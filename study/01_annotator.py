@@ -24,7 +24,7 @@ promptloader = PromptLoader()
 
 SPLIT_SEED = 42
 
-def zero_shot(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, MODE, N_FEW_SHOT):
+def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, MODE, N_FEW_SHOT):
 
     print(f"TASK:", TASK)
     print(f"DATASET_NAME: {DATASET_NAME}")
@@ -40,10 +40,6 @@ def zero_shot(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, MODE, N_FE
         {"name": "stop", "value": [")]"]}, 
         {"name": "num_ctx", "value": "4096"}
         ]) #8192
-
-    ## Load Eval Dataset
-
-    dataset_test = dataloader.load_data(name=DATASET_NAME, data_type=DATASET_TYPE, target=TASK)
     
     ## Unique Aspect Categories
 
@@ -61,8 +57,10 @@ def zero_shot(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, MODE, N_FE
         few_shot_split_0 = dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[0] + dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[1] + dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[2] + dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[3] + dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[4]
         
         random.seed(SPLIT_SEED)
+        dataset_annotation = few_shot_split_0[N_FEW_SHOT:]
         few_shot_split_0 = few_shot_split_0[0:N_FEW_SHOT]
-         
+        print(len(few_shot_split_0), len(dataset_annotation), len(dataset_train))
+          
     fs_examples_ids = [int(example["id"].split("_")[0]) for example in few_shot_split_0]
 
     # Lade alle Zeilen aus der Datei
@@ -87,7 +85,7 @@ def zero_shot(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, MODE, N_FE
 
     ## label
     if MODE in ["label", "chain-of-thought", "plan-and-solve"]:
-     for idx, example in enumerate(dataset_test):
+     for idx, example in enumerate(dataset_annotation):
         prediction = { 
             "task": TASK,
             "dataset_name": DATASET_NAME, 
@@ -134,10 +132,10 @@ def zero_shot(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, MODE, N_FE
                 prediction["duration_label"] = duration
                 prediction["seed"] = seed
     
-        print("########## ", idx, "\nText:", example["text"], "\nLabel:",prediction["pred_label"], "\nRegenerations:", prediction["invalid_precitions_label"])
+        print(f"####### {idx}/{len(dataset_annotation)} ### ", idx, "\nText:", example["text"], "\nLabel:",prediction["pred_label"], "\nRegenerations:", prediction["invalid_precitions_label"])
         predictions.append(dict(prediction, **example))
 
-    dir_path = f"generations/zeroshot"
+    dir_path = f"generations/llm_annotations"
 
     # Create the directories if they don't exist
     os.makedirs(dir_path, exist_ok=True)
@@ -147,7 +145,7 @@ def zero_shot(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, MODE, N_FE
         
         
 
-##### Zero-Shot
+##### create annotations
 
 # tasks = ["asqp", "tasd"]
 # datasets = ["rest15", "rest16"]
@@ -157,11 +155,11 @@ def zero_shot(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, MODE, N_FE
 # modes = ["chain-of-thought", "plan-and-solve", "label"] # "label"
 
 seeds = [0, 1, 2, 3, 4]
-n_few_shot = [0, 10, 20, 30, 40, 50] # 0 fehlt noch
+n_few_shot = [50] # 0 fehlt noch
 datasets = ["rest15", "rest16", "hotels", "flightabsa", "coursera", "gerest"]
 tasks = ["asqp", "tasd"]
-dataset_types = ["test"]
-models = ["gemma2:27b", "gemma2:9b"]
+dataset_types = ["train"]
+models = ["gemma2:27b"]
 modes = ["label"] # "label"
 
 
@@ -169,9 +167,9 @@ combinations = itertools.product(seeds, n_few_shot, datasets, tasks, dataset_typ
 
 for combination in combinations:
     seed, fs,  dataset_name, task, dataset_type, model, mode = combination
-    file_path = f"generations/zeroshot/{task}_{dataset_name}_{dataset_type}_{model}_{seed}_{mode}_{fs}.json"
+    file_path = f"generations/llm_annotations/{task}_{dataset_name}_{dataset_type}_{model}_{seed}_{mode}_{fs}.json"
     # Prüfen, ob die Datei bereits existiert
     if not os.path.exists(file_path):
-        zero_shot(task, dataset_name, dataset_type, model, seed, mode, fs)
+        create_annotations(task, dataset_name, dataset_type, model, seed, mode, fs)
     else:
         print(f"Skipping: {file_path} already exists.")
