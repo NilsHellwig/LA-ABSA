@@ -1,0 +1,177 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
+from validator import validate_label, validate_reasoning
+from promptloader import PromptLoader
+from dataloader import DataLoader
+from llm import LLM
+import itertools
+import json
+import random
+
+
+## Load API Key
+from dotenv import load_dotenv
+load_dotenv()
+GWDG_KEY = os.getenv("GWDG_KEY")  
+
+## LLM
+
+dataloader = DataLoader()
+promptloader = PromptLoader()
+
+SPLIT_SEED = 42
+
+def zero_shot(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, MODE, N_FEW_SHOT):
+
+    print(f"TASK:", TASK)
+    print(f"DATASET_NAME: {DATASET_NAME}")
+    print(f"DATASET_TYPE: {DATASET_TYPE}")
+    print(f"LLM_BASE_MODEL: {LLM_BASE_MODEL}")
+    print(f"SEED: {SEED}")
+    print(f"MODE: {MODE}")
+    print(f"N_FEW_SHOT: {N_FEW_SHOT}")
+
+    ## Load Model
+
+    llm = LLM(LLM_BASE_MODEL, parameters=[
+        {"name": "stop", "value": [")]"]}, 
+        {"name": "num_ctx", "value": "4096"}
+        ]) #8192
+
+    ## Load Eval Dataset
+
+    dataset_test = dataloader.load_data(name=DATASET_NAME, data_type=DATASET_TYPE, target=TASK)
+    
+    ## Unique Aspect Categories
+
+    unique_aspect_categories = sorted({aspect['aspect_category'] for entry in dataloader.load_data(name=DATASET_NAME, data_type="all", target=TASK) for aspect in entry['aspects']})
+    if DATASET_NAME == "gerest" and not("food general" in unique_aspect_categories):
+        unique_aspect_categories += ["food general"]
+    unique_aspect_categories = sorted(unique_aspect_categories)
+    predictions = []
+    
+    ## Load Few-Shot Dataset
+    few_shot_split_0 = []
+
+    if (N_FEW_SHOT > 0):
+        dataset_train = dataloader.load_data(name=DATASET_NAME, data_type="train", target=TASK)
+        few_shot_split_0 = dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[0] + dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[1] + dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[2] + dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[3] + dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[4]
+        
+        random.seed(SPLIT_SEED)
+        few_shot_split_0 = few_shot_split_0[0:N_FEW_SHOT]
+         
+    fs_examples_ids = [int(example["id"].split("_")[0]) for example in few_shot_split_0]
+
+    # Lade alle Zeilen aus der Datei
+    fs_examples_txt = ""
+    with open(f"./datasets/{TASK}/{DATASET_NAME}/train.txt", "r") as f:
+        lines = f.readlines()
+
+        # Füge die Zeilen zusammen, deren Index in fs_examples_ids enthalten ist
+        fs_examples_txt = "".join(lines[i] for i in fs_examples_ids if 0 <= i < len(lines))
+
+    # Erstelle den Zielpfad, falls er nicht existiert
+    output_dir_fs = f"./fs_examples/{TASK}/{DATASET_NAME}/fs_{N_FEW_SHOT}"
+    os.makedirs(output_dir_fs, exist_ok=True)
+
+    # Speichere die resultierenden Beispiele in einer Datei
+    output_path_fs = os.path.join(output_dir_fs, "examples.txt")
+    with open(output_path_fs, "w") as f:
+        f.write(fs_examples_txt)
+        
+    #############################################
+    #############################################
+
+    ## label
+    if MODE in ["label", "chain-of-thought", "plan-and-solve"]:
+     for idx, example in enumerate(dataset_test):
+        prediction = { 
+            "task": TASK,
+            "dataset_name": DATASET_NAME, 
+            "dataset_type": DATASET_TYPE,
+            "llm_base_model": LLM_BASE_MODEL,
+            "mode": MODE,
+            "id": example["id"], 
+            "invalid_precitions_label": [],
+            "init_seed": SEED,
+        }
+        
+        seed = SEED
+    
+        prompt = promptloader.load_prompt(task=TASK,
+                                      prediction_type=MODE, 
+                                      aspects=unique_aspect_categories, 
+                                      examples=few_shot_split_0,
+                                      seed_examples=seed,
+                                      input_example=example)
+    
+        correct_output = False   
+        while correct_output == False:
+            output, duration = llm.predict(prompt, seed)#['message']['content']
+            output_raw = output
+            # delete new lines
+            output = output.replace("\n", "")
+            
+            validator_output = validate_label(output, example["text"], unique_aspect_categories, task=TASK)
+
+            if validator_output[0] != False:
+                prediction["pred_raw"] = output_raw
+                prediction["pred_label"] = validator_output[0]
+                prediction["duration_label"] = duration
+                prediction["seed"] = seed
+                correct_output = True
+            else:
+                prediction["invalid_precitions_label"].append({"pred_label_raw": output_raw, "pred_label": validator_output[0], "duration_label": duration, "seed": seed, "regeneration_reason": validator_output[1]})
+                seed += 5
+                pass
+        
+            if len(prediction["invalid_precitions_label"]) > 9:
+                correct_output = True
+                prediction["pred_label"] = []
+                prediction["duration_label"] = duration
+                prediction["seed"] = seed
+    
+        print("########## ", idx, "\nText:", example["text"], "\nLabel:",prediction["pred_label"], "\nRegenerations:", prediction["invalid_precitions_label"])
+        predictions.append(dict(prediction, **example))
+
+    dir_path = f"generations/zeroshot"
+
+    # Create the directories if they don't exist
+    os.makedirs(dir_path, exist_ok=True)
+
+    with open(f"{dir_path}/{TASK}_{DATASET_NAME}_{DATASET_TYPE}_{LLM_BASE_MODEL}_{SEED}_{MODE}_{N_FEW_SHOT}.json", 'w', encoding='utf-8') as json_file:
+        json.dump(predictions, json_file, ensure_ascii=False, indent=4)
+        
+        
+
+##### Zero-Shot
+
+# tasks = ["asqp", "tasd"]
+# datasets = ["rest15", "rest16"]
+# dataset_types = ["train", "test", "dev"]
+# models = ["gemma2:27b", "llama3.1:70b"]
+# seeds = [0, 1, 2, 3, 4]
+# modes = ["chain-of-thought", "plan-and-solve", "label"] # "label"
+
+seeds = [0, 1, 2, 3, 4]
+n_few_shot = [0, 10, 20, 30, 40, 50] # 0 fehlt noch
+datasets = ["rest15", "rest16", "hotels", "flightabsa", "coursera", "gerest"]
+tasks = ["asqp", "tasd"]
+dataset_types = ["test"]
+models = ["gemma2:27b", "gemma2:9b"]
+modes = ["label"] # "label"
+
+
+combinations = itertools.product(seeds, n_few_shot, datasets, tasks, dataset_types, models, modes)
+
+for combination in combinations:
+    seed, fs,  dataset_name, task, dataset_type, model, mode = combination
+    file_path = f"generations/zeroshot/{task}_{dataset_name}_{dataset_type}_{model}_{seed}_{mode}_{fs}.json"
+    # Prüfen, ob die Datei bereits existiert
+    if not os.path.exists(file_path):
+        zero_shot(task, dataset_name, dataset_type, model, seed, mode, fs)
+    else:
+        print(f"Skipping: {file_path} already exists.")
