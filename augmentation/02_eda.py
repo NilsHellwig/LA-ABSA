@@ -11,32 +11,41 @@ class EDAAugmenter(ABSAAugmenter):
         super(EDAAugmenter, self).__init__(args=args)
 
     def augment(self, eda_file):
-        data = {'quads': [], 'text': []}
+        data = []
         with tqdm(total=self.dataloader.__len__()) as pbar:
             for i, inputs in enumerate(self.dataloader):
                 source_text = inputs.source_text[0]
                 quads = [[q[0] for q in quad] for quad in inputs.quads]
 
-                # # original
-                # data['quads'].append(quads)
-                # data['text'].append(source_text)
-
-                # augmented
-                aug_sentences = eda(source_text,
-                                        alpha_sr=self.args.alpha_sr,
-                                        alpha_ri=self.args.alpha_ri,
-                                        alpha_rs=self.args.alpha_rs,
-                                        p_rd=self.args.alpha_rd,
-                                        num_aug=self.args.num_aug)[:self.args.num_aug]
-
-
-                for aug_sentence in aug_sentences:
-                    data['quads'].append(quads)
-                    data['text'].append(aug_sentence)
-
+                for j in range(self.args.num_aug):
+                    index = j
+                    valid = False
+                    attempt = 0
+                    max_attempts = 5000  # Maximale Versuche pro Beispiel
+                    while not valid and attempt < max_attempts:
+                        try:
+                            # Augmentierte Sätze generieren
+                            aug_sentence = eda(source_text,
+                                                alpha_sr=self.args.alpha_sr,
+                                                alpha_ri=self.args.alpha_ri,
+                                                alpha_rs=self.args.alpha_rs,
+                                                p_rd=self.args.alpha_rd,
+                                                num_aug=self.args.num_aug)[index]
+                            
+                            # Formatieren der Daten im gewünschten Format
+                            data.append(f"{aug_sentence}####{quads}")
+                            valid = True  # Erfolgreiche Augmentierung
+                        except:
+                            attempt += 1  # Erhöhe den Versuchszähler
+                            continue  # Falls Fehler, erneut versuchen
+                
                 pbar.update(1)
-        df = pd.DataFrame.from_dict(data)
-        df.to_csv(eda_file, encoding='utf_8_sig', index=False)
+
+        # Speichern in eine Textdatei
+        with open(eda_file, 'w', encoding='utf_8_sig') as f:
+            for line in data:
+                f.write(line + '\n')
+
         print('Saved to -> [%s]' % eda_file)
 
 import argparse
@@ -69,6 +78,5 @@ for fs, dataset_name, task in combinations:
             
             augmenter = EDAAugmenter(args)
             augmenter.augment(eda_file=file_path)
-            raise KeyboardInterrupt
         else:
             print(f"Skipping: {file_path} already exists.")
