@@ -104,6 +104,8 @@ def target_text_to_quads(task, seq, model_type):
     output:
         [[category, aspect, opinion, sentiment],]
     '''
+    if task == 'tasd':
+        task = "asqp"
     quads = []
     sents = [s.strip() for s in re.split('\[SSEP\]|\[ SSEP \]', seq) if len(s) > 0]
     sents = list(set(sents))
@@ -292,14 +294,19 @@ def read_line_examples_from_file(data_path, task, silence=True):
                 label = list(set(line[1:]))
                 sents.append(sentence.split())
                 labels.append(label)
-        elif task in ["aste", "asqp"]:
+        elif task in ["aste", "asqp", "tasd"]:
             # Read data from file for aste and asqp, each line is: sent####labels
             for line in fp:
                 line = line.strip()
                 if line != '':
                     words, tuples = line.split('####')
                     sents.append(words.split())
-                    labels.append(eval(tuples))
+                    if task in ["tasd"]:
+                        tuples = eval(tuples)
+                        tuples = [tuple(t) + ("opinion",) for t in tuples]
+                        labels.append(tuples)
+                    else:
+                        labels.append(eval(tuples))
         else:
             raise NotImplementedError
     if silence:
@@ -448,7 +455,7 @@ def get_quad_or_triple(sents, labels, task, dataset):
     for i, label in enumerate(labels):
         quads = []
         for l in label:
-            if task == "asqp":
+            if task == "asqp" or task == "tasd":
                 a, c, s, o = l
                 quads.append([c, a.strip(), o.strip(), s])
 
@@ -476,7 +483,7 @@ def get_target_text_from_quads_or_triple(label_list, task, template_version="v1"
 
     target_texts = []
 
-    if task in ["acos", "asqp"]:
+    if task in ["acos", "asqp", "tasd"]:
         for quads in label_list:
             if template_version == "v1":
                 target_text = quads_to_target_text(quads)
@@ -612,7 +619,7 @@ class ABSADataset(Dataset):
         if self.task == "aste":
             return TripletExtractionData(self.inputs[index], self.targets[index], self.quads_list[index],
                                          self.token_lens[index])
-        elif self.task in ["asqp", "acos"]:
+        elif self.task in ["asqp", "acos", "tasd"]:
             return QuadExtractionData(self.inputs[index], self.targets[index], self.quads_list[index],
                                       self.token_lens[index])
         else:

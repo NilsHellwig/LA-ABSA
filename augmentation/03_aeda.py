@@ -40,7 +40,7 @@ class AEDAAugmenter(ABSAAugmenter):
 if __name__ == '__main__':
     n_few_shot = [10, 50]
     datasets = ["rest15", "rest16", "hotels", "flightabsa", "coursera", "gerest"]
-    tasks = ["asqp"]
+    tasks = ["asqp", "tasd"]
 
     combinations = itertools.product(n_few_shot, datasets, tasks)
 

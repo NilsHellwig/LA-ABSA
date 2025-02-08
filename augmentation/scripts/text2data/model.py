@@ -37,7 +37,7 @@ class Extractor(nn.Module):
         self.id2sent = {0: 'negative', 1: 'neutral', 2: 'positive'}
 
         # aspect_cate_dict
-        if self.task in ["asqp", "acos"]:
+        if self.task in ["asqp", "acos", "tasd"]:
             aspect_cate_dict = {idx: c for idx, c in enumerate(asqp_aspect_cate_list)}
             self.aspect_cate_dict = aspect_cate_dict
 

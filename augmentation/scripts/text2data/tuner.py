@@ -148,7 +148,7 @@ class FineTuner(pl.LightningModule):
         texts = texts[:aug_dataset_max_size]
         for source, quads in zip(texts, quads_list):
             try:
-                if self.hyperparams.task in ["acos", "asqp"]:
+                if self.hyperparams.task in ["acos", "asqp", "tasd"]:
                     target = quads_to_target_text_v3(quads)
                     data = QuadExtractionData(source, target, quads)
                 elif self.hyperparams.task in ["aste"]:

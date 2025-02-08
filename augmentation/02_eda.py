@@ -15,7 +15,10 @@ class EDAAugmenter(ABSAAugmenter):
         with tqdm(total=self.dataloader.__len__()) as pbar:
             for i, inputs in enumerate(self.dataloader):
                 source_text = inputs.source_text[0]
-                quads = [[q[0] for q in quad] for quad in inputs.quads]
+                if task == "tasd":
+                    quads = [[q[0] for q in quad] for quad in inputs.quads]
+                else:
+                    quads = [[q[0] for q in quad] for quad in inputs.quads]       
 
                 for j in range(self.args.num_aug):
                     index = j
@@ -23,7 +26,7 @@ class EDAAugmenter(ABSAAugmenter):
                     attempt = 0
                     max_attempts = 5000  # Maximale Versuche pro Beispiel
                     while not valid and attempt < max_attempts:
-                        try:
+                  
                             # Augmentierte Sätze generieren
                             aug_sentence = eda(source_text,
                                                 alpha_sr=self.args.alpha_sr,
@@ -32,12 +35,16 @@ class EDAAugmenter(ABSAAugmenter):
                                                 p_rd=self.args.alpha_rd,
                                                 num_aug=self.args.num_aug)[index]
                             
+                            if task == "tasd":
+                                quads_upt = [[q[1], q[0], q[3]] for q in quads]
+                            if task == "asqp":
+                                quads_upt = [[q[1], q[0], q[3], q[2]] for q in quads]
+                           
+                            
                             # Formatieren der Daten im gewünschten Format
-                            data.append(f"{aug_sentence}####{quads}")
+                            data.append(f"{aug_sentence}####{quads_upt}")
                             valid = True  # Erfolgreiche Augmentierung
-                        except:
-                            attempt += 1  # Erhöhe den Versuchszähler
-                            continue  # Falls Fehler, erneut versuchen
+
                 
                 pbar.update(1)
 
@@ -56,7 +63,7 @@ from argparse import Namespace
 
 n_few_shot = [10, 50]
 datasets = ["rest15", "rest16", "hotels", "flightabsa", "coursera", "gerest"]
-tasks = ["asqp"]
+tasks = ["asqp", "tasd"]
 
 combinations = itertools.product(n_few_shot, datasets, tasks)
 

@@ -36,6 +36,11 @@ class BTAugmenter(ABSAAugmenter):
             for i, inputs in enumerate(self.dataloader):
                 source_text = inputs.source_text[0]
                 quads = [[q[0] for q in quad] for quad in inputs.quads]
+
+                if task == "tasd":
+                    quads = [[q[1], q[0], q[3]] for q in quads]
+                if task == "asqp":
+                    quads = [[q[1], q[0], q[3], q[2]] for q in quads]
                 
                 for j in range(self.args.num_aug):
                     index = j
@@ -63,7 +68,7 @@ class BTAugmenter(ABSAAugmenter):
 
 n_few_shot = [10, 50] # 0 fehlt noch
 datasets = ["rest15", "rest16", "hotels", "flightabsa", "coursera", "gerest"]
-tasks = ["asqp"]
+tasks = ["tasd", "asqp"]
 
 n_generations = 100
 

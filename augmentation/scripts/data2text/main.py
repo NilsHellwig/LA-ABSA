@@ -90,7 +90,7 @@ for data in train_dataset2:
     collection_quads.extend(data.quads)
 
 ## augment facts
-if task in ["acos", "asqp"]:
+if task in ["acos", "asqp", "tasd"]:
     collection_quads, collection_quads_cate_dict = augemnt_collection_quads(collection_quads)
 
 ## Generate with mixed facts
