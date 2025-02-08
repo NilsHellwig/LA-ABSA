@@ -22,16 +22,13 @@ class EDAAugmenter(ABSAAugmenter):
                 # data['text'].append(source_text)
 
                 # augmented
-                try:
-                    aug_sentences = eda(source_text,
+                aug_sentences = eda(source_text,
                                         alpha_sr=self.args.alpha_sr,
                                         alpha_ri=self.args.alpha_ri,
                                         alpha_rs=self.args.alpha_rs,
                                         p_rd=self.args.alpha_rd,
-                                        num_aug=self.args.num_aug)
-                except:
-                    # too short to EDA
-                    continue
+                                        num_aug=self.args.num_aug)[:self.args.num_aug]
+
 
                 for aug_sentence in aug_sentences:
                     data['quads'].append(quads)
@@ -62,7 +59,7 @@ for fs, dataset_name, task in combinations:
                 "n_few_shot": fs,
                 "data_dir": dataset_name,
                 "task": task,
-                "num_aug": 5,
+                "num_aug": int(2000/fs),
                 "alpha_sr": 0.1,
                 "alpha_ri": 0.1,
                 "alpha_rs": 0.1,
@@ -72,5 +69,6 @@ for fs, dataset_name, task in combinations:
             
             augmenter = EDAAugmenter(args)
             augmenter.augment(eda_file=file_path)
+            raise KeyboardInterrupt
         else:
             print(f"Skipping: {file_path} already exists.")
