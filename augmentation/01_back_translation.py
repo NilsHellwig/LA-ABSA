@@ -13,7 +13,7 @@ from basic import ABSAAugmenter
 
 
 class BTAugmenter(ABSAAugmenter):
-    def __init__(self, args, candidate_langs=['fr', 'zh', 'ar', 'jap']): # jap
+    def __init__(self, args, candidate_langs=['fr', 'zh', 'ar', 'jap', 'da']): # jap
         super(BTAugmenter, self).__init__(args=args)
         device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
@@ -44,7 +44,7 @@ class BTAugmenter(ABSAAugmenter):
                     max_attempts = 5000  # Maximale Versuche pro Beispiel
                     while not valid and attempt < max_attempts:
                         try:
-                            aug_sentence = self.all_back_translation_aug[index % len(self.all_back_translation_aug)].augment(source_text)[0]
+                            aug_sentence = self.all_back_translation_aug[index].augment(source_text)[0]
                             data.append(f"{aug_sentence}####{quads}")
                             valid = True  # Erfolgreiche Augmentierung
                         except:
@@ -75,11 +75,10 @@ for combination in combinations:
     file_path = f"augmentation/generations/back_translation/{task}_{dataset_name}_{fs}.txt"
     # Prüfen, ob die Datei bereits existiert
     if not os.path.exists(file_path):
-        print("loop aug augment:", int(n_generations/fs))
-        args = {"data_dir": dataset_name, "task": task, "num_aug": int(n_generations/fs), "n_few_shot": fs}
+        args = {"data_dir": dataset_name, "task": task, "num_aug": 5, "n_few_shot": fs}
         args = Namespace(**args)
         augmenter = BTAugmenter(args)
         augmenter.augment(bt_file=file_path)
-        raise KeyboardInterrupt
+
     else:
         print(f"Skipping: {file_path} already exists.")
