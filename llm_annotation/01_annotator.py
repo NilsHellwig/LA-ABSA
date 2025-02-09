@@ -155,7 +155,7 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, M
 # modes = ["chain-of-thought", "plan-and-solve", "label"] # "label"
 
 seeds = [0, 1, 2, 3, 4]
-n_few_shot = [50] # 0 fehlt noch
+n_few_shot = [0, 10, 50] # 0 fehlt noch
 datasets = ["rest15", "rest16", "hotels", "flightabsa", "coursera", "gerest"]
 tasks = ["asqp", "tasd"]
 dataset_types = ["train"]
