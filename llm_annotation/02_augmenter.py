@@ -106,8 +106,10 @@ def create_annotations(TASK, DATASET_NAME, LLM_BASE_MODEL, SEED, N_FEW_SHOT, N_S
 
         correct_output = False   
         n_retries = 0
+        print("######", idx, example)
         while not correct_output:
             output, duration = llm.predict(prompt, seed)
+            print("output", output)
             correct_output = True
 
             validation_augmentation = validate_augmentation(output, unique_aspect_categories, example)
@@ -144,7 +146,7 @@ def create_annotations(TASK, DATASET_NAME, LLM_BASE_MODEL, SEED, N_FEW_SHOT, N_S
 # seeds = [0, 1, 2, 3, 4]
 # modes = ["chain-of-thought", "plan-and-solve", "label"] # "label"
 
-seeds = [0, 1, 2, 3, 4]
+seeds = [0]
 n_few_shot = [10, 50] # 0 fehlt noch
 datasets = ["rest15", "rest16", "hotels", "flightabsa", "coursera", "gerest"]
 tasks = ["asqp", "tasd"]
