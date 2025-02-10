@@ -6,22 +6,32 @@ import numpy as np
 CACHE_FILE = "similarity_cache.json"
 
 def load_cache():
-    """Lädt die JSON-Datei mit gespeicherten Ähnlichkeitsscores."""
+    """Lädt die JSON-Datei mit gespeicherten Ähnlichkeitsscores, falls sie gültig ist."""
     if os.path.exists(CACHE_FILE):
-        with open(CACHE_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
+        try:
+            with open(CACHE_FILE, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except (json.JSONDecodeError, IOError):
+            print("Warnung: similarity_cache.json ist ungültig oder beschädigt. Erstelle neuen Cache.")
+            return {}
     return {}
+
 
 def save_cache(cache):
     """Speichert die Ähnlichkeitsscores in die JSON-Datei."""
     with open(CACHE_FILE, "w", encoding="utf-8") as f:
+        # Konvertiere alle numpy.float32-Werte in normale float-Werte
+        cache = {key: float(value) for key, value in cache.items()}
         json.dump(cache, f, indent=4, ensure_ascii=False)
 
+
 def compute_similarity(text1, text2, model):
-    """Berechnet die Kosinusähnlichkeit zwischen zwei Texten mithilfe von Sentence Transformers."""
+    """Berechnet die Kosinusähnlichkeit zwischen zwei Texten."""
     emb1 = model.encode(text1, convert_to_numpy=True)
     emb2 = model.encode(text2, convert_to_numpy=True)
-    return np.dot(emb1, emb2) / (np.linalg.norm(emb1) * np.linalg.norm(emb2))
+    similarity = np.dot(emb1, emb2) / (np.linalg.norm(emb1) * np.linalg.norm(emb2))
+    return float(similarity)  # Hier explizit in float umwandeln
+
 
 def sort_examples_by_similarity(example, examples, model_name="all-MiniLM-L6-v2"):
     """
