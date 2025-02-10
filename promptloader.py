@@ -5,10 +5,12 @@ class PromptLoader:
     def __init__(self, base_path="prompt"):
         self.base_path = base_path   
         
-    def load_prompt(self, task="asqp", prediction_type="label", aspects=[], examples=[], seed_examples=42, input_example=None, polarities=["positive", "negative", "neutral"], reasoning_step="reasoning"):
+    def load_prompt(self, task="asqp", prediction_type="label", aspects=[], examples=[], seed_examples=42, input_example=None, polarities=["positive", "negative", "neutral"], reasoning_step="reasoning", shuffle_examples=True):
         # random shuffle examples with seed
         random.seed(seed_examples)
-        random.shuffle(examples)
+        
+        if shuffle_examples:
+           random.shuffle(examples)
         
         # Load Base Prompt
         prompt_path = os.path.join(self.base_path, task, f"prompt.txt")

@@ -4,6 +4,7 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from validator import validate_label, validate_reasoning
+from similarity import sort_examples_by_similarity
 from promptloader import PromptLoader
 from dataloader import DataLoader
 from llm import LLM
@@ -24,7 +25,7 @@ promptloader = PromptLoader()
 
 SPLIT_SEED = 42
 
-def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, MODE, N_FEW_SHOT):
+def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, MODE, N_FEW_SHOT, SORT_EXAMPLES):
 
     print(f"TASK:", TASK)
     print(f"DATASET_NAME: {DATASET_NAME}")
@@ -33,6 +34,7 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, M
     print(f"SEED: {SEED}")
     print(f"MODE: {MODE}")
     print(f"N_FEW_SHOT: {N_FEW_SHOT}")
+    print(f"SORT_EXAMPLES: {SORT_EXAMPLES}")
 
     ## Load Model
 
@@ -52,14 +54,16 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, M
     ## Load Few-Shot Dataset
     few_shot_split_0 = []
 
+    dataset_train = dataloader.load_data(name=DATASET_NAME, data_type="train", target=TASK)
+    few_shot_split_0 = dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[0] + dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[1] + dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[2] + dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[3] + dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[4]
+    random.seed(SPLIT_SEED)
+    dataset_annotation = few_shot_split_0[N_FEW_SHOT:]
+
     if (N_FEW_SHOT > 0):
-        dataset_train = dataloader.load_data(name=DATASET_NAME, data_type="train", target=TASK)
-        few_shot_split_0 = dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[0] + dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[1] + dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[2] + dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[3] + dataloader.random_cross_validation_split(dataset_train, seed=SPLIT_SEED)[4]
-        
-        random.seed(SPLIT_SEED)
-        dataset_annotation = few_shot_split_0[N_FEW_SHOT:]
         few_shot_split_0 = few_shot_split_0[0:N_FEW_SHOT]
         print(len(few_shot_split_0), len(dataset_annotation), len(dataset_train))
+    else:
+        few_shot_split_0 = []
           
     fs_examples_ids = [int(example["id"].split("_")[0]) for example in few_shot_split_0]
 
@@ -98,13 +102,16 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, M
         }
         
         seed = SEED
+        
+        if SORT_EXAMPLES == True:
+           few_shot_split_0 = sort_examples_by_similarity(example, few_shot_split_0)
     
         prompt = promptloader.load_prompt(task=TASK,
                                       prediction_type=MODE, 
                                       aspects=unique_aspect_categories, 
                                       examples=few_shot_split_0,
                                       seed_examples=seed,
-                                      input_example=example)
+                                      input_example=example, shuffle_examples=SORT_EXAMPLES==False)
     
         correct_output = False   
         while correct_output == False:
@@ -161,15 +168,16 @@ tasks = ["asqp", "tasd"]
 dataset_types = ["train"]
 models = ["gemma2:27b"]
 modes = ["label"] # "label"
+sort_examples = [True, False]
 
 
-combinations = itertools.product(seeds, n_few_shot, datasets, tasks, dataset_types, models, modes)
+combinations = itertools.product(seeds, n_few_shot, datasets, tasks, dataset_types, models, modes, sort_examples)
 
 for combination in combinations:
-    seed, fs,  dataset_name, task, dataset_type, model, mode = combination
-    file_path = f"generations/llm_annotations/{task}_{dataset_name}_{dataset_type}_{model}_{seed}_{mode}_{fs}.json"
+    seed, fs,  dataset_name, task, dataset_type, model, mode, s_ex = combination
+    file_path = f"generations/llm_annotations/{task}_{dataset_name}_{dataset_type}_{model}_{seed}_{mode}_{fs}_{s_ex}.json"
     # Prüfen, ob die Datei bereits existiert
     if not os.path.exists(file_path):
-        create_annotations(task, dataset_name, dataset_type, model, seed, mode, fs)
+        create_annotations(task, dataset_name, dataset_type, model, seed, mode, fs, s_ex)
     else:
         print(f"Skipping: {file_path} already exists.")
