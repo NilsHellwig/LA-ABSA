@@ -1,34 +1,49 @@
 import itertools
 import random
 import re
-import spacy
+import sys, os
 
-# Laden des spaCy-Modells
-nlp = spacy.load("en_core_web_md")
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from llm import LLM
 
 synonym_cache = {}
 
+llm = LLM("llama3.1:8b", parameters=[
+        {"name": "stop", "value": [")]"]}, 
+        {"name": "num_ctx", "value": "4096"}
+        ]) #8192
 
-def get_synonyms(word, top_n=5):
+
+def extract_text_between_quotes(text):
+  return re.findall(r'"([^"]*)"', text)
+
+def get_prompt(word, sentence_original):
+    return f'''I'll give you a term that is in the sentence "{sentence_original}", find a similar term and return it enclosed by '"'.\nTerm: "{word}"\nSimilar word: "'''
+    
+
+def get_synonyms(word, sentence_original, top_n=5):
     """Holt eine Liste von Synonymen für ein gegebenes Wort basierend auf Wortähnlichkeiten."""
     # Überprüfen, ob das Wort bereits im Cache ist
     if word in synonym_cache:
         return synonym_cache[word]
 
-    # Wort mit spaCy verarbeiten
-    word_doc = nlp(word)
+    synonyms = []
+    
+    if synonym_cache.get(word):
+        synonyms = synonym_cache.get(word)
+        return synonyms
+    
+    seed = 0
+    
+    while len(synonyms) < top_n:
+        output, duration = llm.predict(get_prompt(word, sentence_original), seed=seed)
+        extraction = extract_text_between_quotes(output)
+        if len(extraction) > 0 and extraction[0] not in synonyms and "imilar word" not in extraction[0] and extraction[0] != word and word != "" and word != " ":
+            synonyms.append(extraction[0])
+        seed += 1
+    print(word, ":",synonyms)
 
-    # Synonyme basierend auf Wortähnlichkeiten finden
-    synonyms = [w.text for w in word_doc.vocab if w.is_lower and w.has_vector and w.similarity(word_doc) > 0.5]
-    synonyms = sorted(synonyms, key=lambda w: word_doc.similarity(nlp(w)), reverse=True)
-
-    # Die Top-N Synonyme speichern
-    top_synonyms = synonyms[:top_n]
-
-    # Ergebnis im Cache speichern
-    synonym_cache[word] = top_synonyms
-
-    return top_synonyms
+    return synonyms
 
 def split_sentence(sentence, targets):
     """Teilt den Satz so auf, dass die Zielbegriffe optional synonymisiert werden können."""
@@ -53,7 +68,7 @@ def split_sentence(sentence, targets):
         parts.append(current_part.strip())
     return parts
 
-def synonym_replacement(target, n_aug):
+def synonym_replacement(target, n_aug, sentence_original):
     """Ersetzt zufällige Wörter im Satz durch Synonyme, außer den Zielbegriffen."""
     words = simple_tokenizer(target)
     words_bool = [True] * len(words)
@@ -61,7 +76,7 @@ def synonym_replacement(target, n_aug):
     words_with_syn_repalcement = []
     for word, bool_ in zip(words, words_bool):
         if bool_ and word.isalpha():
-            synonyms = get_synonyms(word)
+            synonyms = get_synonyms(word, sentence_original)
             if synonyms:
                 words_with_syn_repalcement.append(random.choice(synonyms))
             else:
@@ -84,6 +99,7 @@ def augment_examples(file_path_save, task, dataset_name, n_few_shot):
     lines_save = []
 
     for idx, line in enumerate(lines):
+        print(idx)
         print(idx, ":", line)
         # Example line: Much of the time it seems like they do not care about you .####[['NULL', 'service general', 'negative', 'do not care about you']]
         sentence_original = line.split("####")[0]
@@ -126,14 +142,14 @@ def augment_examples(file_path_save, task, dataset_name, n_few_shot):
                 n_aug = random_bools[current_token:current_token + len(simple_tokenizer(part))].count(True)
                 # Normaler Term und n_aug > 0
                 if part not in terms and n_aug > 0:
-                    augmented_part = synonym_replacement(part, n_aug)
+                    augmented_part = synonym_replacement(part, n_aug, sentence_original)
                     augmented_sentence += augmented_part + " "
                 # Normaler Term und n_aug == 0
                 elif part not in terms and n_aug == 0:
                     augmented_sentence += part + " "
                 # Term und n_aug > 0
                 elif part in terms and n_aug > 0 and TRANSLATE_TERMS:
-                    augmented_part = synonym_replacement(part, n_aug)
+                    augmented_part = synonym_replacement(part, n_aug, sentence_original)
                     augmented_sentence += augmented_part + " "
                     augmented_tuples = [[augmented_part if t == part else t for t in tupl] for tupl in augmented_tuples]
                 # Term und n_aug == 0
@@ -157,6 +173,6 @@ combinations = itertools.product(n_few_shot, datasets, tasks)
 
 for combination in combinations:
     fs, dataset_name, task = combination
-    file_path_save = f"augmentation/generations/eda/{task}_{dataset_name}_{fs}.txt"
+    file_path_save = f"augmentation/generations/llm_eda/{task}_{dataset_name}_{fs}.txt"
     # Prüfen, ob die Datei bereits existiert
     lines = augment_examples(file_path_save=file_path_save, task=task, dataset_name=dataset_name, n_few_shot=fs)
