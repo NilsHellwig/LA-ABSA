@@ -24,13 +24,12 @@ def get_prompt(word, sentence_original):
 def get_synonyms(word, sentence_original, top_n=5):
     """Holt eine Liste von Synonymen für ein gegebenes Wort basierend auf Wortähnlichkeiten."""
     # Überprüfen, ob das Wort bereits im Cache ist
-    if word in synonym_cache:
-        return synonym_cache[word]
+    if word + "_" + sentence_original in synonym_cache:
+        return synonym_cache[word + "_" + sentence_original]
 
     synonyms = []
-    
-    if synonym_cache.get(word):
-        synonyms = synonym_cache.get(word)
+    if synonym_cache.get(word + "_" + sentence_original):
+        synonyms = synonym_cache.get(word + "_" + sentence_original)
         return synonyms
     
     seed = 0
@@ -42,6 +41,8 @@ def get_synonyms(word, sentence_original, top_n=5):
             synonyms.append(extraction[0])
         seed += 1
     print(word, ":",synonyms)
+    
+    synonym_cache[word + "_" + sentence_original] = synonyms
 
     return synonyms
 
