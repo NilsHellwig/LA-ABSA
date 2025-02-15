@@ -1,6 +1,7 @@
 import os
 import shutil
 from send2trash import send2trash
+from collections import Counter
 
 class DotDict(dict):
     def __getattr__(self, attr):
@@ -43,3 +44,34 @@ def create_output_directory(output_directory='./classifier/outputs'):
         print(f'Directory {output_directory} has been created.')
     else:
         print(f'Directory {output_directory} already exists.')
+
+
+def get_frequency_for_counts(counts, minimum):
+    return sorted(counts, reverse=True)[0:minimum][minimum-1]
+
+def get_unique_keys(dict_list):
+    unique_keys = set()  # Set für einzigartige Schlüssel
+
+    for d in dict_list:
+        unique_keys.update(d.keys())  # Füge die Schlüssel zum Set hinzu
+
+    return list(unique_keys)  # Wandle das Set in eine Liste um und gebe es zurück
+
+def merge_aspect_lists(aspect_lists, minimum_appearance=3):
+    
+    aspect_lists_counter = []
+    for aspect_list in aspect_lists:
+        aspect_counter = dict(Counter([";;".join(aspect) for aspect in aspect_list]))
+        aspect_lists_counter.append(aspect_counter)
+        
+    unique_tuples = get_unique_keys(aspect_lists_counter)
+
+    label = []
+    for tuple_str in unique_tuples:
+
+        count_tuple =  get_frequency_for_counts([asp.get(tuple_str, 0) for asp in aspect_lists_counter], minimum_appearance)
+        tuple_reverse = tuple(tuple_str.split(";;"))
+        
+        label += count_tuple * [tuple_reverse]
+
+    return label

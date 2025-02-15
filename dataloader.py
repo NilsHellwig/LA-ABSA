@@ -5,22 +5,43 @@ import numpy as np
 from sklearn.preprocessing import MultiLabelBinarizer
 from iterstrat.ml_stratifiers import MultilabelStratifiedKFold
 import json
+from helper import merge_aspect_lists
 
 class DataLoader:
     def __init__(self, base_path="datasets", fs_path="fs_examples"):
         self.base_path = base_path
         self.fs_path = fs_path
         
-    def load_fs_ann(self, dataset_paths):
-        with open(dataset_paths[1], "r", encoding="utf-8") as file:
-            data = json.load(file)
+    def load_fs_ann(self, name, data_type, target, fs_num, llm_name):
+        
+        data = []
+        for seed in range(5):
+          with open(f"./generations/llm_annotations/{target}_{name}_train_{llm_name}_{seed}_label_{fs_num}.json", "r", encoding="utf-8") as file:
+            examples = json.load(file)
+          data.append(examples)
+        
         lines = []
-        for example in data:
-            lines.append(f"{example['text']}####{example['pred_label']}")
+        for k in range(len(data[0])):
+            labels = []
+
+            for i in range(0, len(data)):
+                if data[i][k]["pred_label"] != []:
+                   labels += [data[i][k]["pred_label"]]
+                else:
+                   labels.append([])
+            merged_label = merge_aspect_lists(labels, minimum_appearance=3)
+
+            
+            for l in merged_label:
+                if len(l) > 4:
+                    raise KeyboardInterrupt(merged_label)
+            if len(merged_label) > 0:
+               lines.append(f"{data[0][k]['text']}####{merged_label}")
+            
         return lines
 
         
-    def load_data(self, name, data_type, cv=False, seed=42, target="asqp", fs_mode=False, fs_num=0, fs_ann_mode=False, fs_ann_seed=0, llm_name="gemma2:27b", n_ann_examples="full"):
+    def load_data(self, name, data_type, cv=False, seed=42, target="asqp", fs_mode=False, fs_num=0, fs_ann_mode=False, llm_name="gemma2:27b", n_ann_examples="full"):
         if fs_mode or fs_ann_mode:
             dataset_paths = [os.path.join(self.fs_path, target, name, f"fs_{str(fs_num)}", "examples.txt")] 
         else:
@@ -28,7 +49,7 @@ class DataLoader:
             dataset_paths = [os.path.join(self.base_path, target, name, f"{d_path}.txt") for d_path in dataset_paths]
 
         if fs_ann_mode:
-            dataset_paths += [f"./generations/llm_annotations/{target}_{name}_train_{llm_name}_{fs_ann_seed}_label_{fs_num}.json"]
+            dataset_paths += [f"../generations/llm_annotations/"]
             
         data = []
 
@@ -37,10 +58,9 @@ class DataLoader:
             lines = []
             
             if "generations/llm_annotations" in d_path:
-                    if n_ann_examples == "full":
-                        lines += self.load_fs_ann(dataset_paths)
-                    else:
-                        lines += self.load_fs_ann(dataset_paths)[0:n_ann_examples]
+                    lines += self.load_fs_ann(name, data_type, target, fs_num, llm_name)
+                    if n_ann_examples != "full":
+                        lines = lines[0:n_ann_examples]
                     lines = lines[0:len(lines)-fs_num]
                         
             else:

@@ -13,9 +13,9 @@ dataloader = DataLoader("./datasets", "./fs_examples")
 for i in range(5):
  for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
   for fs_num in [50, 10, 0]:
-   for task in ["asqp", "tasd"]:
+   for task in ["asqp"]:
      for n_llm_examples in ["full", 500, 800]:  
-         train_ds = dataloader.load_data(ds_name, "train", cv=False, target=task, fs_num=fs_num, fs_ann_mode=True, fs_ann_seed=i, n_ann_examples=n_llm_examples)
+         train_ds = dataloader.load_data(ds_name, "train", cv=False, target=task, fs_num=fs_num, fs_ann_mode=True, n_ann_examples=n_llm_examples)
          test_ds = dataloader.load_data(ds_name, "test", cv=False, target=task)
       
          for ml_method in ["paraphrase", "dlo"]:
