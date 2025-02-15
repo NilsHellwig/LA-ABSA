@@ -39,6 +39,8 @@ def get_synonyms(word, sentence_original, top_n=5):
         extraction = extract_text_between_quotes(output)
         if len(extraction) > 0 and extraction[0] not in synonyms and "imilar word" not in extraction[0] and extraction[0] != word and word != "" and word != " ":
             synonyms.append(extraction[0])
+        if seed > 20:
+            synonyms.append(word)
         seed += 1
     print(word, ":",synonyms)
     

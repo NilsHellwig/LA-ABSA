@@ -4,27 +4,45 @@ import random
 import numpy as np
 from sklearn.preprocessing import MultiLabelBinarizer
 from iterstrat.ml_stratifiers import MultilabelStratifiedKFold
+import json
 
 class DataLoader:
     def __init__(self, base_path="datasets", fs_path="fs_examples"):
         self.base_path = base_path
         self.fs_path = fs_path
+        
+    def load_fs_ann(self, dataset_paths, n_llm_examples):
+        with open(dataset_paths[1], "r", encoding="utf-8") as file:
+            data = json.load(file)
+        lines = []
+        for example in data:
+            lines.append(f"{example['text']}####{example['pred_label']}")
+        return lines
 
-    def load_data(self, name, data_type, cv=False, seed=42, target="asqp", fs_mode=False, fs_num=0):
-        if fs_mode:
+        
+    def load_data(self, name, data_type, cv=False, seed=42, target="asqp", fs_mode=False, fs_num=0, fs_ann_mode=False, fs_ann_seed=0, llm_name="gemma2:27b", n_llm_examples=800):
+        if fs_mode or fs_ann_mode:
             dataset_paths = [os.path.join(self.fs_path, target, name, f"fs_{str(fs_num)}", "examples.txt")] 
         else:
             dataset_paths = ["train", "test", "dev"] if data_type == "all" else [data_type]
             dataset_paths = [os.path.join(self.base_path, target, name, f"{d_path}.txt") for d_path in dataset_paths]
+
+        if fs_ann_mode:
+            dataset_paths += [f"./generations/llm_annotations/{target}_{name}_train_{llm_name}_{fs_ann_seed}_label_{fs_num}.json"]
+            
         data = []
 
         for d_path in dataset_paths:
-            if not os.path.exists(d_path):
-                raise FileNotFoundError(f"Dataset file {d_path} not found.")
             
-            with open(d_path, 'r', encoding='utf-8') as file:
-                lines = file.readlines()
+            lines = []
             
+            for d_path in dataset_paths:
+                if "generations/llm_annotations" in d_path:
+                    lines += self.load_fs_ann(dataset_paths, n_llm_examples)
+                else:
+                    with open(d_path, 'r', encoding='utf-8') as file:
+                       lines += file.readlines()
+                    
             for idx, line in enumerate(lines):
                 try:
                     text, aspects_str = line.split("####")
