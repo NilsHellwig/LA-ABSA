@@ -11,7 +11,7 @@ class DataLoader:
         self.base_path = base_path
         self.fs_path = fs_path
         
-    def load_fs_ann(self, dataset_paths, n_llm_examples):
+    def load_fs_ann(self, dataset_paths):
         with open(dataset_paths[1], "r", encoding="utf-8") as file:
             data = json.load(file)
         lines = []
@@ -20,7 +20,7 @@ class DataLoader:
         return lines
 
         
-    def load_data(self, name, data_type, cv=False, seed=42, target="asqp", fs_mode=False, fs_num=0, fs_ann_mode=False, fs_ann_seed=0, llm_name="gemma2:27b", n_llm_examples=800):
+    def load_data(self, name, data_type, cv=False, seed=42, target="asqp", fs_mode=False, fs_num=0, fs_ann_mode=False, fs_ann_seed=0, llm_name="gemma2:27b", n_ann_examples="full"):
         if fs_mode or fs_ann_mode:
             dataset_paths = [os.path.join(self.fs_path, target, name, f"fs_{str(fs_num)}", "examples.txt")] 
         else:
@@ -36,18 +36,24 @@ class DataLoader:
             
             lines = []
             
-            for d_path in dataset_paths:
-                if "generations/llm_annotations" in d_path:
-                    lines += self.load_fs_ann(dataset_paths, n_llm_examples)
-                else:
+            if "generations/llm_annotations" in d_path:
+                    if n_ann_examples == "full":
+                        lines += self.load_fs_ann(dataset_paths)
+                    else:
+                        lines += self.load_fs_ann(dataset_paths)[0:n_ann_examples]
+                    lines = lines[0:len(lines)-fs_num]
+                        
+            else:
                     with open(d_path, 'r', encoding='utf-8') as file:
                        lines += file.readlines()
+                    
                     
             for idx, line in enumerate(lines):
                 try:
                     text, aspects_str = line.split("####")
                     aspects = ast.literal_eval(aspects_str.strip())
                     aspect_list = []
+                
 
                     for aspect in aspects:
                         aspect_dict = {
