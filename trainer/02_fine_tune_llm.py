@@ -17,21 +17,35 @@ dataloader = DataLoader("./datasets", "./fs_examples")
 
 def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples):
          train_ds = dataloader.load_data(ds_name, "train", cv=False, target=task, fs_num=fs_num, fs_ann_mode=True, n_ann_examples=n_llm_examples)[fs_num:]
-         fs_ds = dataloader.load_data(ds_name, "train", cv=False, target=task, fs_num=fs_num, fs_mode=True)
-         test_ds = dataloader.load_data(ds_name, "test", cv=False, target=task)
-    
          unique_aspect_categories = sorted({aspect['aspect_category'] for entry in dataloader.load_data(name=ds_name, data_type="all", target=task) for aspect in entry['aspects']})
-         
-         dataset = []
-    
-         for idx, example in enumerate(train_ds):
-             prompt = promptloader.load_prompt(task=task,
+         fs_ds = dataloader.load_data(ds_name, "train", cv=False, target=task, fs_num=fs_num, fs_mode=True)
+         prompt_header = promptloader.load_prompt(task=task,
                                       prediction_type="label", 
                                       aspects=unique_aspect_categories, 
                                       examples=fs_ds,
                                       seed_examples=seed,
-                                      input_example=example)
-             dataset.append({"text": example["text"], "output": str(example["tuple_list"]), "instruction": "Do Aspect Sentiment Quadruple Preiction."})
+                                      input_example=train_ds[0]).split("Text:")[0]
+                      
+         test_ds = dataloader.load_data(ds_name, "test", cv=False, target=task)
+         
+         
+         alpaca_prompt = """
+
+         ### Instruction:
+         {}
+
+         ### Input:
+         {}
+
+         ### Response:
+         {}"""
+         alpaca_prompt = prompt_header + "\n" + alpaca_prompt
+
+         
+         dataset = []
+    
+         for idx, example in enumerate(train_ds):
+            dataset.append({"text": example["text"], "output": str(example["tuple_list"]), "instruction": prompt_header, "input": ""})
              
              
          # Dataset aus der Liste von Dicts erstellen
@@ -66,18 +80,7 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples):
              use_rslora = False,  # We support rank stabilized LoRA
              loftq_config = None, # And LoftQ
          )
-
-         alpaca_prompt = """Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
-
-         ### Instruction:
-         {}
-
-         ### Input:
-         {}
-
-         ### Response:
-         {}"""
-
+ 
          EOS_TOKEN = tokenizer.eos_token # Must add EOS_TOKEN
          def formatting_prompts_func(examples):
              instructions = examples["instruction"]
@@ -90,11 +93,8 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples):
                  texts.append(text)
              return { "text" : texts, }
 
- 
-         #  dataset = load_dataset("yahma/alpaca-cleaned", split = "train")
-         #  dataset = dataset.map(formatting_prompts_func, batched = True,)
+         dataset = dataset.map(formatting_prompts_func, batched = True,)
          
-
 
          trainer = SFTTrainer(
              model = model,
@@ -108,7 +108,7 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples):
                  per_device_train_batch_size = 2,
                  gradient_accumulation_steps = 4,
                  warmup_steps = 5,
-                 max_steps = 250,
+                 max_steps = 60,
                  learning_rate = 2e-4,
                  fp16 = not is_bfloat16_supported(),
                  bf16 = is_bfloat16_supported(),
@@ -122,12 +122,16 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples):
              ),
          )
 
-         trainer_stats = trainer.train()
+         trainer.train()
 
          FastLanguageModel.for_inference(model) # Enable native 2x faster inference
          inputs = tokenizer(
          [
-             "Das Essen war lecker aber der Service war schrecklich.",
+            alpaca_prompt.format(
+               "The hamburgers were awesome but the service bro was aweful!",  # instruction
+               "",  # input
+               "",  # output - leave this blank for generation!
+            )
          ], return_tensors = "pt").to("cuda")
 
          outputs = model.generate(**inputs, max_new_tokens = 64, use_cache = True)
