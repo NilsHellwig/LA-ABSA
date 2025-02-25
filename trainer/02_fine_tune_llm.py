@@ -36,6 +36,7 @@ alpaca_prompt_base = """
 
 
 def get_trainer(model, tokenizer, dataset, max_seq_length):
+    print("Training on ", len(dataset), "examples")
     return SFTTrainer(
         model=model,
         tokenizer=tokenizer,
@@ -45,11 +46,11 @@ def get_trainer(model, tokenizer, dataset, max_seq_length):
         dataset_num_proc=2,
         packing=False,  # Can make training 5x faster for short sequences.
         args=TrainingArguments(
-            per_device_train_batch_size=2,
+            per_device_train_batch_size=8,
             gradient_accumulation_steps=4,
-            warmup_steps=5,
-            max_steps=10,
-            learning_rate=2e-4,
+            warmup_steps=0,
+            max_steps=int(len(dataset) / 32) * 10, # 8 is the batch size
+            learning_rate=3e-4,
             fp16=not is_bfloat16_supported(),
             bf16=is_bfloat16_supported(),
             logging_steps=1,
@@ -76,7 +77,7 @@ def get_model_and_tokenizer(max_seq_length):
 
     model = FastLanguageModel.get_peft_model(
         model,
-        r=16,  # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
+        r=8,  # Choose any number > 0 ! Suggested 8, 16, 32, 64, 128
         target_modules=[
             "q_proj",
             "k_proj",
@@ -86,12 +87,12 @@ def get_model_and_tokenizer(max_seq_length):
             "up_proj",
             "down_proj",
         ],
-        lora_alpha=16,
-        lora_dropout=0,  # Supports any, but = 0 is optimized
+        lora_alpha=8,
+        lora_dropout=0.05,  # Supports any, but = 0 is optimized
         bias="none",  # Supports any, but = "none" is optimized
         # [NEW] "unsloth" uses 30% less VRAM, fits 2x larger batch sizes!
         use_gradient_checkpointing="unsloth",  # True or "unsloth" for very long context
-        random_state=3407,
+        random_state=43,
         use_rslora=False,  # We support rank stabilized LoRA
         loftq_config=None,  # And LoftQ
     )
