@@ -5,7 +5,17 @@ class PromptLoader:
     def __init__(self, base_path="prompt"):
         self.base_path = base_path   
         
-    def load_prompt(self, task="asqp", prediction_type="label", aspects=[], examples=[], seed_examples=42, input_example=None, polarities=["positive", "negative", "neutral"], reasoning_step="reasoning", shuffle_examples=True):
+    def load_prompt(self, task="asqp", prediction_type="label", aspects=[], examples=[], seed_examples=42, input_example=None, polarities=["positive", "negative", "neutral"], reasoning_step="reasoning", shuffle_examples=True, load_llm_instruction=False):
+        if load_llm_instruction:
+           # Load Base Prompt
+           prompt_path = os.path.join(self.base_path, task, f"llm_instruction.txt")
+           if not os.path.exists(prompt_path):
+               raise FileNotFoundError(f"Prompt file {prompt_path} not found.")
+
+           with open(prompt_path, 'r', encoding='utf-8') as file:
+               prompt = file.read()        
+           return prompt  
+         
         # random shuffle examples with seed
         random.seed(seed_examples)
         
