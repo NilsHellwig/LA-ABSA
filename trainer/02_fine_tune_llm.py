@@ -19,6 +19,7 @@ from promptloader import PromptLoader
 from datasets import Dataset
 
 import json
+import torch
 
 promptloader = PromptLoader()
 dataloader = DataLoader("./datasets", "./fs_examples")
@@ -36,7 +37,6 @@ alpaca_prompt_base = """
 
 
 def get_trainer(model, tokenizer, dataset, max_seq_length):
-    print("Training on ", len(dataset), "examples")
     return SFTTrainer(
         model=model,
         tokenizer=tokenizer,
@@ -49,7 +49,7 @@ def get_trainer(model, tokenizer, dataset, max_seq_length):
             per_device_train_batch_size=8,
             gradient_accumulation_steps=4,
             warmup_steps=0,
-            max_steps=int(len(dataset) / 32) * 10, # 8 is the batch size
+            max_steps=3, #int(len(dataset) / 32) * 10, # 8 is the batch size
             learning_rate=3e-4,
             fp16=not is_bfloat16_supported(),
             bf16=is_bfloat16_supported(),
@@ -57,7 +57,7 @@ def get_trainer(model, tokenizer, dataset, max_seq_length):
             optim="adamw_8bit",
             weight_decay=0.01,
             lr_scheduler_type="linear",
-            seed=3407,
+            seed=43,
             output_dir="outputs",
             report_to="none",  # Use this for WandB etc
         ),
@@ -194,9 +194,11 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples):
                 ],
                 return_tensors="pt",
             ).to("cuda")
+            
+            torch.manual_seed(len(prediction["invalid_precitions_label"]))
 
             output_raw = tokenizer.batch_decode(
-                model.generate(**inputs, max_new_tokens=64, use_cache=True)
+                model.generate(**inputs, max_new_tokens=64, use_cache=True),
             )[0]
             output_label = output_raw.split("### Response:")
 
