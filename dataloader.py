@@ -52,6 +52,7 @@ class DataLoader:
             for j in range(num_aug_for_example): # anzahl an annotierten beispielen
                 lines_sorted.append(lines[j*num_aug_for_example+i])
         
+        lines_sorted = lines_sorted * 10
         return lines_sorted
 
 

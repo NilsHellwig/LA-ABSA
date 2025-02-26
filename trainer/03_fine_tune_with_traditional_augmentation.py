@@ -13,7 +13,7 @@ dataloader = DataLoader("./datasets", "./fs_examples")
 
 for i in range(5):
     for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
-        for fs_num in [50, 10]:
+        for fs_num in [10, 50]:
             for task in ["asqp", "tasd"]:
                 for n_llm_examples in ["full", 800, 1600]:
                     for aug_method in ["eda", "llm_eda", "back_translation"]:
@@ -27,11 +27,12 @@ for i in range(5):
                             aug_method=aug_method,
                             n_ann_examples=n_llm_examples,
                         )
+
                         test_ds = dataloader.load_data(
                             ds_name, "test", cv=False, target=task
                         )
 
-                        for ml_method in ["paraphrase", "dlo", "mvp"]:
+                        for ml_method in ["paraphrase", "dlo"]:
                             print(
                                 f"Task:",
                                 task,
@@ -49,8 +50,10 @@ for i in range(5):
                                 len(test_ds),
                                 "n_llm_examples",
                                 n_llm_examples,
+                                "aug_method",
+                                aug_method,
                             )
-                            filename = f"./generations/train_llm_annotations/training_{task}_{ds_name}_seed-{i}_n-train_{ml_method}_fs-num_{fs_num}_n-llm-examples_{n_llm_examples}_aug_method_{aug_method}.json"
+                            filename = f"./generations/train_traditional_augmentations/training_{task}_{ds_name}_seed-{i}_n-train_{ml_method}_fs-num_{fs_num}_n-llm-examples_{n_llm_examples}_aug_method_{aug_method}.json"
 
                             if os.path.exists(filename):
                                 print(f"File {filename} already exists. Skipping.")
@@ -89,3 +92,5 @@ for i in range(5):
                                     json.dump(
                                         scores, json_file, ensure_ascii=False, indent=4
                                     )
+
+
