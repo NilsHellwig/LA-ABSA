@@ -31,18 +31,33 @@ class DataLoader:
                    labels.append([])
             merged_label = merge_aspect_lists(labels, minimum_appearance=3)
 
-            
-            for l in merged_label:
-                if len(l) > 4:
-                    raise KeyboardInterrupt(merged_label)
             if len(merged_label) > 0:
                lines.append(f"{data[0][k]['text']}####{merged_label}")
             
         return lines
+    
+    def load_aug_ann(self, name, target, fs_num, aug_method):
+        lines = []
+        with open(f"./generations/{aug_method}/{target}_{name}_{fs_num}.txt", "r", encoding="utf-8") as file:
+            for line in file:
+                lines.append(line.strip())  # Entfernt Zeilenumbrüche
+        
+        lines_sorted = []
+                        
+        if aug_method == "eda" or aug_method == "llm_eda":
+            num_aug_for_example = int(len(lines) / fs_num)
+        if aug_method == "back_translation":
+            num_aug_for_example = 5
+        for i in range(fs_num): # anzahl an beispielen die augmentiert wurden
+            for j in range(num_aug_for_example): # anzahl an annotierten beispielen
+                lines_sorted.append(lines[j*num_aug_for_example+i])
+        
+        return lines_sorted
+
 
         
-    def load_data(self, name, data_type, cv=False, seed=42, target="asqp", fs_mode=False, fs_num=0, fs_ann_mode=False, llm_name="gemma2:27b", n_ann_examples="full"):
-        if fs_mode or fs_ann_mode:
+    def load_data(self, name, data_type, cv=False, seed=42, target="asqp", fs_mode=False, fs_num=0, fs_ann_mode=False, llm_name="gemma2:27b", n_ann_examples="full", aug_mode=False, aug_method=None):
+        if fs_mode or fs_ann_mode or aug_mode:
             dataset_paths = [os.path.join(self.fs_path, target, name, f"fs_{str(fs_num)}", "examples.txt")] 
         else:
             dataset_paths = ["train", "test", "dev"] if data_type == "all" else [data_type]
@@ -50,6 +65,9 @@ class DataLoader:
 
         if fs_ann_mode:
             dataset_paths += [f"../generations/llm_annotations/"]
+        
+        if aug_mode:
+            dataset_paths += [f"../generations/{aug_method}/"]
             
         data = []
 
@@ -62,7 +80,13 @@ class DataLoader:
                     if n_ann_examples != "full":
                         lines = lines[0:n_ann_examples]
                     lines = lines[0:len(lines)-fs_num]
-                        
+            elif f"generations/{aug_method}" in d_path:
+                    lines += self.load_aug_ann(name, target, fs_num, aug_method)
+                    if n_ann_examples != "full":
+                        lines = lines[0:n_ann_examples]
+                    temp_dl = DataLoader()
+                    original_full_size = len(temp_dl.load_data(name, "train", cv=False, target=target))
+                    lines = lines[0:original_full_size-fs_num]               
             else:
                     with open(d_path, 'r', encoding='utf-8') as file:
                        lines += file.readlines()
