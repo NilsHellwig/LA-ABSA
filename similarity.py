@@ -3,7 +3,7 @@ import os
 from sentence_transformers import SentenceTransformer
 import numpy as np
 
-CACHE_FILE = "similarity_cache.json"
+CACHE_FILE = "../01_create_annotated_examples/similarity_cache.json"
 
 def load_cache():
     """Lädt die JSON-Datei mit gespeicherten Ähnlichkeitsscores, falls sie gültig ist."""
