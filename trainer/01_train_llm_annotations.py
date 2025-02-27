@@ -18,7 +18,7 @@ for i in range(5):
          train_ds = dataloader.load_data(ds_name, "train", cv=False, target=task, fs_num=fs_num, fs_ann_mode=True, n_ann_examples=n_llm_examples)
          test_ds = dataloader.load_data(ds_name, "test", cv=False, target=task)
       
-         for ml_method in ["paraphrase"]:
+         for ml_method in ["paraphrase", "dlo"]:
             print(f"Task:", task, "Dataset:", ds_name, "Seed:", i, "ML-Method:", ml_method, "FS-Num:", fs_num, "len(train_ds)", len(train_ds), "len(test_ds)", len(test_ds), "n_llm_examples", n_llm_examples)
             filename = f"./generations/train_llm_annotations/training_{task}_{ds_name}_seed-{i}_n-train_{ml_method}_fs-num_{fs_num}_n-llm-examples_{n_llm_examples}.json"
 
