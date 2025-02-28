@@ -157,6 +157,6 @@ combinations = itertools.product(n_few_shot, datasets, tasks)
 
 for combination in combinations:
     fs, dataset_name, task = combination
-    file_path_save = f"augmentation/generations/eda/{task}_{dataset_name}_{fs}.txt"
+    file_path_save = f"_out_synthetic_examples/02_eda_few_shot_augmenter/{task}_{dataset_name}_{fs}.txt"
     # Prüfen, ob die Datei bereits existiert
     lines = augment_examples(file_path_save=file_path_save, task=task, dataset_name=dataset_name, n_few_shot=fs)

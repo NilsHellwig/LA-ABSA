@@ -168,14 +168,14 @@ tasks = ["asqp", "tasd"]
 dataset_types = ["train"]
 models = ["gemma2:27b"]
 modes = ["label"] # "label"
-sort_examples = [True, False]
+sort_examples = [False]
 
 
 combinations = itertools.product(seeds, n_few_shot, datasets, tasks, dataset_types, models, modes, sort_examples)
 
 for combination in combinations:
     seed, fs,  dataset_name, task, dataset_type, model, mode, s_ex = combination
-    file_path = f"generations/llm_annotations/{task}_{dataset_name}_{dataset_type}_{model}_{seed}_{mode}_{fs}_{s_ex}.json"
+    file_path = f"_out_synthetic_examples/01_llm_annotate_train/{task}_{dataset_name}_{dataset_type}_{model}_{seed}_{mode}_{fs}_{s_ex}.json"
     # Prüfen, ob die Datei bereits existiert
     if not os.path.exists(file_path):
         create_annotations(task, dataset_name, dataset_type, model, seed, mode, fs, s_ex)
