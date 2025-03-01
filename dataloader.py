@@ -16,7 +16,7 @@ class DataLoader:
         
         data = []
         for seed in range(5):
-          with open(f"./generations/llm_annotations/{target}_{name}_train_{llm_name}_{seed}_label_{fs_num}.json", "r", encoding="utf-8") as file:
+          with open(f"./_out_synthetic_examples/01_llm_annotate_train/{target}_{name}_train_{llm_name}_{seed}_label_{fs_num}.json", "r", encoding="utf-8") as file:
             examples = json.load(file)
           data.append(examples)
         
@@ -38,7 +38,7 @@ class DataLoader:
     
     def load_aug_ann(self, name, target, fs_num, aug_method):
         lines = []
-        with open(f"./generations/{aug_method}/{target}_{name}_{fs_num}.txt", "r", encoding="utf-8") as file:
+        with open(f"./_out_synthetic_examples/{aug_method}_few_shot_augmenter/{target}_{name}_{fs_num}.txt", "r", encoding="utf-8") as file:
             for line in file:
                 lines.append(line.strip())  # Entfernt Zeilenumbrüche
         
@@ -65,10 +65,10 @@ class DataLoader:
             dataset_paths = [os.path.join(self.base_path, target, name, f"{d_path}.txt") for d_path in dataset_paths]
 
         if fs_ann_mode:
-            dataset_paths += [f"../generations/llm_annotations/"]
+            dataset_paths += [f"../_out_synthetic_examples/01_llm_annotate_train/"]
         
         if aug_mode:
-            dataset_paths += [f"../generations/{aug_method}/"]
+            dataset_paths += [f"../_out_synthetic_examples/{aug_method}_few_shot_augmenter/"]
             
         data = []
 
@@ -76,12 +76,12 @@ class DataLoader:
             
             lines = []
             
-            if "generations/llm_annotations" in d_path:
+            if "_out_synthetic_examples/01_llm_annotate_train" in d_path:
                     lines += self.load_fs_ann(name, data_type, target, fs_num, llm_name)
                     if n_ann_examples != "full":
                         lines = lines[0:n_ann_examples]
                     lines = lines[0:len(lines)-fs_num]
-            elif f"generations/{aug_method}" in d_path:
+            elif f"_out_synthetic_examples/{aug_method}_few_shot_augmenter" in d_path:
                     lines += self.load_aug_ann(name, target, fs_num, aug_method)
                     if n_ann_examples != "full":
                         lines = lines[0:n_ann_examples]

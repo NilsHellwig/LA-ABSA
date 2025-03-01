@@ -100,17 +100,23 @@ def get_model_and_tokenizer(max_seq_length):
     return model, tokenizer
 
 
-def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples, llm_name):
+def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples, llm_name, only_real_data=False):
     # Load datasets
-    train_ds = dataloader.load_data(
-        ds_name,
-        "train",
-        cv=False,
-        target=task,
-        fs_num=fs_num,
-        fs_ann_mode=True,
-        n_ann_examples=n_llm_examples,
-    )[fs_num:]
+    if only_real_data:
+        if n_llm_examples == "full":
+            train_ds = dataloader.load_data(ds_name, "train", cv=False, target=task)
+        else:
+            train_ds = dataloader.load_data(ds_name, "train", cv=False, target=task, fs_mode=True, fs_num=n_llm_examples)
+    else:
+        train_ds = dataloader.load_data(
+          ds_name,
+          "train",
+          cv=False,
+          target=task,
+          fs_num=fs_num,
+          fs_ann_mode=True,
+          n_ann_examples=n_llm_examples)#[fs_num:]
+        
     unique_aspect_categories = sorted(
         {
             aspect["aspect_category"]
@@ -243,13 +249,13 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples, llm_name):
         )
         predictions.append(dict(prediction, **example))
 
-    dir_path = f"generations/ft_llm_predictions"
+    dir_path = f"../_out_fine_tunings/02_fine_tune_llm"
 
     # Create the directories if they don't exist
     os.makedirs(dir_path, exist_ok=True)
 
     with open(
-        f"{dir_path}/fine_tune_{llm_name}_{seed}_{task}_{fs_num}_{ds_name}.json",
+        f"{dir_path}/{llm_name}_{seed}_{task}_{fs_num}_{ds_name}.json",
         "w",
         encoding="utf-8",
     ) as json_file:
@@ -260,6 +266,23 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples, llm_name):
 
 LLM_NAME = "gemma-2-9b"
 
+# Train the model without synthetic data
+for seed in range(5):
+    for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
+            for task in ["asqp", "tasd"]:
+                for n_llm_examples in ["full", 500, 800]:
+                    fine_tune_llm(
+                        seed=seed,
+                        ds_name=ds_name,
+                        fs_num=0,
+                        task=task,
+                        n_llm_examples=n_llm_examples,
+                        llm_name=LLM_NAME,
+                        only_real_data=True
+                    )
+
+
+# with synth
 for i in range(5):
     for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
         for fs_num in [50, 10, 0]:
