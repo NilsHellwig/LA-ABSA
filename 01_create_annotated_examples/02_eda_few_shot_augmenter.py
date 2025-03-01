@@ -137,7 +137,7 @@ def augment_examples(file_path_save, task, dataset_name, n_few_shot):
                     augmented_sentence += augmented_part + " "
                     augmented_tuples = [[augmented_part if t == part else t for t in tupl] for tupl in augmented_tuples]
                 # Term und n_aug == 0
-                elif n_aug == 0:
+                else:
                     augmented_sentence += part + " "
                 
                 current_token += len(simple_tokenizer(part)) 
@@ -149,9 +149,9 @@ def augment_examples(file_path_save, task, dataset_name, n_few_shot):
         f.write("\n".join(lines_save))
 
 n_few_shot = [10, 50]  # 0 fehlt noch
-datasets = ["rest15", "rest16", "hotels", "flightabsa", "coursera", "gerest"]
-tasks = ["tasd", "asqp"]
-TRANSLATE_TERMS = False
+datasets = ["coursera", "rest16", "hotels", "flightabsa", "rest15", "gerest"]
+tasks = ["asqp", "tasd"]
+TRANSLATE_TERMS = True
 
 combinations = itertools.product(n_few_shot, datasets, tasks)
 

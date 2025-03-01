@@ -18,7 +18,7 @@ def extract_text_between_quotes(text):
   return re.findall(r'"([^"]*)"', text)
 
 def get_prompt(word, sentence_original):
-    return f'''I'll give you a term that is in the sentence "{sentence_original}", find a similar term and return it enclosed by '"'.\nTerm: "{word}"\nSimilar word: "'''
+    return f'''I'll give you a term that is in the sentence "{sentence_original}", find a similar term and return it enclosed by '"'.\nTerm: "{word}"\nSimilar Term: "'''
     
 
 def get_synonyms(word, sentence_original, top_n=5):
@@ -37,7 +37,7 @@ def get_synonyms(word, sentence_original, top_n=5):
     while len(synonyms) < top_n:
         output, duration = llm.predict(get_prompt(word, sentence_original), seed=seed)
         extraction = extract_text_between_quotes(output)
-        if len(extraction) > 0 and extraction[0] not in synonyms and "imilar word" not in extraction[0] and extraction[0] != word and word != "" and word != " ":
+        if len(extraction) > 0 and len(extraction[0]) > 0 and extraction[0] not in synonyms and "imilar word" not in extraction[0] and extraction[0] != word and word != "" and word != " ":
             synonyms.append(extraction[0])
         if seed > 20:
             synonyms.append(word)
@@ -156,7 +156,7 @@ def augment_examples(file_path_save, task, dataset_name, n_few_shot):
                     augmented_sentence += augmented_part + " "
                     augmented_tuples = [[augmented_part if t == part else t for t in tupl] for tupl in augmented_tuples]
                 # Term und n_aug == 0
-                elif n_aug == 0:
+                else:
                     augmented_sentence += part + " "
                 
                 current_token += len(simple_tokenizer(part)) 
@@ -170,7 +170,7 @@ def augment_examples(file_path_save, task, dataset_name, n_few_shot):
 n_few_shot = [10, 50]  # 0 fehlt noch
 datasets = ["rest15", "rest16", "hotels", "flightabsa", "coursera", "gerest"]
 tasks = ["tasd", "asqp"]
-TRANSLATE_TERMS = False
+TRANSLATE_TERMS = True
 
 combinations = itertools.product(n_few_shot, datasets, tasks)
 
