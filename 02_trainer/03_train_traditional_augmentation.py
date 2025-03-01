@@ -11,7 +11,7 @@ from helper import clean_up, create_output_directory
 dataloader = DataLoader("./datasets", "./fs_examples")
 
 
-for i in range(5):
+for seed in range(5):
     for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
         for fs_num in [10, 50]:
             for task in ["asqp", "tasd"]:
@@ -39,7 +39,7 @@ for i in range(5):
                                 "Dataset:",
                                 ds_name,
                                 "Seed:",
-                                i,
+                                seed,
                                 "ML-Method:",
                                 ml_method,
                                 "FS-Num:",
@@ -53,7 +53,7 @@ for i in range(5):
                                 "aug_method",
                                 aug_method,
                             )
-                            filename = f"./generations/train_traditional_augmentations/training_{task}_{ds_name}_seed-{i}_n-train_{ml_method}_fs-num_{fs_num}_n-llm-examples_{n_llm_examples}_aug_method_{aug_method}.json"
+                            filename = f"./generations/train_traditional_augmentations/{ml_method}_{aug_method}_{n_llm_examples}_{task}_{fs_num}_{ds_name}_{seed}.json"
 
                             if os.path.exists(filename):
                                 print(f"File {filename} already exists. Skipping.")
@@ -67,7 +67,7 @@ for i in range(5):
                                     scores = train_paraphrase(
                                         train_ds=train_ds,
                                         test_ds=test_ds,
-                                        seed=i,
+                                        seed=seed,
                                         dataset=ds_name,
                                         task=task,
                                     )
@@ -75,7 +75,7 @@ for i in range(5):
                                     scores = train_mvp(
                                         train_ds=train_ds,
                                         test_ds=test_ds,
-                                        seed=i,
+                                        seed=seed,
                                         dataset=ds_name,
                                         task=task,
                                     )
@@ -83,7 +83,7 @@ for i in range(5):
                                     scores = train_dlo(
                                         train_ds=train_ds,
                                         test_ds=test_ds,
-                                        seed=i,
+                                        seed=seed,
                                         dataset=ds_name,
                                         task=task,
                                     )

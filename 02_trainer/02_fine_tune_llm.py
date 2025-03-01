@@ -68,7 +68,7 @@ def get_model_and_tokenizer(max_seq_length):
     dtype = None  # None for auto detection. Float16 for Tesla T4, V100, Bfloat16 for Ampere+
     load_in_4bit = True  # Use 4bit quantization to reduce memory usage. Can be False.
     model, tokenizer = FastLanguageModel.from_pretrained(
-        model_name="unsloth/gemma-2-9b",
+        model_name=f"unsloth/{LLM_NAME}",
         max_seq_length=max_seq_length,
         dtype=dtype,
         load_in_4bit=load_in_4bit,
@@ -100,7 +100,7 @@ def get_model_and_tokenizer(max_seq_length):
     return model, tokenizer
 
 
-def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples):
+def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples, llm_name):
     # Load datasets
     train_ds = dataloader.load_data(
         ds_name,
@@ -172,7 +172,7 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples):
             "task": task,
             "dataset_name": ds_name,
             "dataset_type": "test",
-            "llm_base_model": "gemma-2-9b",
+            "llm_base_model": llm_name,
             "mode": "label",
             "id": example["id"],
             "invalid_precitions_label": [],
@@ -249,7 +249,7 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples):
     os.makedirs(dir_path, exist_ok=True)
 
     with open(
-        f"{dir_path}/{task}_{ds_name}_test_gemma-2-9b_{seed}_label_{fs_num}.json",
+        f"{dir_path}/fine_tune_{llm_name}_{seed}_{task}_{fs_num}_{ds_name}.json",
         "w",
         encoding="utf-8",
     ) as json_file:
@@ -257,6 +257,8 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples):
 
     shutil.rmtree("outputs")
 
+
+LLM_NAME = "gemma-2-9b"
 
 for i in range(5):
     for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
@@ -269,4 +271,5 @@ for i in range(5):
                         fs_num=fs_num,
                         task=task,
                         n_llm_examples=n_llm_examples,
+                        llm_name=LLM_NAME
                     )
