@@ -13,7 +13,7 @@ dataloader = DataLoader("./datasets", "./fs_examples")
 
 for seed in range(5):
     for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
-        for fs_num in [10, 50]:
+        for fs_num in [50, 10]:
             for task in ["asqp", "tasd"]:
                 for n_llm_examples in ["full", 800, 1600]:
                     for aug_method in ["eda", "llm_eda", "back_translation"]:
@@ -53,7 +53,7 @@ for seed in range(5):
                                 "aug_method",
                                 aug_method,
                             )
-                            filename = f"./generations/train_traditional_augmentations/{ml_method}_{aug_method}_{n_llm_examples}_{task}_{fs_num}_{ds_name}_{seed}.json"
+                            filename = f"./_out_fine_tunings/03_traditional_augmentation/{ml_method}_{aug_method}_{n_llm_examples}_{task}_{fs_num}_{ds_name}_{seed}.json"
 
                             if os.path.exists(filename):
                                 print(f"File {filename} already exists. Skipping.")

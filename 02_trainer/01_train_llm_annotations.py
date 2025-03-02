@@ -13,14 +13,14 @@ dataloader = DataLoader("./datasets", "./fs_examples")
 for seed in range(5):
  for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
   for fs_num in [50, 10, 0]:
-   for task in ["asqp", "tasd"]:
-     for n_llm_examples in ["full", 500, 800]:  
+   for task in ["tasd", "asqp"]:
+     for n_llm_examples in ["full", 800]:  
          train_ds = dataloader.load_data(ds_name, "train", cv=False, target=task, fs_num=fs_num, fs_ann_mode=True, n_ann_examples=n_llm_examples)
          test_ds = dataloader.load_data(ds_name, "test", cv=False, target=task)
       
          for ml_method in ["paraphrase", "dlo"]:
             print(f"Task:", task, "Dataset:", ds_name, "Seed:", seed, "ML-Method:", ml_method, "FS-Num:", fs_num, "len(train_ds)", len(train_ds), "len(test_ds)", len(test_ds), "n_llm_examples", n_llm_examples)
-            filename = f"./generations/train_llm_annotations/{ml_method}_{n_llm_examples}_{task}_{fs_num}_{ds_name}_{seed}.json"
+            filename = f"./_out_fine_tunings/01_llm_annotate_train/{ml_method}_{n_llm_examples}_{task}_{fs_num}_{ds_name}_{seed}.json"
 
             if os.path.exists(filename):
                print(f"File {filename} already exists. Skipping.")
