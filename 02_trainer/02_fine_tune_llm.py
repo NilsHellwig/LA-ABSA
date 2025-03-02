@@ -49,7 +49,7 @@ def get_trainer(model, tokenizer, dataset, max_seq_length):
             per_device_train_batch_size=8,
             gradient_accumulation_steps=4,
             warmup_steps=0,
-            max_steps=int(len(dataset) / 32) * 10, # 8 is the batch size
+            max_steps=50, #int(len(dataset) / 32) * 10, # 8 is the batch size
             learning_rate=3e-4,
             fp16=not is_bfloat16_supported(),
             bf16=is_bfloat16_supported(),
@@ -172,7 +172,9 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples, llm_name, only_re
     FastLanguageModel.for_inference(model)  # Enable native 2x faster inference
 
     predictions = []
+
     for idx, example in enumerate(test_ds):
+        seed_itr = seed
 
         prediction = {
             "task": task,
@@ -219,24 +221,24 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples, llm_name, only_re
             if validator_output[0] != False:
                 prediction["pred_raw"] = output_raw
                 prediction["pred_label"] = validator_output[0]
-                prediction["seed"] = seed
+                prediction["seed"] = seed_itr
                 correct_output = True
             else:
                 prediction["invalid_precitions_label"].append(
                     {
                         "pred_label_raw": output_raw,
                         "pred_label": validator_output[0],
-                        "seed": seed,
+                        "seed": seed_itr,
                         "regeneration_reason": validator_output[1],
                     }
                 )
-                seed += 5
+                seed_itr += 5
                 pass
 
             if len(prediction["invalid_precitions_label"]) > 9:
                 correct_output = True
                 prediction["pred_label"] = []
-                prediction["seed"] = seed
+                prediction["seed"] = seed_itr
 
         print(
             f"####### {idx}/{len(test_ds)} ### ",
@@ -249,10 +251,11 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples, llm_name, only_re
         )
         predictions.append(dict(prediction, **example))
 
-    dir_path = f"../_out_fine_tunings/02_fine_tune_llm"
+    dir_path = f"./_out_fine_tunings/02_fine_tune_llm"
 
     # Create the directories if they don't exist
     os.makedirs(dir_path, exist_ok=True)
+    print("Saving predictions to", dir_path)
     
     if not only_real_data:
 
@@ -277,13 +280,13 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples, llm_name, only_re
 LLM_NAME = "gemma-2-9b"
 
 # with synth
-for i in range(5):
+for seed in range(5):
     for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
         for fs_num in [50, 10, 0]:
             for task in ["asqp", "tasd"]:
                 for n_llm_examples in ["full", 800]:
                     fine_tune_llm(
-                        seed=i,
+                        seed=seed,
                         ds_name=ds_name,
                         fs_num=fs_num,
                         task=task,
