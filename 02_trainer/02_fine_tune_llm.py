@@ -283,7 +283,7 @@ LLM_NAME = "gemma-2-9b"
 for seed in range(5):
     for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
         for fs_num in [50, 10, 0]:
-            for task in ["asqp", "tasd"]:
+            for task in ["tasd", "asqp"]:
                 for n_llm_examples in ["full", 800]:
                     fine_tune_llm(
                         seed=seed,
@@ -295,17 +295,17 @@ for seed in range(5):
                     )
 
 # Train the model without synthetic data
-for seed in range(5):
-    for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
-            for task in ["asqp", "tasd"]:
-                for n_llm_examples in ["full", 800]:
-                    fine_tune_llm(
-                        seed=seed,
-                        ds_name=ds_name,
-                        fs_num=0,
-                        task=task,
-                        n_llm_examples=n_llm_examples,
-                        llm_name=LLM_NAME,
-                        only_real_data=True
-                    )
+# for seed in range(5):
+#     for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
+#             for task in ["asqp", "tasd"]:
+#                 for n_llm_examples in ["full", 800]:
+#                     fine_tune_llm(
+#                         seed=seed,
+#                         ds_name=ds_name,
+#                         fs_num=0,
+#                         task=task,
+#                         n_llm_examples=n_llm_examples,
+#                         llm_name=LLM_NAME,
+#                         only_real_data=True
+#                     )
 
