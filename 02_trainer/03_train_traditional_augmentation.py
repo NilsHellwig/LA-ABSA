@@ -14,7 +14,7 @@ dataloader = DataLoader("./datasets", "./fs_examples")
 for seed in range(5):
     for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
         for fs_num in [50, 10]:
-            for task in ["asqp", "tasd"]:
+            for task in ["tasd", "asqp"]:
                 for n_llm_examples in ["full", 800, 1600]:
                     for aug_method in ["eda", "llm_eda", "back_translation"]:
                         train_ds = dataloader.load_data(

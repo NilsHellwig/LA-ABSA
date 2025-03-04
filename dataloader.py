@@ -38,7 +38,8 @@ class DataLoader:
     
     def load_aug_ann(self, name, target, fs_num, aug_method):
         lines = []
-        with open(f"./_out_synthetic_examples/{aug_method}_few_shot_augmenter/{target}_{name}_{fs_num}.txt", "r", encoding="utf-8") as file:
+        idx_aug = {"eda": 2, "llm_eda": 3, "back_translation": 4}
+        with open(f"./_out_synthetic_examples/0{str(idx_aug[aug_method])}_{aug_method}_few_shot_augmenter/{target}_{name}_{fs_num}.txt", "r", encoding="utf-8") as file:
             for line in file:
                 lines.append(line.strip())  # Entfernt Zeilenumbrüche
         
