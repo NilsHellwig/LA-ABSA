@@ -126,7 +126,7 @@ def augment_examples(file_path_save, task, dataset_name, n_few_shot):
                 
         
 n_few_shot = [10, 50] # 0 fehlt noch
-datasets = ["rest15", "rest16", "hotels", "flightabsa", "coursera", "gerest"]
+datasets = ["rest15", "rest16", "hotels", "flightabsa", "coursera"]
 tasks = ["asqp", "tasd"]
 TRANSLATE_TERMS = True
 candidate_langs = ['fr', 'zh', 'ar', 'jap', 'da']

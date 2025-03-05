@@ -149,7 +149,7 @@ def augment_examples(file_path_save, task, dataset_name, n_few_shot):
         f.write("\n".join(lines_save))
 
 n_few_shot = [10, 50]  # 0 fehlt noch
-datasets = ["coursera", "rest16", "hotels", "flightabsa", "rest15", "gerest"]
+datasets = ["coursera", "rest16", "hotels", "flightabsa", "rest15"]
 tasks = ["asqp", "tasd"]
 TRANSLATE_TERMS = True
 
