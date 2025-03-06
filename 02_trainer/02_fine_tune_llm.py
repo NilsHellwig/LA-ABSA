@@ -49,7 +49,7 @@ def get_trainer(model, tokenizer, dataset, max_seq_length):
             per_device_train_batch_size=8,
             gradient_accumulation_steps=4,
             warmup_steps=0,
-            max_steps=50, #int(len(dataset) / 32) * 10, # 8 is the batch size
+            max_steps=int(len(dataset) / 32) * 10, # 8 is the batch size
             learning_rate=3e-4,
             fp16=not is_bfloat16_supported(),
             bf16=is_bfloat16_supported(),
