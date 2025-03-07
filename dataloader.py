@@ -47,12 +47,9 @@ class DataLoader:
             num_aug_for_example = int(len(lines) / fs_num)
         if aug_method == "back_translation":
             num_aug_for_example = 5
-        for i in range(fs_num): # anzahl an beispielen die augmentiert wurden
-            for j in range(num_aug_for_example): # anzahl an annotierten beispielen
-                try:
-                  lines_sorted.append(lines[j*num_aug_for_example+i])
-                except:
-                    pass
+        for j in range(num_aug_for_example): # anzahl an annotierten beispielen   
+            for i in range(fs_num): # anzahl an beispielen die augmentiert wurden
+                lines_sorted.append(lines[j+num_aug_for_example*i])
 
         lines_sorted = lines_sorted * 10
         return lines_sorted
