@@ -25,15 +25,13 @@ class DataLoader:
             labels = []
 
             for i in range(0, len(data)):
-                if data[i][k]["pred_label"] != []:
+                if len(data[i][k]["pred_label"]) > 0:
                    labels += [data[i][k]["pred_label"]]
                 else:
                    labels.append([])
             merged_label = merge_aspect_lists(labels, minimum_appearance=3)
-
-            if len(merged_label) > 0:
-               lines.append(f"{data[0][k]['text']}####{merged_label}")
-            
+            lines.append(f"{data[0][k]['text']}####{merged_label}")
+                 
         return lines
     
     def load_aug_ann(self, name, target, fs_num, aug_method):
@@ -51,8 +49,11 @@ class DataLoader:
             num_aug_for_example = 5
         for i in range(fs_num): # anzahl an beispielen die augmentiert wurden
             for j in range(num_aug_for_example): # anzahl an annotierten beispielen
-                lines_sorted.append(lines[j*num_aug_for_example+i])
-        
+                try:
+                  lines_sorted.append(lines[j*num_aug_for_example+i])
+                except:
+                    pass
+
         lines_sorted = lines_sorted * 10
         return lines_sorted
 
@@ -78,17 +79,21 @@ class DataLoader:
             lines = []
             
             if "_out_synthetic_examples/01_llm_annotate_train" in d_path:
-                    lines += self.load_fs_ann(name, data_type, target, fs_num, llm_name)
+                    ann_examples = self.load_fs_ann(name, data_type, target, fs_num, llm_name)
+                    lines += ann_examples
                     if n_ann_examples != "full":
                         lines = lines[0:n_ann_examples]
-                    lines = lines[0:len(lines)-fs_num]
+                        
+                        
             elif f"_out_synthetic_examples/{aug_method}_few_shot_augmenter" in d_path:
-                    lines += self.load_aug_ann(name, target, fs_num, aug_method)
+                    ann_examples = self.load_aug_ann(name, target, fs_num, aug_method)
+                    lines += ann_examples
                     if n_ann_examples != "full":
                         lines = lines[0:n_ann_examples]
-                    temp_dl = DataLoader()
-                    original_full_size = len(temp_dl.load_data(name, "train", cv=False, target=target))
-                    lines = lines[0:original_full_size-fs_num]               
+                    else:
+                      temp_dl = DataLoader()
+                      original_full_size = len(temp_dl.load_data(name, "train", cv=False, target=target))
+                      lines = lines[0:original_full_size-fs_num]               
             else:
                     with open(d_path, 'r', encoding='utf-8') as file:
                        lines += file.readlines()
