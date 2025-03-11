@@ -30,7 +30,6 @@ alpaca_prompt_base = """
          {}
 
          ### Input:
-         {}
 
          ### Response:
          {}"""
@@ -136,10 +135,8 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples, llm_name, only_re
     for idx, example in enumerate(train_ds):
         dataset.append(
             {
-                "text": example["text"],
-                "output": str(example["tuple_list"]),
-                "instruction": prompt_header,
                 "input": example["text"],
+                "output": str(example["tuple_list"]),
             }
         )
     dataset = Dataset.from_dict({key: [d[key] for d in dataset] for key in dataset[0]})
@@ -148,13 +145,12 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples, llm_name, only_re
     EOS_TOKEN = tokenizer.eos_token  # Must add EOS_TOKEN
 
     def formatting_prompts_func(examples):
-        instructions = examples["instruction"]
         inputs = examples["input"]
         outputs = examples["output"]
         texts = []
-        for instruction, input, output in zip(instructions, inputs, outputs):
+        for input, output in zip(inputs, outputs):
             # Must add EOS_TOKEN, otherwise your generation will go on forever!
-            text = alpaca_prompt.format(instruction, input, output) + EOS_TOKEN
+            text = prompt_header + alpaca_prompt.format(input, output) + EOS_TOKEN
             texts.append(text)
         return {
             "text": texts,
@@ -194,8 +190,7 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples, llm_name, only_re
 
             inputs = tokenizer(
                 [
-                    alpaca_prompt.format(
-                        prompt_header,  # instruction
+                    prompt_header + alpaca_prompt.format(
                         test_text,  # input
                         "",  # output - leave this blank for generation!
                     )
