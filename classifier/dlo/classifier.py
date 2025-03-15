@@ -208,6 +208,11 @@ def get_para_tasd_targets(sents, labels, top_k):
         quad_list = []
         for quad in label:
             at, ac, sp = quad  # Kein OT mehr
+            
+            if language == 'german':
+                man_ot = sentword2opinion_german[sp]  # 'POS
+            else:
+                man_ot = sentword2opinion[sp]  # 'POS' -> 'good'
 
             if at == 'NULL':  # für implizite Aspekte
                 if language == 'german':
@@ -217,7 +222,8 @@ def get_para_tasd_targets(sents, labels, top_k):
 
             quad = [f"[AT] {at}",
                     f"[AC] {ac}",
-                    f"[SP] {sp}"]
+                    f"[SP] {man_ot}"]
+            
             x = permutations(quad)
             permute_object = {}
             for each in x:
@@ -301,6 +307,7 @@ def get_para_tasd_targets_test(sents, labels):
         target = ' [SSEP] '.join(all_triplet_sentences)
         targets.append(target)
     return targets
+
 
 def order_scores_function(quad_list, cur_sent, model, tokenizer, device, task):
     """
