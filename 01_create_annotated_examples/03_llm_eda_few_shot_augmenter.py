@@ -8,7 +8,9 @@ from llm import LLM
 
 synonym_cache = {}
 
-llm = LLM("llama3.1:8b", parameters=[
+model = "gemma3:27b"
+
+llm = LLM(model, parameters=[
         {"name": "stop", "value": [")]"]}, 
         {"name": "num_ctx", "value": "4096"}
         ]) #8192
@@ -174,8 +176,12 @@ TRANSLATE_TERMS = True
 
 combinations = itertools.product(n_few_shot, datasets, tasks)
 
+import time, subprocess
+
 for combination in combinations:
     fs, dataset_name, task = combination
     file_path_save = f"_out_synthetic_examples/03_llm_eda_few_shot_augmenter/{task}_{dataset_name}_{fs}.txt"
     # Prüfen, ob die Datei bereits existiert
+    time.sleep(10)
+    subprocess.run(["ollama", "stop", model])
     lines = augment_examples(file_path_save=file_path_save, task=task, dataset_name=dataset_name, n_few_shot=fs)

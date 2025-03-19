@@ -157,7 +157,7 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, M
 # tasks = ["asqp", "tasd"]
 # datasets = ["rest15", "rest16"]
 # dataset_types = ["train", "test", "dev"]
-# models = ["gemma2:27b", "llama3.1:70b"]
+# models = ["gemma3:27b", "llama3.1:70b"]
 # seeds = [0, 1, 2, 3, 4]
 # modes = ["chain-of-thought", "plan-and-solve", "label"] # "label"
 
@@ -166,9 +166,11 @@ n_few_shot = [0, 10, 50] # 0 fehlt noch
 datasets = ["rest15", "rest16", "hotels", "flightabsa", "coursera"]
 tasks = ["asqp", "tasd"]
 dataset_types = ["train"]
-models = ["gemma2:27b"]
+models = ["gemma3:27b"]
 modes = ["label"] # "label"
 sort_examples = [False]
+
+import time, subprocess
 
 
 combinations = itertools.product(seeds, n_few_shot, datasets, tasks, dataset_types, models, modes, sort_examples)
@@ -178,6 +180,8 @@ for combination in combinations:
     file_path = f"_out_synthetic_examples/01_llm_annotate_train/{task}_{dataset_name}_{dataset_type}_{model}_{seed}_{mode}_{fs}.json"
     # Prüfen, ob die Datei bereits existiert
     if not os.path.exists(file_path):
+        time.sleep(10)
+        subprocess.run(["ollama", "stop", model])
         create_annotations(task, dataset_name, dataset_type, model, seed, mode, fs, s_ex)
     else:
         print(f"Skipping: {file_path} already exists.")

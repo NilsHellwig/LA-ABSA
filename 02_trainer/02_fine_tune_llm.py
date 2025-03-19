@@ -272,7 +272,7 @@ def fine_tune_llm(seed, ds_name, fs_num, task, n_llm_examples, llm_name, only_re
     shutil.rmtree("outputs")
 
 
-LLM_NAME = "gemma-2-9b"
+LLM_NAME = "gemma-3-4b"
 
 # with synth
 for seed in range(5):

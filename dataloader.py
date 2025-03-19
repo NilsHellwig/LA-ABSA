@@ -56,7 +56,7 @@ class DataLoader:
 
 
         
-    def load_data(self, name, data_type, cv=False, seed=42, target="asqp", fs_mode=False, fs_num=0, fs_ann_mode=False, llm_name="gemma2:27b", n_ann_examples="full", aug_mode=False, aug_method=None):
+    def load_data(self, name, data_type, cv=False, seed=42, target="asqp", fs_mode=False, fs_num=0, fs_ann_mode=False, llm_name="gemma3:27b", n_ann_examples="full", aug_mode=False, aug_method=None):
         if fs_mode or fs_ann_mode or aug_mode:
             dataset_paths = [os.path.join(self.fs_path, target, name, f"fs_{str(fs_num)}", "examples.txt")] 
         else:
