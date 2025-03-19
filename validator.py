@@ -67,6 +67,7 @@ def validate_label(predicted_label, input_text, unique_aspect_categories, polari
                    return [False, "opinion term not in text"]
   
         
+        label = [tuple([t.strip() for t in tup]) for tup in label]
         # 6. If all checks pass, return the array
         return [label]
     

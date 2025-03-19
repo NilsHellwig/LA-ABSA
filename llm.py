@@ -5,7 +5,7 @@ from openai import OpenAI
 import os
 
 class LLM:
-    def __init__(self, base_model="gemma2:27b", gwdg_token="", openai_token="",  parameters=[{"name": "stop", "value": ["\\n"]}, 
+    def __init__(self, base_model="gemma3:27b", gwdg_token="", openai_token="",  parameters=[{"name": "stop", "value": ["\\n"]}, 
                                                                                   {"name": "num_ctx", "value": "8192"}]):
         self.model_name = base_model
         self.gwdg_token = gwdg_token
@@ -18,7 +18,10 @@ class LLM:
     def predict(self, prompt, seed=0):
         prediction_start_time = time.time()
         if (self.gwdg_token == "" and self.openai_token == ""):
-            response = ollama.generate(model=self.model_name, options=dict(seed=seed, temperature=0.8, num_ctx=4096, stop=["]"]), prompt=prompt)
+            response_generated = False
+            while not response_generated:
+               response = ollama.generate(model=self.model_name, options=dict(seed=seed, temperature=0.8, num_ctx=4096, stop=["]"]), prompt=prompt)
+               response_generated = True
             response = response["response"] + "]"
         if (self.openai_token != ""):
           chat_completion = self.openai_client.chat.completions.create(messages=[{"role": "user", "content": prompt, "stop": ["]"]}],model=self.model_name)
