@@ -2,6 +2,7 @@ import sys
 import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../zero-shot-absa-quad/')))
 
 from validator import validate_label, validate_reasoning
 from similarity import sort_examples_by_similarity
@@ -20,19 +21,18 @@ GWDG_KEY = os.getenv("GWDG_KEY")
 
 ## LLM
 
-dataloader = DataLoader()
-promptloader = PromptLoader()
+dataloader = DataLoader(base_path="../zero-shot-absa-quad/datasets/")
+promptloader = PromptLoader(base_path="../zero-shot-absa-quad/prompt/")
 
 SPLIT_SEED = 42
 
-def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, MODE, N_FEW_SHOT, SORT_EXAMPLES):
+def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, N_FEW_SHOT, SORT_EXAMPLES):
 
     print(f"TASK:", TASK)
     print(f"DATASET_NAME: {DATASET_NAME}")
     print(f"DATASET_TYPE: {DATASET_TYPE}")
     print(f"LLM_BASE_MODEL: {LLM_BASE_MODEL}")
     print(f"SEED: {SEED}")
-    print(f"MODE: {MODE}")
     print(f"N_FEW_SHOT: {N_FEW_SHOT}")
     print(f"SORT_EXAMPLES: {SORT_EXAMPLES}")
 
@@ -69,7 +69,7 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, M
 
     # Lade alle Zeilen aus der Datei
     fs_examples_txt = ""
-    with open(f"./datasets/{TASK}/{DATASET_NAME}/train.txt", "r") as f:
+    with open(f"../zero-shot-absa-quad/datasets/{TASK}/{DATASET_NAME}/train.txt", "r") as f:
         lines = f.readlines()
 
         # Füge die Zeilen zusammen, deren Index in fs_examples_ids enthalten ist
@@ -88,14 +88,12 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, M
     #############################################
 
     ## label
-    if MODE in ["label", "chain-of-thought", "plan-and-solve"]:
-     for idx, example in enumerate(dataset_annotation):
+    for idx, example in enumerate(dataset_annotation):
         prediction = { 
             "task": TASK,
             "dataset_name": DATASET_NAME, 
             "dataset_type": DATASET_TYPE,
             "llm_base_model": LLM_BASE_MODEL,
-            "mode": MODE,
             "id": example["id"], 
             "invalid_precitions_label": [],
             "init_seed": SEED,
@@ -107,7 +105,7 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, M
            few_shot_split_0 = sort_examples_by_similarity(example, few_shot_split_0)
     
         prompt = promptloader.load_prompt(task=TASK,
-                                      prediction_type=MODE, 
+                                      prediction_type="label", 
                                       aspects=unique_aspect_categories, 
                                       examples=few_shot_split_0,
                                       seed_examples=seed,
@@ -115,12 +113,20 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, M
     
         correct_output = False   
         while correct_output == False:
-            output, duration = llm.predict(prompt, seed)#['message']['content']
+            generated = False
+            while generated == False:
+                try:
+                    output, duration = llm.predict(prompt, seed)
+                    generated = True
+                except Exception as e:
+                    pass
+                
             output_raw = output
+            
             # delete new lines
             output = output.replace("\n", "")
             
-            validator_output = validate_label(output, example["text"], unique_aspect_categories, task=TASK)
+            validator_output = validate_label(output, example["text"], unique_aspect_categories, task=TASK, allow_small_variations=True)
 
             if validator_output[0] != False:
                 prediction["pred_raw"] = output_raw
@@ -147,7 +153,7 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, M
     # Create the directories if they don't exist
     os.makedirs(dir_path, exist_ok=True)
 
-    with open(f"{dir_path}/{TASK}_{DATASET_NAME}_{DATASET_TYPE}_{LLM_BASE_MODEL}_{SEED}_{MODE}_{N_FEW_SHOT}.json", 'w', encoding='utf-8') as json_file:
+    with open(f"{dir_path}/{TASK}_{DATASET_NAME}_{DATASET_TYPE}_{LLM_BASE_MODEL}_{SEED}_{N_FEW_SHOT}.json", 'w', encoding='utf-8') as json_file:
         json.dump(predictions, json_file, ensure_ascii=False, indent=4)
         
         
@@ -159,7 +165,6 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, M
 # dataset_types = ["train", "test", "dev"]
 # models = ["gemma3:27b", "llama3.1:70b"]
 # seeds = [0, 1, 2, 3, 4]
-# modes = ["chain-of-thought", "plan-and-solve", "label"] # "label"
 
 seeds = [0, 1, 2, 3, 4]
 n_few_shot = [0, 10, 50] # 0 fehlt noch
@@ -167,21 +172,20 @@ datasets = ["rest15", "rest16", "hotels", "flightabsa", "coursera"]
 tasks = ["asqp", "tasd"]
 dataset_types = ["train"]
 models = ["gemma3:27b"]
-modes = ["label"] # "label"
 sort_examples = [False]
 
 import time, subprocess
 
 
-combinations = itertools.product(seeds, n_few_shot, datasets, tasks, dataset_types, models, modes, sort_examples)
+combinations = itertools.product(seeds, n_few_shot, datasets, tasks, dataset_types, models, sort_examples)
 
 for combination in combinations:
-    seed, fs,  dataset_name, task, dataset_type, model, mode, s_ex = combination
-    file_path = f"_out_synthetic_examples/01_llm_annotate_train/{task}_{dataset_name}_{dataset_type}_{model}_{seed}_{mode}_{fs}.json"
+    seed, fs,  dataset_name, task, dataset_type, model, s_ex = combination
+    file_path = f"_out_synthetic_examples/01_llm_annotate_train/{task}_{dataset_name}_{dataset_type}_{model}_{seed}_{fs}.json"
     # Prüfen, ob die Datei bereits existiert
     if not os.path.exists(file_path):
-        time.sleep(10)
+        time.sleep(3)
         subprocess.run(["ollama", "stop", model])
-        create_annotations(task, dataset_name, dataset_type, model, seed, mode, fs, s_ex)
+        create_annotations(task, dataset_name, dataset_type, model, seed, fs, s_ex)
     else:
         print(f"Skipping: {file_path} already exists.")
