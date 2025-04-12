@@ -76,7 +76,7 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, N
         fs_examples_txt = "".join(lines[i] for i in fs_examples_ids if 0 <= i < len(lines))
 
     # Erstelle den Zielpfad, falls er nicht existiert
-    output_dir_fs = f"./fs_examples/{TASK}/{DATASET_NAME}/fs_{N_FEW_SHOT}"
+    output_dir_fs = f"../zero-shot-absa-quad/fs_examples/{TASK}/{DATASET_NAME}/fs_{N_FEW_SHOT}"
     os.makedirs(output_dir_fs, exist_ok=True)
 
     # Speichere die resultierenden Beispiele in einer Datei
@@ -110,6 +110,7 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, N
                                       examples=few_shot_split_0,
                                       seed_examples=seed,
                                       input_example=example, shuffle_examples=SORT_EXAMPLES==False)
+    
     
         correct_output = False   
         while correct_output == False:
@@ -167,7 +168,7 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, N
 # seeds = [0, 1, 2, 3, 4]
 
 seeds = [0, 1, 2, 3, 4]
-n_few_shot = [0, 10, 50] # 0 fehlt noch
+n_few_shot = [10, 0, 50] # 0 fehlt noch
 datasets = ["rest15", "rest16", "hotels", "flightabsa", "coursera"]
 tasks = ["asqp", "tasd"]
 dataset_types = ["train"]
