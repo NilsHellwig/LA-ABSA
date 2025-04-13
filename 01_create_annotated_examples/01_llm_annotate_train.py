@@ -27,6 +27,8 @@ promptloader = PromptLoader(base_path="../zero-shot-absa-quad/prompt/")
 SPLIT_SEED = 42
 
 def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, N_FEW_SHOT, SORT_EXAMPLES):
+    
+    print(f"{TASK}_{DATASET_NAME}_{DATASET_TYPE}_{LLM_BASE_MODEL}_{SEED}_{N_FEW_SHOT}.json")
 
     print(f"TASK:", TASK)
     print(f"DATASET_NAME: {DATASET_NAME}")
@@ -149,7 +151,7 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, N
         print(f"####### {idx}/{len(dataset_annotation)} ### ", idx, "\nText:", example["text"], "\nLabel:",prediction["pred_label"], "\nRegenerations:", prediction["invalid_precitions_label"])
         predictions.append(dict(prediction, **example))
 
-    dir_path = f"generations/llm_annotations"
+    dir_path = f"_out_synthetic_examples/01_llm_annotate_train"
 
     # Create the directories if they don't exist
     os.makedirs(dir_path, exist_ok=True)
@@ -168,7 +170,7 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, N
 # seeds = [0, 1, 2, 3, 4]
 
 seeds = [0, 1, 2, 3, 4]
-n_few_shot = [10, 0, 50] # 0 fehlt noch
+n_few_shot = [50] # 0 fehlt noch
 datasets = ["rest15", "rest16", "hotels", "flightabsa", "coursera"]
 tasks = ["asqp", "tasd"]
 dataset_types = ["train"]
