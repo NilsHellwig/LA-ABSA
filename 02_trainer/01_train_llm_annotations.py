@@ -1,5 +1,5 @@
 import sys, os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../zero-shot-absa-quad/')))
 from dataloader import DataLoader
 from trainer import train_paraphrase, train_mvp, train_dlo
 import json
@@ -7,14 +7,14 @@ import time
 
 from helper import clean_up, create_output_directory
 
-dataloader = DataLoader("./datasets", "./fs_examples")
+dataloader = DataLoader("../zero-shot-absa-quad/datasets", "../zero-shot-absa-quad/fs_examples")
 
 
 for seed in range(5):
  for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
   for fs_num in [50, 10, 0]:
    for task in ["tasd", "asqp"]:
-     for n_llm_examples in ["full", 800]:  
+     for n_llm_examples in [800, "full"]:  
          train_ds = dataloader.load_data(ds_name, "train", cv=False, target=task, fs_num=fs_num, fs_ann_mode=True, n_ann_examples=n_llm_examples)
          test_ds = dataloader.load_data(ds_name, "test", cv=False, target=task)
       
