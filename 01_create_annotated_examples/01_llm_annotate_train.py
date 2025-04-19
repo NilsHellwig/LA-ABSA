@@ -11,7 +11,7 @@ from dataloader import DataLoader
 from llm import LLM
 import itertools
 import json
-import random
+import random, time, subprocess
 
 
 ## Load API Key
@@ -25,6 +25,19 @@ dataloader = DataLoader(base_path="../zero-shot-absa-quad/datasets/")
 promptloader = PromptLoader(base_path="../zero-shot-absa-quad/prompt/")
 
 SPLIT_SEED = 42
+
+import concurrent.futures
+
+def run_with_timeout(llm, prompt, seed, temp, timeout=300):
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        future = executor.submit(llm.predict, prompt, seed, stop=["]"], temperature=temp)
+        try:
+            output, duration = future.result(timeout=timeout)
+            return output, duration
+        except concurrent.futures.TimeoutError:
+            raise TimeoutError("Vorhersage hat länger als 20 Sekunden gedauert.")
+
+
 
 def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, N_FEW_SHOT, SORT_EXAMPLES):
     
@@ -117,11 +130,15 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, N
         correct_output = False   
         while correct_output == False:
             generated = False
+            k = 0
             while generated == False:
                 try:
-                    output, duration = llm.predict(prompt, seed)
+                    print("Start")
+                    output, duration = run_with_timeout(llm, prompt, seed, temp=0.8+k)
                     generated = True
                 except Exception as e:
+                    print("Exception")
+                    #k += 0.01
                     pass
                 
             output_raw = output
@@ -170,14 +187,12 @@ def create_annotations(TASK, DATASET_NAME, DATASET_TYPE, LLM_BASE_MODEL, SEED, N
 # seeds = [0, 1, 2, 3, 4]
 
 seeds = [0, 1, 2, 3, 4]
-n_few_shot = [0, 10, 50] # 0 fehlt noch
+n_few_shot = [50, 10, 0] # 0 fehlt noch
 datasets = ["rest15", "rest16", "hotels", "flightabsa", "coursera"]
 tasks = ["asqp", "tasd"]
 dataset_types = ["train"]
 models = ["gemma3:27b"]
 sort_examples = [False]
-
-import time, subprocess
 
 
 combinations = itertools.product(seeds, n_few_shot, datasets, tasks, dataset_types, models, sort_examples)
@@ -187,8 +202,8 @@ for combination in combinations:
     file_path = f"_out_synthetic_examples/01_llm_annotate_train/{task}_{dataset_name}_{dataset_type}_{model}_{seed}_{fs}.json"
     # Prüfen, ob die Datei bereits existiert
     if not os.path.exists(file_path):
-        time.sleep(3)
-        subprocess.run(["ollama", "stop", model])
+        # time.sleep(3)
+        # subprocess.run(["ollama", "stop", model])
         create_annotations(task, dataset_name, dataset_type, model, seed, fs, s_ex)
     else:
         print(f"Skipping: {file_path} already exists.")
