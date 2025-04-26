@@ -33,7 +33,7 @@ for seed in range(5):
                             ds_name, "test", cv=False, target=task
                         )
 
-                        for ml_method in ["paraphrase", "dlo"]:
+                        for ml_method in ["paraphrase"]:
                             print(
                                 f"Task:",
                                 task,
