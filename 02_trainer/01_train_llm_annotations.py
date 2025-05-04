@@ -9,16 +9,16 @@ from helper import clean_up, create_output_directory
 
 dataloader = DataLoader("../zero-shot-absa-quad/datasets", "../zero-shot-absa-quad/fs_examples")
 
-
-for seed in range(5):
- for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
-  for fs_num in [50, 10, 0]:
-   for task in ["tasd", "asqp"]:
-     for n_llm_examples in [800, "full"]:  
-         train_ds = dataloader.load_data(ds_name, "train", cv=False, target=task, fs_num=fs_num, fs_ann_mode=True, n_ann_examples=n_llm_examples)
-         test_ds = dataloader.load_data(ds_name, "test", cv=False, target=task)
+for ml_method in ["dlo", "paraphrase"]:
+ for seed in range(5):
+   for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
+     for fs_num in [50, 10, 0]:
+       for task in ["tasd", "asqp"]:
+         for n_llm_examples in [800, "full"]:  
+            train_ds = dataloader.load_data(ds_name, "train", cv=False, target=task, fs_num=fs_num, fs_ann_mode=True, n_ann_examples=n_llm_examples)
+            test_ds = dataloader.load_data(ds_name, "test", cv=False, target=task)
       
-         for ml_method in ["paraphrase", "dlo"]:
+         
             print(f"Task:", task, "Dataset:", ds_name, "Seed:", seed, "ML-Method:", ml_method, "FS-Num:", fs_num, "len(train_ds)", len(train_ds), "len(test_ds)", len(test_ds), "n_llm_examples", n_llm_examples)
             filename = f"./_out_fine_tunings/01_llm_annotate_train/{ml_method}_{n_llm_examples}_{task}_{fs_num}_{ds_name}_{seed}.json"
 
