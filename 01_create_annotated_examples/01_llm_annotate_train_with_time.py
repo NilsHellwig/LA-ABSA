@@ -19,7 +19,7 @@ watt_values = []
 
 running = False
 
-def monitor_gpu(interval=0.5):
+def monitor_gpu(interval=0.1):
     global running
     global vram_values 
     global watt_values
