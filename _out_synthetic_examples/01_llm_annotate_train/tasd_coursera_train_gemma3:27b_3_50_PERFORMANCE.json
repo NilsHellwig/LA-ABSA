@@ -1,0 +1,2989 @@
+[
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1160_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "```json\n[\n  [\"professor\", \"faculty general\", \"positive\"]",
+                "pred_label": false,
+                "duration_label": 3.9052975177764893,
+                "seed": 3,
+                "regeneration_reason": "no list in prediction"
+            },
+            {
+                "pred_label_raw": "```json\n[\n  [\"professor\", \"faculty general\", \"positive\"]",
+                "pred_label": false,
+                "duration_label": 3.95947265625,
+                "seed": 8,
+                "regeneration_reason": "no list in prediction"
+            }
+        ],
+        "init_seed": 3,
+        "pred_raw": "```json\n[\n  (\"professor\", \"faculty general\", \"positive\"),\n  (\"assignments\", \"assignments workload\", \"negative\")\n]",
+        "pred_label": [
+            [
+                "professor",
+                "faculty general",
+                "positive"
+            ],
+            [
+                "assignments",
+                "assignments workload",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.5232672691345215,
+        "seed": 13,
+        "avg_gpu_power_eval_W": 249.62086021505374,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 12.39183783531189,
+        "text": "The professor was very goodbut there is a lot of assignments ! ! !",
+        "aspects": [
+            {
+                "aspect_term": "assignments",
+                "aspect_category": "assignments quantity",
+                "polarity": "neutral"
+            },
+            {
+                "aspect_term": "professor",
+                "aspect_category": "faculty general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "assignments",
+                "assignments quantity",
+                "neutral"
+            ],
+            [
+                "professor",
+                "faculty general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1397_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "[('course', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.707047939300537,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 251.9739285714286,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.7113442420959473,
+        "text": "Very useful course .",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "506_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('course', 'course general', 'positive'), ('professor', 'faculty general', 'positive')]",
+        "pred_label": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ],
+            [
+                "professor",
+                "faculty general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.215649843215942,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 253.54031250000003,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.222825765609741,
+        "text": "The course is amazing , the professor gives you right examples an amount of information for understanding the topics .",
+        "aspects": [
+            {
+                "aspect_term": "professor",
+                "aspect_category": "faculty comprehensiveness",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "professor",
+                "faculty comprehensiveness",
+                "positive"
+            ],
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "246_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('contents', 'course comprehensiveness', 'positive')]",
+        "pred_label": [
+            [
+                "contents",
+                "course comprehensiveness",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.824270486831665,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 248.9206666666667,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.8909080028533936,
+        "text": "Just in 3 weeks , covered a good contents .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1351_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "[('course', 'course quality', 'positive')]",
+        "pred_label": [
+            [
+                "course",
+                "course quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.72562313079834,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 247.28793103448277,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.8130524158477783,
+        "text": "Im very happy to see that the authors improved the course by actually showing the students how to integrate JS and HTML .",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1159_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "[('format', 'course quality', 'negative')]",
+        "pred_label": [
+            [
+                "format",
+                "course quality",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.745811939239502,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 249.3562068965517,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.763169288635254,
+        "text": "It would help if the format was broken up a bit more .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "253_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "[('course', 'course quality', 'positive')]",
+        "pred_label": [
+            [
+                "course",
+                "course quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.7094225883483887,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 248.17965517241376,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.7955541610717773,
+        "text": "This is a beutiful course , very well designed .",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course quality",
+                "positive"
+            ],
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1272_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('course', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8320131301879883,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 249.76866666666666,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.881026029586792,
+        "text": "A good introductory course all around .",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "256_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "```json\n[\n  [\n    \"course\",\n    \"course general\",\n    \"positive\"\n  ]",
+                "pred_label": false,
+                "duration_label": 4.371588468551636,
+                "seed": 3,
+                "regeneration_reason": "no list in prediction"
+            }
+        ],
+        "init_seed": 3,
+        "pred_raw": "[('NULL', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.707693099975586,
+        "seed": 8,
+        "avg_gpu_power_eval_W": 248.81709677419357,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 8.17867398262024,
+        "text": "I have one word : Fantastic .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1121_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('course', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8060691356658936,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 244.15896551724143,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.8338820934295654,
+        "text": "I truly recommend this course to anyone at the beginner level .",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "687_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "[('course', 'course general', 'positive')]",
+                "pred_label": false,
+                "duration_label": 3.7768068313598633,
+                "seed": 3,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "[('course', 'course general', 'positive')]",
+                "pred_label": false,
+                "duration_label": 3.783418655395508,
+                "seed": 8,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "[('course', 'course general', 'positive')]",
+                "pred_label": false,
+                "duration_label": 3.817445993423462,
+                "seed": 13,
+                "regeneration_reason": "aspect term not in text"
+            }
+        ],
+        "init_seed": 3,
+        "pred_raw": "```\n[('NULL', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8654491901397705,
+        "seed": 18,
+        "avg_gpu_power_eval_W": 249.7809482758621,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 15.275849103927612,
+        "text": "For someone like me having 17years programming experience , and with some hands on of neural networks from colelge days , and analytic tools for a few applications in R ; it is a great refresher on the fundamentals and great breadth of practical technology elements that are most useful in machine learning applications .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "course quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "course quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "462_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "```json\n[\n  [\n    \"course\",\n    \"course general\",\n    \"positive\"\n  ]",
+                "pred_label": false,
+                "duration_label": 4.322648525238037,
+                "seed": 3,
+                "regeneration_reason": "no list in prediction"
+            }
+        ],
+        "init_seed": 3,
+        "pred_raw": "[('course', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.705580234527588,
+        "seed": 8,
+        "avg_gpu_power_eval_W": 248.04112903225806,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 8.144912481307983,
+        "text": "This course was simple .",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "neutral"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course general",
+                "neutral"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "548_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('NULL', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.77811861038208,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 248.35965517241374,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.8063652515411377,
+        "text": "This was great",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "531_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('course', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.840235471725464,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 245.83896551724143,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.8590316772460938,
+        "text": "The rest of the course was good .",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1198_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "[('assignment', 'assignments comprehensiveness', 'negative')]",
+        "pred_label": [
+            [
+                "assignment",
+                "assignments comprehensiveness",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.7801525592803955,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 247.87724137931036,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.795793056488037,
+        "text": "It ' s immensely fussy ( as I understand it has to be ) , but the assignment instructions are often very vague and don ' t sufficiently explicitly define whats expected .",
+        "aspects": [
+            {
+                "aspect_term": "assignment instructions",
+                "aspect_category": "assignments quality",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "assignment instructions",
+                "assignments quality",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1088_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('NULL', 'presentation quality', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "presentation quality",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.879899263381958,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 246.39699999999996,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9441423416137695,
+        "text": "If only the method would have had tiny bit more variation , such as animations , video analysis , case studies , maybe more expert visitors etc . it would have been even better and more durable in long run .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "presentation quality",
+                "polarity": "neutral"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "presentation quality",
+                "neutral"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1266_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('Fowler', 'faculty general', 'positive')]",
+        "pred_label": [
+            [
+                "Fowler",
+                "faculty general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.850013256072998,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 246.16966666666667,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9908525943756104,
+        "text": "Fowler is his excitement - - which makes it feel , less like a lecture and more , like a fun conversation about calculus .",
+        "aspects": [
+            {
+                "aspect_term": "Fowler",
+                "aspect_category": "faculty general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Fowler",
+                "faculty general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1225_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('professor', 'faculty general', 'positive')]",
+        "pred_label": [
+            [
+                "Professor",
+                "faculty general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8240513801574707,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 244.01333333333332,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9881818294525146,
+        "text": "Very good : Professor is patient and nice .",
+        "aspects": [
+            {
+                "aspect_term": "Professor",
+                "aspect_category": "faculty general",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "Professor",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Professor",
+                "faculty general",
+                "positive"
+            ],
+            [
+                "Professor",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "819_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('course', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8398501873016357,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 248.64466666666664,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9421744346618652,
+        "text": "This is a very basic course that introduces you to the topic , but doesn ' t go into much depth .",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "neutral"
+            },
+            {
+                "aspect_term": "course",
+                "aspect_category": "course quality",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course general",
+                "neutral"
+            ],
+            [
+                "course",
+                "course quality",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "511_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "[('Professor Cockell', 'faculty general', 'positive'), ('lectures', 'presentation quality', 'positive')]",
+        "pred_label": [
+            [
+                "Professor Cockell",
+                "faculty general",
+                "positive"
+            ],
+            [
+                "lectures",
+                "presentation quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.258760213851929,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 244.590909090909,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.300657033920288,
+        "text": "Professor Cockell obviously has a passion for his field and I thoroughly enjoyed his lectures .",
+        "aspects": [
+            {
+                "aspect_term": "Professor Cockell",
+                "aspect_category": "faculty general",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "lectures",
+                "aspect_category": "presentation quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Professor Cockell",
+                "faculty general",
+                "positive"
+            ],
+            [
+                "lectures",
+                "presentation quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "400_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('Machine Learning', 'course general', 'positive'), ('presentations', 'presentation quality', 'positive')]",
+        "pred_label": [
+            [
+                "Machine Learning",
+                "course general",
+                "positive"
+            ],
+            [
+                "presentations",
+                "presentation quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.262624979019165,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 247.16999999999993,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.383724927902222,
+        "text": "Machine Learning is an excellent course with great presentations .",
+        "aspects": [
+            {
+                "aspect_term": "presentations",
+                "aspect_category": "presentation quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "presentations",
+                "presentation quality",
+                "positive"
+            ],
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "862_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('course', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8325610160827637,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 247.35633333333334,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9207184314727783,
+        "text": "Everybody will get benefits for life who will have complete this course .",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1289_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "[('software projects', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "software projects",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.781311511993408,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 249.02517241379311,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.8143703937530518,
+        "text": "What I like : presenting of current software projects around big data",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "presentation quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "presentation quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "413_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "[('video', 'presentation quality', 'positive'), ('lecture note', 'material quality', 'positive')]",
+        "pred_label": [
+            [
+                "video",
+                "presentation quality",
+                "positive"
+            ],
+            [
+                "lecture note",
+                "material quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.227069139480591,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 246.3378125,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.2990477085113525,
+        "text": "Besides the fantastic video , the lecture note is so informative and helpful for learners .",
+        "aspects": [
+            {
+                "aspect_term": "lecture",
+                "aspect_category": "material quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "video",
+                "aspect_category": "presentation quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "lecture",
+                "material quality",
+                "positive"
+            ],
+            [
+                "video",
+                "presentation quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1125_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "```\n[('course', 'course general', 'positive')]",
+                "pred_label": false,
+                "duration_label": 3.7854113578796387,
+                "seed": 3,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "[('course', 'course general', 'positive')]",
+                "pred_label": false,
+                "duration_label": 3.705336809158325,
+                "seed": 8,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "```\n[('course', 'course general', 'positive')]",
+                "pred_label": false,
+                "duration_label": 3.7840049266815186,
+                "seed": 13,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "[('course', 'course general', 'positive')]",
+                "pred_label": false,
+                "duration_label": 3.7004106044769287,
+                "seed": 18,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "```json\n[\n  (\"course\", \"course general\", \"positive\")\n]",
+                "pred_label": false,
+                "duration_label": 4.007795095443726,
+                "seed": 23,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "```json\n[\n  (\"course\", \"course general\", \"positive\")\n]",
+                "pred_label": false,
+                "duration_label": 4.01228404045105,
+                "seed": 28,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "```\n[('course', 'course general', 'positive')]",
+                "pred_label": false,
+                "duration_label": 3.8197453022003174,
+                "seed": 33,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "```json\n[\n  (\"course\", \"course general\", \"positive\")\n]",
+                "pred_label": false,
+                "duration_label": 3.9733726978302,
+                "seed": 38,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "```\n[('course', 'course general', 'positive')]",
+                "pred_label": false,
+                "duration_label": 3.78309965133667,
+                "seed": 43,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "```\n[('course', 'course general', 'positive')]",
+                "pred_label": false,
+                "duration_label": 3.780012607574463,
+                "seed": 48,
+                "regeneration_reason": "aspect term not in text"
+            }
+        ],
+        "init_seed": 3,
+        "pred_label": [],
+        "duration_label": 3.780012607574463,
+        "seed": 53,
+        "avg_gpu_power_eval_W": 249.37191780821925,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 38.48470735549927,
+        "text": "Easy to follow .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "course comprehensiveness",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "course comprehensiveness",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "702_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "```json\n[\n  [\n    \"NULL\",\n    \"course general\",\n    \"positive\"\n  ]",
+                "pred_label": false,
+                "duration_label": 4.342907428741455,
+                "seed": 3,
+                "regeneration_reason": "no list in prediction"
+            }
+        ],
+        "init_seed": 3,
+        "pred_raw": "[('course', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.6940665245056152,
+        "seed": 8,
+        "avg_gpu_power_eval_W": 248.357868852459,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 8.05094838142395,
+        "text": "Great course !",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "667_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('code', 'presentation quality', 'negative')]",
+        "pred_label": [
+            [
+                "code",
+                "presentation quality",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.810253858566284,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 248.3331034482759,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.8340280055999756,
+        "text": "At times the code that were provided in the lecture videos were out of date and a lot of time was spent on googling to find the updated code .",
+        "aspects": [
+            {
+                "aspect_term": "code",
+                "aspect_category": "material quality",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "code",
+                "material quality",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "274_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('course', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8047935962677,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 248.1226666666666,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.839731216430664,
+        "text": "This is one of the most amazing courses I have ever taken !",
+        "aspects": [
+            {
+                "aspect_term": "courses",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "courses",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "332_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "[('Ma \\' am', 'faculty comprehensiveness', 'positive'), ('Ma \\' am', 'presentation quality', 'positive')]",
+        "pred_label": [
+            [
+                "Ma ' am",
+                "faculty comprehensiveness",
+                "positive"
+            ],
+            [
+                "Ma ' am",
+                "presentation quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.38576865196228,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 250.1678787878788,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.407430648803711,
+        "text": "I love the way the presentation is done by Ma ' am .",
+        "aspects": [
+            {
+                "aspect_term": "Ma ' am",
+                "aspect_category": "faculty general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Ma ' am",
+                "faculty general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "412_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('course', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.7944657802581787,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 248.0903333333333,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9356319904327393,
+        "text": "I highly recommend the course !",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "466_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('course', 'course general', 'negative')]",
+        "pred_label": [
+            [
+                "course",
+                "course general",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.8399174213409424,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 246.1353333333333,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.914788246154785,
+        "text": "Not such a great course .",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "969_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "[('Yakkov', 'faculty general', 'negative')]",
+        "pred_label": [
+            [
+                "Yakkov",
+                "faculty general",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.7859177589416504,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 246.34199999999998,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9082891941070557,
+        "text": "Why Yakkov does this instead of that ? \" is a question I frequently ask myself during the course .",
+        "aspects": [
+            {
+                "aspect_term": "Yakkov",
+                "aspect_category": "faculty comprehensiveness",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Yakkov",
+                "faculty comprehensiveness",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "386_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('NULL', 'course relatability', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "course relatability",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8858067989349365,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 248.904,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9351298809051514,
+        "text": "I am involved in a Sanitation and Hygiene behavior baseline survey in Schools in India and I found this course relevant to my understanding of how behavior is an outcome of norms that arise in turn from empirical and normative expectations .",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course comprehensiveness",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course comprehensiveness",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1033_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('course', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "Course",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8297367095947266,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 246.87137931034485,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.928795099258423,
+        "text": "Really Good work on the Course : )",
+        "aspects": [
+            {
+                "aspect_term": "Course",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Course",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "933_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```json\n[\n  (\"Examples\", \"course general\", \"positive\")\n]",
+        "pred_label": [
+            [
+                "Examples",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.01738166809082,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 249.95580645161297,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.089782953262329,
+        "text": "Examples so relevant and memorable so as to make an everlasting impression .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "presentation comprehensiveness",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "presentation relatability",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "presentation comprehensiveness",
+                "positive"
+            ],
+            [
+                "NULL",
+                "presentation relatability",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1191_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "[('NULL', 'course workload', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "course workload",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.744342803955078,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 244.54724137931035,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.787572145462036,
+        "text": "I found the pace , content style worked for me to allow me to proceed on other courses .",
+        "aspects": [
+            {
+                "aspect_term": "pace",
+                "aspect_category": "presentation quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "content style",
+                "aspect_category": "presentation quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "pace",
+                "presentation quality",
+                "positive"
+            ],
+            [
+                "content style",
+                "presentation quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1363_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('Emily', 'faculty comprehensiveness', 'positive')]",
+        "pred_label": [
+            [
+                "Emily",
+                "faculty comprehensiveness",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8715052604675293,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 246.5420689655172,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.8952152729034424,
+        "text": "Emily teaches all courses here and dives into the math and usage .",
+        "aspects": [
+            {
+                "aspect_term": "Emily",
+                "aspect_category": "faculty comprehensiveness",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Emily",
+                "faculty comprehensiveness",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1224_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('NULL', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.826995849609375,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 251.22466666666668,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.915924310684204,
+        "text": "Anyway I am glad I participated in the course .",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1133_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "```json\n[\n  (\"course\", \"course general\", \"positive\"),\n  (\"Mr . Andrew\", \"faculty general\", \"positive\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"lecturer\", \"faculty comprehensiveness\", \"positive\"),\n  (\"lecturer\", \"faculty response\", \"positive\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"mentors\", \"faculty general\", \"positive\"),\n  (\"NULL\", \"course relatability\", \"negative\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"NULL\", \"course comprehensiveness\", \"positive\"),\n  (\"NULL\", \"course quality\", \"positive\"),\n  (\"course\", \"course comprehensiveness\", \"positive\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"assignments\", \"assignments comprehensiveness\", \"negative\"),\n  (\"tutorials\", \"presentation comprehensiveness\", \"positive\"),\n  (\"content\", \"course general\", \"positive\"),\n  (\"Harris\", \"faculty comprehensiveness\", \"positive\"),\n  (\"videos\", \"presentation quality\", \"negative\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"teacher\", \"faculty value\", \"positive\"),\n  (\"Assignments\", \"assignments comprehensiveness\", \"positive\"),\n  (\"professor\", \"faculty general\", \"positive\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"Dr . Chuck\", \"faculty general\", \"positive\"),\n  (\"NULL\", \"presentation quality\", \"negative\"),\n  (\"NULL\", \"course value\", \"negative\"),\n  (\"quizzes\", \"assignments comprehensiveness\", \"negative\"),\n  (\"quizzes\", \"assignments quality\", \"negative\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"course instructors\", \"faculty comprehensiveness\", \"negative\"),\n  (\"course\", \"course quality\", \"negative\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"Professor Covach\", \"faculty response\", \"positive\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"course\", \"course quality\", \"positive\"),\n  (\"team of experts\", \"faculty general\", \"positive\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"quiz\", \"assignments quality\", \"negative\"),\n  (\"Prof . Scott\", \"faculty comprehensiveness\", \"positive\"),\n  (\"course\", \"course comprehensiveness\", \"neutral\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"NULL\", \"course workload\", \"negative\"),\n  (\"NULL\", \"course quality\", \"positive\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"instructor\", \"faculty general\", \"positive\"),\n  (\"NULL\", \"course quality\", \"positive\"),\n  (\"Assingments\", \"assignments quality\", \"negative\"),\n  (\"assignments\", \"assignments relatability\", \"negative\"),\n  (\"Courses\", \"course general\", \"positive\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"Videos\", \"presentation quality\", \"negative\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"assignment\", \"assignments workload\", \"negative\"),\n  (\"NULL\", \"course general\", \"positive\")\n]",
+                "pred_label": false,
+                "duration_label": 33.48546385765076,
+                "seed": 3,
+                "regeneration_reason": "aspect term not in text"
+            }
+        ],
+        "init_seed": 3,
+        "pred_raw": "[('NULL', 'course value', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "course value",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.7046234607696533,
+        "seed": 8,
+        "avg_gpu_power_eval_W": 247.8087318840579,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 37.28597664833069,
+        "text": "It is definitely worth taking if you are interested in effective professional development .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "course value",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "course value",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1008_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "[('assignments', 'assignments quantity', 'negative')]",
+                "pred_label": false,
+                "duration_label": 3.711575508117676,
+                "seed": 3,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "[('assignments', 'assignments quality', 'negative')]",
+                "pred_label": false,
+                "duration_label": 3.717273473739624,
+                "seed": 8,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "[('assignments', 'assignments quantity', 'negative')]",
+                "pred_label": false,
+                "duration_label": 3.7290596961975098,
+                "seed": 13,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "[('assignments', 'assignments quantity', 'negative')]",
+                "pred_label": false,
+                "duration_label": 3.721576452255249,
+                "seed": 18,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "[('assignments', 'assignments quantity', 'negative')]",
+                "pred_label": false,
+                "duration_label": 3.741870403289795,
+                "seed": 23,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "[('assignments', 'assignments quantity', 'negative')]",
+                "pred_label": false,
+                "duration_label": 3.7726707458496094,
+                "seed": 28,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "[('assignments', 'assignments quantity', 'negative')]",
+                "pred_label": false,
+                "duration_label": 3.7479536533355713,
+                "seed": 33,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "[('assignments', 'assignments quantity', 'negative')]",
+                "pred_label": false,
+                "duration_label": 3.73644757270813,
+                "seed": 38,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "[('assignments', 'assignments quantity', 'neutral')]",
+                "pred_label": false,
+                "duration_label": 3.7374379634857178,
+                "seed": 43,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "[('assignments', 'assignments quantity', 'negative')]",
+                "pred_label": false,
+                "duration_label": 3.7468996047973633,
+                "seed": 48,
+                "regeneration_reason": "aspect term not in text"
+            }
+        ],
+        "init_seed": 3,
+        "pred_label": [],
+        "duration_label": 3.7468996047973633,
+        "seed": 53,
+        "avg_gpu_power_eval_W": 249.61217543859644,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 37.49982976913452,
+        "text": "The two things I ' ve missed were 1 ) some peer - graded assignment in addition to quizzes and 2 ) some list for future investigation / reading .",
+        "aspects": [
+            {
+                "aspect_term": "assignment",
+                "aspect_category": "assignments quality",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "course general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "assignment",
+                "assignments quality",
+                "negative"
+            ],
+            [
+                "NULL",
+                "course general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "846_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "[('course', 'course comprehensiveness', 'positive')]",
+                "pred_label": false,
+                "duration_label": 3.8106019496917725,
+                "seed": 3,
+                "regeneration_reason": "aspect term not in text"
+            }
+        ],
+        "init_seed": 3,
+        "pred_raw": "```\n[('NULL', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8219785690307617,
+        "seed": 8,
+        "avg_gpu_power_eval_W": 250.0227586206897,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 7.676589727401733,
+        "text": "An in - depth survey of perhaps most of the current techniques in machine learning .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "162_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('NULL', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.807340145111084,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 251.8648275862069,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.8757576942443848,
+        "text": "My kids tried out the games I created later on and were amazed too !",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "661_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "```json\n[\n  [\n    \"course\",\n    \"course general\",\n    \"positive\"\n  ]",
+                "pred_label": false,
+                "duration_label": 4.35078763961792,
+                "seed": 3,
+                "regeneration_reason": "no list in prediction"
+            }
+        ],
+        "init_seed": 3,
+        "pred_raw": "[('course', 'course comprehensiveness', 'positive')]",
+        "pred_label": [
+            [
+                "course",
+                "course comprehensiveness",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.772801399230957,
+        "seed": 8,
+        "avg_gpu_power_eval_W": 248.07698412698417,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 8.247122287750244,
+        "text": "Fast paced course with good supplementary materials .",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "supplementary materials",
+                "aspect_category": "material quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course quality",
+                "positive"
+            ],
+            [
+                "supplementary materials",
+                "material quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "792_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "[('Prof . Yaakov', 'faculty comprehensiveness', 'positive'), ('Prof . Yaakov', 'faculty response', 'positive')]",
+        "pred_label": [
+            [
+                "Prof . Yaakov",
+                "faculty comprehensiveness",
+                "positive"
+            ],
+            [
+                "Prof . Yaakov",
+                "faculty response",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.424295663833618,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 248.4058823529412,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.465627908706665,
+        "text": "Prof . Yaakov is incredibly talented and keeps the lessons dynamic and he goes into details without making it tiresome .",
+        "aspects": [
+            {
+                "aspect_term": "Prof . Yaakov",
+                "aspect_category": "faculty comprehensiveness",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "Prof . Yaakov",
+                "aspect_category": "faculty general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Prof . Yaakov",
+                "faculty comprehensiveness",
+                "positive"
+            ],
+            [
+                "Prof . Yaakov",
+                "faculty general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "138_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "```json\n[\n  [\n    \"course\",\n    \"course general\",\n    \"positive\"\n  ]",
+                "pred_label": false,
+                "duration_label": 4.366137504577637,
+                "seed": 3,
+                "regeneration_reason": "no list in prediction"
+            },
+            {
+                "pred_label_raw": "```json\n[\n  [\"course\", \"course general\", \"positive\"]",
+                "pred_label": false,
+                "duration_label": 3.9445555210113525,
+                "seed": 8,
+                "regeneration_reason": "no list in prediction"
+            }
+        ],
+        "init_seed": 3,
+        "pred_raw": "```json\n[\n  (\"course\", \"course general\", \"positive\"),\n  (\"instructor\", \"faculty general\", \"positive\")\n]",
+        "pred_label": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ],
+            [
+                "instructor",
+                "faculty general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.538819789886475,
+        "seed": 13,
+        "avg_gpu_power_eval_W": 248.26142857142867,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 12.884788990020752,
+        "text": "A for the course and A + for its instructor Andrew Ng .",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "Andrew Ng",
+                "aspect_category": "faculty general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course quality",
+                "positive"
+            ],
+            [
+                "Andrew Ng",
+                "faculty general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "104_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('assignments', 'assignments quantity', 'negative')]",
+        "pred_label": [
+            [
+                "assignments",
+                "assignments quantity",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.8183939456939697,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 247.3762068965517,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.8538146018981934,
+        "text": "No exercises , no code assignments .",
+        "aspects": [
+            {
+                "aspect_term": "assignments",
+                "aspect_category": "assignments quantity",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "assignments",
+                "assignments quantity",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1342_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('contents', 'material comprehensiveness', 'positive')]",
+        "pred_label": [
+            [
+                "contents",
+                "material comprehensiveness",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8652894496917725,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 247.0065517241379,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.8995649814605713,
+        "text": "I love it because the contents are simple and very well structured .",
+        "aspects": [
+            {
+                "aspect_term": "contents",
+                "aspect_category": "material comprehensiveness",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "contents",
+                "aspect_category": "material quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "contents",
+                "material comprehensiveness",
+                "positive"
+            ],
+            [
+                "contents",
+                "material quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1013_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "[('NULL', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.7440977096557617,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 246.93586206896552,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.797881603240967,
+        "text": "Filled with examples , literature and very interesting interviews !",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "material quantity",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "material quantity",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "301_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```json\n[\n  (\"statement\", \"course general\", \"positive\")\n]",
+        "pred_label": [
+            [
+                "statement",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.021855354309082,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 245.39612903225805,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.157642364501953,
+        "text": "Every statement is very clear .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "presentation quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "presentation quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "454_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('course', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.7855944633483887,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 242.14200000000002,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9310028553009033,
+        "text": "Very good course .",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1087_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "[('Dr . Chuck', 'faculty general', 'positive')]",
+        "pred_label": [
+            [
+                "Dr . Chuck",
+                "faculty general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.807490587234497,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 244.79586206896553,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.8285911083221436,
+        "text": "Dr . Chuck ' s teaching style is completely in - sync with my learning style .",
+        "aspects": [
+            {
+                "aspect_term": "Dr . Chuck",
+                "aspect_category": "faculty comprehensiveness",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Dr . Chuck",
+                "faculty comprehensiveness",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "981_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('class', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "class",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8038511276245117,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 252.1148275862069,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.8539979457855225,
+        "text": "This was a fantastic class .",
+        "aspects": [
+            {
+                "aspect_term": "class",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "class",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1154_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('NULL', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.886054277420044,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 247.48233333333332,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9510247707366943,
+        "text": "i ' ve learned tons of new things . i would like to have more materials on the subject . could the staff attach some recommended readings ? other courses ? than you for making this course : )",
+        "aspects": [
+            {
+                "aspect_term": "materials",
+                "aspect_category": "material quantity",
+                "polarity": "neutral"
+            },
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "neutral"
+            },
+            {
+                "aspect_term": "course",
+                "aspect_category": "course quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "materials",
+                "material quantity",
+                "neutral"
+            ],
+            [
+                "course",
+                "course general",
+                "neutral"
+            ],
+            [
+                "course",
+                "course quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "542_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "[('NULL', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.7279725074768066,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 251.56586206896557,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.8703081607818604,
+        "text": "Personally , I suggest this module to all the students and professionals that they want to obtain useful and practical knowledge regarding Content Marketing and Social IMC .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "815_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "```\n[('quizzes', 'assignments quality', 'negative')]",
+                "pred_label": false,
+                "duration_label": 3.853520393371582,
+                "seed": 3,
+                "regeneration_reason": "aspect term not in text"
+            }
+        ],
+        "init_seed": 3,
+        "pred_raw": "[('quizes', 'assignments quality', 'negative'), ('quizes', 'assignments comprehensiveness', 'negative')]",
+        "pred_label": [
+            [
+                "quizes",
+                "assignments quality",
+                "negative"
+            ],
+            [
+                "quizes",
+                "assignments comprehensiveness",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.266009330749512,
+        "seed": 8,
+        "avg_gpu_power_eval_W": 247.34564516129026,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 8.145723342895508,
+        "text": "The quizes often ask for information that is beyond the scope of the lectures and steadily becomes a process of just retaking exams until you get a 100 % .",
+        "aspects": [
+            {
+                "aspect_term": "quizes",
+                "aspect_category": "assignments relatability",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "quizes",
+                "assignments relatability",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "915_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('NULL', 'course quality', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "course quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8265464305877686,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 248.1893103448275,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.840515375137329,
+        "text": "It ' s challenging and helps you develop a great functional programming mindset .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "assignments quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "assignments quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "680_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('NULL', 'course workload', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "course workload",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.8154866695404053,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 248.08633333333336,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9181199073791504,
+        "text": "So for most of the students , I believe , will have to do a lot of self - studying to finish the final project .",
+        "aspects": [
+            {
+                "aspect_term": "final project",
+                "aspect_category": "assignments workload",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "final project",
+                "assignments workload",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1204_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "```json\n[\n  [\n    \"words\",\n    \"presentation quality\",\n    \"negative\"\n  ]",
+                "pred_label": false,
+                "duration_label": 4.345034599304199,
+                "seed": 3,
+                "regeneration_reason": "no list in prediction"
+            },
+            {
+                "pred_label_raw": "```json\n[\n  [\n    \"words\",\n    \"presentation quality\",\n    \"negative\"\n  ]",
+                "pred_label": false,
+                "duration_label": 4.334158182144165,
+                "seed": 8,
+                "regeneration_reason": "no list in prediction"
+            },
+            {
+                "pred_label_raw": "```json\n[\n  (\"NULL\", \"presentation quality\", \"negative\"),\n  (\"NULL\", \"course value\", \"negative\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"NULL\", \"course quality\", \"positive\"),\n  (\"Mr . Andrew\", \"faculty general\", \"positive\"),\n  (\"lecturer\", \"faculty comprehensiveness\", \"positive\"),\n  (\"lecturer\", \"faculty response\", \"positive\"),\n  (\"Professor Covach\", \"faculty response\", \"positive\"),\n  (\"content\", \"course general\", \"positive\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"quizzes\", \"assignments comprehensiveness\", \"negative\"),\n  (\"quizzes\", \"assignments quality\", \"negative\"),\n  (\"course\", \"course comprehensiveness\", \"neutral\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"videos\", \"presentation quality\", \"negative\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"NULL\", \"course quality\", \"positive\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"Assignments\", \"assignments comprehensiveness\", \"positive\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"teacher\", \"faculty value\", \"positive\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"instructor\", \"faculty general\", \"positive\"),\n  (\"NULL\", \"course quality\", \"positive\"),\n  (\"course\", \"course comprehensiveness\", \"positive\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"assignment\", \"assignments workload\", \"negative\"),\n  (\"course instructors\", \"faculty comprehensiveness\", \"negative\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"assignments\", \"assignments relatability\", \"negative\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"assignments\", \"assignments comprehensiveness\", \"negative\"),\n  (\"tutorials\", \"presentation comprehensiveness\", \"positive\"),\n  (\"course\", \"course quality\", \"positive\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"Dr . Chuck\", \"faculty general\", \"positive\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"Videos\", \"presentation quality\", \"negative\"),\n  (\"quiz\", \"assignments quality\", \"negative\"),\n  (\"Assingments\", \"assignments quality\", \"negative\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"mentors\", \"faculty general\", \"positive\"),\n  (\"NULL\", \"course relatability\", \"negative\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"NULL\", \"course workload\", \"negative\"),\n  (\"NULL\", \"course general\", \"positive\"),\n  (\"NULL\", \"course comprehensiveness\", \"positive\"),\n  (\"course\", \"course general\", \"positive\"),\n  (\"professor\", \"faculty general\", \"positive\"),\n  (\"course\", \"course quality\", \"negative\"),\n  (\"team of experts\", \"faculty general\", \"positive\"),\n  (\"Harris\", \"faculty comprehensiveness\", \"positive\"),\n  (\"Courses\", \"course general\", \"positive\"),\n  (\"Prof . Scott\", \"faculty comprehensiveness\", \"positive\")\n]",
+                "pred_label": false,
+                "duration_label": 33.954445600509644,
+                "seed": 13,
+                "regeneration_reason": "aspect term not in text"
+            }
+        ],
+        "init_seed": 3,
+        "pred_raw": "```\n[('NULL', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8127193450927734,
+        "seed": 18,
+        "avg_gpu_power_eval_W": 248.58845930232536,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 46.559619665145874,
+        "text": "Very practical approach .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "course relatability",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "course relatability",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "399_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "[('course', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.716008186340332,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 247.52827586206897,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.812066078186035,
+        "text": "The best thing about the course was the acknowledgment that this is a highly interdisciplinary area and the emphasis on future research directions .",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1037_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('NULL', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.800151824951172,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 247.05,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.8353590965270996,
+        "text": "Enjoyed it . .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1259_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('assignments', 'assignments comprehensiveness', 'negative')]",
+        "pred_label": [
+            [
+                "assignments",
+                "assignments comprehensiveness",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.841817617416382,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 252.60033333333334,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.962114095687866,
+        "text": "The assignments are therefore not particularly challenging - - you get out of this class what you put in !",
+        "aspects": [
+            {
+                "aspect_term": "assignments",
+                "aspect_category": "assignments quality",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "assignments",
+                "assignments quality",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "744_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('assignments', 'assignments quality', 'positive')]",
+        "pred_label": [
+            [
+                "assignments",
+                "assignments quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.841078281402588,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 245.06206896551726,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.937296152114868,
+        "text": "There are obviously many text - books and online videos to learn more - or - less the same concepts , but the assignments here are the high point , they are hard , but for me personally , they are what made this course special .",
+        "aspects": [
+            {
+                "aspect_term": "assignments",
+                "aspect_category": "assignments comprehensiveness",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "assignments",
+                "aspect_category": "assignments quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "assignments",
+                "assignments comprehensiveness",
+                "negative"
+            ],
+            [
+                "assignments",
+                "assignments quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1134_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('NULL', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.806363344192505,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 243.16066666666674,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9500420093536377,
+        "text": "I learnt so much and could not stop until I finished .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "course comprehensiveness",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "course comprehensiveness",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1184_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('Assignments', 'assignments quantity', 'negative')]",
+        "pred_label": [
+            [
+                "Assignments",
+                "assignments quantity",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.83746600151062,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 248.22862068965517,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9309444427490234,
+        "text": "Assignments are not available for audit students .",
+        "aspects": [
+            {
+                "aspect_term": "Assignments",
+                "aspect_category": "assignments quality",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Assignments",
+                "assignments quality",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "436_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "```\n[('course', 'course general', 'positive')]",
+        "pred_label": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8253557682037354,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 248.32999999999996,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9370625019073486,
+        "text": "Very good course but not as good as the first one : Try monads are never introduced but are referenced by one of the lecturer .",
+        "aspects": [
+            {
+                "aspect_term": "course",
+                "aspect_category": "course general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "course",
+                "course general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1234_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "```json\n[\n  (\"course\", \"course general\", \"positive\")\n]",
+                "pred_label": false,
+                "duration_label": 4.042471885681152,
+                "seed": 3,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "[('course', 'course workload', 'positive')]",
+                "pred_label": false,
+                "duration_label": 3.739664316177368,
+                "seed": 8,
+                "regeneration_reason": "aspect term not in text"
+            }
+        ],
+        "init_seed": 3,
+        "pred_raw": "```json\n[\n  (\"NULL\", \"course general\", \"positive\")\n]",
+        "pred_label": [
+            [
+                "NULL",
+                "course general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.018810987472534,
+        "seed": 13,
+        "avg_gpu_power_eval_W": 248.89604395604388,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 11.935120344161987,
+        "text": "It goes along with a great pace , and sessions are not too long to lose you to distraction .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "course quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "presentation workload",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "course quality",
+                "positive"
+            ],
+            [
+                "NULL",
+                "presentation workload",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "coursera",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1095_coursera_../zero-shot-absa-quad/datasets/tasd/coursera/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 3,
+        "pred_raw": "[('weeks', 'course workload', 'negative')]",
+        "pred_label": [
+            [
+                "weeks",
+                "course workload",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.7217588424682617,
+        "seed": 3,
+        "avg_gpu_power_eval_W": 248.13827586206898,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.824021577835083,
+        "text": "The first three weeks are totally trivial .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "course general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "course general",
+                "negative"
+            ]
+        ]
+    }
+]

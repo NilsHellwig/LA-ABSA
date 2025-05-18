@@ -1,0 +1,2823 @@
+[
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "2_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('NULL', 'airline general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "airline general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8549132347106934,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.536,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.940056562423706,
+        "text": "Very impressed indeed.",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "airline general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "airline general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "513_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "```\n[('airline', 'airline general', 'negative')]",
+                "pred_label": false,
+                "duration_label": 3.8798868656158447,
+                "seed": 1,
+                "regeneration_reason": "aspect term not in text"
+            }
+        ],
+        "init_seed": 1,
+        "pred_raw": "Here's the sentiment element recognition for the final text, following the provided format:\n\nText: I’d stay away\nSentiment Elements: [('NULL', 'airline general', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "airline general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.995271444320679,
+        "seed": 6,
+        "avg_gpu_power_eval_W": 250.08223880597012,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 8.978410720825195,
+        "text": "I’d stay away",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "airline general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "airline general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "304_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('sparkling wine', 'onboard food', 'positive'), ('food', 'onboard food', 'negative'), ('bread', 'onboard food', 'negative'), ('pasta', 'onboard food', 'negative'), ('brie', 'onboard food', 'positive')]",
+        "pred_label": [
+            [
+                "sparkling wine",
+                "onboard food",
+                "positive"
+            ],
+            [
+                "food",
+                "onboard food",
+                "negative"
+            ],
+            [
+                "bread",
+                "onboard food",
+                "negative"
+            ],
+            [
+                "pasta",
+                "onboard food",
+                "negative"
+            ],
+            [
+                "brie",
+                "onboard food",
+                "positive"
+            ]
+        ],
+        "duration_label": 5.825193166732788,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.79886363636362,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.94667387008667,
+        "text": "I was pleased that they offered sparkling wine, but I found the food mediocre - dry bread, uninteresting pasta- huge piece of brie though!!",
+        "aspects": [
+            {
+                "aspect_term": "pasta",
+                "aspect_category": "onboard food",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "food",
+                "aspect_category": "onboard food",
+                "polarity": "neutral"
+            },
+            {
+                "aspect_term": "bread",
+                "aspect_category": "onboard food",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "sparkling wine",
+                "aspect_category": "onboard food",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "brie",
+                "aspect_category": "onboard food",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "food",
+                "aspect_category": "onboard food",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "pasta",
+                "onboard food",
+                "negative"
+            ],
+            [
+                "food",
+                "onboard food",
+                "neutral"
+            ],
+            [
+                "bread",
+                "onboard food",
+                "negative"
+            ],
+            [
+                "sparkling wine",
+                "onboard food",
+                "positive"
+            ],
+            [
+                "brie",
+                "onboard food",
+                "positive"
+            ],
+            [
+                "food",
+                "onboard food",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1332_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('staff', 'airline service', 'positive')]",
+        "pred_label": [
+            [
+                "staff",
+                "airline service",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8608996868133545,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.16200000000006,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9288196563720703,
+        "text": "The staff there were nice",
+        "aspects": [
+            {
+                "aspect_term": "staff",
+                "aspect_category": "airline service",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "staff",
+                "airline service",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1058_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('service', 'airline service', 'negative')]",
+        "pred_label": [
+            [
+                "service",
+                "airline service",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.880925416946411,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.79100000000003,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9290311336517334,
+        "text": "From start to finish, the service was appalling and completely unacceptable.",
+        "aspects": [
+            {
+                "aspect_term": "service",
+                "aspect_category": "airline service",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "service",
+                "airline service",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "283_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "[('checkin', 'airport operation check_in', 'positive'), ('PERSON', 'airline service', 'positive')]",
+                "pred_label": false,
+                "duration_label": 4.389343738555908,
+                "seed": 1,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "```\n[('checkin', 'airport operation check_in', 'positive'), ('PERSON', 'airline service', 'positive')]",
+                "pred_label": false,
+                "duration_label": 4.486327171325684,
+                "seed": 6,
+                "regeneration_reason": "aspect term not in text"
+            }
+        ],
+        "init_seed": 1,
+        "pred_raw": "```python\n[('check in', 'airport operation check_in', 'positive'), ('PERSON', 'airline service', 'positive')]",
+        "pred_label": [
+            [
+                "Check in",
+                "airport operation check_in",
+                "positive"
+            ],
+            [
+                "PERSON",
+                "airline service",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.527173280715942,
+        "seed": 11,
+        "avg_gpu_power_eval_W": 249.49127450980404,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 13.45383882522583,
+        "text": "Check in at Bristol and PERSON were exemplary.",
+        "aspects": [
+            {
+                "aspect_term": "Check in",
+                "aspect_category": "airport operation check_in",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "PERSON",
+                "aspect_category": "airline service",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Check in",
+                "airport operation check_in",
+                "positive"
+            ],
+            [
+                "PERSON",
+                "airline service",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1269_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Okay, here's the sentiment element breakdown for the final text, following the provided format.\n\n```\n[('Customer service', 'airline service', 'positive'), ('take off', 'airline general', 'positive'), ('landing', 'airline general', 'positive')]",
+        "pred_label": [
+            [
+                "Customer service",
+                "airline service",
+                "positive"
+            ],
+            [
+                "take off",
+                "airline general",
+                "positive"
+            ],
+            [
+                "landing",
+                "airline general",
+                "positive"
+            ]
+        ],
+        "duration_label": 5.640480041503906,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.92069767441856,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.715918779373169,
+        "text": "Customer service was excellent; take off and landing were great.",
+        "aspects": [
+            {
+                "aspect_term": "Customer service",
+                "aspect_category": "airline service",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Customer service",
+                "airline service",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "346_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('check in', 'airport operation check_in', 'positive'), ('bag tags', 'airport operation baggage', 'positive')]",
+        "pred_label": [
+            [
+                "check in",
+                "airport operation check_in",
+                "positive"
+            ],
+            [
+                "bag tags",
+                "airport operation baggage",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.479045391082764,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 250.26514285714293,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.590322256088257,
+        "text": "The check in was efficient with a machine to self print bag tags and then an easy bag drop.",
+        "aspects": [
+            {
+                "aspect_term": "bag drop",
+                "aspect_category": "airport operation baggage",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "check in",
+                "aspect_category": "airport operation check_in",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "bag drop",
+                "airport operation baggage",
+                "positive"
+            ],
+            [
+                "check in",
+                "airport operation check_in",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1166_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the breakdown of sentiment elements for the final text, following the requested format:\n\n```\n[('Ticket', 'airline price', 'negative')]",
+        "pred_label": [
+            [
+                "Ticket",
+                "airline price",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.6456825733184814,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 245.17416666666668,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.78544807434082,
+        "text": "Ticket not cheap.",
+        "aspects": [
+            {
+                "aspect_term": "Ticket",
+                "aspect_category": "airline price",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Ticket",
+                "airline price",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "848_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('luggage', 'airport operation baggage', 'negative'), ('prices', 'airline price', 'negative')]",
+        "pred_label": [
+            [
+                "luggage",
+                "airport operation baggage",
+                "negative"
+            ],
+            [
+                "prices",
+                "airline price",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.314931154251099,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.91939393939396,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.3660888671875,
+        "text": "They weigh your luggage and force you to pay outrageous prices per kilo - $125 for a small carry-on.",
+        "aspects": [
+            {
+                "aspect_term": "carry-on",
+                "aspect_category": "airline price",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "airline price",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "carry-on",
+                "airline price",
+                "negative"
+            ],
+            [
+                "NULL",
+                "airline price",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "484_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('PERSON', 'airline service', 'positive'), ('Easyjet', 'airline general', 'negative')]",
+        "pred_label": [
+            [
+                "PERSON",
+                "airline service",
+                "positive"
+            ],
+            [
+                "Easyjet",
+                "airline general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.273674964904785,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.69424242424242,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.391788005828857,
+        "text": "Our entire holiday got cancelled by Easyjet and PERSON saved our holiday and helped us book another so that the kids weren’t hugely disappointed.",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "punctuality general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "punctuality general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "589_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('company', 'airline general', 'negative')]",
+        "pred_label": [
+            [
+                "company",
+                "airline general",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.827519416809082,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 244.01699999999997,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.888343334197998,
+        "text": "The rating for this wonderful company would be negative if it would be possible.",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "airline general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "airline general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "571_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the continuation of the sentiment element recognition for the provided text, following the established format:\n\nText: But then did not follow the same in Istanbul making me miss the connecting flight and delaying me some 14hrs... No\nSentiment Elements: [('NULL', 'punctuality general', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "punctuality general",
+                "negative"
+            ]
+        ],
+        "duration_label": 6.020310163497925,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.8273333333334,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 6.0470130443573,
+        "text": "But then did not follow the same in Istanbul making me miss the connecting flight and delaying me some 14hrs... No",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "punctuality general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "punctuality general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1208_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the completed list of sentiment elements for the final text, following the specified format:\n\n[('boarding', 'airport operation boarding', 'negative')]",
+        "pred_label": [
+            [
+                "boarding",
+                "airport operation boarding",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.618512392044067,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.5111428571429,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.6351637840271,
+        "text": "Delays at boarding.",
+        "aspects": [
+            {
+                "aspect_term": "boarding",
+                "aspect_category": "punctuality general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "boarding",
+                "punctuality general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1016_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('experience', 'airline general', 'positive')]",
+        "pred_label": [
+            [
+                "experience",
+                "airline general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.9214770793914795,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.69500000000002,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9891135692596436,
+        "text": "I travelled either with my family + kids, with friends or alone and it was always a pleasant experience.",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "airline general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "airline general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1160_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('euros', 'airline price', 'neutral')]",
+        "pred_label": [
+            [
+                "euros",
+                "airline price",
+                "neutral"
+            ]
+        ],
+        "duration_label": 3.9059131145477295,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 250.05,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9867780208587646,
+        "text": "So it was just 45 euros per flight.",
+        "aspects": [
+            {
+                "aspect_term": "flight",
+                "aspect_category": "airline price",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "flight",
+                "airline price",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1337_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "[('flight attendant', 'airline service', 'positive'), ('airline', 'airline general', 'positive')]",
+                "pred_label": false,
+                "duration_label": 4.327922105789185,
+                "seed": 1,
+                "regeneration_reason": "aspect term not in text"
+            }
+        ],
+        "init_seed": 1,
+        "pred_raw": "```\n[('flight attendant', 'airline service', 'positive')]",
+        "pred_label": [
+            [
+                "flight attendant",
+                "airline service",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.9458553791046143,
+        "seed": 6,
+        "avg_gpu_power_eval_W": 247.78888888888886,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 8.339763879776001,
+        "text": "An absoloutley amazing experience with jet 2 this review is solely towards the amazing flight attendant who I didn’t catch the name of unfortunately.",
+        "aspects": [
+            {
+                "aspect_term": "flight attendant",
+                "aspect_category": "airline service",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "jet 2",
+                "aspect_category": "airline general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "flight attendant",
+                "airline service",
+                "positive"
+            ],
+            [
+                "jet 2",
+                "airline general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "953_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('flight', 'punctuality general', 'negative')]",
+        "pred_label": [
+            [
+                "Flight",
+                "punctuality general",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.8621509075164795,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.543,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.953850030899048,
+        "text": "An overnight Flight from IAD to London Heathrow on DATE was two hours late.",
+        "aspects": [
+            {
+                "aspect_term": "Flight from IAD to London Heathrow",
+                "aspect_category": "punctuality general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Flight from IAD to London Heathrow",
+                "punctuality general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "522_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('bag dropoff', 'airport operation baggage', 'positive')]",
+        "pred_label": [
+            [
+                "bag dropoff",
+                "airport operation baggage",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.9734668731689453,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.33290322580643,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.092036485671997,
+        "text": "Smooth bag dropoff.",
+        "aspects": [
+            {
+                "aspect_term": "bag dropoff",
+                "aspect_category": "airport operation baggage",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "bag dropoff",
+                "airport operation baggage",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "487_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('airline', 'airline general', 'negative')]",
+        "pred_label": [
+            [
+                "airline",
+                "airline general",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.887758493423462,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 242.90419354838716,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.030859470367432,
+        "text": "Honestly, compared to this airline, Ryanair looks like a luxury company.",
+        "aspects": [
+            {
+                "aspect_term": "Ryanair",
+                "aspect_category": "airline general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Ryanair",
+                "airline general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "838_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('seats', 'onboard seat comfort', 'negative'), ('staff', 'airline service', 'negative')]",
+        "pred_label": [
+            [
+                "Seats",
+                "onboard seat comfort",
+                "negative"
+            ],
+            [
+                "staff",
+                "airline service",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.3306498527526855,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 245.19363636363633,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.3355913162231445,
+        "text": "Seats are tight and staff is not understanding or flexible… we were only travelling with a hand luggage very small and me and my husband were one of the first people to",
+        "aspects": [
+            {
+                "aspect_term": "Seats",
+                "aspect_category": "onboard seat comfort",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "staff",
+                "aspect_category": "airline service",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Seats",
+                "onboard seat comfort",
+                "negative"
+            ],
+            [
+                "staff",
+                "airline service",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "465_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('refund', 'airline price', 'negative')]",
+        "pred_label": [
+            [
+                "refund",
+                "airline price",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.824944019317627,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.48666666666668,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.8904576301574707,
+        "text": "DO NOT DO IT because they do not honor their refund.",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "airline general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "airline general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1022_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('plane', 'airline general', 'negative')]",
+        "pred_label": [
+            [
+                "plane",
+                "airline general",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.9081292152404785,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 245.96633333333332,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9685091972351074,
+        "text": "The most uncomfortable plane I've ever been on.",
+        "aspects": [
+            {
+                "aspect_term": "plane",
+                "aspect_category": "airline general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "plane",
+                "airline general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "743_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('seats', 'onboard seat comfort', 'negative'), ('service', 'airline service', 'negative'), ('staff', 'airline service', 'negative'), ('baggage', 'airport operation baggage', 'negative'), ('NULL', 'punctuality general', 'negative')]",
+        "pred_label": [
+            [
+                "seats",
+                "onboard seat comfort",
+                "negative"
+            ],
+            [
+                "service",
+                "airline service",
+                "negative"
+            ],
+            [
+                "staff",
+                "airline service",
+                "negative"
+            ],
+            [
+                "baggage",
+                "airport operation baggage",
+                "negative"
+            ],
+            [
+                "NULL",
+                "punctuality general",
+                "negative"
+            ]
+        ],
+        "duration_label": 5.827723026275635,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 250.12295454545463,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.877240180969238,
+        "text": "Really small seats, poor in flight service, staff diffident about anyone other than business class, baggage at Heathrow took 3/4 hour and was soaking wet  - oh and we were 1 1/2 hours late.",
+        "aspects": [
+            {
+                "aspect_term": "baggage",
+                "aspect_category": "airport operation baggage",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "seats",
+                "aspect_category": "onboard seat comfort",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "punctuality general",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "staff",
+                "aspect_category": "airline service",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "in flight service",
+                "aspect_category": "airline service",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "baggage",
+                "airport operation baggage",
+                "negative"
+            ],
+            [
+                "seats",
+                "onboard seat comfort",
+                "negative"
+            ],
+            [
+                "NULL",
+                "punctuality general",
+                "negative"
+            ],
+            [
+                "staff",
+                "airline service",
+                "negative"
+            ],
+            [
+                "in flight service",
+                "airline service",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "832_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('NULL', 'airline general', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "airline general",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.9244561195373535,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.79166666666663,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9801828861236572,
+        "text": "If you are Not forced to use them don’t do it!",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "airline general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "airline general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "338_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```json\n[\n  (\"direct non holiday flights\", \"airline general\", \"positive\")\n]",
+        "pred_label": [
+            [
+                "Direct non holiday flights",
+                "airline general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.218812465667725,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.26562500000003,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.266015291213989,
+        "text": "Direct non holiday flights to Izmir are lacking in choices so this is a good route.",
+        "aspects": [
+            {
+                "aspect_term": "route",
+                "aspect_category": "airline general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "route",
+                "airline general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "307_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Okay, here's the sentiment element recognition for the final text, formatted as requested:\n\n```\n[('Very helpful', 'airline service', 'positive')]",
+        "pred_label": [
+            [
+                "Very helpful",
+                "airline service",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.718598365783691,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.64194444444445,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.816203594207764,
+        "text": "Very helpful on arrival to East Midlands airport, weighing cases and helping to find desk for check in.",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "airline service",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "airline service",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "521_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('flight', 'punctuality general', 'positive'), ('aircraft interior', 'airline general', 'positive')]",
+        "pred_label": [
+            [
+                "flight",
+                "punctuality general",
+                "positive"
+            ],
+            [
+                "aircraft interior",
+                "airline general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.333756923675537,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.41545454545465,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.390480279922485,
+        "text": "We had booked Manchester to Innsbruck return (flights only) and everything went without a hitch timewise, the aircraft interior was",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "punctuality general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "punctuality general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "488_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('company', 'airline general', 'positive')]",
+        "pred_label": [
+            [
+                "company",
+                "airline general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8407702445983887,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 250.12933333333334,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9344866275787354,
+        "text": "I am impressed by the competence of this company regarding animals, we contacted the company DATE before departure and they helped us choose carriers for animals.",
+        "aspects": [
+            {
+                "aspect_term": "company",
+                "aspect_category": "airline general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "company",
+                "airline general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "990_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the completed list of sentiment elements for the final text, following the specified format:\n\n```\n[('Air France', 'airline general', 'positive')]",
+        "pred_label": [
+            [
+                "Air France",
+                "airline general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.776285886764526,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.60888888888888,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.857006549835205,
+        "text": "Air France have been by far the best so far.",
+        "aspects": [
+            {
+                "aspect_term": "Air France",
+                "aspect_category": "airline general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Air France",
+                "airline general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "480_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the completed list of sentiment elements for the final text, following the specified format:\n\n[('Entertainment', 'onboard entertainment', 'positive'), ('seat', 'onboard seat comfort', 'positive')]",
+        "pred_label": [
+            [
+                "Entertainment",
+                "onboard entertainment",
+                "positive"
+            ],
+            [
+                "seat",
+                "onboard seat comfort",
+                "positive"
+            ]
+        ],
+        "duration_label": 5.177876710891724,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 249.2405128205129,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.198777914047241,
+        "text": "Entertainment was enjoyable and seat was comfy and pretty clean",
+        "aspects": [
+            {
+                "aspect_term": "seat",
+                "aspect_category": "onboard seat comfort",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "Entertainment",
+                "aspect_category": "onboard entertainment",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "seat",
+                "aspect_category": "onboard cleanliness",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "seat",
+                "onboard seat comfort",
+                "positive"
+            ],
+            [
+                "Entertainment",
+                "onboard entertainment",
+                "positive"
+            ],
+            [
+                "seat",
+                "onboard cleanliness",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "974_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('NULL', 'airline general', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "airline general",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.8445961475372314,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.11499999999995,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9427545070648193,
+        "text": "I wss running late due to traffic and security but zero assistance anywhere so missed my flight and then no assistance from anyone to help me.",
+        "aspects": [
+            {
+                "aspect_term": "assistance",
+                "aspect_category": "airline service",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "assistance",
+                "airline service",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "956_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the completed list of sentiment elements for the final text, following the specified format:\n\n```\n[('staff', 'airline service', 'positive')]",
+        "pred_label": [
+            [
+                "staff",
+                "airline service",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.729359865188599,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.82138888888892,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.8506083488464355,
+        "text": "The staff are always on hand at airports to help if needed.",
+        "aspects": [
+            {
+                "aspect_term": "staff",
+                "aspect_category": "airline service",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "staff",
+                "airline service",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1203_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the sentiment element recognition for the final text, following the provided format:\n\nText: Tried Jet2 as all our TUI flights lately have been delayed.\nSentiment Elements: [('Jet2', 'airline general', 'positive'), ('flights', 'punctuality general', 'negative')]",
+        "pred_label": [
+            [
+                "Jet2",
+                "airline general",
+                "positive"
+            ],
+            [
+                "flights",
+                "punctuality general",
+                "negative"
+            ]
+        ],
+        "duration_label": 5.883556365966797,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.19088888888888,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.933318138122559,
+        "text": "Tried Jet2 as all our TUI flights lately have been delayed.",
+        "aspects": [
+            {
+                "aspect_term": "TUI flights",
+                "aspect_category": "punctuality general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "TUI flights",
+                "punctuality general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "27_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('airline', 'airline general', 'negative'), ('checkin', 'airport operation check_in', 'negative')]",
+        "pred_label": [
+            [
+                "airline",
+                "airline general",
+                "negative"
+            ],
+            [
+                "checkin",
+                "airport operation check_in",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.433438539505005,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.322,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.523529767990112,
+        "text": "Worst airline ever, charged £40 on the way there for checkin.",
+        "aspects": [
+            {
+                "aspect_term": "checkin",
+                "aspect_category": "airline price",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "airline",
+                "aspect_category": "airline general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "checkin",
+                "airline price",
+                "negative"
+            ],
+            [
+                "airline",
+                "airline general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1228_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the sentiment element recognition for the provided text, formatted as requested:\n\n[('staff', 'airline service', 'negative'), ('plane', 'onboard cleanliness', 'negative'), ('PERSON', 'airline service', 'negative'), ('PERSON', 'airline service', 'negative')]",
+        "pred_label": [
+            [
+                "staff",
+                "airline service",
+                "negative"
+            ],
+            [
+                "plane",
+                "onboard cleanliness",
+                "negative"
+            ],
+            [
+                "PERSON",
+                "airline service",
+                "negative"
+            ],
+            [
+                "PERSON",
+                "airline service",
+                "negative"
+            ]
+        ],
+        "duration_label": 5.797322034835815,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.1356818181818,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.799673080444336,
+        "text": "absolutely disgusted by the the mess PERSON the staff was very rude at the gate and the plane wasn't clean in ages PERSON shocking!",
+        "aspects": [
+            {
+                "aspect_term": "plane",
+                "aspect_category": "onboard cleanliness",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "PERSON",
+                "aspect_category": "airline service",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "plane",
+                "onboard cleanliness",
+                "negative"
+            ],
+            [
+                "PERSON",
+                "airline service",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1143_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the sentiment element recognition for the final text, following the provided format:\n\n```\n[('gentleman', 'airline service', 'positive'), ('bag', 'airport operation baggage', 'negative'), ('plane', 'punctuality general', 'negative')]",
+        "pred_label": [
+            [
+                "gentleman",
+                "airline service",
+                "positive"
+            ],
+            [
+                "bag",
+                "airport operation baggage",
+                "negative"
+            ],
+            [
+                "plane",
+                "punctuality general",
+                "negative"
+            ]
+        ],
+        "duration_label": 5.589707612991333,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 249.1711627906976,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.614256381988525,
+        "text": "The gentleman who boarded us told us we would have to pay to put bag in the hold which we did to avoid holding passengers up as plane was over an hour late",
+        "aspects": [
+            {
+                "aspect_term": "plane",
+                "aspect_category": "punctuality general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "plane",
+                "punctuality general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1026_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the completed list of sentiment elements for the final text, following the requested format:\n\nText: Their departure time was right on\nSentiment Elements: [('departure time', 'punctuality general', 'positive')]",
+        "pred_label": [
+            [
+                "departure time",
+                "punctuality general",
+                "positive"
+            ]
+        ],
+        "duration_label": 5.198845386505127,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.41325,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.2905333042144775,
+        "text": "Their departure time was right on",
+        "aspects": [
+            {
+                "aspect_term": "departure time",
+                "aspect_category": "punctuality general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "departure time",
+                "punctuality general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "975_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('NULL', 'airline general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "airline general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.7589523792266846,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 244.76896551724138,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.7679309844970703,
+        "text": "No issues at all.",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "airline general",
+                "polarity": "neutral"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "airline general",
+                "neutral"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "191_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Okay, I've processed the text and here's the list of sentiment elements in the requested format:\n\n```\n[('delay', 'punctuality general', 'negative'), ('flight', 'airline general', 'negative')]",
+        "pred_label": [
+            [
+                "delay",
+                "punctuality general",
+                "negative"
+            ],
+            [
+                "flight",
+                "airline general",
+                "negative"
+            ]
+        ],
+        "duration_label": 5.286591291427612,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.82875000000004,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.323139429092407,
+        "text": "This 1 hour and 30 minutes delay led us to miss our connecting flight although there was a 2 hour 15",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "punctuality general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "punctuality general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "741_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('NULL', 'airline general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "airline general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.7909085750579834,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.131,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.938680648803711,
+        "text": "Amazing amazing flight.",
+        "aspects": [
+            {
+                "aspect_term": "flight",
+                "aspect_category": "airline general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "flight",
+                "airline general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "836_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('flights', 'punctuality general', 'positive')]",
+        "pred_label": [
+            [
+                "Flights",
+                "punctuality general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.8203346729278564,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.57433333333339,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9124653339385986,
+        "text": "Flights left and landed on time.",
+        "aspects": [
+            {
+                "aspect_term": "Flights",
+                "aspect_category": "punctuality general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Flights",
+                "punctuality general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "274_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('NULL', 'airline general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "airline general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.823594093322754,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 243.781,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.951554775238037,
+        "text": "Rather than getting turned away as other airlines had done to passengers we were looked after.",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "airline service",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "airline service",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "128_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('stewardess', 'airline service', 'negative')]",
+        "pred_label": [
+            [
+                "stewardess",
+                "airline service",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.003478527069092,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.8316129032258,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.09598183631897,
+        "text": "I ringed again and the rude stewardess said \"what is it this time\"",
+        "aspects": [
+            {
+                "aspect_term": "stewardess",
+                "aspect_category": "airline service",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "stewardess",
+                "airline service",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "20_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('boarding', 'airport operation boarding', 'negative')]",
+        "pred_label": [
+            [
+                "Boarding",
+                "airport operation boarding",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.9134857654571533,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 244.34599999999998,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9754745960235596,
+        "text": "The Boarding process was like a cattle car with us having to bused to and from the plane.",
+        "aspects": [
+            {
+                "aspect_term": "Boarding process",
+                "aspect_category": "airport operation boarding",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Boarding process",
+                "airport operation boarding",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1101_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('staff', 'airline service', 'positive'), ('PERSON', 'airline service', 'positive')]",
+        "pred_label": [
+            [
+                "staff",
+                "airline service",
+                "positive"
+            ],
+            [
+                "PERSON",
+                "airline service",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.221148729324341,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 250.9749999999999,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.236417770385742,
+        "text": "The EasyJet staff, in particular PERSON, was incredibly helpful and ensured that the group was guided & supported so that they can board their flight as efficiently as possible.",
+        "aspects": [
+            {
+                "aspect_term": "PERSON",
+                "aspect_category": "airline service",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "PERSON",
+                "airline service",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "403_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('flight', 'punctuality general', 'negative')]",
+        "pred_label": [
+            [
+                "flight",
+                "punctuality general",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.845012664794922,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 254.20689655172413,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.852919816970825,
+        "text": "Got on bus to board flight then told to all get off….flight was cancelled.",
+        "aspects": [
+            {
+                "aspect_term": "flight",
+                "aspect_category": "punctuality general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "flight",
+                "punctuality general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "510_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('seats', 'onboard seat comfort', 'negative')]",
+        "pred_label": [
+            [
+                "seats",
+                "onboard seat comfort",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.042337656021118,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 249.59593749999996,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.176937580108643,
+        "text": "However, moving other passengers to seats because you know them is unacceptable.",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "airline general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "airline general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1292_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('leg room', 'onboard seat legroom', 'negative'), ('food', 'onboard food', 'negative'), ('staff', 'airline service', 'negative')]",
+        "pred_label": [
+            [
+                "leg room",
+                "onboard seat legroom",
+                "negative"
+            ],
+            [
+                "food",
+                "onboard food",
+                "negative"
+            ],
+            [
+                "staff",
+                "airline service",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.903748273849487,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.66594594594594,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.907291889190674,
+        "text": "No leg room, poor food, grumpy and impolite staff.",
+        "aspects": [
+            {
+                "aspect_term": "food",
+                "aspect_category": "onboard food",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "staff",
+                "aspect_category": "airline service",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "leg room",
+                "aspect_category": "onboard seat legroom",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "food",
+                "onboard food",
+                "negative"
+            ],
+            [
+                "staff",
+                "airline service",
+                "negative"
+            ],
+            [
+                "leg room",
+                "onboard seat legroom",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1144_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('TAP Airlines', 'airline general', 'positive')]",
+        "pred_label": [
+            [
+                "TAP Airlines",
+                "airline general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.829064130783081,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.35833333333332,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.9502274990081787,
+        "text": "TAP Airlines is incredible.",
+        "aspects": [
+            {
+                "aspect_term": "TAP Airlines",
+                "aspect_category": "airline general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "TAP Airlines",
+                "airline general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1167_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('food', 'onboard food', 'positive')]",
+        "pred_label": [
+            [
+                "food",
+                "onboard food",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.9375498294830322,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.27933333333337,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.955679416656494,
+        "text": "The food is the only thing I would highlight as being quite good.",
+        "aspects": [
+            {
+                "aspect_term": "food",
+                "aspect_category": "onboard food",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "food",
+                "onboard food",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "664_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the sentiment element recognition for the final text, following the provided format:\n\nText: DO NOT USE BA EVER!!!!!\nSentiment Elements: [('BA', 'airline general', 'negative')]",
+        "pred_label": [
+            [
+                "BA",
+                "airline general",
+                "negative"
+            ]
+        ],
+        "duration_label": 5.020737171173096,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.06210526315786,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.10502028465271,
+        "text": "DO NOT USE BA EVER!!!!!",
+        "aspects": [
+            {
+                "aspect_term": "BA",
+                "aspect_category": "airline general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "BA",
+                "airline general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "784_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the sentiment element recognition for the final text, following the provided format:\n\n```\n[('flight', 'punctuality general', 'negative'), ('refreshment vouchers', 'airline service', 'negative')]",
+        "pred_label": [
+            [
+                "flight",
+                "punctuality general",
+                "negative"
+            ],
+            [
+                "refreshment vouchers",
+                "airline service",
+                "negative"
+            ]
+        ],
+        "duration_label": 5.244295597076416,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 245.95461538461532,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.253213167190552,
+        "text": "Our flight coming back from Geneva was cancelled and then the flight going to Geneva was delayed by 5 hours and we were not offered refreshment vouchers as is usually the custom.",
+        "aspects": [
+            {
+                "aspect_term": "refreshment vouchers",
+                "aspect_category": "airline service",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "flight",
+                "aspect_category": "punctuality general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "refreshment vouchers",
+                "airline service",
+                "negative"
+            ],
+            [
+                "flight",
+                "punctuality general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1030_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('NULL', 'airline general', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "airline general",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.9101836681365967,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.60612903225805,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.026730060577393,
+        "text": "I now think I'd crawl through glass before I selected your airline again.",
+        "aspects": [
+            {
+                "aspect_term": "airline",
+                "aspect_category": "airline general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "airline",
+                "airline general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "756_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('Aegean Airlines', 'airline general', 'negative'), ('luggage', 'airport operation baggage', 'negative')]",
+        "pred_label": [
+            [
+                "Aegean Airlines",
+                "airline general",
+                "negative"
+            ],
+            [
+                "luggage",
+                "airport operation baggage",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.404675006866455,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 245.87205882352936,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.485407590866089,
+        "text": "I recently flew with Aegean Airlines and had a concerning experience with their handling of my luggage.",
+        "aspects": [
+            {
+                "aspect_term": "handling of my luggage",
+                "aspect_category": "airline general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "handling of my luggage",
+                "airline general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1118_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('plane', 'onboard cleanliness', 'positive')]",
+        "pred_label": [
+            [
+                "plane",
+                "onboard cleanliness",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.9385673999786377,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 244.0836666666666,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.987183094024658,
+        "text": "The plane was very clean.",
+        "aspects": [
+            {
+                "aspect_term": "plane",
+                "aspect_category": "onboard cleanliness",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "plane",
+                "onboard cleanliness",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "459_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('Cabin crew', 'airline service', 'positive'), ('airport staff', 'airline service', 'positive')]",
+        "pred_label": [
+            [
+                "Cabin crew",
+                "airline service",
+                "positive"
+            ],
+            [
+                "airport staff",
+                "airline service",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.338497161865234,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.57060606060602,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.359435319900513,
+        "text": "The Cabin crew were smart and professional as were the airport staff.",
+        "aspects": [
+            {
+                "aspect_term": "Cabin crew",
+                "aspect_category": "airline service",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Cabin crew",
+                "airline service",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1104_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('seats', 'onboard seat comfort', 'positive')]",
+        "pred_label": [
+            [
+                "seats",
+                "onboard seat comfort",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.929722547531128,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.87866666666662,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.971843957901001,
+        "text": "The seats on the Airbus 350 are comfortable if a little narrow.",
+        "aspects": [
+            {
+                "aspect_term": "seats",
+                "aspect_category": "onboard seat comfort",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "seats",
+                "aspect_category": "onboard seat comfort",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "seats",
+                "onboard seat comfort",
+                "positive"
+            ],
+            [
+                "seats",
+                "onboard seat comfort",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1262_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the completed list of sentiment elements for the final text, following the specified format:\n\n```\n[('snacks', 'onboard food', 'negative')]",
+        "pred_label": [
+            [
+                "snacks",
+                "onboard food",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.732930660247803,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 250.75027027027028,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.867303133010864,
+        "text": "Additionally, no snacks were provided.",
+        "aspects": [
+            {
+                "aspect_term": "snacks",
+                "aspect_category": "onboard food",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "snacks",
+                "onboard food",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "782_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('flight', 'airline general', 'positive')]",
+        "pred_label": [
+            [
+                "flight",
+                "airline general",
+                "positive"
+            ]
+        ],
+        "duration_label": 3.79658579826355,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.11999999999998,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 3.8902854919433594,
+        "text": "No problems at all with the flight.",
+        "aspects": [
+            {
+                "aspect_term": "flight",
+                "aspect_category": "airline general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "flight",
+                "airline general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1209_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('TERRIBLE airline!', 'airline general', 'negative')]",
+        "pred_label": [
+            [
+                "Terrible airline!",
+                "airline general",
+                "negative"
+            ]
+        ],
+        "duration_label": 3.9923346042633057,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 245.59903225806448,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.132007837295532,
+        "text": "Terrible airline!",
+        "aspects": [
+            {
+                "aspect_term": "airline",
+                "aspect_category": "airline general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "airline",
+                "airline general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "560_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the sentiment element recognition for the final text, following the provided format:\n\nText: Never again with this ‘star alliance’ airline.\nSentiment Elements: [('airline', 'airline general', 'negative')]",
+        "pred_label": [
+            [
+                "airline",
+                "airline general",
+                "negative"
+            ]
+        ],
+        "duration_label": 5.225912809371948,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.8535,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.260003328323364,
+        "text": "Never again with this ‘star alliance’ airline.",
+        "aspects": [
+            {
+                "aspect_term": "star alliance",
+                "aspect_category": "airline general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "star alliance",
+                "airline general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1283_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Okay, here's the completed list of sentiment elements for the final text, formatted as requested:\n\n```\n[('seats', 'onboard seat legroom', 'positive')]",
+        "pred_label": [
+            [
+                "seats",
+                "onboard seat legroom",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.924950838088989,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.7481081081081,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.9268834590911865,
+        "text": "The seats do have more leg room compared to other",
+        "aspects": [
+            {
+                "aspect_term": "leg room",
+                "aspect_category": "onboard seat legroom",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "leg room",
+                "onboard seat legroom",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1117_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('legroom seats', 'onboard seat legroom', 'negative'), ('airline', 'airline general', 'negative')]",
+        "pred_label": [
+            [
+                "legroom seats",
+                "onboard seat legroom",
+                "negative"
+            ],
+            [
+                "airline",
+                "airline general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.442195892333984,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 249.34441176470585,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.531830787658691,
+        "text": "Despite booking extra legroom seats well in advance, TUI airlines decided to change the aircraft but didn't inform us this meant we lost our seat bookings.",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "airline service",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "airline service",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "flightabsa",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "934_flightabsa_../zero-shot-absa-quad/datasets/tasd/flightabsa/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('airline', 'airline general', 'negative'), ('special meals', 'onboard food', 'negative')]",
+        "pred_label": [
+            [
+                "airline",
+                "airline general",
+                "negative"
+            ],
+            [
+                "special meals",
+                "onboard food",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.298496961593628,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 250.47575757575754,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.307928085327148,
+        "text": "The airline never registered and served the special meals I ordered.",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "airline service",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "airline service",
+                "negative"
+            ]
+        ]
+    }
+]

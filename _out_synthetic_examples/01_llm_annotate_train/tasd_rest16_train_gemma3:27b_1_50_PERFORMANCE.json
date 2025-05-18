@@ -1,0 +1,3710 @@
+[
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "7_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('Saul', 'restaurant general', 'positive')]",
+        "pred_label": [
+            [
+                "Saul",
+                "restaurant general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.157843589782715,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.48156249999997,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.205779790878296,
+        "text": "Saul is the best restaurant on Smith Street and in Brooklyn .",
+        "aspects": [
+            {
+                "aspect_term": "Saul",
+                "aspect_category": "restaurant general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Saul",
+                "restaurant general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1449_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('NULL', 'service general', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.066592693328857,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.01935483870966,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.11893630027771,
+        "text": "Although we were told 10-15 minutes and it was more like 45 minutes .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "519_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('sushi', 'food quality', 'negative')]",
+        "pred_label": [
+            [
+                "sushi",
+                "food quality",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.210010766983032,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.08812499999996,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.29191780090332,
+        "text": "Quite frankly , this is some of the worst sushi I have ever tried .",
+        "aspects": [
+            {
+                "aspect_term": "sushi",
+                "aspect_category": "food quality",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "sushi",
+                "food quality",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "981_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the breakdown of sentiment elements for the final text, following the requested format:\n\n```\n[('food', 'food quality', 'negative'), ('sauces', 'food quality', 'negative')]",
+        "pred_label": [
+            [
+                "food",
+                "food quality",
+                "negative"
+            ],
+            [
+                "sauces",
+                "food quality",
+                "negative"
+            ]
+        ],
+        "duration_label": 5.385610580444336,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 245.50536585365853,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.430562496185303,
+        "text": "The food was not fresh , the sauces were bland and very oily .",
+        "aspects": [
+            {
+                "aspect_term": "food",
+                "aspect_category": "food quality",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "sauces",
+                "aspect_category": "food quality",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "food",
+                "food quality",
+                "negative"
+            ],
+            [
+                "sauces",
+                "food quality",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1346_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('customer service', 'service general', 'negative')]",
+        "pred_label": [
+            [
+                "customer service",
+                "service general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.154543399810791,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.1203125,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.246097564697266,
+        "text": "For a restaurant with such a good reputation and that is usually so packed , there was no reason for such a lack of intelligent customer service .",
+        "aspects": [
+            {
+                "aspect_term": "restaurant",
+                "aspect_category": "restaurant miscellaneous",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "customer service",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "restaurant",
+                "restaurant miscellaneous",
+                "positive"
+            ],
+            [
+                "customer service",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1041_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('decor', 'ambience general', 'positive')]",
+        "pred_label": [
+            [
+                "decor",
+                "ambience general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.138972997665405,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 245.38437499999998,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.164576768875122,
+        "text": "The decor is very simple but comfortable .",
+        "aspects": [
+            {
+                "aspect_term": "decor",
+                "aspect_category": "ambience general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "decor",
+                "ambience general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "823_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('Lucky Strike', 'restaurant general', 'positive')]",
+        "pred_label": [
+            [
+                "Lucky Strike",
+                "restaurant general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.273458480834961,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 250.7657575757576,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.323291301727295,
+        "text": "As a retired hipster , I can say with some degree of certainty that for the last year Lucky Strike has been the best laid-back late night in the city .",
+        "aspects": [
+            {
+                "aspect_term": "Lucky Strike",
+                "aspect_category": "restaurant general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Lucky Strike",
+                "restaurant general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1693_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('NULL', 'service general', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.226168632507324,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 251.881875,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.228870868682861,
+        "text": "The three of us standing in front of her should have been an indication of how many of us there were .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "905_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('Cute', 'ambience general', 'positive'), ('decorative', 'ambience general', 'positive')]",
+        "pred_label": [
+            [
+                "Cute",
+                "ambience general",
+                "positive"
+            ],
+            [
+                "decorative",
+                "ambience general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.544585227966309,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 249.0445714285714,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.633841276168823,
+        "text": "Cute and decorative .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "ambience general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "ambience general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1357_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```json\n[('NULL', 'restaurant general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.189764022827148,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 245.22575757575757,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.284867525100708,
+        "text": "Try it !",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "353_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('garden', 'ambience general', 'positive')]",
+        "pred_label": [
+            [
+                "garden",
+                "ambience general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.212464809417725,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.886875,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.357457876205444,
+        "text": "They tell me they are going to cover the garden in glass for the winter , so i 'm looking forward to going there on a snowy night to enjoy it .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant miscellaneous",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant miscellaneous",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "947_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('food', 'food quality', 'positive'), ('price', 'food prices', 'positive'), ('decor', 'ambience general', 'negative'), ('place', 'restaurant general', 'positive')]",
+        "pred_label": [
+            [
+                "food",
+                "food quality",
+                "positive"
+            ],
+            [
+                "price",
+                "food prices",
+                "positive"
+            ],
+            [
+                "decor",
+                "ambience general",
+                "negative"
+            ],
+            [
+                "place",
+                "restaurant general",
+                "positive"
+            ]
+        ],
+        "duration_label": 5.394789218902588,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.46857142857147,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.461190462112427,
+        "text": "However , if you want great food at a great price and don 't mind the decor , you can 't beat this place .",
+        "aspects": [
+            {
+                "aspect_term": "food",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "decor",
+                "aspect_category": "ambience general",
+                "polarity": "neutral"
+            },
+            {
+                "aspect_term": "food",
+                "aspect_category": "food prices",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "food",
+                "food quality",
+                "positive"
+            ],
+            [
+                "decor",
+                "ambience general",
+                "neutral"
+            ],
+            [
+                "food",
+                "food prices",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "709_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('pizzas', 'food quality', 'positive'), ('price', 'food prices', 'positive')]",
+        "pred_label": [
+            [
+                "pizzas",
+                "food quality",
+                "positive"
+            ],
+            [
+                "price",
+                "food prices",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.532511472702026,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.96742857142854,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.6738011837005615,
+        "text": "All of the pizzas are terrific and the price is even better !",
+        "aspects": [
+            {
+                "aspect_term": "pizzas",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "pizzas",
+                "aspect_category": "food prices",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "pizzas",
+                "food quality",
+                "positive"
+            ],
+            [
+                "pizzas",
+                "food prices",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1202_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('bartender', 'service general', 'negative'), ('drinks', 'drinks quality', 'negative'), ('service', 'service general', 'negative'), ('food', 'food quality', 'negative'), ('waitresses', 'service general', 'negative')]",
+        "pred_label": [
+            [
+                "bartender",
+                "service general",
+                "negative"
+            ],
+            [
+                "drinks",
+                "drinks quality",
+                "negative"
+            ],
+            [
+                "service",
+                "service general",
+                "negative"
+            ],
+            [
+                "food",
+                "food quality",
+                "negative"
+            ],
+            [
+                "waitresses",
+                "service general",
+                "negative"
+            ]
+        ],
+        "duration_label": 5.903179883956909,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.66911111111114,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.99938178062439,
+        "text": "Very immature bartender , didnt know how to make specific drinks , service was so slowwwww , the food was not fresh or warm , waitresses were busy flirting with men at the bar and werent very attentive to all the customers .",
+        "aspects": [
+            {
+                "aspect_term": "bartender",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "service",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "food",
+                "aspect_category": "food quality",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "waitresses",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "bartender",
+                "service general",
+                "negative"
+            ],
+            [
+                "service",
+                "service general",
+                "negative"
+            ],
+            [
+                "food",
+                "food quality",
+                "negative"
+            ],
+            [
+                "waitresses",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1253_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('belly dancers', 'restaurant miscellaneous', 'positive'), ('baba ganoush', 'food quality', 'positive')]",
+        "pred_label": [
+            [
+                "belly dancers",
+                "restaurant miscellaneous",
+                "positive"
+            ],
+            [
+                "baba ganoush",
+                "food quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.725120306015015,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 249.68222222222226,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.745366811752319,
+        "text": "Watch the talented belly dancers as you enjoy delicious baba ganoush that 's more lemony than smoky .",
+        "aspects": [
+            {
+                "aspect_term": "baba ganoush",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "belly dancers",
+                "aspect_category": "ambience general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "baba ganoush",
+                "food quality",
+                "positive"
+            ],
+            [
+                "belly dancers",
+                "ambience general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1166_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "```json\n[\n  [('NULL', 'restaurant general', 'positive')]",
+                "pred_label": false,
+                "duration_label": 4.3145763874053955,
+                "seed": 1,
+                "regeneration_reason": "no list in prediction"
+            },
+            {
+                "pred_label_raw": "```json\n[\n  [\n    ('Loved', 'restaurant general', 'positive')\n  ]",
+                "pred_label": false,
+                "duration_label": 4.50644063949585,
+                "seed": 6,
+                "regeneration_reason": "no list in prediction"
+            },
+            {
+                "pred_label_raw": "```json\n[\n  [\n    ('Loved', 'restaurant general', 'positive')\n  ]",
+                "pred_label": false,
+                "duration_label": 4.522157669067383,
+                "seed": 11,
+                "regeneration_reason": "no list in prediction"
+            },
+            {
+                "pred_label_raw": "```json\n[\n  [\n    ('NULL', 'restaurant general', 'positive')\n  ]",
+                "pred_label": false,
+                "duration_label": 4.547650575637817,
+                "seed": 16,
+                "regeneration_reason": "no list in prediction"
+            },
+            {
+                "pred_label_raw": "```json\n[\n  [\n    (\n      \"Loved\",\n      \"restaurant general\",\n      \"positive\"\n    )\n  ]",
+                "pred_label": false,
+                "duration_label": 4.924418926239014,
+                "seed": 21,
+                "regeneration_reason": "no list in prediction"
+            },
+            {
+                "pred_label_raw": "```json\n[\n  [\n    ('Loved', 'restaurant general', 'positive')\n  ]",
+                "pred_label": false,
+                "duration_label": 4.5368969440460205,
+                "seed": 26,
+                "regeneration_reason": "no list in prediction"
+            },
+            {
+                "pred_label_raw": "```json\n[\n  [\n    ('Loved', 'restaurant general', 'positive')\n  ]",
+                "pred_label": false,
+                "duration_label": 4.509559154510498,
+                "seed": 31,
+                "regeneration_reason": "no list in prediction"
+            },
+            {
+                "pred_label_raw": "```json\n[\n  [\n    ('Loved', 'restaurant general', 'positive')\n  ]",
+                "pred_label": false,
+                "duration_label": 4.51061749458313,
+                "seed": 36,
+                "regeneration_reason": "no list in prediction"
+            },
+            {
+                "pred_label_raw": "```json\n[\n  [\n    ('Loved', 'restaurant general', 'positive')\n  ]",
+                "pred_label": false,
+                "duration_label": 4.498018503189087,
+                "seed": 41,
+                "regeneration_reason": "no list in prediction"
+            },
+            {
+                "pred_label_raw": "```json\n[\n  [\n    ('NULL', 'restaurant general', 'positive')\n  ]",
+                "pred_label": false,
+                "duration_label": 4.529853820800781,
+                "seed": 46,
+                "regeneration_reason": "no list in prediction"
+            }
+        ],
+        "init_seed": 1,
+        "pred_label": [],
+        "duration_label": 4.529853820800781,
+        "seed": 51,
+        "avg_gpu_power_eval_W": 250.1004373177843,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 45.42869019508362,
+        "text": "Loved It",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "578_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('food', 'food prices', 'positive'), ('waiters', 'service general', 'positive')]",
+        "pred_label": [
+            [
+                "food",
+                "food prices",
+                "positive"
+            ],
+            [
+                "waiters",
+                "service general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.5457444190979,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.45444444444442,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.684462308883667,
+        "text": "The food is so cheap and the waiters are nice .",
+        "aspects": [
+            {
+                "aspect_term": "food",
+                "aspect_category": "food prices",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "waiters",
+                "aspect_category": "service general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "food",
+                "food prices",
+                "positive"
+            ],
+            [
+                "waiters",
+                "service general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "559_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('Waitstaff', 'service general', 'positive')]",
+        "pred_label": [
+            [
+                "Waitstaff",
+                "service general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.100545644760132,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 245.84343750000002,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.198674917221069,
+        "text": "Waitstaff are very friendly .",
+        "aspects": [
+            {
+                "aspect_term": "Waitstaff",
+                "aspect_category": "service general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Waitstaff",
+                "service general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1266_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('decor', 'ambience general', 'negative'), ('food', 'food quality', 'positive')]",
+        "pred_label": [
+            [
+                "Decor",
+                "ambience general",
+                "negative"
+            ],
+            [
+                "food",
+                "food quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.62668514251709,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.11111111111111,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.726388692855835,
+        "text": "Decor needs to be upgraded but the food is amazing !",
+        "aspects": [
+            {
+                "aspect_term": "Decor",
+                "aspect_category": "ambience general",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "food",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Decor",
+                "ambience general",
+                "negative"
+            ],
+            [
+                "food",
+                "food quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "791_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('soup', 'food quality', 'negative')]",
+        "pred_label": [
+            [
+                "soup",
+                "food quality",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.1730287075042725,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 245.505625,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.258429288864136,
+        "text": "The soup for the udon was soy sauce and water .",
+        "aspects": [
+            {
+                "aspect_term": "soup for the udon",
+                "aspect_category": "food quality",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "soup for the udon",
+                "food quality",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "933_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('NULL', 'restaurant miscellaneous', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "restaurant miscellaneous",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.1585259437561035,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 249.69500000000005,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.306037664413452,
+        "text": "My friend from Milan and myself were pleasantly surprised when we arrived and everyone spoke italian .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant miscellaneous",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant miscellaneous",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "274_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('NULL', 'restaurant general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.060131311416626,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.83193548387095,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.112244606018066,
+        "text": "keep up the good work .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1371_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('mirrors', 'ambience general', 'negative'), ('food', 'food quality', 'positive')]",
+        "pred_label": [
+            [
+                "mirrors",
+                "ambience general",
+                "negative"
+            ],
+            [
+                "food",
+                "food quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.565828323364258,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.26228571428567,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.616381406784058,
+        "text": "Despite the confusing mirrors this will likely be my go-to for modern Japanese food for the foreseeable future .",
+        "aspects": [
+            {
+                "aspect_term": "modern Japanese food",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "mirrors",
+                "aspect_category": "ambience general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "modern Japanese food",
+                "food quality",
+                "positive"
+            ],
+            [
+                "mirrors",
+                "ambience general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "535_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the sentiment element recognition for the final text, following the specified format:\n\n```\n[('meal', 'food quality', 'positive'), ('room', 'ambience general', 'positive')]",
+        "pred_label": [
+            [
+                "meal",
+                "food quality",
+                "positive"
+            ],
+            [
+                "room",
+                "ambience general",
+                "positive"
+            ]
+        ],
+        "duration_label": 5.356481313705444,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 250.4378048780488,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.416366338729858,
+        "text": "With the theater 2 blocks away we had a delicious meal in a beautiful room .",
+        "aspects": [
+            {
+                "aspect_term": "meal",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "room",
+                "aspect_category": "ambience general",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "location general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "meal",
+                "food quality",
+                "positive"
+            ],
+            [
+                "room",
+                "ambience general",
+                "positive"
+            ],
+            [
+                "NULL",
+                "location general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "912_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('SEASONAL beer', 'drinks style_options', 'positive')]",
+        "pred_label": [
+            [
+                "SEASONAL beer",
+                "drinks style_options",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.256197452545166,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.97757575757578,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.345894813537598,
+        "text": "(Always ask the bartender for the SEASONAL beer ! ! !",
+        "aspects": [
+            {
+                "aspect_term": "SEASONAL beer",
+                "aspect_category": "drinks quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "SEASONAL beer",
+                "drinks quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "608_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('customer service', 'service general', 'negative')]",
+        "pred_label": [
+            [
+                "customer service",
+                "service general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.116533994674683,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 249.04531249999997,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.254276752471924,
+        "text": "I was here a few weeks back and we had the worst customer service experience at a restaurant ever .",
+        "aspects": [
+            {
+                "aspect_term": "customer service",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "customer service",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "745_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('counter service', 'service general', 'negative')]",
+        "pred_label": [
+            [
+                "counter service",
+                "service general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.105173349380493,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.98312499999994,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.24352765083313,
+        "text": "The counter service is bad .",
+        "aspects": [
+            {
+                "aspect_term": "counter service",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "counter service",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "87_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('ingredients', 'food quality', 'positive'), ('dishes', 'food quality', 'positive')]",
+        "pred_label": [
+            [
+                "ingredients",
+                "food quality",
+                "positive"
+            ],
+            [
+                "dishes",
+                "food quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.5391175746917725,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.93685714285706,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.591333627700806,
+        "text": "The combination of super-fresh ingredients in the dishes are unusual but really delicious .",
+        "aspects": [
+            {
+                "aspect_term": "ingredients",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "ingredients",
+                "food quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "609_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('NULL', 'service general', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.229699611663818,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.05606060606053,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.251698970794678,
+        "text": "A gentleman , maybe the manager , came to our table , and without so much as a smile or greeting asked for our order .",
+        "aspects": [
+            {
+                "aspect_term": "gentleman",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "gentleman",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1149_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('space', 'ambience general', 'positive')]",
+        "pred_label": [
+            [
+                "space",
+                "ambience general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.179020643234253,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 252.28531249999997,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.287677049636841,
+        "text": "The space kind of feels like an Alice in Wonderland setting , without it trying to be that .",
+        "aspects": [
+            {
+                "aspect_term": "space",
+                "aspect_category": "ambience general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "space",
+                "ambience general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "799_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('Food', 'food quality', 'positive'), ('Food', 'food prices', 'positive')]",
+        "pred_label": [
+            [
+                "Food",
+                "food quality",
+                "positive"
+            ],
+            [
+                "Food",
+                "food prices",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.5403892993927,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.9554285714286,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.60175633430481,
+        "text": "Food is great and inexpensive .",
+        "aspects": [
+            {
+                "aspect_term": "Food",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "Food",
+                "aspect_category": "food prices",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Food",
+                "food quality",
+                "positive"
+            ],
+            [
+                "Food",
+                "food prices",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1407_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('NULL', 'food quality', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "food quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.135879278182983,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 251.665625,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.150981664657593,
+        "text": "Best Indian Chinese in the city , by far !",
+        "aspects": [
+            {
+                "aspect_term": "Indian Chinese",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Indian Chinese",
+                "food quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1237_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('food', 'food quality', 'positive'), ('place', 'restaurant general', 'positive'), ('place', 'restaurant prices', 'positive')]",
+        "pred_label": [
+            [
+                "food",
+                "food quality",
+                "positive"
+            ],
+            [
+                "place",
+                "restaurant general",
+                "positive"
+            ],
+            [
+                "place",
+                "restaurant prices",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.8922388553619385,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 249.16657894736846,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.895930290222168,
+        "text": "The food was good , the place was clean and affordable .",
+        "aspects": [
+            {
+                "aspect_term": "food",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "place",
+                "aspect_category": "ambience general",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "place",
+                "aspect_category": "restaurant prices",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "food",
+                "food quality",
+                "positive"
+            ],
+            [
+                "place",
+                "ambience general",
+                "positive"
+            ],
+            [
+                "place",
+                "restaurant prices",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1362_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('roll', 'food style_options', 'positive'), ('dessert', 'food quality', 'positive')]",
+        "pred_label": [
+            [
+                "roll",
+                "food style_options",
+                "positive"
+            ],
+            [
+                "dessert",
+                "food quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.6666929721832275,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 249.4557142857143,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.701146602630615,
+        "text": "One special roll and one regular roll is enough to fill you up , but save room for dessert !",
+        "aspects": [
+            {
+                "aspect_term": "dessert",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "special roll",
+                "aspect_category": "food style_options",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "regular roll",
+                "aspect_category": "food style_options",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "dessert",
+                "food quality",
+                "positive"
+            ],
+            [
+                "special roll",
+                "food style_options",
+                "positive"
+            ],
+            [
+                "regular roll",
+                "food style_options",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1696_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```json\n[('staff', 'service general', 'negative')]",
+        "pred_label": [
+            [
+                "staff",
+                "service general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.189374923706055,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.90969696969702,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.311435222625732,
+        "text": "bad staff",
+        "aspects": [
+            {
+                "aspect_term": "staff",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "staff",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "322_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('NULL', 'restaurant general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.064647197723389,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.7096774193549,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.141934871673584,
+        "text": "Overall I would recommend it and go back again .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1150_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('meal', 'food quality', 'positive'), ('NULL', 'restaurant prices', 'positive')]",
+        "pred_label": [
+            [
+                "meal",
+                "food quality",
+                "positive"
+            ],
+            [
+                "NULL",
+                "restaurant prices",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.575228214263916,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 249.4817142857143,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.607203006744385,
+        "text": "I paid just about  $60 for a good meal , though  : )",
+        "aspects": [
+            {
+                "aspect_term": "meal",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "meal",
+                "aspect_category": "food prices",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "meal",
+                "food quality",
+                "positive"
+            ],
+            [
+                "meal",
+                "food prices",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1674_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('NULL', 'service general', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.158710479736328,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 251.4521875,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.303616046905518,
+        "text": "Never got an explanation as to what was going on .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "189_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```json\n[('food', 'food quality', 'positive')]",
+        "pred_label": [
+            [
+                "food",
+                "food quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.191029787063599,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.05343749999994,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.27936577796936,
+        "text": "The food was good too .",
+        "aspects": [
+            {
+                "aspect_term": "food",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "food",
+                "food quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "573_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('foods', 'food quality', 'negative')]",
+        "pred_label": [
+            [
+                "foods",
+                "food quality",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.131701469421387,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 245.465,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.275155067443848,
+        "text": "We ate at this Thai place following the reviews but very unhappy with the foods .",
+        "aspects": [
+            {
+                "aspect_term": "foods",
+                "aspect_category": "food quality",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "foods",
+                "food quality",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1168_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the breakdown of sentiment elements for the final text, following the requested format:\n\n[('waiter', 'service general', 'positive'), ('food', 'food quality', 'positive'), ('views', 'location general', 'positive')]",
+        "pred_label": [
+            [
+                "waiter",
+                "service general",
+                "positive"
+            ],
+            [
+                "food",
+                "food quality",
+                "positive"
+            ],
+            [
+                "views",
+                "location general",
+                "positive"
+            ]
+        ],
+        "duration_label": 5.7435479164123535,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.22840909090908,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.772850275039673,
+        "text": "The waiter was attentive , the food was delicious and the views of the city were great .",
+        "aspects": [
+            {
+                "aspect_term": "waiter",
+                "aspect_category": "service general",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "food",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "views of the city",
+                "aspect_category": "location general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "waiter",
+                "service general",
+                "positive"
+            ],
+            [
+                "food",
+                "food quality",
+                "positive"
+            ],
+            [
+                "views of the city",
+                "location general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "370_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('Myagi', 'restaurant general', 'positive')]",
+        "pred_label": [
+            [
+                "Myagi",
+                "restaurant general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.141625881195068,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 249.37656249999995,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.223244667053223,
+        "text": "Myagi is one of my favorite restaurants in the City ; the place the negative reviews describe sound like they were somewhere else .",
+        "aspects": [
+            {
+                "aspect_term": "Myagi",
+                "aspect_category": "restaurant general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Myagi",
+                "restaurant general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "161_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the continuation of the sentiment element recognition, following the established format:\n\nText: Even after they overcharged me the last time I was there .\nSentiment Elements: [('NULL', 'restaurant prices', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "restaurant prices",
+                "negative"
+            ]
+        ],
+        "duration_label": 5.563653945922852,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.00302325581393,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.623353004455566,
+        "text": "Even after they overcharged me the last time I was there .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "767_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('NULL', 'service general', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.169658660888672,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 250.14656250000002,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.202583074569702,
+        "text": "THE BIG COMPLAINT : NO TOASTING AVAILABLE .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1200_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('NULL', 'restaurant general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.058584451675415,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.48749999999998,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.192188501358032,
+        "text": "I 'll be back for sure .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "355_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('NULL', 'restaurant general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.066871404647827,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.68225806451602,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.192859888076782,
+        "text": "HIGHLY RECOMMENDED ! ! ! ! !",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1257_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('drinks', 'drinks quality', 'positive')]",
+        "pred_label": [
+            [
+                "drinks",
+                "drinks quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.08597469329834,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 245.49968750000002,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.166263103485107,
+        "text": "The drinks are great , especially when made by Raymond .",
+        "aspects": [
+            {
+                "aspect_term": "drinks",
+                "aspect_category": "drinks quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "Raymond",
+                "aspect_category": "service general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "drinks",
+                "drinks quality",
+                "positive"
+            ],
+            [
+                "Raymond",
+                "service general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "788_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```python\n[('bagels', 'food quality', 'positive')]",
+        "pred_label": [
+            [
+                "bagels",
+                "food quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.242431640625,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 249.6160606060606,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.333003520965576,
+        "text": "Be sure not to get anything other than bagels ! . .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "food quality",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "bagels",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "food quality",
+                "negative"
+            ],
+            [
+                "bagels",
+                "food quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1310_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the sentiment element breakdown for the final text, following the provided format:\n\n```\n[('restaurant', 'restaurant general', 'positive')]",
+        "pred_label": [
+            [
+                "restaurant",
+                "restaurant general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.990187644958496,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.73763157894743,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.001391172409058,
+        "text": "All in all , I would return - as it was a beautiful restaurant - but I hope the staff pays more attention to the little details in the future .",
+        "aspects": [
+            {
+                "aspect_term": "restaurant",
+                "aspect_category": "restaurant general",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "restaurant",
+                "aspect_category": "ambience general",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "staff",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "restaurant",
+                "restaurant general",
+                "positive"
+            ],
+            [
+                "restaurant",
+                "ambience general",
+                "positive"
+            ],
+            [
+                "staff",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "552_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "Here's the completed list of sentiment elements for the final text, following the requested format:\n\n[('Patroon', 'restaurant general', 'positive'), ('staff', 'service general', 'positive')]",
+        "pred_label": [
+            [
+                "Patroon",
+                "restaurant general",
+                "positive"
+            ],
+            [
+                "staff",
+                "service general",
+                "positive"
+            ]
+        ],
+        "duration_label": 5.352294445037842,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.1870731707318,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.356428384780884,
+        "text": "Patroon features a nice cigar bar and has great staff .",
+        "aspects": [
+            {
+                "aspect_term": "cigar bar",
+                "aspect_category": "ambience general",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "staff",
+                "aspect_category": "service general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "cigar bar",
+                "ambience general",
+                "positive"
+            ],
+            [
+                "staff",
+                "service general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "402_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('food', 'food prices', 'positive'), ('prixe fixe tasting menu', 'food prices', 'positive'), ('prixe fixe tasting menu', 'food quality', 'positive')]",
+        "pred_label": [
+            [
+                "food",
+                "food prices",
+                "positive"
+            ],
+            [
+                "prixe fixe tasting menu",
+                "food prices",
+                "positive"
+            ],
+            [
+                "prixe fixe tasting menu",
+                "food quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 5.307140350341797,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 252.12125,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.377358436584473,
+        "text": "The food can get pricey but the prixe fixe tasting menu is the greatest food for a good price and they cater the food to any food allergies or food you don 't like .",
+        "aspects": [
+            {
+                "aspect_term": "food",
+                "aspect_category": "food prices",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "prixe fixe tasting menu",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "prixe fixe tasting menu",
+                "aspect_category": "food prices",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "service general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "food",
+                "food prices",
+                "negative"
+            ],
+            [
+                "prixe fixe tasting menu",
+                "food quality",
+                "positive"
+            ],
+            [
+                "prixe fixe tasting menu",
+                "food prices",
+                "positive"
+            ],
+            [
+                "NULL",
+                "service general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1379_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('dish', 'food quality', 'negative'), ('sauce', 'food quality', 'negative'), ('seasoning', 'food quality', 'negative')]",
+        "pred_label": [
+            [
+                "dish",
+                "food quality",
+                "negative"
+            ],
+            [
+                "sauce",
+                "food quality",
+                "negative"
+            ],
+            [
+                "seasoning",
+                "food quality",
+                "negative"
+            ]
+        ],
+        "duration_label": 5.128237247467041,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 249.86794871794874,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.229490518569946,
+        "text": "Rather than preparing vegetarian dish , the chef presented me with a plate of steamed vegetables  (minus sauce , seasoning , or any form or aesthetic presentation ) .",
+        "aspects": [
+            {
+                "aspect_term": "chef",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "vegetarian dish",
+                "aspect_category": "food quality",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "vegetarian dish",
+                "aspect_category": "food style_options",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "chef",
+                "service general",
+                "negative"
+            ],
+            [
+                "vegetarian dish",
+                "food quality",
+                "negative"
+            ],
+            [
+                "vegetarian dish",
+                "food style_options",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1238_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('indian place', 'restaurant general', 'positive')]",
+        "pred_label": [
+            [
+                "indian place",
+                "restaurant general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.112957239151001,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 249.36437500000002,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.257871627807617,
+        "text": "I noticed alot of indian people eatting there which is a great sign for an indian place !",
+        "aspects": [
+            {
+                "aspect_term": "indian place",
+                "aspect_category": "restaurant miscellaneous",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "indian place",
+                "restaurant miscellaneous",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1677_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('NULL', 'service general', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.0584046840667725,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.70656249999993,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.166752576828003,
+        "text": "On the way out , we heard of other guests complaining about similar issues .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "714_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('NULL', 'service general', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.149723529815674,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.35562500000003,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.212111949920654,
+        "text": "So rushing us out was absolutely unnecessary !",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "840_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('NULL', 'restaurant general', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "restaurant general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.071045637130737,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.65437500000002,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.219461679458618,
+        "text": "I wish they would change back to what it was before .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1529_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('NULL', 'service general', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.171839475631714,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.8075,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.263200044631958,
+        "text": "We 've tried before but it always packed and doesn 't take reservations .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant miscellaneous",
+                "polarity": "neutral"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant miscellaneous",
+                "neutral"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "610_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('NULL', 'service general', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.22618556022644,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 245.25545454545457,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.366920709609985,
+        "text": "When asked about how a certain dish was prepared in comparison to a similar at other thai restaurants , he replied this is not Mcdonald 's , every place makes things differently",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1559_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('dishes', 'food quality', 'negative')]",
+        "pred_label": [
+            [
+                "dishes",
+                "food quality",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.209947347640991,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 244.82593749999998,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.223663330078125,
+        "text": "I tried a couple other dishes but wasn 't too impressed .",
+        "aspects": [
+            {
+                "aspect_term": "dishes",
+                "aspect_category": "food quality",
+                "polarity": "neutral"
+            }
+        ],
+        "tuple_list": [
+            [
+                "dishes",
+                "food quality",
+                "neutral"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "777_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('Pizza', 'food quality', 'positive')]",
+        "pred_label": [
+            [
+                "Pizza",
+                "food quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.216488599777222,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.60636363636365,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.279718637466431,
+        "text": "I will be out with friends and all of a sudden I am hungry and I only crave one thing . . . their Pizza .",
+        "aspects": [
+            {
+                "aspect_term": "Pizza",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Pizza",
+                "food quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1137_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```json\n[('hot dogs', 'food quality', 'positive')]",
+        "pred_label": [
+            [
+                "hot dogs",
+                "food quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.21872091293335,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 250.26181818181817,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.363680362701416,
+        "text": "One of the best hot dogs I have ever eaten .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "food quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "785_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('NULL', 'restaurant prices', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "restaurant prices",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.1900694370269775,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.8745454545455,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.319227695465088,
+        "text": "A little pricey but it really hits the spot on a Sunday morning !",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant prices",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant prices",
+                "negative"
+            ],
+            [
+                "NULL",
+                "restaurant general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1560_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('Shabu Shabu', 'food quality', 'positive')]",
+        "pred_label": [
+            [
+                "Shabu Shabu",
+                "food quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.296262264251709,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.07030303030302,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.313931465148926,
+        "text": "But for the Shabu Shabu , you won 't find much better in NY .",
+        "aspects": [
+            {
+                "aspect_term": "Shabu Shabu",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Shabu Shabu",
+                "food quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1622_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('decor', 'ambience general', 'positive'), ('pita', 'food quality', 'positive'), ('hummus', 'food quality', 'positive'), ('grilled octopus', 'food quality', 'positive')]",
+        "pred_label": [
+            [
+                "decor",
+                "ambience general",
+                "positive"
+            ],
+            [
+                "pita",
+                "food quality",
+                "positive"
+            ],
+            [
+                "hummus",
+                "food quality",
+                "positive"
+            ],
+            [
+                "grilled octopus",
+                "food quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 5.590615272521973,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 251.72069767441863,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.678609132766724,
+        "text": "I 'll being with a couple of positives : cool decor , good pita and hummus , and grilled octopus that was actually pretty tasty .",
+        "aspects": [
+            {
+                "aspect_term": "decor",
+                "aspect_category": "ambience general",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "pita",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "hummus",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "grilled octopus",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "decor",
+                "ambience general",
+                "positive"
+            ],
+            [
+                "pita",
+                "food quality",
+                "positive"
+            ],
+            [
+                "hummus",
+                "food quality",
+                "positive"
+            ],
+            [
+                "grilled octopus",
+                "food quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1522_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('side dishes', 'food quality', 'neutral')]",
+        "pred_label": [
+            [
+                "side dishes",
+                "food quality",
+                "neutral"
+            ]
+        ],
+        "duration_label": 4.103433847427368,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.47250000000003,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.20189905166626,
+        "text": "The side dishes were passable , and I did get a refill upon request .",
+        "aspects": [
+            {
+                "aspect_term": "side dishes",
+                "aspect_category": "food quality",
+                "polarity": "neutral"
+            },
+            {
+                "aspect_term": "side dishes",
+                "aspect_category": "food style_options",
+                "polarity": "neutral"
+            }
+        ],
+        "tuple_list": [
+            [
+                "side dishes",
+                "food quality",
+                "neutral"
+            ],
+            [
+                "side dishes",
+                "food style_options",
+                "neutral"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "607_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('SEA', 'restaurant general', 'positive')]",
+        "pred_label": [
+            [
+                "SEA",
+                "restaurant general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.055737495422363,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 245.30387096774194,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.061868190765381,
+        "text": "I would definitely recommend SEA if you like thai cuisine !",
+        "aspects": [
+            {
+                "aspect_term": "thai cuisine",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "thai cuisine",
+                "food quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1070_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('piece of Unagi', 'food quality', 'negative')]",
+        "pred_label": [
+            [
+                "piece of Unagi",
+                "food quality",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.300122022628784,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.2175757575758,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.372453212738037,
+        "text": "Wasn 't going to share but I feel obligated . . .while sitting at the sushi bar dining we watched the chef accidentally drop a piece of Unagi on the floor and upon retrieving it from the floor proceed to use the piece in the delivery order he was preparing .",
+        "aspects": [
+            {
+                "aspect_term": "chef",
+                "aspect_category": "food quality",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "chef",
+                "food quality",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "557_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('Food', 'food quality', 'positive')]",
+        "pred_label": [
+            [
+                "Food",
+                "food quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.064502716064453,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.2584375,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.208272933959961,
+        "text": "Food is excellent .",
+        "aspects": [
+            {
+                "aspect_term": "Food",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Food",
+                "food quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "641_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('buffet', 'food style_options', 'positive')]",
+        "pred_label": [
+            [
+                "buffet",
+                "food style_options",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.174272537231445,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.0709090909091,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.276667356491089,
+        "text": "The buffet had a nice selection .",
+        "aspects": [
+            {
+                "aspect_term": "buffet",
+                "aspect_category": "food style_options",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "buffet",
+                "food style_options",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1037_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('dim sum combo', 'food quality', 'positive')]",
+        "pred_label": [
+            [
+                "dim sum combo",
+                "food quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.1989052295684814,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 244.22909090909096,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.341197729110718,
+        "text": "I got the  $10 10-piece dim sum combo , every bite of which was great .",
+        "aspects": [
+            {
+                "aspect_term": "$10 10-piece dim sum combo",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "$10 10-piece dim sum combo",
+                "food quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "750_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('dosas', 'food quality', 'negative')]",
+        "pred_label": [
+            [
+                "dosas",
+                "food quality",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.275848627090454,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 245.70030303030305,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.372105836868286,
+        "text": "The dosas are skimpy , unattractive and drip with grease , and personally I 'd drink popcorn topping before I 'd eat another one of these .",
+        "aspects": [
+            {
+                "aspect_term": "dosas",
+                "aspect_category": "food style_options",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "dosas",
+                "aspect_category": "food quality",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "dosas",
+                "food style_options",
+                "negative"
+            ],
+            [
+                "dosas",
+                "food quality",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "211_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```json\n[\n  (\"staff\", \"service general\", \"neutral\")\n]",
+        "pred_label": [
+            [
+                "staff",
+                "service general",
+                "neutral"
+            ]
+        ],
+        "duration_label": 4.40477442741394,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.9788571428572,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.543653726577759,
+        "text": "The staff is no nonsense .",
+        "aspects": [
+            {
+                "aspect_term": "staff",
+                "aspect_category": "service general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "staff",
+                "service general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "858_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('restaurant', 'ambience general', 'negative'), ('meal', 'food quality', 'positive')]",
+        "pred_label": [
+            [
+                "restaurant",
+                "ambience general",
+                "negative"
+            ],
+            [
+                "meal",
+                "food quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.619302034378052,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 248.18971428571433,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.684300899505615,
+        "text": "The restaurant is a bit noisy but that is something that can be overlooked once you sit down and enjoy a great meal",
+        "aspects": [
+            {
+                "aspect_term": "meal",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "restaurant",
+                "aspect_category": "ambience general",
+                "polarity": "neutral"
+            }
+        ],
+        "tuple_list": [
+            [
+                "meal",
+                "food quality",
+                "positive"
+            ],
+            [
+                "restaurant",
+                "ambience general",
+                "neutral"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1331_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('Casa La Femme', 'restaurant general', 'positive')]",
+        "pred_label": [
+            [
+                "Casa La Femme",
+                "restaurant general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.157148361206055,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.44939393939396,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.301076889038086,
+        "text": "Stepping into Casa La Femme last night was a true experience unlike any other in New York !",
+        "aspects": [
+            {
+                "aspect_term": "Casa La Femme",
+                "aspect_category": "restaurant general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Casa La Femme",
+                "restaurant general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1503_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "```json\n[\n  (\"staff\", \"service general\", \"negative\")\n]",
+                "pred_label": false,
+                "duration_label": 4.373393774032593,
+                "seed": 1,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "```json\n[\n  (\"place\", \"restaurant miscellaneous\", \"negative\")\n]",
+                "pred_label": false,
+                "duration_label": 4.315024375915527,
+                "seed": 6,
+                "regeneration_reason": "aspect term not in text"
+            }
+        ],
+        "init_seed": 1,
+        "pred_raw": "[('order', 'service general', 'negative')]",
+        "pred_label": [
+            [
+                "order",
+                "service general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.079949617385864,
+        "seed": 11,
+        "avg_gpu_power_eval_W": 249.15329896907213,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 12.863879203796387,
+        "text": "For starters they delivered us someone else 's order .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1147_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('NULL', 'restaurant general', 'positive')]",
+        "pred_label": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.121809482574463,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.0240625,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.2576539516448975,
+        "text": "Will comeback for sure , wish they have it here in LA . .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1344_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('NULL', 'service general', 'negative')]",
+        "pred_label": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.074117660522461,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 249.06677419354838,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.134860038757324,
+        "text": "We paid and left because we didn 't feel like arguing any more .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1452_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```json\n[\n  (\"hostess\", \"service general\", \"positive\")\n]",
+        "pred_label": [
+            [
+                "hostess",
+                "service general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.374722242355347,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 251.1629411764706,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.4767091274261475,
+        "text": "The hostess was very pleasant .",
+        "aspects": [
+            {
+                "aspect_term": "hostess",
+                "aspect_category": "service general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "hostess",
+                "service general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1678_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('restaurant', 'restaurant general', 'negative'), ('clients', 'service general', 'negative')]",
+        "pred_label": [
+            [
+                "restaurant",
+                "restaurant general",
+                "negative"
+            ],
+            [
+                "clients",
+                "service general",
+                "negative"
+            ]
+        ],
+        "duration_label": 4.485421657562256,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.07735294117646,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.535884141921997,
+        "text": "Can’t believe how an expensive NYC restaurant can be so disrespectful to its clients .",
+        "aspects": [
+            {
+                "aspect_term": "restaurant",
+                "aspect_category": "restaurant prices",
+                "polarity": "negative"
+            },
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "service general",
+                "polarity": "negative"
+            }
+        ],
+        "tuple_list": [
+            [
+                "restaurant",
+                "restaurant prices",
+                "negative"
+            ],
+            [
+                "NULL",
+                "service general",
+                "negative"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "643_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "[('Service', 'service general', 'positive')]",
+        "pred_label": [
+            [
+                "Service",
+                "service general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.081150770187378,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.2796774193548,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.167670011520386,
+        "text": "Service was also very good .",
+        "aspects": [
+            {
+                "aspect_term": "Service",
+                "aspect_category": "service general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Service",
+                "service general",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "256_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```\n[('pizza', 'food quality', 'positive'), ('santa fe chopped salad', 'food quality', 'positive'), ('fish and chips', 'food quality', 'positive')]",
+        "pred_label": [
+            [
+                "pizza",
+                "food quality",
+                "positive"
+            ],
+            [
+                "santa fe chopped salad",
+                "food quality",
+                "positive"
+            ],
+            [
+                "fish and chips",
+                "food quality",
+                "positive"
+            ]
+        ],
+        "duration_label": 5.157555103302002,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 246.76538461538468,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 5.19448709487915,
+        "text": "Other guests enjoyed pizza , santa fe chopped salad and fish and chips .",
+        "aspects": [
+            {
+                "aspect_term": "pizza",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "santa fe chopped salad",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            },
+            {
+                "aspect_term": "fish and chips",
+                "aspect_category": "food quality",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "pizza",
+                "food quality",
+                "positive"
+            ],
+            [
+                "santa fe chopped salad",
+                "food quality",
+                "positive"
+            ],
+            [
+                "fish and chips",
+                "food quality",
+                "positive"
+            ]
+        ]
+    },
+    {
+        "task": "tasd",
+        "dataset_name": "rest16",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "702_rest16_../zero-shot-absa-quad/datasets/tasd/rest16/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 1,
+        "pred_raw": "```json\n[\n  (\"NULL\", \"restaurant general\", \"positive\")\n]",
+        "pred_label": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive"
+            ]
+        ],
+        "duration_label": 4.353062629699707,
+        "seed": 1,
+        "avg_gpu_power_eval_W": 247.79147058823528,
+        "avg_gpu_vram_eval_MB": 19098.0,
+        "total_time_eval": 4.4843668937683105,
+        "text": "However , it is jus too good to not praise it .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "positive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive"
+            ]
+        ]
+    }
+]
