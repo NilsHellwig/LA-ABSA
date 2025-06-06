@@ -1,10 +1,10 @@
 {
-    "avg_gpu_vram_train_MB": 13509.047619047618,
-    "avg_gpu_power_train_W": 132.20238095238093,
+    "avg_gpu_vram_train_MB": null,
+    "avg_gpu_power_train_W": null,
     "scores": {
-        "precision": 0.6325757575757576,
-        "recall": 0.5310015898251192,
-        "f1": 0.5773552290406223
+        "precision": 0.6418181818181818,
+        "recall": 0.56120826709062,
+        "f1": 0.5988125530110263
     },
     "all_labels": [
         [
@@ -3959,6 +3959,11 @@
                 "rooms design_features",
                 "rooms",
                 "great"
+            ],
+            [
+                "rooms design_features",
+                "decor",
+                "great"
             ]
         ],
         [
@@ -3984,24 +3989,29 @@
         ],
         [
             [
-                "location general",
-                "Location",
+                "rooms design_features",
+                "Rooms",
                 "great"
             ],
             [
-                "rooms design_features",
+                "location general",
+                "Location",
+                "bad"
+            ],
+            [
+                "rooms quality",
                 "Rooms",
                 "great"
             ]
         ],
         [
             [
-                "rooms design_features",
+                "rooms prices",
                 "rooms",
                 "great"
             ],
             [
-                "rooms prices",
+                "rooms general",
                 "rooms",
                 "great"
             ]
@@ -4010,6 +4020,11 @@
             [
                 "location general",
                 "location",
+                "great"
+            ],
+            [
+                "facilities general",
+                "resturants",
                 "great"
             ]
         ],
@@ -4048,13 +4063,13 @@
         ],
         [
             [
-                "location general",
-                "location",
+                "rooms design_features",
+                "lounge",
                 "great"
             ],
             [
-                "rooms design_features",
-                "lounge",
+                "location general",
+                "location",
                 "great"
             ],
             [
@@ -4074,7 +4089,7 @@
             [
                 "food_drinks quality",
                 "restaurant",
-                "bad"
+                "great"
             ]
         ],
         [
@@ -4189,13 +4204,13 @@
         ],
         [
             [
-                "service general",
-                "staff",
+                "rooms design_features",
+                "Room",
                 "great"
             ],
             [
-                "rooms design_features",
-                "Room",
+                "service general",
+                "staff",
                 "great"
             ]
         ],
@@ -4223,7 +4238,7 @@
         [
             [
                 "hotel general",
-                "hospitality",
+                "NULL",
                 "great"
             ]
         ],
@@ -4232,12 +4247,10 @@
                 "food_drinks prices",
                 "breakfast",
                 "great"
-            ]
-        ],
-        [
+            ],
             [
-                "location general",
-                "Location",
+                "food_drinks quality",
+                "parking",
                 "great"
             ]
         ],
@@ -4248,12 +4261,24 @@
                 "great"
             ],
             [
-                "rooms comfort",
+                "location general",
+                "location",
+                "great"
+            ]
+        ],
+        [
+            [
+                "rooms design_features",
                 "bathrooms",
                 "great"
             ],
             [
-                "rooms design_features",
+                "rooms comfort",
+                "rooms",
+                "great"
+            ],
+            [
+                "rooms comfort",
                 "rooms",
                 "great"
             ]
@@ -4267,7 +4292,12 @@
         ],
         [
             [
-                "rooms design_features",
+                "rooms cleanliness",
+                "room",
+                "great"
+            ],
+            [
+                "rooms comfort",
                 "room",
                 "great"
             ],
@@ -4280,24 +4310,24 @@
         [
             [
                 "rooms design_features",
-                "room",
+                "bathroom",
                 "great"
             ],
             [
                 "rooms design_features",
-                "bathroom",
+                "room",
                 "great"
             ]
         ],
         [
             [
-                "service general",
-                "staff",
+                "hotel cleanliness",
+                "Moore Hotel",
                 "great"
             ],
             [
-                "hotel cleanliness",
-                "Moore Hotel",
+                "service general",
+                "staff",
                 "great"
             ]
         ],
@@ -4317,19 +4347,14 @@
         ],
         [
             [
-                "rooms design_features",
-                "Room",
+                "rooms comfort",
+                "linens",
                 "great"
             ],
             [
-                "rooms comfort",
-                "Room",
-                "bad"
-            ],
-            [
                 "rooms design_features",
-                "Aveda Toiletries [SP] great",
-                "bad"
+                "Room",
+                "great"
             ]
         ],
         [
@@ -4370,30 +4395,40 @@
                 "rooms prices",
                 "room",
                 "great"
+            ],
+            [
+                "rooms design_features",
+                "room",
+                "great"
             ]
         ],
         [
             [
                 "location general",
-                "location",
+                "Triton",
                 "great"
             ]
         ],
         [
+            [
+                "rooms cleanliness",
+                "room",
+                "great"
+            ],
             [
                 "rooms design_features",
                 "room",
                 "great"
             ],
             [
-                "rooms cleanliness",
+                "rooms design_features",
                 "room",
                 "great"
             ]
         ],
         [
             [
-                "rooms design_features",
+                "rooms comfort",
                 "room",
                 "great"
             ]
@@ -4407,12 +4442,12 @@
         ],
         [
             [
-                "facilities general",
+                "facilities design_features",
                 "gym",
                 "bad"
             ],
             [
-                "facilities general",
+                "facilities design_features",
                 "restrooms",
                 "bad"
             ]
@@ -4473,12 +4508,17 @@
         ],
         [
             [
-                "facilities general",
+                "hotel general",
                 "museum",
                 "great"
             ]
         ],
         [
+            [
+                "rooms comfort",
+                "amenities",
+                "great"
+            ],
             [
                 "rooms design_features",
                 "room",
@@ -4486,6 +4526,11 @@
             ]
         ],
         [
+            [
+                "rooms design_features",
+                "bedroom",
+                "great"
+            ],
             [
                 "location general",
                 "location",
@@ -4499,7 +4544,7 @@
                 "great"
             ],
             [
-                "location general",
+                "hotel general",
                 "hotel",
                 "great"
             ]
@@ -4509,23 +4554,18 @@
                 "service general",
                 "staff",
                 "great"
-            ],
+            ]
+        ],
+        [
             [
-                "service general",
-                "stadd",
+                "rooms general",
+                "cell phone reception",
                 "great"
             ]
         ],
         [
             [
-                "service general",
-                "reception",
-                "great"
-            ]
-        ],
-        [
-            [
-                "location general",
+                "hotel general",
                 "Grand Hyatt",
                 "great"
             ]
@@ -4568,6 +4608,11 @@
                 "rooms design_features",
                 "bedrooms",
                 "bad"
+            ],
+            [
+                "hotel general",
+                "hotel",
+                "bad"
             ]
         ],
         [
@@ -4607,7 +4652,7 @@
         ],
         [
             [
-                "hotel general",
+                "hotel cleanliness",
                 "NULL",
                 "bad"
             ]
@@ -4619,9 +4664,9 @@
                 "great"
             ],
             [
-                "drinks prices",
-                "drinks",
-                "bad"
+                "rooms design_features",
+                "rooms",
+                "great"
             ]
         ],
         [
@@ -4675,8 +4720,13 @@
         ],
         [
             [
+                "food_drinks quality",
+                "Breakfast",
+                "great"
+            ],
+            [
                 "service general",
-                "Staff",
+                "staff",
                 "great"
             ]
         ],
@@ -4701,13 +4751,13 @@
         ],
         [
             [
-                "service general",
-                "staff",
+                "rooms cleanliness",
+                "room",
                 "great"
             ],
             [
-                "rooms cleanliness",
-                "room",
+                "service general",
+                "staff",
                 "great"
             ]
         ],
@@ -4720,7 +4770,7 @@
         ],
         [
             [
-                "facilities general",
+                "rooms comfort",
                 "towels",
                 "bad"
             ],
@@ -4733,7 +4783,7 @@
         [
             [
                 "hotel general",
-                "bar",
+                "NULL",
                 "great"
             ]
         ],
@@ -4824,6 +4874,11 @@
                 "location general",
                 "hotel",
                 "great"
+            ],
+            [
+                "service general",
+                "concierge",
+                "great"
             ]
         ],
         [
@@ -4835,7 +4890,7 @@
         ],
         [
             [
-                "facilities design_features",
+                "facilities general",
                 "rooftop pool",
                 "bad"
             ],
@@ -4843,6 +4898,11 @@
                 "food_drinks prices",
                 "breakfast",
                 "bad"
+            ],
+            [
+                "facilities general",
+                "rooftop pool",
+                "great"
             ]
         ],
         [
@@ -4881,7 +4941,7 @@
         [
             [
                 "service general",
-                "shuttle",
+                "hotel shuttle",
                 "great"
             ]
         ],
@@ -4901,13 +4961,13 @@
         ],
         [
             [
-                "rooms design_features",
+                "rooms cleanliness",
                 "rooms",
                 "bad"
             ],
             [
                 "food_drinks quality",
-                "breakfast",
+                "Porn",
                 "great"
             ]
         ],
@@ -4953,12 +5013,7 @@
         ],
         [
             [
-                "rooms design_features",
-                "room",
-                "bad"
-            ],
-            [
-                "rooms availability",
+                "rooms general",
                 "room",
                 "bad"
             ]
@@ -4996,11 +5051,16 @@
                 "rooms design_features",
                 "room",
                 "great"
+            ],
+            [
+                "rooms design_features",
+                "bathroom",
+                "great"
             ]
         ],
         [
             [
-                "food_drinks quality",
+                "location general",
                 "restuarants",
                 "great"
             ]
@@ -5035,12 +5095,12 @@
         ],
         [
             [
-                "rooms design_features",
+                "rooms comfort",
                 "room",
                 "bad"
             ],
             [
-                "rooms comfort",
+                "rooms design_features",
                 "room",
                 "bad"
             ]
@@ -5048,7 +5108,7 @@
         [
             [
                 "food_drinks quality",
-                "rooftop bar",
+                "bar",
                 "great"
             ],
             [
@@ -5109,7 +5169,7 @@
         ],
         [
             [
-                "rooms design_features",
+                "rooms security",
                 "rooms",
                 "bad"
             ],
@@ -5120,6 +5180,11 @@
             ]
         ],
         [
+            [
+                "location general",
+                "location",
+                "great"
+            ],
             [
                 "service general",
                 "staff",
@@ -5135,12 +5200,12 @@
         ],
         [
             [
-                "rooms design_features",
+                "rooms comfort",
                 "rooms",
                 "bad"
             ],
             [
-                "rooms comfort",
+                "rooms design_features",
                 "rooms",
                 "bad"
             ]
@@ -5160,12 +5225,7 @@
             ],
             [
                 "location general",
-                "location",
-                "great"
-            ],
-            [
-                "rooms comfort",
-                "rooms",
+                "train station",
                 "great"
             ]
         ],
@@ -5233,14 +5293,19 @@
         [
             [
                 "service general",
-                "shuttle",
+                "Shuttle",
+                "great"
+            ],
+            [
+                "service general",
+                "Shuttle",
                 "great"
             ]
         ],
         [
             [
                 "hotel general",
-                "NULL",
+                "hotel",
                 "great"
             ]
         ],
@@ -5289,12 +5354,17 @@
         [
             [
                 "location general",
-                "location",
+                "Castle Inn",
                 "great"
             ],
             [
                 "location general",
-                "Castle Inn",
+                "location",
+                "great"
+            ],
+            [
+                "hotel cleanliness",
+                "hotel",
                 "great"
             ]
         ],
@@ -5305,13 +5375,13 @@
                 "great"
             ],
             [
-                "location general",
-                "Bar",
+                "food_drinks quality",
+                "restaurant",
                 "great"
             ],
             [
                 "food_drinks quality",
-                "restaurant",
+                "Bar",
                 "great"
             ]
         ],
@@ -5338,12 +5408,12 @@
         ],
         [
             [
-                "rooms design_features",
+                "rooms cleanliness",
                 "rooms",
                 "great"
             ],
             [
-                "rooms cleanliness",
+                "rooms design_features",
                 "rooms",
                 "great"
             ]
@@ -5376,6 +5446,11 @@
         ],
         [
             [
+                "hotel general",
+                "lobby",
+                "bad"
+            ],
+            [
                 "service general",
                 "staff",
                 "bad"
@@ -5389,6 +5464,11 @@
             ]
         ],
         [
+            [
+                "rooms general",
+                "suite",
+                "great"
+            ],
             [
                 "service general",
                 "staff",
@@ -5409,7 +5489,7 @@
                 "great"
             ],
             [
-                "rooms general",
+                "rooms cleanliness",
                 "shower",
                 "bad"
             ],
@@ -5422,14 +5502,14 @@
         [
             [
                 "location general",
-                "Location",
+                "NULL",
                 "great"
             ]
         ],
         [
             [
-                "rooms design_features",
-                "black out blinds",
+                "rooms comfort",
+                "blinds",
                 "great"
             ]
         ],
@@ -5539,7 +5619,7 @@
         ],
         [
             [
-                "hotel general",
+                "location general",
                 "NULL",
                 "great"
             ]
@@ -5547,13 +5627,18 @@
         [
             [
                 "service general",
-                "NULL",
+                "everyone",
                 "great"
             ]
         ],
         [
             [
                 "rooms design_features",
+                "room",
+                "bad"
+            ],
+            [
+                "rooms comfort",
                 "room",
                 "bad"
             ]
@@ -5575,7 +5660,7 @@
         [
             [
                 "food_drinks quality",
-                "House Without a Key Orchids",
+                "breakfast",
                 "great"
             ]
         ],
@@ -5595,13 +5680,13 @@
         ],
         [
             [
-                "service general",
-                "staff",
+                "rooms design_features",
+                "room",
                 "great"
             ],
             [
-                "rooms design_features",
-                "room",
+                "service general",
+                "staff",
                 "great"
             ]
         ],
@@ -5642,13 +5727,13 @@
         ],
         [
             [
-                "service general",
-                "staff",
+                "hotel general",
+                "hotel",
                 "great"
             ],
             [
-                "hotel general",
-                "hotel",
+                "service general",
+                "staff",
                 "great"
             ]
         ],
@@ -5692,6 +5777,11 @@
                 "location general",
                 "location",
                 "great"
+            ],
+            [
+                "hotel general",
+                "NULL",
+                "great"
             ]
         ],
         [
@@ -5716,11 +5806,6 @@
             ]
         ],
         [
-            [
-                "rooms cleanliness",
-                "linens",
-                "great"
-            ],
             [
                 "rooms cleanliness",
                 "linens",
@@ -5732,6 +5817,11 @@
                 "rooms design_features",
                 "bed",
                 "great"
+            ],
+            [
+                "rooms comfort",
+                "towels",
+                "great"
             ]
         ],
         [
@@ -5748,24 +5838,19 @@
                 "great"
             ],
             [
-                "location general",
+                "food_drinks quality",
                 "restaurants",
-                "great"
-            ],
-            [
-                "service general",
-                "service",
                 "great"
             ]
         ],
         [
             [
-                "hotel cleanliness",
+                "hotel general",
                 "hotel",
                 "great"
             ],
             [
-                "hotel general",
+                "hotel cleanliness",
                 "hotel",
                 "great"
             ]
@@ -5779,13 +5864,18 @@
         ],
         [
             [
+                "service general",
+                "concierge",
+                "great"
+            ],
+            [
                 "food_drinks quality",
                 "breakfast",
                 "great"
             ],
             [
-                "service general",
-                "concierge",
+                "food_drinks quality",
+                "breakfast",
                 "great"
             ]
         ],
@@ -5798,19 +5888,9 @@
         ],
         [
             [
-                "rooms cleanliness",
-                "glasses",
-                "bad"
-            ],
-            [
-                "rooms cleanliness",
-                "cups",
-                "bad"
-            ],
-            [
-                "rooms cleanliness",
-                "glasses",
-                "bad"
+                "room_amenities general",
+                "glasses and cups",
+                "great"
             ]
         ],
         [
@@ -5823,16 +5903,11 @@
         [
             [
                 "hotel general",
-                "club",
+                "NULL",
                 "great"
             ]
         ],
         [
-            [
-                "food_drinks quality",
-                "breakfast",
-                "great"
-            ],
             [
                 "food_drinks quality",
                 "breakfast",
@@ -5870,11 +5945,6 @@
                 "location general",
                 "location",
                 "great"
-            ],
-            [
-                "location general",
-                "location",
-                "great"
             ]
         ],
         [
@@ -5907,11 +5977,6 @@
         ],
         [
             [
-                "location general",
-                "location",
-                "great"
-            ],
-            [
                 "hotel prices",
                 "hotel",
                 "great"
@@ -5936,6 +6001,11 @@
                 "location general",
                 "location",
                 "great"
+            ],
+            [
+                "hotel prices",
+                "Price",
+                "great"
             ]
         ],
         [
@@ -5945,29 +6015,29 @@
                 "great"
             ],
             [
-                "hotel prices",
+                "service general",
+                "service",
+                "great"
+            ],
+            [
+                "service general",
                 "price",
                 "great"
             ]
         ],
         [
             [
-                "service general",
-                "staff",
-                "great"
-            ],
-            [
                 "rooms design_features",
                 "room",
                 "great"
             ],
             [
-                "location general",
-                "location",
+                "service general",
+                "staff",
                 "great"
             ],
             [
-                "rooms comfort",
+                "rooms cleanliness",
                 "room",
                 "great"
             ],
@@ -5987,19 +6057,24 @@
         [
             [
                 "facilities general",
-                "beach",
+                "pool",
                 "great"
             ],
             [
                 "facilities general",
-                "swim up bar",
+                "bar",
+                "great"
+            ],
+            [
+                "facilities general",
+                "pool",
                 "great"
             ]
         ],
         [
             [
                 "hotel general",
-                "Bernini Palace Hotel",
+                "Bernini Palace",
                 "great"
             ]
         ],
@@ -6021,65 +6096,70 @@
             [
                 "hotel general",
                 "hotels",
-                "great"
+                "bad"
             ]
         ],
         [
-            [
-                "rooms design_features",
-                "rooms",
-                "great"
-            ],
             [
                 "rooms comfort",
                 "rooms",
                 "great"
-            ]
-        ],
-        [
-            [
-                "hotel general",
-                "NULL",
-                "great"
-            ]
-        ],
-        [
-            [
-                "hotel general",
-                "NULL",
-                "great"
-            ]
-        ],
-        [
-            [
-                "hotel general",
-                "NULL",
-                "great"
-            ]
-        ],
-        [
-            [
-                "service general",
-                "staff",
-                "great"
-            ]
-        ],
-        [
-            [
-                "hotel general",
-                "NULL",
-                "great"
-            ]
-        ],
-        [
-            [
-                "service general",
-                "staff",
-                "great"
             ],
+            [
+                "rooms design_features",
+                "rooms",
+                "great"
+            ]
+        ],
+        [
+            [
+                "hotel general",
+                "NULL",
+                "great"
+            ]
+        ],
+        [
+            [
+                "hotel general",
+                "NULL",
+                "great"
+            ]
+        ],
+        [
+            [
+                "hotel general",
+                "NULL",
+                "great"
+            ]
+        ],
+        [
+            [
+                "service general",
+                "staff",
+                "great"
+            ]
+        ],
+        [
+            [
+                "hotel general",
+                "NULL",
+                "great"
+            ]
+        ],
+        [
             [
                 "hotel general",
                 "Lobby",
+                "great"
+            ],
+            [
+                "service general",
+                "personnel",
+                "great"
+            ],
+            [
+                "rooms design_features",
+                "accomodations",
                 "great"
             ]
         ],
@@ -6092,13 +6172,13 @@
         ],
         [
             [
-                "location general",
-                "Location",
+                "rooms design_features",
+                "rooms",
                 "great"
             ],
             [
-                "rooms design_features",
-                "rooms",
+                "location general",
+                "Location",
                 "great"
             ],
             [
@@ -6123,6 +6203,11 @@
         ],
         [
             [
+                "rooms design_features",
+                "rooms",
+                "bad"
+            ],
+            [
                 "service general",
                 "staff",
                 "bad"
@@ -6130,13 +6215,13 @@
         ],
         [
             [
-                "food_drinks quality",
-                "breakfast",
+                "rooms design_features",
+                "bathrooms",
                 "great"
             ],
             [
-                "rooms design_features",
-                "bedrooms",
+                "food_drinks quality",
+                "breakfast",
                 "great"
             ]
         ],
@@ -6164,17 +6249,12 @@
                 "service general",
                 "concierge",
                 "great"
-            ],
-            [
-                "facilities general",
-                "bar",
-                "great"
             ]
         ],
         [
             [
                 "hotel general",
-                "apt 2A",
+                "NULL",
                 "great"
             ]
         ],
@@ -6267,6 +6347,11 @@
                 "great"
             ],
             [
+                "rooms design_features",
+                "rooms",
+                "great"
+            ],
+            [
                 "hotel general",
                 "hotel",
                 "great"
@@ -6324,25 +6409,20 @@
                 "great"
             ],
             [
-                "service general",
-                "club lounge",
+                "hotel prices",
+                "price",
                 "great"
             ]
         ],
         [
             [
-                "rooms design_features",
+                "rooms cleanliness",
                 "room",
                 "great"
             ],
             [
-                "rooms cleanliness",
-                "bathroom",
-                "great"
-            ],
-            [
                 "rooms design_features",
-                "dressing room",
+                "room",
                 "great"
             ]
         ],
@@ -6396,11 +6476,6 @@
             ],
             [
                 "service general",
-                "service",
-                "great"
-            ],
-            [
-                "service general",
                 "staff",
                 "great"
             ]
@@ -6412,8 +6487,8 @@
                 "great"
             ],
             [
-                "rooms general",
-                "shower",
+                "water quality",
+                "water",
                 "great"
             ]
         ],
@@ -6435,15 +6510,10 @@
             [
                 "hotel general",
                 "NULL",
-                "bad"
+                "great"
             ]
         ],
         [
-            [
-                "hotel prices",
-                "internet rate",
-                "bad"
-            ],
             [
                 "service general",
                 "valet service",
@@ -6459,9 +6529,9 @@
         ],
         [
             [
-                "hotel prices",
+                "hotel general",
                 "hotel",
-                "bad"
+                "great"
             ]
         ],
         [
@@ -6501,8 +6571,8 @@
         ],
         [
             [
-                "service general",
-                "shuttle bus",
+                "location general",
+                "hotel",
                 "great"
             ]
         ],
@@ -6517,7 +6587,7 @@
             [
                 "hotel prices",
                 "NULL",
-                "bad"
+                "great"
             ]
         ],
         [
@@ -6551,6 +6621,11 @@
                 "rooms comfort",
                 "beds",
                 "great"
+            ],
+            [
+                "rooms cleanliness",
+                "beds",
+                "great"
             ]
         ],
         [
@@ -6575,12 +6650,17 @@
                 "rooms comfort",
                 "room",
                 "great"
+            ],
+            [
+                "rooms design_features",
+                "room",
+                "great"
             ]
         ],
         [
             [
                 "rooms design_features",
-                "View",
+                "Room",
                 "great"
             ]
         ],
@@ -6601,12 +6681,7 @@
         [
             [
                 "food_drinks quality",
-                "breakfast",
-                "great"
-            ],
-            [
-                "food_drinks quality",
-                "afternoon tea",
+                "breakfasts",
                 "great"
             ]
         ],
@@ -6618,6 +6693,11 @@
             ]
         ],
         [
+            [
+                "service general",
+                "service",
+                "great"
+            ],
             [
                 "service general",
                 "staff",
@@ -6632,7 +6712,7 @@
         [
             [
                 "hotel general",
-                "NULL",
+                "hotel",
                 "great"
             ]
         ],
@@ -6647,6 +6727,11 @@
             [
                 "rooms design_features",
                 "room",
+                "great"
+            ],
+            [
+                "hotel general",
+                "hotel",
                 "great"
             ]
         ],
@@ -6667,6 +6752,11 @@
                 "rooms design_features",
                 "rooms",
                 "great"
+            ],
+            [
+                "rooms design_features",
+                "rooms",
+                "great"
             ]
         ],
         [
@@ -6680,6 +6770,11 @@
             [
                 "rooms design_features",
                 "rooms",
+                "great"
+            ],
+            [
+                "rooms design_features",
+                "baths",
                 "great"
             ]
         ],
@@ -6702,30 +6797,35 @@
                 "location general",
                 "location",
                 "great"
-            ],
-            [
-                "location general",
-                "location",
-                "great"
             ]
         ],
         [
             [
-                "rooms design_features",
+                "rooms comfort",
+                "room",
+                "great"
+            ],
+            [
+                "rooms comfort",
                 "room",
                 "great"
             ]
         ],
         [
             [
+                "rooms prices",
+                "rooms",
+                "bad"
+            ],
+            [
                 "location general",
                 "location",
                 "great"
             ],
             [
-                "rooms prices",
-                "rooms",
-                "bad"
+                "hotel general",
+                "hotel",
+                "great"
             ]
         ],
         [
@@ -6743,7 +6843,7 @@
         [
             [
                 "location general",
-                "Location",
+                "NULL",
                 "great"
             ]
         ],
@@ -6768,13 +6868,13 @@
         ],
         [
             [
-                "rooms design_features",
-                "lobby",
+                "hotel general",
+                "Hotel",
                 "great"
             ],
             [
-                "service general",
-                "front desk",
+                "hotel general",
+                "lobby",
                 "great"
             ]
         ],
@@ -6788,7 +6888,7 @@
         [
             [
                 "location general",
-                "location",
+                "Location",
                 "great"
             ]
         ],
@@ -6801,19 +6901,19 @@
         ],
         [
             [
-                "rooms design_features",
+                "rooms cleanliness",
                 "Room",
                 "great"
             ],
             [
-                "rooms cleanliness",
+                "rooms design_features",
                 "Room",
                 "great"
             ]
         ],
         [
             [
-                "service general",
+                "rooms general",
                 "refrigerator",
                 "bad"
             ]
@@ -6838,6 +6938,11 @@
             ]
         ],
         [
+            [
+                "hotel general",
+                "hotel",
+                "great"
+            ],
             [
                 "hotel general",
                 "hotel",
@@ -6882,12 +6987,12 @@
         [
             [
                 "location general",
-                "location",
+                "Hotel",
                 "great"
             ],
             [
                 "location general",
-                "Hotel",
+                "location",
                 "great"
             ]
         ],
@@ -6901,22 +7006,17 @@
         [
             [
                 "rooms design_features",
-                "rooms",
-                "great"
-            ],
-            [
-                "rooms design_features",
-                "bathroom",
-                "great"
-            ],
-            [
-                "location general",
-                "location",
+                "Rooms",
                 "great"
             ],
             [
                 "hotel general",
-                "hotel",
+                "Hotel",
+                "great"
+            ],
+            [
+                "hotel general",
+                "Hotel",
                 "great"
             ]
         ],
@@ -6971,6 +7071,11 @@
             [
                 "service general",
                 "service",
+                "great"
+            ],
+            [
+                "rooms design_features",
+                "amenities",
                 "great"
             ],
             [
@@ -7039,11 +7144,6 @@
                 "rooms cleanliness",
                 "Rooms",
                 "great"
-            ],
-            [
-                "rooms cleanliness",
-                "Rooms",
-                "great"
             ]
         ],
         [
@@ -7053,13 +7153,18 @@
                 "great"
             ],
             [
+                "rooms design_features",
+                "TV",
+                "great"
+            ],
+            [
                 "rooms comfort",
                 "room",
                 "great"
             ],
             [
                 "rooms design_features",
-                "TV",
+                "room",
                 "great"
             ]
         ],
@@ -7112,7 +7217,7 @@
                 "bad"
             ],
             [
-                "rooms design_features",
+                "rooms cleanliness",
                 "rooms",
                 "bad"
             ]
@@ -7125,19 +7230,19 @@
             ],
             [
                 "hotel prices",
-                "location",
+                "value",
                 "great"
             ]
         ],
         [
             [
                 "service general",
-                "front desk",
+                "management",
                 "great"
             ],
             [
-                "service general",
-                "management",
+                "location general",
+                "location",
                 "great"
             ]
         ],
@@ -7197,13 +7302,13 @@
         ],
         [
             [
-                "rooms design_features",
-                "room",
+                "food_drinks quality",
+                "breakfast",
                 "great"
             ],
             [
-                "food_drinks quality",
-                "breakfast",
+                "rooms design_features",
+                "room",
                 "great"
             ]
         ],
@@ -7218,11 +7323,6 @@
             [
                 "food_drinks quality",
                 "breakfast",
-                "great"
-            ],
-            [
-                "hotel general",
-                "hotel",
                 "great"
             ]
         ],
@@ -7243,12 +7343,7 @@
         [
             [
                 "food_drinks quality",
-                "room service",
-                "great"
-            ],
-            [
-                "food_drinks quality",
-                "steaks",
+                "meals",
                 "great"
             ]
         ],
@@ -7283,6 +7378,11 @@
                 "rooms design_features",
                 "rooms",
                 "bad"
+            ],
+            [
+                "rooms comfort",
+                "rooms",
+                "bad"
             ]
         ],
         [
@@ -7297,27 +7397,32 @@
                 "great"
             ],
             [
-                "food_drinks quality",
-                "pool area",
+                "facilities cleanliness",
+                "pool",
+                "great"
+            ],
+            [
+                "rooms comfort",
+                "rooms",
                 "great"
             ]
         ],
         [
             [
-                "hotel design_features",
+                "hotel general",
                 "hotel",
                 "great"
             ]
         ],
         [
             [
-                "service general",
-                "staff",
+                "rooms design_features",
+                "rooms",
                 "great"
             ],
             [
-                "rooms design_features",
-                "rooms",
+                "service general",
+                "staff",
                 "great"
             ]
         ],
@@ -7364,7 +7469,7 @@
             ],
             [
                 "service general",
-                "reception staff",
+                "staff",
                 "great"
             ]
         ],
@@ -7390,13 +7495,18 @@
             ],
             [
                 "rooms comfort",
-                "bed",
+                "pillows",
+                "great"
+            ],
+            [
+                "rooms cleanliness",
+                "room",
                 "great"
             ]
         ]
     ],
-    "total_time_eval": 178.69996547698975,
-    "total_time_train": 227.71632432937622,
-    "avg_gpu_vram_eval_MB": 15212.83396946565,
-    "avg_gpu_power_eval_W": 113.11835877862596
+    "total_time_eval": 184.86092257499695,
+    "total_time_train": 211.0768654346466,
+    "avg_gpu_vram_eval_MB": null,
+    "avg_gpu_power_eval_W": null
 }

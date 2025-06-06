@@ -1,10 +1,10 @@
 {
-    "avg_gpu_vram_train_MB": 13749.68,
-    "avg_gpu_power_train_W": 131.52880000000002,
+    "avg_gpu_vram_train_MB": null,
+    "avg_gpu_power_train_W": null,
     "scores": {
-        "precision": 0.6219667943805874,
-        "recall": 0.5669383003492433,
-        "f1": 0.5931790499390986
+        "precision": 0.646095717884131,
+        "recall": 0.5972060535506403,
+        "f1": 0.6206896551724137
     },
     "all_labels": [
         [
@@ -5509,8 +5509,8 @@
         [
             [
                 "restaurant general",
-                "restaurant",
-                "bad"
+                "NULL",
+                "great"
             ]
         ],
         [
@@ -5583,8 +5583,8 @@
         ],
         [
             [
-                "restaurant general",
-                "place",
+                "food quality",
+                "meal",
                 "great"
             ]
         ],
@@ -5612,7 +5612,7 @@
         [
             [
                 "food quality",
-                "they",
+                "They",
                 "great"
             ]
         ],
@@ -5644,14 +5644,14 @@
         ],
         [
             [
-                "ambience general",
-                "ambience",
-                "great"
-            ],
-            [
                 "restaurant general",
                 "place",
                 "bad"
+            ],
+            [
+                "ambience general",
+                "ambience",
+                "great"
             ]
         ],
         [
@@ -5724,13 +5724,13 @@
         ],
         [
             [
-                "food quality",
-                "food",
+                "drinks style_options",
+                "wine list",
                 "great"
             ],
             [
-                "drinks style_options",
-                "wine list",
+                "food quality",
+                "food",
                 "great"
             ]
         ],
@@ -5766,6 +5766,11 @@
             ]
         ],
         [
+            [
+                "drinks style_options",
+                "wine list",
+                "great"
+            ],
             [
                 "service general",
                 "staff",
@@ -5822,11 +5827,6 @@
                 "food quality",
                 "food",
                 "great"
-            ],
-            [
-                "food quality",
-                "food",
-                "great"
             ]
         ],
         [
@@ -5852,13 +5852,13 @@
         ],
         [
             [
-                "food quality",
-                "food",
+                "service general",
+                "service",
                 "great"
             ],
             [
-                "service general",
-                "service",
+                "food quality",
+                "food",
                 "great"
             ]
         ],
@@ -5897,7 +5897,7 @@
                 "great"
             ],
             [
-                "food quality",
+                "food prices",
                 "food",
                 "bad"
             ]
@@ -5912,12 +5912,12 @@
         [
             [
                 "food quality",
-                "tuna",
+                "rice",
                 "bad"
             ],
             [
                 "food quality",
-                "rice",
+                "tuna",
                 "bad"
             ]
         ],
@@ -5949,13 +5949,13 @@
         ],
         [
             [
-                "service general",
-                "service",
+                "restaurant prices",
+                "value",
                 "bad"
             ],
             [
-                "restaurant prices",
-                "value",
+                "service general",
+                "service",
                 "bad"
             ]
         ],
@@ -6011,12 +6011,12 @@
         ],
         [
             [
-                "food style_options",
+                "food quality",
                 "miso soup",
                 "great"
             ],
             [
-                "food style_options",
+                "food quality",
                 "rolls",
                 "great"
             ]
@@ -6037,25 +6037,25 @@
         ],
         [
             [
-                "food quality",
+                "food prices",
                 "portions",
                 "bad"
             ],
             [
-                "restaurant prices",
+                "restaurant general",
                 "place",
                 "bad"
             ]
         ],
         [
             [
-                "service general",
-                "service",
+                "ambience general",
+                "space",
                 "great"
             ],
             [
-                "ambience general",
-                "space",
+                "service general",
+                "service",
                 "great"
             ]
         ],
@@ -6123,39 +6123,39 @@
         [
             [
                 "food quality",
-                "food",
-                "great"
-            ],
-            [
-                "food quality",
                 "salsa",
                 "bad"
-            ]
-        ],
-        [
-            [
-                "restaurant general",
-                "NULL",
-                "great"
-            ]
-        ],
-        [
-            [
-                "restaurant general",
-                "NULL",
-                "bad"
-            ]
-        ],
-        [
+            ],
             [
                 "food quality",
                 "food",
                 "great"
+            ]
+        ],
+        [
+            [
+                "restaurant general",
+                "NULL",
+                "great"
+            ]
+        ],
+        [
+            [
+                "restaurant general",
+                "NULL",
+                "bad"
+            ]
+        ],
+        [
+            [
+                "drinks quality",
+                "margaritas",
+                "great"
             ],
             [
-                "drinks style_options",
-                "margaritas",
-                "bad"
+                "food quality",
+                "food",
+                "great"
             ],
             [
                 "service general",
@@ -6173,6 +6173,11 @@
                 "service general",
                 "water refills",
                 "bad"
+            ],
+            [
+                "service general",
+                "bill",
+                "bad"
             ]
         ],
         [
@@ -6185,7 +6190,7 @@
         [
             [
                 "restaurant general",
-                "Mama Mia",
+                "pizza place",
                 "great"
             ]
         ],
@@ -6238,8 +6243,8 @@
         ],
         [
             [
-                "restaurant general",
-                "NULL",
+                "ambience general",
+                "summertime deck experience",
                 "great"
             ]
         ],
@@ -6292,11 +6297,6 @@
         ],
         [
             [
-                "food quality",
-                "pizza",
-                "great"
-            ],
-            [
                 "drinks style_options",
                 "draft",
                 "great"
@@ -6305,18 +6305,23 @@
                 "drinks style_options",
                 "bottle selection",
                 "great"
+            ],
+            [
+                "food quality",
+                "pizza",
+                "great"
             ]
         ],
         [
             [
-                "drinks quality",
+                "ambience general",
                 "jukebox",
                 "great"
             ]
         ],
         [
             [
-                "restaurant general",
+                "location general",
                 "HOME",
                 "great"
             ]
@@ -6330,13 +6335,13 @@
         ],
         [
             [
-                "food quality",
-                "food",
+                "service general",
+                "bartenders",
                 "great"
             ],
             [
-                "service general",
-                "bartenders",
+                "food quality",
+                "food",
                 "great"
             ]
         ],
@@ -6349,13 +6354,13 @@
         ],
         [
             [
-                "drinks style_options",
-                "beer selection",
+                "service general",
+                "owners",
                 "great"
             ],
             [
-                "service general",
-                "owners",
+                "drinks style_options",
+                "beer selection",
                 "great"
             ]
         ],
@@ -6376,7 +6381,7 @@
         [
             [
                 "restaurant general",
-                "guys",
+                "NULL",
                 "great"
             ]
         ],
@@ -6396,7 +6401,7 @@
         ],
         [
             [
-                "food quality",
+                "food style_options",
                 "fish",
                 "great"
             ]
@@ -6410,6 +6415,11 @@
             [
                 "food quality",
                 "Sake Ikura roll",
+                "great"
+            ],
+            [
+                "food quality",
+                "Blue Fin Tuna",
                 "great"
             ]
         ],
@@ -6431,7 +6441,7 @@
             [
                 "ambience general",
                 "crowd",
-                "great"
+                "ok"
             ]
         ],
         [
@@ -6457,17 +6467,22 @@
         ],
         [
             [
-                "food quality",
-                "food",
+                "restaurant prices",
+                "price",
                 "bad"
             ],
             [
-                "restaurant prices",
-                "price",
+                "food quality",
+                "food",
                 "bad"
             ]
         ],
         [
+            [
+                "restaurant general",
+                "place",
+                "bad"
+            ],
             [
                 "food quality",
                 "food",
@@ -6490,8 +6505,8 @@
         ],
         [
             [
-                "restaurant general",
-                "NULL",
+                "drinks quality",
+                "drinks",
                 "bad"
             ]
         ],
@@ -6503,31 +6518,26 @@
             ]
         ],
         [
-            [
-                "food quality",
-                "food",
-                "great"
-            ],
             [
                 "ambience general",
                 "ambience",
                 "great"
+            ],
+            [
+                "food quality",
+                "food",
+                "great"
             ]
         ],
         [
             [
                 "food quality",
-                "pumpkin ravioli",
-                "great"
-            ],
-            [
-                "food quality",
-                "goat cheese gnocchi",
-                "great"
-            ],
-            [
-                "food quality",
                 "filet mignon",
+                "great"
+            ],
+            [
+                "food quality",
+                "pumpkin ravioli",
                 "great"
             ],
             [
@@ -6546,17 +6556,17 @@
         [
             [
                 "ambience general",
+                "NULL",
+                "great"
+            ],
+            [
+                "ambience general",
                 "artwork",
                 "great"
             ],
             [
                 "ambience general",
                 "music",
-                "great"
-            ],
-            [
-                "ambience general",
-                "NULL",
                 "great"
             ]
         ],
@@ -6602,26 +6612,26 @@
         ],
         [
             [
-                "food quality",
-                "food",
-                "great"
-            ],
-            [
                 "location general",
                 "location",
                 "bad"
+            ],
+            [
+                "food quality",
+                "food",
+                "great"
             ]
         ],
         [
             [
-                "restaurant general",
-                "little jem",
+                "restaurant miscellaneous",
+                "jem",
                 "bad"
             ]
         ],
         [
             [
-                "restaurant general",
+                "location general",
                 "Beverly Center",
                 "great"
             ]
@@ -6642,7 +6652,7 @@
         ],
         [
             [
-                "food quality",
+                "food style_options",
                 "saag",
                 "great"
             ],
@@ -6652,7 +6662,7 @@
                 "great"
             ],
             [
-                "food style_options",
+                "food quality",
                 "korma",
                 "great"
             ]
@@ -6675,7 +6685,7 @@
             [
                 "food quality",
                 "food",
-                "bad"
+                "great"
             ]
         ],
         [
@@ -6695,6 +6705,11 @@
                 "food quality",
                 "saag paneer",
                 "great"
+            ],
+            [
+                "food quality",
+                "samosas",
+                "great"
             ]
         ],
         [
@@ -6702,11 +6717,6 @@
                 "food quality",
                 "food",
                 "great"
-            ],
-            [
-                "food quality",
-                "food",
-                "bad"
             ]
         ],
         [
@@ -6759,7 +6769,7 @@
         [
             [
                 "food quality",
-                "fajitas",
+                "fajita salad",
                 "great"
             ],
             [
@@ -6789,8 +6799,8 @@
         ],
         [
             [
-                "restaurant general",
-                "restaurant",
+                "service general",
+                "customer service",
                 "great"
             ],
             [
@@ -6800,7 +6810,7 @@
             ],
             [
                 "service general",
-                "customer service",
+                "manager",
                 "great"
             ],
             [
@@ -6842,11 +6852,6 @@
                 "service general",
                 "service",
                 "great"
-            ],
-            [
-                "service general",
-                "service",
-                "great"
             ]
         ],
         [
@@ -6875,7 +6880,7 @@
         ],
         [
             [
-                "restaurant general",
+                "service general",
                 "NULL",
                 "great"
             ]
@@ -6924,20 +6929,20 @@
         ],
         [
             [
-                "ambience general",
-                "decor",
+                "service general",
+                "staff",
                 "great"
             ],
             [
-                "service general",
-                "staff",
+                "ambience general",
+                "decor",
                 "great"
             ]
         ],
         [
             [
                 "restaurant general",
-                "OPEN SESAME",
+                "NULL",
                 "great"
             ]
         ],
@@ -6953,11 +6958,6 @@
                 "food quality",
                 "food",
                 "great"
-            ],
-            [
-                "food quality",
-                "quality",
-                "bad"
             ]
         ],
         [
@@ -6971,11 +6971,6 @@
             [
                 "food quality",
                 "open sesame combo plate",
-                "great"
-            ],
-            [
-                "food quality",
-                "food",
                 "great"
             ]
         ],
@@ -6996,22 +6991,17 @@
                 "food quality",
                 "hummus",
                 "great"
-            ],
-            [
-                "food quality",
-                "olive oil",
-                "great"
             ]
         ],
         [
             [
-                "service general",
-                "service",
+                "ambience general",
+                "seating",
                 "bad"
             ],
             [
-                "ambience general",
-                "seating",
+                "service general",
+                "service",
                 "bad"
             ]
         ],
@@ -7057,13 +7047,13 @@
         ],
         [
             [
-                "drinks quality",
-                "beer",
+                "food quality",
+                "meal",
                 "bad"
             ],
             [
-                "food quality",
-                "meal",
+                "drinks quality",
+                "beer",
                 "bad"
             ]
         ],
@@ -7132,6 +7122,11 @@
                 "service general",
                 "waiter",
                 "bad"
+            ],
+            [
+                "service general",
+                "service",
+                "bad"
             ]
         ],
         [
@@ -7143,7 +7138,7 @@
         ],
         [
             [
-                "restaurant general",
+                "drinks style_options",
                 "Winelist",
                 "great"
             ]
@@ -7152,11 +7147,6 @@
             [
                 "drinks style_options",
                 "wine list",
-                "great"
-            ],
-            [
-                "drinks style_options",
-                "Ray",
                 "great"
             ]
         ],
@@ -7169,7 +7159,7 @@
         ],
         [
             [
-                "drinks quality",
+                "drinks style_options",
                 "wine experience",
                 "great"
             ]
@@ -7197,25 +7187,30 @@
         ],
         [
             [
-                "food quality",
-                "food",
+                "restaurant prices",
+                "prices",
                 "bad"
             ],
             [
                 "service general",
                 "service",
                 "bad"
+            ],
+            [
+                "food quality",
+                "food",
+                "bad"
             ]
         ],
         [
             [
                 "service general",
-                "sevice",
+                "owners",
                 "bad"
             ],
             [
-                "service general",
-                "attitude",
+                "restaurant general",
+                "sevice",
                 "bad"
             ]
         ],
@@ -7228,7 +7223,7 @@
         ],
         [
             [
-                "restaurant general",
+                "drinks style_options",
                 "Scooner or Later",
                 "bad"
             ]
@@ -7261,8 +7256,13 @@
                 "great"
             ],
             [
-                "drinks style_options",
+                "drinks quality",
                 "Coffee",
+                "great"
+            ],
+            [
+                "restaurant general",
+                "Place",
                 "great"
             ]
         ],
@@ -7303,20 +7303,6 @@
         ],
         [
             [
-                "food quality",
-                "food",
-                "great"
-            ]
-        ],
-        [
-            [
-                "service general",
-                "Old Reliable",
-                "great"
-            ]
-        ],
-        [
-            [
                 "restaurant general",
                 "place",
                 "great"
@@ -7324,10 +7310,19 @@
         ],
         [
             [
-                "food quality",
-                "food",
+                "service general",
+                "NULL",
                 "great"
-            ],
+            ]
+        ],
+        [
+            [
+                "restaurant prices",
+                "rates",
+                "great"
+            ]
+        ],
+        [
             [
                 "location general",
                 "location",
@@ -7336,6 +7331,11 @@
             [
                 "service general",
                 "service",
+                "great"
+            ],
+            [
+                "food quality",
+                "food",
                 "great"
             ]
         ],
@@ -7354,6 +7354,11 @@
             ]
         ],
         [
+            [
+                "food prices",
+                "Food",
+                "great"
+            ],
             [
                 "food quality",
                 "Food",
@@ -7384,12 +7389,12 @@
         [
             [
                 "service general",
-                "waitress",
+                "Service",
                 "bad"
             ],
             [
                 "service general",
-                "Service",
+                "waitress",
                 "bad"
             ]
         ],
@@ -7423,13 +7428,13 @@
         ],
         [
             [
-                "food quality",
-                "food",
+                "ambience general",
+                "atmosphere",
                 "great"
             ],
             [
-                "ambience general",
-                "atmosphere",
+                "food quality",
+                "food",
                 "great"
             ]
         ],
@@ -7443,17 +7448,17 @@
                 "food quality",
                 "pancakes",
                 "great"
+            ],
+            [
+                "food quality",
+                "potatoes",
+                "great"
             ]
         ],
         [
             [
                 "restaurant general",
                 "place",
-                "great"
-            ],
-            [
-                "ambience general",
-                "Sunday breakfast",
                 "great"
             ]
         ],
@@ -7467,6 +7472,11 @@
                 "food quality",
                 "omikase platter",
                 "great"
+            ],
+            [
+                "food quality",
+                "meal",
+                "great"
             ]
         ],
         [
@@ -7474,22 +7484,17 @@
                 "service general",
                 "waitstaff",
                 "great"
-            ],
-            [
-                "food quality",
-                "rice",
-                "bad"
             ]
         ],
         [
             [
-                "service general",
-                "waiter",
+                "drinks quality",
+                "sake",
                 "great"
             ],
             [
-                "drinks quality",
-                "sake",
+                "service general",
+                "waiter",
                 "great"
             ]
         ],
@@ -7516,8 +7521,8 @@
         ],
         [
             [
-                "restaurant general",
-                "place",
+                "food quality",
+                "freshness",
                 "great"
             ]
         ],
@@ -7530,6 +7535,11 @@
             [
                 "food quality",
                 "nigiri",
+                "great"
+            ],
+            [
+                "food quality",
+                "rolls",
                 "great"
             ]
         ],
@@ -7570,7 +7580,7 @@
         ],
         [
             [
-                "restaurant general",
+                "ambience general",
                 "NULL",
                 "great"
             ]
@@ -7579,7 +7589,12 @@
             [
                 "restaurant prices",
                 "$6",
-                "great"
+                "bad"
+            ],
+            [
+                "restaurant prices",
+                "tip",
+                "bad"
             ]
         ],
         [
@@ -7603,7 +7618,7 @@
         ],
         [
             [
-                "restaurant general",
+                "food quality",
                 "Sushi place",
                 "great"
             ]
@@ -7625,7 +7640,7 @@
         [
             [
                 "service general",
-                "they",
+                "NULL",
                 "bad"
             ]
         ],
@@ -7653,12 +7668,12 @@
         [
             [
                 "food quality",
-                "food",
+                "egg white omelet",
                 "great"
             ],
             [
                 "food quality",
-                "egg white omelet",
+                "food",
                 "great"
             ]
         ],
@@ -7678,13 +7693,13 @@
         ],
         [
             [
-                "ambience general",
-                "ambiance",
+                "drinks style_options",
+                "wine list",
                 "great"
             ],
             [
-                "drinks style_options",
-                "wine list",
+                "ambience general",
+                "ambiance",
                 "great"
             ]
         ],
@@ -7717,11 +7732,6 @@
             ],
             [
                 "food style_options",
-                "chicken soup",
-                "great"
-            ],
-            [
-                "food style_options",
                 "specials",
                 "great"
             ]
@@ -7749,13 +7759,13 @@
         ],
         [
             [
-                "service general",
-                "wait staff",
+                "food quality",
+                "sushi",
                 "great"
             ],
             [
-                "food quality",
-                "sushi",
+                "service general",
+                "wait staff",
                 "great"
             ]
         ],
@@ -7774,6 +7784,11 @@
             ]
         ],
         [
+            [
+                "restaurant general",
+                "Space",
+                "bad"
+            ],
             [
                 "food quality",
                 "food",
@@ -7817,7 +7832,7 @@
         ],
         [
             [
-                "service general",
+                "restaurant general",
                 "NULL",
                 "great"
             ]
@@ -7831,20 +7846,20 @@
         ],
         [
             [
-                "restaurant general",
+                "food quality",
                 "NULL",
-                "great"
+                "ok"
             ]
         ],
         [
             [
-                "food quality",
-                "food",
+                "drinks quality",
+                "Margaritas",
                 "great"
             ],
             [
-                "drinks quality",
-                "Margaritas",
+                "food quality",
+                "food",
                 "great"
             ]
         ],
@@ -7877,18 +7892,6 @@
                 "ambience general",
                 "art",
                 "great"
-            ],
-            [
-                "ambience general",
-                "art",
-                "great"
-            ]
-        ],
-        [
-            [
-                "restaurant general",
-                "place",
-                "great"
             ]
         ],
         [
@@ -7901,13 +7904,25 @@
         [
             [
                 "food quality",
+                "meal",
+                "great"
+            ]
+        ],
+        [
+            [
+                "restaurant general",
+                "place",
+                "great"
+            ],
+            [
+                "food quality",
                 "indain food",
                 "great"
             ]
         ],
         [
             [
-                "food style_options",
+                "food prices",
                 "lunch menu",
                 "great"
             ]
@@ -7935,37 +7950,42 @@
         ],
         [
             [
+                "service general",
+                "service",
+                "great"
+            ],
+            [
                 "food quality",
                 "food",
                 "great"
-            ],
-            [
-                "service general",
-                "service",
-                "great"
             ]
         ],
         [
             [
                 "food quality",
-                "fish",
-                "great"
-            ],
-            [
-                "service general",
-                "service",
-                "great"
-            ]
-        ],
-        [
-            [
-                "food style_options",
                 "sushi",
                 "great"
             ],
             [
+                "service general",
+                "service",
+                "great"
+            ],
+            [
+                "food quality",
+                "fish",
+                "great"
+            ]
+        ],
+        [
+            [
                 "food style_options",
                 "selection",
+                "great"
+            ],
+            [
+                "food style_options",
+                "sushi",
                 "great"
             ]
         ],
@@ -7995,6 +8015,11 @@
                 "restaurant general",
                 "Murphy",
                 "great"
+            ],
+            [
+                "food quality",
+                "brunch food",
+                "great"
             ]
         ],
         [
@@ -8013,18 +8038,13 @@
         ],
         [
             [
-                "food quality",
+                "drinks style_options",
                 "sake",
                 "great"
             ],
             [
                 "food quality",
-                "Salmon",
-                "great"
-            ],
-            [
-                "food quality",
-                "Salmon",
+                "salmon",
                 "great"
             ],
             [
@@ -8041,11 +8061,6 @@
                 "food quality",
                 "Salmon",
                 "great"
-            ],
-            [
-                "",
-                "",
-                ""
             ]
         ],
         [
@@ -8057,14 +8072,14 @@
         ],
         [
             [
-                "restaurant general",
+                "food quality",
                 "BLUE RIBBON SUSHI",
                 "great"
             ]
         ],
         [
             [
-                "restaurant general",
+                "food quality",
                 "NULL",
                 "great"
             ]
@@ -8150,7 +8165,7 @@
             ],
             [
                 "food quality",
-                "smoked yellowtail",
+                "Chef's Choice",
                 "great"
             ]
         ],
@@ -8168,13 +8183,18 @@
         ],
         [
             [
-                "food quality",
+                "service general",
+                "service",
+                "bad"
+            ],
+            [
+                "food prices",
                 "food",
                 "bad"
             ],
             [
-                "service general",
-                "service",
+                "food quality",
+                "food",
                 "bad"
             ]
         ],
@@ -8220,13 +8240,13 @@
         ],
         [
             [
-                "food quality",
-                "food",
+                "service general",
+                "wait staff",
                 "great"
             ],
             [
-                "service general",
-                "waiting staff",
+                "food quality",
+                "food",
                 "great"
             ]
         ],
@@ -8261,19 +8281,19 @@
         [
             [
                 "restaurant general",
-                "Mirage",
+                "NULL",
                 "great"
             ]
         ],
         [
             [
                 "food quality",
-                "appetizer",
+                "appetizer of oysters, lobster, crab",
                 "great"
             ],
             [
                 "food quality",
-                "oysters, lobster, crab",
+                "appetizer",
                 "great"
             ]
         ],
@@ -8302,7 +8322,7 @@
             [
                 "food quality",
                 "dessert",
-                "bad"
+                "great"
             ]
         ],
         [
@@ -8314,14 +8334,14 @@
         ],
         [
             [
-                "food quality",
-                "food",
-                "ok"
-            ],
-            [
                 "service general",
                 "service",
                 "bad"
+            ],
+            [
+                "food quality",
+                "food",
+                "ok"
             ]
         ],
         [
@@ -8347,12 +8367,17 @@
         ],
         [
             [
+                "service general",
+                "bill",
+                "bad"
+            ],
+            [
                 "drinks prices",
                 "drinks",
                 "bad"
             ],
             [
-                "drinks quality",
+                "food quality",
                 "food",
                 "bad"
             ]
@@ -8395,11 +8420,16 @@
                 "service general",
                 "service",
                 "bad"
+            ],
+            [
+                "service general",
+                "beer",
+                "bad"
             ]
         ],
         [
             [
-                "drinks quality",
+                "drinks style_options",
                 "glass",
                 "bad"
             ]
@@ -8408,11 +8438,6 @@
             [
                 "service general",
                 "service",
-                "bad"
-            ],
-            [
-                "service general",
-                "link",
                 "bad"
             ]
         ],
@@ -8439,8 +8464,8 @@
         ],
         [
             [
-                "service general",
-                "link",
+                "restaurant general",
+                "give away link",
                 "bad"
             ]
         ],
@@ -8472,13 +8497,13 @@
         ],
         [
             [
-                "food quality",
-                "seafood",
+                "restaurant general",
+                "setting",
                 "great"
             ],
             [
                 "food quality",
-                "seafood",
+                "seasonal fish and seafood",
                 "great"
             ]
         ],
@@ -8491,14 +8516,14 @@
         ],
         [
             [
-                "service general",
-                "Service",
+                "food quality",
+                "Pizza",
                 "bad"
             ],
             [
-                "food quality",
-                "Pizza",
-                "great"
+                "service general",
+                "Service",
+                "bad"
             ]
         ],
         [
@@ -8562,6 +8587,11 @@
         ],
         [
             [
+                "restaurant general",
+                "place",
+                "great"
+            ],
+            [
                 "service general",
                 "service",
                 "bad"
@@ -8576,15 +8606,8 @@
         ],
         [
             [
-                "restaurant general",
-                "place",
-                "great"
-            ]
-        ],
-        [
-            [
-                "restaurant general",
-                "NULL",
+                "food quality",
+                "breakfast",
                 "great"
             ]
         ],
@@ -8593,16 +8616,23 @@
                 "food quality",
                 "food",
                 "great"
+            ]
+        ],
+        [
+            [
+                "drinks quality",
+                "bloody mary",
+                "great"
             ],
             [
-                "drinks style_options",
-                "bloody mary",
+                "food quality",
+                "food",
                 "great"
             ]
         ],
         [
             [
-                "restaurant general",
+                "food quality",
                 "breakfast",
                 "great"
             ]
@@ -8616,13 +8646,13 @@
         ],
         [
             [
-                "food quality",
-                "menu items",
+                "drinks style_options",
+                "mimosas",
                 "great"
             ],
             [
-                "drinks style_options",
-                "mimosas",
+                "food style_options",
+                "menu items",
                 "great"
             ]
         ],
@@ -8654,7 +8684,7 @@
                 "great"
             ],
             [
-                "ambience general",
+                "restaurant general",
                 "restaurant",
                 "great"
             ]
@@ -8683,12 +8713,12 @@
         [
             [
                 "food quality",
-                "walnuts",
+                "prawns",
                 "great"
             ],
             [
                 "food quality",
-                "prawns",
+                "walnuts",
                 "great"
             ]
         ],
@@ -8714,6 +8744,11 @@
             ]
         ],
         [
+            [
+                "food quality",
+                "brocolli",
+                "great"
+            ],
             [
                 "food quality",
                 "scallops and prawns",
@@ -8755,14 +8790,14 @@
                 "bad"
             ],
             [
-                "restaurant prices",
+                "restaurant general",
                 "place",
-                "bad"
+                "great"
             ]
         ],
         [
             [
-                "food quality",
+                "food style_options",
                 "portions",
                 "bad"
             ]
@@ -8779,14 +8814,14 @@
                 "bad"
             ],
             [
-                "food prices",
-                "$5 a piece",
-                "bad"
+                "food quality",
+                "sushi",
+                "great"
             ]
         ],
         [
             [
-                "food prices",
+                "drinks prices",
                 "$40 per person",
                 "bad"
             ]
@@ -8800,13 +8835,13 @@
         ],
         [
             [
-                "food quality",
-                "food",
+                "service general",
+                "service",
                 "bad"
             ],
             [
-                "service general",
-                "service",
+                "food quality",
+                "food",
                 "bad"
             ]
         ],
@@ -8819,8 +8854,8 @@
         ],
         [
             [
-                "restaurant general",
-                "restaurant",
+                "restaurant miscellaneous",
+                "tables",
                 "great"
             ]
         ],
@@ -8840,14 +8875,14 @@
         ],
         [
             [
-                "food quality",
+                "food style_options",
                 "appetizers",
-                "bad"
+                "great"
             ]
         ],
         [
             [
-                "service general",
+                "food quality",
                 "bread service",
                 "bad"
             ]
@@ -8868,14 +8903,14 @@
         ],
         [
             [
-                "food quality",
-                "food",
+                "restaurant prices",
+                "restaurant",
                 "ok"
             ],
             [
-                "restaurant prices",
-                "restaurant",
-                "bad"
+                "food quality",
+                "Food",
+                "ok"
             ]
         ],
         [
@@ -8889,13 +8924,18 @@
             [
                 "restaurant general",
                 "NULL",
-                "great"
+                "bad"
             ]
         ],
         [
             [
-                "parking general",
-                "parking",
+                "location general",
+                "Parking",
+                "great"
+            ],
+            [
+                "location general",
+                "lot",
                 "great"
             ]
         ],
@@ -8903,11 +8943,6 @@
             [
                 "ambience general",
                 "restaurant",
-                "great"
-            ],
-            [
-                "ambience general",
-                "glass walls",
                 "great"
             ]
         ],
@@ -8921,19 +8956,24 @@
         [
             [
                 "service general",
-                "NULL",
+                "seated",
+                "great"
+            ],
+            [
+                "food quality",
+                "service",
                 "great"
             ]
         ],
         [
             [
                 "food quality",
-                "Spanish Mackeral special appetizer",
+                "box sushi",
                 "great"
             ],
             [
                 "food quality",
-                "box sushi",
+                "Spanish Mackeral special appetizer",
                 "great"
             ]
         ],
@@ -8969,6 +9009,11 @@
             [
                 "food prices",
                 "sushi",
+                "bad"
+            ],
+            [
+                "food quality",
+                "sushi",
                 "great"
             ]
         ],
@@ -8981,20 +9026,20 @@
         ],
         [
             [
-                "food quality",
-                "food",
+                "service general",
+                "customer service",
                 "bad"
             ],
             [
-                "service general",
-                "customer service",
+                "food quality",
+                "food",
                 "bad"
             ]
         ],
         [
             [
                 "service general",
-                "service",
+                "restaurant staff",
                 "bad"
             ],
             [
@@ -9024,7 +9069,7 @@
                 "bad"
             ],
             [
-                "service general",
+                "food quality",
                 "food",
                 "bad"
             ]
@@ -9108,7 +9153,7 @@
         ],
         [
             [
-                "restaurant prices",
+                "food prices",
                 "quantity",
                 "great"
             ],
@@ -9133,19 +9178,19 @@
             ],
             [
                 "food style_options",
-                "Ray's",
+                "Ray",
                 "great"
             ]
         ],
         [
             [
                 "food quality",
-                "family platter",
+                "black cod in sake kasu",
                 "great"
             ],
             [
                 "food quality",
-                "black cod in sake kasu",
+                "family platter",
                 "great"
             ]
         ],
@@ -9193,7 +9238,7 @@
             ],
             [
                 "food quality",
-                "gluten free menu",
+                "corn beef hash",
                 "great"
             ]
         ],
@@ -9206,8 +9251,8 @@
         ],
         [
             [
-                "service general",
-                "line",
+                "restaurant general",
+                "place",
                 "great"
             ]
         ],
@@ -9241,6 +9286,11 @@
         ],
         [
             [
+                "service general",
+                "bar tenders",
+                "great"
+            ],
+            [
                 "ambience general",
                 "atmosphere",
                 "great"
@@ -9248,11 +9298,6 @@
             [
                 "ambience general",
                 "music",
-                "great"
-            ],
-            [
-                "ambience general",
-                "bar tenders",
                 "great"
             ]
         ],
@@ -9272,8 +9317,8 @@
         ],
         [
             [
-                "food quality",
-                "Food",
+                "restaurant prices",
+                "Prices",
                 "great"
             ],
             [
@@ -9282,14 +9327,14 @@
                 "great"
             ],
             [
-                "restaurant prices",
-                "Prices",
+                "food quality",
+                "Food",
                 "great"
             ]
         ],
         [
             [
-                "restaurant prices",
+                "food prices",
                 "price fixed pre-show dinner",
                 "great"
             ]
@@ -9311,11 +9356,6 @@
                 "ambience general",
                 "subwoofer",
                 "bad"
-            ],
-            [
-                "ambience general",
-                "subwoofer",
-                "bad"
             ]
         ],
         [
@@ -9328,13 +9368,13 @@
         [
             [
                 "food quality",
-                "presentation",
-                "great"
+                "seafood",
+                "ok"
             ],
             [
                 "food quality",
-                "seafood",
-                "great"
+                "presentation",
+                "ok"
             ]
         ],
         [
@@ -9375,11 +9415,6 @@
                 "food quality",
                 "steak",
                 "bad"
-            ],
-            [
-                "food quality",
-                "meat tenderizer",
-                "bad"
             ]
         ],
         [
@@ -9387,22 +9422,12 @@
                 "food quality",
                 "MSG",
                 "bad"
-            ],
-            [
-                "food quality",
-                "taste",
-                "bad"
             ]
         ],
         [
             [
                 "food quality",
-                "frosting",
-                "great"
-            ],
-            [
-                "food quality",
-                "take out box",
+                "them",
                 "great"
             ]
         ],
@@ -9441,7 +9466,7 @@
         ],
         [
             [
-                "style_options",
+                "ambience general",
                 "NULL",
                 "great"
             ]
@@ -9461,7 +9486,7 @@
         [
             [
                 "drinks style_options",
-                "sake suggestions",
+                "sake",
                 "great"
             ]
         ],
@@ -9488,14 +9513,9 @@
         ],
         [
             [
-                "restaurant general",
+                "service general",
                 "table",
                 "ok"
-            ],
-            [
-                "restaurant general",
-                "table",
-                "bad"
             ]
         ],
         [
@@ -9507,19 +9527,19 @@
             [
                 "restaurant general",
                 "restaurant",
-                "ok"
+                "bad"
             ]
         ],
         [
             [
-                "service general",
+                "restaurant miscellaneous",
                 "bathroom stall",
                 "bad"
             ]
         ],
         [
             [
-                "food quality",
+                "food style_options",
                 "food",
                 "great"
             ]
@@ -9528,10 +9548,10 @@
             [
                 "food quality",
                 "food",
-                "great"
+                "bad"
             ],
             [
-                "restaurant prices",
+                "food prices",
                 "food",
                 "bad"
             ]
@@ -9579,12 +9599,12 @@
         [
             [
                 "food quality",
-                "salads",
+                "pizza",
                 "great"
             ],
             [
                 "food quality",
-                "pizza",
+                "salads",
                 "great"
             ]
         ],
@@ -9595,7 +9615,7 @@
                 "great"
             ],
             [
-                "service general",
+                "food quality",
                 "cooks",
                 "great"
             ]
@@ -9603,7 +9623,7 @@
         [
             [
                 "service general",
-                "they",
+                "They",
                 "bad"
             ]
         ],
@@ -9615,11 +9635,6 @@
             ],
             [
                 "ambience general",
-                "feeling",
-                "great"
-            ],
-            [
-                "ambience general",
                 "restaurant",
                 "great"
             ]
@@ -9627,15 +9642,15 @@
         [
             [
                 "food style_options",
-                "menu",
+                "NULL",
                 "great"
             ]
         ],
         [
             [
                 "restaurant general",
-                "",
-                "great [AT] [AC] restaurant general [AT] [SP] great [AT] [AC] restaurant general [AT] [SP] great [AT] [AC] restaurant general [AT] [SP] great [AT] [AC] restaurant general [AT] [SP] great [AT] [AC] restaurant general [AT] [SP] great [AT] [AC] restaurant general [AT] [SP] great [AT] [AC] restaurant general [AT]"
+                "NULL",
+                "great"
             ]
         ],
         [
@@ -9662,12 +9677,12 @@
         [
             [
                 "food style_options",
-                "menu",
+                "pizza",
                 "great"
             ],
             [
-                "food quality",
-                "pizza",
+                "food style_options",
+                "menu",
                 "great"
             ]
         ],
@@ -9714,7 +9729,7 @@
         [
             [
                 "restaurant general",
-                "wait",
+                "NULL",
                 "great"
             ]
         ],
@@ -9805,6 +9820,16 @@
         [
             [
                 "food quality",
+                "exotic fish",
+                "bad"
+            ],
+            [
+                "food prices",
+                "$100 dollar plate",
+                "bad"
+            ],
+            [
+                "food quality",
                 "pieces of exotic fish",
                 "bad"
             ]
@@ -9853,8 +9878,8 @@
         ],
         [
             [
-                "food quality",
-                "food",
+                "drinks quality",
+                "coffee",
                 "great"
             ],
             [
@@ -9863,8 +9888,8 @@
                 "great"
             ],
             [
-                "drinks quality",
-                "coffee",
+                "food quality",
+                "food",
                 "great"
             ]
         ],
@@ -9879,7 +9904,7 @@
             [
                 "restaurant general",
                 "NULL",
-                "bad"
+                "ok"
             ]
         ],
         [
@@ -9910,7 +9935,7 @@
                 "great"
             ],
             [
-                "food quality",
+                "food prices",
                 "food",
                 "great"
             ]
@@ -9925,7 +9950,7 @@
         [
             [
                 "ambience general",
-                "people",
+                "atmosphere",
                 "great"
             ],
             [
@@ -9934,8 +9959,8 @@
                 "great"
             ],
             [
-                "ambience general",
-                "atmosphere",
+                "service general",
+                "people",
                 "great"
             ]
         ],
@@ -9949,7 +9974,12 @@
         [
             [
                 "restaurant general",
-                "Open Sesame",
+                "owners",
+                "great"
+            ],
+            [
+                "restaurant general",
+                "restaurant",
                 "great"
             ]
         ],
@@ -9964,12 +9994,17 @@
             [
                 "restaurant general",
                 "sushi bar",
+                "great"
+            ],
+            [
+                "restaurant general",
+                "place",
                 "bad"
             ]
         ],
         [
             [
-                "ambience general",
+                "restaurant general",
                 "NULL",
                 "great"
             ]
@@ -9977,7 +10012,7 @@
         [
             [
                 "food quality",
-                "menu",
+                "everything",
                 "great"
             ]
         ],
@@ -10044,7 +10079,7 @@
             [
                 "restaurant general",
                 "NULL",
-                "bad"
+                "great"
             ]
         ],
         [
@@ -10058,7 +10093,7 @@
             [
                 "restaurant general",
                 "NULL",
-                "bad"
+                "great"
             ]
         ],
         [
@@ -10085,26 +10120,26 @@
         [
             [
                 "food quality",
-                "Creme Brulee",
+                "appetizer",
                 "great"
             ],
             [
                 "food quality",
-                "appetizer",
+                "Creme Brulee",
                 "great"
             ]
         ],
         [
             [
                 "ambience general",
-                "indoor ambience",
+                "ambience",
                 "great"
             ]
         ],
         [
             [
                 "ambience general",
-                "table",
+                "balcony",
                 "great"
             ]
         ],
@@ -10124,6 +10159,11 @@
         ],
         [
             [
+                "drinks quality",
+                "drinks",
+                "bad"
+            ],
+            [
                 "service general",
                 "server",
                 "bad"
@@ -10133,7 +10173,7 @@
             [
                 "service general",
                 "NULL",
-                "great"
+                "bad"
             ]
         ],
         [
@@ -10148,9 +10188,19 @@
                 "ambience general",
                 "table",
                 "great"
+            ],
+            [
+                "ambience general",
+                "table",
+                "great"
             ]
         ],
         [
+            [
+                "service general",
+                "waiters",
+                "great"
+            ],
             [
                 "service general",
                 "service",
@@ -10160,12 +10210,12 @@
         [
             [
                 "food quality",
-                "food",
+                "filet mignon",
                 "great"
             ],
             [
                 "food quality",
-                "filet mignon",
+                "food",
                 "great"
             ]
         ],
@@ -10173,7 +10223,7 @@
             [
                 "food style_options",
                 "portions",
-                "bad"
+                "great"
             ]
         ],
         [
@@ -10187,7 +10237,7 @@
             [
                 "service general",
                 "check",
-                "bad"
+                "great"
             ]
         ],
         [
@@ -10201,11 +10251,6 @@
             [
                 "ambience general",
                 "bathroom",
-                "bad"
-            ],
-            [
-                "ambience general",
-                "toilet",
                 "bad"
             ],
             [
@@ -10230,13 +10275,13 @@
         ],
         [
             [
-                "service general",
-                "service",
+                "restaurant general",
+                "Mercedes restaurant",
                 "great"
             ],
             [
-                "restaurant general",
-                "Mercedes restaurant",
+                "service general",
+                "service",
                 "great"
             ]
         ],
@@ -10249,6 +10294,11 @@
             [
                 "restaurant prices",
                 "prices",
+                "great"
+            ],
+            [
+                "food quality",
+                "chips and salsa",
                 "great"
             ]
         ],
@@ -10266,7 +10316,7 @@
         ],
         [
             [
-                "service general",
+                "food quality",
                 "catering",
                 "great"
             ],
@@ -10280,7 +10330,7 @@
             [
                 "drinks quality",
                 "Drinks",
-                "bad"
+                "great"
             ]
         ],
         [
@@ -10294,28 +10344,23 @@
             [
                 "service general",
                 "Service",
-                "great"
-            ],
-            [
-                "service general",
-                "Service",
-                "great"
+                "bad"
             ]
         ],
         [
             [
                 "restaurant prices",
+                "presentation",
+                "great"
+            ],
+            [
+                "restaurant general",
                 "Snooze",
                 "bad"
             ],
             [
-                "restaurant prices",
+                "food style_options",
                 "menu",
-                "bad"
-            ],
-            [
-                "restaurant prices",
-                "place",
                 "bad"
             ]
         ],
@@ -10330,11 +10375,6 @@
             [
                 "drinks prices",
                 "juice",
-                "bad"
-            ],
-            [
-                "drinks prices",
-                "half gallon",
                 "bad"
             ]
         ],
@@ -10352,9 +10392,9 @@
                 "great"
             ],
             [
-                "food quality",
-                "pancakes",
-                "great"
+                "food prices",
+                "pancake flight",
+                "bad"
             ]
         ],
         [
@@ -10380,7 +10420,7 @@
         ],
         [
             [
-                "service general",
+                "food quality",
                 "dish",
                 "bad"
             ]
@@ -10392,19 +10432,24 @@
                 "great"
             ],
             [
-                "food quality",
-                "pancakes",
-                "great"
-            ],
-            [
                 "drinks prices",
                 "orange juice",
+                "bad"
+            ],
+            [
+                "drinks quality",
+                "iced tea",
+                "bad"
+            ],
+            [
+                "food quality",
+                "pancakes",
                 "great"
             ]
         ],
         [
             [
-                "restaurant general",
+                "location general",
                 "view",
                 "great"
             ]
@@ -10418,6 +10463,11 @@
         ],
         [
             [
+                "restaurant general",
+                "Ray",
+                "great"
+            ],
+            [
                 "food quality",
                 "food",
                 "great"
@@ -10425,11 +10475,6 @@
             [
                 "service general",
                 "service",
-                "great"
-            ],
-            [
-                "restaurant general",
-                "Ray",
                 "great"
             ]
         ],
@@ -10444,6 +10489,11 @@
             [
                 "service general",
                 "server",
+                "great"
+            ],
+            [
+                "drinks quality",
+                "drink",
                 "great"
             ]
         ],
@@ -10462,6 +10512,11 @@
                 "food quality",
                 "scallops in a soy dressing",
                 "great"
+            ],
+            [
+                "food quality",
+                "Shilshole Sampler",
+                "great"
             ]
         ],
         [
@@ -10473,11 +10528,6 @@
             [
                 "food quality",
                 "artichoke hearts",
-                "great"
-            ],
-            [
-                "food quality",
-                "chard",
                 "great"
             ],
             [
@@ -10508,6 +10558,11 @@
                 "food quality",
                 "creamed Washington russet potatoes",
                 "great"
+            ],
+            [
+                "food quality",
+                "green beans",
+                "great"
             ]
         ],
         [
@@ -10522,11 +10577,6 @@
                 "service general",
                 "server",
                 "great"
-            ],
-            [
-                "restaurant general",
-                "place",
-                "bad"
             ]
         ],
         [
@@ -10544,19 +10594,24 @@
         [
             [
                 "restaurant general",
-                "Ray's Boathouse",
+                "Ray",
+                "great"
+            ],
+            [
+                "restaurant general",
+                "Boathouse",
                 "great"
             ]
         ],
         [
             [
-                "food quality",
-                "food",
+                "service general",
+                "server",
                 "great"
             ],
             [
-                "service general",
-                "server",
+                "food quality",
+                "food",
                 "great"
             ]
         ],
@@ -10568,8 +10623,8 @@
             ]
         ]
     ],
-    "total_time_eval": 149.88164114952087,
-    "total_time_train": 280.24336791038513,
-    "avg_gpu_vram_eval_MB": 14962.666666666666,
-    "avg_gpu_power_eval_W": 82.69666666666667
+    "total_time_eval": 258.10614800453186,
+    "total_time_train": 260.1968240737915,
+    "avg_gpu_vram_eval_MB": null,
+    "avg_gpu_power_eval_W": null
 }

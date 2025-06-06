@@ -1,10 +1,10 @@
 {
-    "avg_gpu_vram_train_MB": 14780.073894609328,
-    "avg_gpu_power_train_W": 224.59646880678378,
+    "avg_gpu_vram_train_MB": null,
+    "avg_gpu_power_train_W": null,
     "scores": {
-        "precision": 0.5385996409335727,
-        "recall": 0.5671077504725898,
-        "f1": 0.5524861878453039
+        "precision": 0.5923076923076923,
+        "recall": 0.5822306238185255,
+        "f1": 0.5872259294566254
     },
     "all_labels": [
         [
@@ -3438,28 +3438,18 @@
         [
             [
                 "airline service",
-                "someone there",
+                "NULL",
                 "great"
             ]
         ],
         [
             [
                 "airline service",
-                "customer service",
+                "customer treatment",
                 "great"
             ]
         ],
         [
-            [
-                "onboard cleanliness",
-                "plane",
-                "great"
-            ],
-            [
-                "onboard cleanliness",
-                "plane",
-                "great"
-            ],
             [
                 "onboard cleanliness",
                 "plane",
@@ -3476,6 +3466,21 @@
                 "onboard food",
                 "food",
                 "bad"
+            ],
+            [
+                "onboard food",
+                "sausage",
+                "bad"
+            ],
+            [
+                "onboard food",
+                "bacon",
+                "bad"
+            ],
+            [
+                "onboard food",
+                "dessert",
+                "bad"
             ]
         ],
         [
@@ -3488,7 +3493,7 @@
         [
             [
                 "airline service",
-                "ticket",
+                "service",
                 "bad"
             ]
         ],
@@ -3578,7 +3583,7 @@
         ],
         [
             [
-                "airline general",
+                "airline price",
                 "business class",
                 "great"
             ]
@@ -3611,7 +3616,7 @@
                 "great"
             ],
             [
-                "airport operation check_in",
+                "airport operation boarding",
                 "boarding",
                 "great"
             ]
@@ -3625,13 +3630,13 @@
         ],
         [
             [
-                "airport operation check_in",
-                "check in",
+                "airport operation boarding",
+                "boarding",
                 "bad"
             ],
             [
                 "airport operation check_in",
-                "boarding",
+                "check in",
                 "bad"
             ]
         ],
@@ -3644,15 +3649,15 @@
         ],
         [
             [
-                "airline general",
-                "NULL",
+                "airport operation check_in",
+                "departure gate",
                 "great"
             ]
         ],
         [
             [
                 "airport operation check_in",
-                "flight",
+                "check in",
                 "great"
             ],
             [
@@ -3662,21 +3667,6 @@
             ],
             [
                 "airport operation check_in",
-                "check in",
-                "great"
-            ],
-            [
-                "airport operation check_in",
-                "flight",
-                "great"
-            ],
-            [
-                "punctuality general",
-                "flight",
-                "great"
-            ],
-            [
-                "punctuality general",
                 "flight",
                 "great"
             ]
@@ -3686,11 +3676,6 @@
                 "airline service",
                 "Staff",
                 "great"
-            ],
-            [
-                "airline general",
-                "tui flights",
-                "bad"
             ]
         ],
         [
@@ -3710,7 +3695,7 @@
         [
             [
                 "punctuality general",
-                "delay",
+                "NULL",
                 "bad"
             ]
         ],
@@ -3785,29 +3770,29 @@
         [
             [
                 "airline general",
-                "jet flight",
+                "Easy jet flight",
                 "great"
             ]
         ],
         [
             [
                 "airport operation baggage",
-                "baggage",
+                "baggage drop",
                 "great"
             ],
             [
-                "airport operation baggage",
-                "baggage",
-                "great"
-            ],
-            [
-                "airport operation baggage",
-                "baggage",
-                "great"
-            ],
-            [
-                "punctuality general",
+                "airline price",
                 "prices",
+                "great"
+            ],
+            [
+                "airline price",
+                "prices",
+                "great"
+            ],
+            [
+                "airline service",
+                "staff",
                 "great"
             ]
         ],
@@ -3820,7 +3805,7 @@
         ],
         [
             [
-                "airline general",
+                "airline price",
                 "up charge",
                 "bad"
             ]
@@ -3834,28 +3819,18 @@
         ],
         [
             [
+                "airline general",
+                "flights",
+                "bad"
+            ],
+            [
                 "airport operation baggage",
                 "private transfer",
                 "bad"
             ],
             [
                 "airline general",
-                "flights",
-                "great"
-            ],
-            [
-                "airline general",
-                "flights",
-                "bad"
-            ],
-            [
-                "airline general",
-                "flights",
-                "bad"
-            ],
-            [
-                "airline general",
-                "flights",
+                "Jet2",
                 "bad"
             ]
         ],
@@ -3867,7 +3842,7 @@
             ],
             [
                 "onboard seat legroom",
-                "leg room",
+                "flight",
                 "great"
             ]
         ],
@@ -3888,7 +3863,7 @@
         [
             [
                 "onboard seat legroom",
-                "long legs",
+                "legs",
                 "bad"
             ]
         ],
@@ -3902,21 +3877,31 @@
         [
             [
                 "onboard food",
-                "Food",
+                "Dinner",
+                "great"
+            ],
+            [
+                "onboard food",
+                "breakfast",
                 "great"
             ]
         ],
         [
             [
                 "airline general",
-                "carrier",
+                "NULL",
                 "bad"
             ]
         ],
         [
             [
                 "onboard seat legroom",
-                "leg room",
+                "extra leg room",
+                "great"
+            ],
+            [
+                "onboard seat legroom",
+                "seat",
                 "great"
             ],
             [
@@ -3930,27 +3915,27 @@
                 "airline service",
                 "customer service",
                 "bad"
+            ],
+            [
+                "airline general",
+                "flight",
+                "bad"
+            ],
+            [
+                "airline general",
+                "connecting flight",
+                "bad"
             ]
         ],
         [
             [
+                "airline general",
+                "flight",
+                "great"
+            ],
+            [
                 "airline service",
                 "crew",
-                "great"
-            ],
-            [
-                "airline service",
-                "flight",
-                "great"
-            ],
-            [
-                "airline service",
-                "flight",
-                "great"
-            ],
-            [
-                "airline service",
-                "flight",
                 "great"
             ]
         ],
@@ -3991,8 +3976,8 @@
         ],
         [
             [
-                "airport operation check_in",
-                "TUI staff",
+                "punctuality general",
+                "NULL",
                 "bad"
             ]
         ],
@@ -4026,13 +4011,13 @@
         ],
         [
             [
-                "airline service",
-                "Service",
+                "onboard food",
+                "food",
                 "great"
             ],
             [
-                "onboard food",
-                "food",
+                "airline service",
+                "Service",
                 "great"
             ]
         ],
@@ -4052,8 +4037,8 @@
         ],
         [
             [
-                "airline general",
-                "Ryanair",
+                "airline service",
+                "service",
                 "great"
             ]
         ],
@@ -4088,18 +4073,23 @@
         [
             [
                 "airline general",
-                "BUYER BEWARE",
+                "NULL",
                 "bad"
             ]
         ],
         [
             [
-                "punctuality general",
+                "airline service",
                 "cabin crew",
                 "great"
             ]
         ],
         [
+            [
+                "airport operation boarding",
+                "boarding",
+                "bad"
+            ],
             [
                 "airline service",
                 "customer service",
@@ -4114,6 +4104,16 @@
             ]
         ],
         [
+            [
+                "airline service",
+                "professional",
+                "great"
+            ],
+            [
+                "airline service",
+                "knowledgeable",
+                "great"
+            ],
             [
                 "airline service",
                 "NULL",
@@ -4144,11 +4144,6 @@
                 "airline service",
                 "staff",
                 "great"
-            ],
-            [
-                "airline service",
-                "flight crew",
-                "great"
             ]
         ],
         [
@@ -4167,16 +4162,6 @@
         ],
         [
             [
-                "airport operation check_in",
-                "check in",
-                "bad"
-            ],
-            [
-                "airport operation check_in",
-                "flight",
-                "bad"
-            ],
-            [
                 "airline general",
                 "international airline",
                 "bad"
@@ -4191,7 +4176,7 @@
         ],
         [
             [
-                "punctuality general",
+                "airline service",
                 "crew",
                 "great"
             ]
@@ -4243,16 +4228,6 @@
                 "great"
             ],
             [
-                "onboard seat comfort",
-                "blanket",
-                "great"
-            ],
-            [
-                "onboard seat comfort",
-                "blanket",
-                "great"
-            ],
-            [
                 "onboard entertainment",
                 "entertainment movie selection",
                 "great"
@@ -4270,29 +4245,19 @@
                 "great"
             ],
             [
-                "airport operation check_in",
+                "airline service",
                 "flight",
                 "great"
             ],
             [
-                "airline service",
+                "onboard food",
                 "food",
                 "great"
             ],
             [
                 "airport operation check_in",
-                "Check in",
+                "flight",
                 "great"
-            ],
-            [
-                "airport operation check_in",
-                "Check in",
-                "great"
-            ],
-            [
-                "",
-                "",
-                ""
             ]
         ],
         [
@@ -4325,6 +4290,11 @@
         ],
         [
             [
+                "airline general",
+                "flights",
+                "bad"
+            ],
+            [
                 "airline service",
                 "cabin crew member",
                 "bad"
@@ -4340,14 +4310,14 @@
                 "onboard food",
                 "pastries",
                 "great"
-            ],
-            [
-                "onboard food",
-                "pastries",
-                "great"
             ]
         ],
         [
+            [
+                "airline price",
+                "prices",
+                "bad"
+            ],
             [
                 "airline service",
                 "service",
@@ -4364,12 +4334,12 @@
         [
             [
                 "airline general",
-                "captain",
+                "flight",
                 "great"
             ],
             [
-                "airline general",
-                "flight",
+                "airline service",
+                "captain",
                 "great"
             ]
         ],
@@ -4390,7 +4360,7 @@
         [
             [
                 "airline general",
-                "Lufthansa",
+                "connecting flight",
                 "great"
             ]
         ],
@@ -4411,24 +4381,24 @@
         [
             [
                 "onboard cleanliness",
+                "toilets",
+                "bad"
+            ],
+            [
+                "onboard cleanliness",
                 "hand sanitiser",
                 "bad"
             ]
         ],
         [
             [
+                "punctuality general",
+                "flight",
+                "great"
+            ],
+            [
                 "airline service",
                 "cabin crew",
-                "great"
-            ],
-            [
-                "punctuality general",
-                "flight",
-                "great"
-            ],
-            [
-                "punctuality general",
-                "flight",
                 "great"
             ]
         ],
@@ -4437,18 +4407,23 @@
                 "airline price",
                 "priority",
                 "bad"
+            ],
+            [
+                "airline price",
+                "extra cost",
+                "bad"
             ]
         ],
         [
             [
                 "onboard seat comfort",
                 "Seats",
-                "great"
+                "ok"
             ]
         ],
         [
             [
-                "airline general",
+                "airline price",
                 "Business Class",
                 "great"
             ]
@@ -4462,18 +4437,18 @@
         ],
         [
             [
+                "onboard food",
+                "food",
+                "bad"
+            ],
+            [
                 "airline service",
                 "staff",
                 "bad"
             ],
             [
-                "onboard food",
-                "food",
-                "bad"
-            ],
-            [
-                "onboard food",
-                "food",
+                "airline service",
+                "staff",
                 "bad"
             ]
         ],
@@ -4489,14 +4464,14 @@
                 "airline service",
                 "staff",
                 "great"
-            ],
-            [
-                "airline service",
-                "airport staff",
-                "great"
             ]
         ],
         [
+            [
+                "onboard seat comfort",
+                "seats",
+                "bad"
+            ],
             [
                 "airline service",
                 "Staff",
@@ -4512,6 +4487,11 @@
         ],
         [
             [
+                "airport operation baggage",
+                "bags",
+                "bad"
+            ],
+            [
                 "airport operation check_in",
                 "check in desks",
                 "bad"
@@ -4526,7 +4506,7 @@
         ],
         [
             [
-                "airline general",
+                "airline price",
                 "refund",
                 "bad"
             ]
@@ -4538,7 +4518,7 @@
                 "great"
             ],
             [
-                "airline service",
+                "airport operation baggage",
                 "passenger baggage",
                 "bad"
             ]
@@ -4550,42 +4530,12 @@
                 "bad"
             ],
             [
-                "onboard cleanliness",
+                "airline service",
                 "staff",
                 "great"
-            ],
-            [
-                "onboard seat comfort",
-                "flight",
-                "great"
-            ],
-            [
-                "onboard seat comfort",
-                "seats",
-                "bad"
-            ],
-            [
-                "onboard seat comfort",
-                "seats",
-                "bad"
-            ],
-            [
-                "onboard seat comfort",
-                "seats",
-                "bad"
-            ],
-            [
-                "",
-                "",
-                ""
             ]
         ],
         [
-            [
-                "onboard food",
-                "Meals",
-                "great"
-            ],
             [
                 "onboard food",
                 "Meals",
@@ -4608,11 +4558,6 @@
             [
                 "onboard seat comfort",
                 "seats",
-                "great"
-            ],
-            [
-                "onboard seat legroom",
-                "leg room",
                 "great"
             ]
         ],
@@ -4639,7 +4584,7 @@
         ],
         [
             [
-                "airline general",
+                "airline service",
                 "TUI",
                 "great"
             ]
@@ -4647,6 +4592,11 @@
         [
             [
                 "onboard food",
+                "food",
+                "great"
+            ],
+            [
+                "airline service",
                 "Service",
                 "great"
             ]
@@ -4656,17 +4606,22 @@
                 "punctuality general",
                 "flights",
                 "bad"
+            ],
+            [
+                "airline general",
+                "NULL",
+                "bad"
             ]
         ],
         [
             [
-                "airline service",
-                "staff",
+                "punctuality general",
+                "flight",
                 "great"
             ],
             [
-                "punctuality general",
-                "flight",
+                "airline service",
+                "staff",
                 "great"
             ]
         ],
@@ -4715,7 +4670,7 @@
         [
             [
                 "onboard food",
-                "drink",
+                "meal",
                 "bad"
             ]
         ],
@@ -4756,6 +4711,11 @@
         ],
         [
             [
+                "airline price",
+                "money money money",
+                "bad"
+            ],
+            [
                 "airline service",
                 "customer care",
                 "bad"
@@ -4777,18 +4737,13 @@
         ],
         [
             [
-                "airline general",
+                "punctuality general",
                 "flight",
                 "great"
             ],
             [
                 "airline service",
                 "crew",
-                "great"
-            ],
-            [
-                "airline service",
-                "flight",
                 "great"
             ],
             [
@@ -4843,7 +4798,7 @@
             [
                 "airline general",
                 "EasyJet",
-                "great"
+                "bad"
             ]
         ],
         [
@@ -4858,6 +4813,11 @@
                 "airport operation baggage",
                 "trolleys",
                 "bad"
+            ],
+            [
+                "airline service",
+                "Service",
+                "great"
             ]
         ],
         [
@@ -4925,13 +4885,8 @@
         ],
         [
             [
-                "airport operation check_in",
-                "check in process",
-                "bad"
-            ],
-            [
-                "onboard food",
-                "Food",
+                "onboard seat comfort",
+                "seat selection",
                 "bad"
             ],
             [
@@ -4947,7 +4902,7 @@
                 "great"
             ],
             [
-                "airport operation check_in",
+                "airline service",
                 "staff",
                 "great"
             ]
@@ -4961,7 +4916,7 @@
         ],
         [
             [
-                "airline general",
+                "airport operation baggage",
                 "luggage",
                 "bad"
             ]
@@ -4983,8 +4938,13 @@
         [
             [
                 "airline service",
-                "cabin crew",
+                "cabin crew interaction",
                 "bad"
+            ],
+            [
+                "onboard cleanliness",
+                "World traveller cabin",
+                "great"
             ]
         ],
         [
@@ -5003,13 +4963,8 @@
         ],
         [
             [
-                "onboard cleanliness",
-                "seats",
-                "great"
-            ],
-            [
                 "onboard seat legroom",
-                "leg room",
+                "seats/leg room",
                 "great"
             ],
             [
@@ -5076,8 +5031,13 @@
         ],
         [
             [
-                "onboard food",
-                "snacks",
+                "airport operation boarding",
+                "boarding",
+                "great"
+            ],
+            [
+                "punctuality general",
+                "flight",
                 "bad"
             ],
             [
@@ -5086,12 +5046,7 @@
                 "bad"
             ],
             [
-                "onboard entertainment",
-                "entertainment",
-                "bad"
-            ],
-            [
-                "onboard entertainment",
+                "onboard seat comfort",
                 "seats",
                 "bad"
             ]
@@ -5113,7 +5068,7 @@
         [
             [
                 "onboard seat comfort",
-                "spare seats",
+                "seats",
                 "great"
             ]
         ],
@@ -5140,8 +5095,8 @@
         ],
         [
             [
-                "airport operation check_in",
-                "security",
+                "onboard seat comfort",
+                "seat",
                 "bad"
             ]
         ],
@@ -5154,8 +5109,8 @@
         ],
         [
             [
-                "onboard seat comfort",
-                "planes",
+                "punctuality general",
+                "flights",
                 "great"
             ],
             [
@@ -5164,34 +5119,19 @@
                 "great"
             ],
             [
-                "punctuality general",
-                "flights",
+                "onboard seat comfort",
+                "planes",
                 "great"
             ],
             [
                 "onboard seat comfort",
                 "seats",
                 "great"
-            ],
-            [
-                "onboard seat comfort",
-                "seats",
-                "great"
-            ],
-            [
-                "onboard seat comfort",
-                "seats",
-                "great"
-            ],
-            [
-                "",
-                "",
-                ""
             ]
         ],
         [
             [
-                "airline general",
+                "airline price",
                 "NULL",
                 "bad"
             ]
@@ -5205,8 +5145,13 @@
         ],
         [
             [
-                "airline general",
+                "airline service",
                 "Turkish airlines",
+                "bad"
+            ],
+            [
+                "airline service",
+                "customer service",
                 "bad"
             ]
         ],
@@ -5219,12 +5164,17 @@
         ],
         [
             [
-                "airline general",
+                "airline service",
                 "service",
                 "bad"
             ]
         ],
         [
+            [
+                "airport operation check_in",
+                "booking in process",
+                "great"
+            ],
             [
                 "airline service",
                 "staff",
@@ -5232,6 +5182,11 @@
             ]
         ],
         [
+            [
+                "airport operation check_in",
+                "check-in",
+                "great"
+            ],
             [
                 "airport operation baggage",
                 "baggage drop",
@@ -5240,7 +5195,7 @@
         ],
         [
             [
-                "onboard cleanliness",
+                "onboard seat comfort",
                 "seats",
                 "great"
             ],
@@ -5248,31 +5203,6 @@
                 "airline service",
                 "staff",
                 "great"
-            ],
-            [
-                "punctuality general",
-                "flights",
-                "great"
-            ],
-            [
-                "onboard seat comfort",
-                "seats",
-                "great"
-            ],
-            [
-                "onboard seat comfort",
-                "seats",
-                "great"
-            ],
-            [
-                "punctuality general",
-                "flights",
-                "great"
-            ],
-            [
-                "",
-                "",
-                ""
             ]
         ],
         [
@@ -5283,6 +5213,11 @@
             ]
         ],
         [
+            [
+                "onboard seat comfort",
+                "plane",
+                "great"
+            ],
             [
                 "punctuality general",
                 "Flight",
@@ -5299,28 +5234,23 @@
         [
             [
                 "onboard food",
+                "food",
+                "great"
+            ],
+            [
+                "onboard food",
                 "drinks",
-                "bad"
+                "great"
             ],
             [
-                "onboard food",
-                "food",
-                "bad"
-            ],
-            [
-                "onboard food",
-                "snacks",
-                "bad"
-            ],
-            [
-                "onboard food",
-                "food",
-                "bad"
+                "airline general",
+                "flight",
+                "great"
             ]
         ],
         [
             [
-                "airline general",
+                "airline price",
                 "flight",
                 "bad"
             ]
@@ -5329,21 +5259,21 @@
             [
                 "onboard seat legroom",
                 "leg room",
+                "great"
+            ],
+            [
+                "airline service",
+                "communication",
                 "bad"
             ],
             [
                 "airline service",
                 "staff",
-                "bad"
+                "great"
             ],
             [
-                "airline price",
-                "price",
-                "bad"
-            ],
-            [
-                "onboard seat legroom",
-                "leg room",
+                "airline service",
+                "communication",
                 "bad"
             ]
         ],
@@ -5373,19 +5303,9 @@
                 "airport operation check_in",
                 "flight",
                 "great"
-            ],
-            [
-                "airport operation check_in",
-                "landing",
-                "great"
             ]
         ],
         [
-            [
-                "airline service",
-                "staff",
-                "bad"
-            ],
             [
                 "airline service",
                 "Flight",
@@ -5406,11 +5326,6 @@
         ],
         [
             [
-                "airline price",
-                "crew",
-                "great"
-            ],
-            [
                 "punctuality general",
                 "flights",
                 "great"
@@ -5421,8 +5336,8 @@
                 "great"
             ],
             [
-                "punctuality general",
-                "flights",
+                "airline service",
+                "crew",
                 "great"
             ],
             [
@@ -5438,13 +5353,8 @@
                 "bad"
             ],
             [
-                "onboard food",
+                "onboard entertainment",
                 "headphone jack",
-                "bad"
-            ],
-            [
-                "onboard food",
-                "food",
                 "bad"
             ],
             [
@@ -5463,12 +5373,7 @@
         [
             [
                 "onboard food",
-                "bottle",
-                "great"
-            ],
-            [
-                "onboard food",
-                "bottle",
+                "Prosecco",
                 "great"
             ]
         ],
@@ -5480,7 +5385,12 @@
             ],
             [
                 "airport operation check_in",
-                "security",
+                "wait",
+                "great"
+            ],
+            [
+                "airport operation check_in",
+                "wait",
                 "great"
             ]
         ],
@@ -5515,18 +5425,13 @@
         [
             [
                 "onboard food",
-                "Service",
-                "great"
-            ],
-            [
-                "onboard food",
-                "veggie meals",
-                "great"
-            ],
-            [
-                "onboard food",
                 "food",
                 "bad"
+            ],
+            [
+                "airline service",
+                "Service",
+                "great"
             ]
         ],
         [
@@ -5536,13 +5441,13 @@
                 "great"
             ],
             [
-                "airport operation check_in",
+                "airport operation boarding",
                 "boarding",
                 "great"
             ],
             [
-                "airport operation check_in",
-                "Staff",
+                "airline service",
+                "staff",
                 "great"
             ]
         ],
@@ -5577,13 +5482,13 @@
         [
             [
                 "airline general",
-                "Heathrow",
+                "Return Flight",
                 "bad"
             ]
         ],
         [
             [
-                "punctuality general",
+                "airport operation baggage",
                 "luggage",
                 "bad"
             ]
@@ -5605,7 +5510,7 @@
         [
             [
                 "onboard seat legroom",
-                "airline legroom",
+                "legroom",
                 "bad"
             ]
         ],
@@ -5624,7 +5529,7 @@
         [
             [
                 "airline service",
-                "Jet2 staff",
+                "staff",
                 "great"
             ]
         ],
@@ -5639,7 +5544,7 @@
             [
                 "airline general",
                 "BA",
-                "great"
+                "bad"
             ]
         ],
         [
@@ -5656,7 +5561,7 @@
                 "bad"
             ],
             [
-                "onboard seat legroom",
+                "onboard seat comfort",
                 "seats",
                 "bad"
             ],
@@ -5670,6 +5575,11 @@
             [
                 "onboard seat comfort",
                 "seats",
+                "bad"
+            ],
+            [
+                "punctuality general",
+                "flights",
                 "great"
             ]
         ],
@@ -5727,41 +5637,11 @@
                 "airline service",
                 "staff",
                 "great"
-            ],
-            [
-                "airline service",
-                "staff",
-                "great"
             ]
         ],
         [
             [
                 "onboard seat comfort",
-                "seats",
-                "great"
-            ],
-            [
-                "onboard seat comfort",
-                "seats",
-                "great"
-            ],
-            [
-                "onboard seat comfort",
-                "seats",
-                "great"
-            ],
-            [
-                "onboard seat comfort",
-                "seats",
-                "great"
-            ],
-            [
-                "onboard seat comfort",
-                "seats",
-                "great"
-            ],
-            [
-                "onboard seat comfort [SSEP",
                 "seats",
                 "great"
             ]
@@ -5790,6 +5670,11 @@
         [
             [
                 "airport operation check_in",
+                "check-in counter",
+                "bad"
+            ],
+            [
+                "airline service",
                 "staff",
                 "bad"
             ]
@@ -5817,14 +5702,9 @@
         ],
         [
             [
-                "airline service",
-                "service",
-                "great"
-            ],
-            [
-                "airline service",
+                "onboard food",
                 "beverages",
-                "great"
+                "bad"
             ],
             [
                 "airline service",
@@ -5862,13 +5742,13 @@
         ],
         [
             [
-                "airline price",
+                "airline service",
                 "customer service",
                 "bad"
             ],
             [
                 "airline service",
-                "employees",
+                "Cancellations",
                 "bad"
             ]
         ],
@@ -5909,8 +5789,8 @@
         ],
         [
             [
-                "airline service",
-                "Turbo service",
+                "airport operation baggage",
+                "luggage",
                 "bad"
             ]
         ],
@@ -5923,39 +5803,24 @@
         ],
         [
             [
-                "onboard entertainment",
+                "onboard seat legroom",
                 "leg room",
                 "bad"
             ],
             [
-                "airline price",
+                "airport operation boarding",
                 "boarding procedures",
                 "great"
             ],
             [
-                "airline service",
+                "airline price",
                 "flight",
                 "great"
             ],
             [
-                "airline service",
-                "crew",
+                "airline price",
+                "flight",
                 "great"
-            ],
-            [
-                "onboard entertainment",
-                "leg room",
-                "bad"
-            ],
-            [
-                "onboard entertainment",
-                "leg room",
-                "bad"
-            ],
-            [
-                "",
-                "",
-                ""
             ]
         ],
         [
@@ -5974,7 +5839,7 @@
         ],
         [
             [
-                "airline general",
+                "airline price",
                 "Turkish business class",
                 "great"
             ]
@@ -5989,7 +5854,12 @@
         [
             [
                 "onboard food",
-                "low-sodium meal",
+                "meal",
+                "great"
+            ],
+            [
+                "onboard food",
+                "kosher",
                 "great"
             ]
         ],
@@ -6003,16 +5873,11 @@
         [
             [
                 "airport operation check_in",
-                "flight",
-                "great"
-            ],
-            [
-                "airport operation check_in",
                 "check in",
                 "great"
             ],
             [
-                "airport operation check_in",
+                "punctuality general",
                 "flight",
                 "great"
             ]
@@ -6027,7 +5892,7 @@
         [
             [
                 "punctuality general",
-                "Coach class jaunt",
+                "Coach class",
                 "great"
             ]
         ],
@@ -6040,6 +5905,11 @@
             [
                 "airline service",
                 "cabin crew",
+                "great"
+            ],
+            [
+                "airline service",
+                "planes",
                 "great"
             ]
         ],
@@ -6073,12 +5943,22 @@
         ],
         [
             [
+                "airline price",
+                "prices",
+                "bad"
+            ],
+            [
                 "airline service",
                 "customer service",
                 "bad"
             ]
         ],
         [
+            [
+                "airport operation check_in",
+                "check in",
+                "great"
+            ],
             [
                 "airport operation check_in",
                 "Premium check in",
@@ -6094,25 +5974,25 @@
         ],
         [
             [
-                "airline service",
-                "Staff",
-                "great"
-            ],
-            [
                 "onboard seat comfort",
                 "seat",
                 "bad"
+            ],
+            [
+                "airline service",
+                "Staff",
+                "great"
             ]
         ],
         [
             [
-                "airline service",
-                "staff",
+                "airline general",
+                "Airplane",
                 "great"
             ],
             [
                 "airline service",
-                "Airplane",
+                "staff",
                 "great"
             ]
         ],
@@ -6160,23 +6040,18 @@
         ],
         [
             [
+                "airport operation baggage",
+                "baggage",
+                "great"
+            ],
+            [
                 "airline general",
                 "Airplane",
                 "great"
             ],
             [
-                "airline service",
-                "food",
-                "great"
-            ],
-            [
                 "onboard food",
                 "food",
-                "great"
-            ],
-            [
-                "onboard food",
-                "baggage",
                 "great"
             ],
             [
@@ -6185,14 +6060,9 @@
                 "great"
             ],
             [
-                "punctuality general",
+                "airport operation baggage",
                 "baggage",
                 "great"
-            ],
-            [
-                "",
-                "",
-                ""
             ]
         ],
         [
@@ -6203,6 +6073,11 @@
             ]
         ],
         [
+            [
+                "airline service",
+                "on-board service",
+                "great"
+            ],
             [
                 "airline service",
                 "after-sales service",
@@ -6231,7 +6106,7 @@
         [
             [
                 "airline price",
-                "NULL",
+                "£150",
                 "bad"
             ]
         ],
@@ -6244,11 +6119,6 @@
             [
                 "airline general",
                 "landing",
-                "great"
-            ],
-            [
-                "airline general",
-                "flight",
                 "great"
             ]
         ],
@@ -6296,7 +6166,7 @@
         ],
         [
             [
-                "airline service",
+                "airport operation baggage",
                 "baggage",
                 "bad"
             ]
@@ -6317,7 +6187,7 @@
         ],
         [
             [
-                "airline general",
+                "airline price",
                 "business class",
                 "bad"
             ]
@@ -6344,11 +6214,6 @@
             ]
         ],
         [
-            [
-                "airport operation baggage",
-                "Terminal 5",
-                "great"
-            ],
             [
                 "airline general",
                 "BA",
@@ -6399,40 +6264,30 @@
         ],
         [
             [
-                "airport operation baggage",
-                "Terminal C",
-                "great"
-            ],
-            [
-                "airline general",
-                "BA flying to Orlando",
-                "great"
-            ],
-            [
-                "airport operation check_in",
-                "Terminal C",
-                "great"
-            ],
-            [
-                "airport operation check_in",
-                "Terminal C",
-                "great"
-            ],
-            [
                 "airline general",
                 "Terminal C",
                 "great"
             ],
             [
-                "airport operation",
-                "Terminal C",
+                "airline general",
+                "BA flying",
                 "great"
             ]
         ],
         [
             [
+                "punctuality general",
+                "flight",
+                "bad"
+            ],
+            [
                 "airport operation baggage",
-                "carry on away",
+                "carry on",
+                "bad"
+            ],
+            [
+                "punctuality general",
+                "flight",
                 "bad"
             ]
         ],
@@ -6487,17 +6342,7 @@
         ],
         [
             [
-                "airline service",
-                "staff",
-                "great"
-            ],
-            [
-                "airline service",
-                "lounge",
-                "great"
-            ],
-            [
-                "airline service",
+                "onboard seat legroom",
                 "flight",
                 "great"
             ],
@@ -6508,18 +6353,8 @@
             ],
             [
                 "airline service",
-                "lounge",
+                "staff",
                 "great"
-            ],
-            [
-                "airline service",
-                "lounge",
-                "great"
-            ],
-            [
-                "",
-                "",
-                ""
             ]
         ],
         [
@@ -6562,11 +6397,6 @@
                 "airline price",
                 "Virgin",
                 "bad"
-            ],
-            [
-                "airline price",
-                "package holiday",
-                "bad"
             ]
         ],
         [
@@ -6578,8 +6408,8 @@
         ],
         [
             [
-                "airline price",
-                "extra £48",
+                "airport operation baggage",
+                "£48",
                 "bad"
             ]
         ],
@@ -6594,7 +6424,7 @@
             [
                 "onboard food",
                 "glass of water",
-                "great"
+                "bad"
             ]
         ],
         [
@@ -6635,6 +6465,11 @@
                 "onboard seat comfort",
                 "seats",
                 "bad"
+            ],
+            [
+                "punctuality general",
+                "delays",
+                "great"
             ]
         ],
         [
@@ -6645,17 +6480,7 @@
             ],
             [
                 "onboard food",
-                "drinks",
-                "bad"
-            ],
-            [
-                "onboard food",
-                "drinks",
-                "bad"
-            ],
-            [
-                "onboard food",
-                "drinks",
+                "food",
                 "bad"
             ],
             [
@@ -6665,19 +6490,24 @@
             ],
             [
                 "airline service",
-                "flights",
+                "flight",
                 "bad"
             ],
             [
-                "",
-                "",
-                ""
+                "airline service",
+                "flight",
+                "bad"
             ]
         ],
         [
             [
                 "onboard seat comfort",
                 "seats",
+                "bad"
+            ],
+            [
+                "airport operation baggage",
+                "luggage",
                 "bad"
             ]
         ],
@@ -6693,6 +6523,11 @@
                 "airline service",
                 "customer service",
                 "bad"
+            ],
+            [
+                "punctuality general",
+                "cases",
+                "bad"
             ]
         ],
         [
@@ -6702,12 +6537,7 @@
                 "great"
             ],
             [
-                "airline service",
-                "food",
-                "great"
-            ],
-            [
-                "airline service",
+                "onboard food",
                 "food",
                 "great"
             ]
@@ -6754,7 +6584,7 @@
                 "great"
             ],
             [
-                "onboard seat comfort",
+                "airline service",
                 "service",
                 "bad"
             ],
@@ -6780,7 +6610,7 @@
         ],
         [
             [
-                "airline general",
+                "punctuality general",
                 "NULL",
                 "bad"
             ]
@@ -6821,6 +6651,11 @@
         [
             [
                 "airline general",
+                "flight",
+                "bad"
+            ],
+            [
+                "airline general",
                 "compensation",
                 "great"
             ]
@@ -6856,7 +6691,7 @@
         [
             [
                 "airport operation check_in",
-                "automatic ticket scan",
+                "check in",
                 "bad"
             ]
         ],
@@ -6878,7 +6713,7 @@
             [
                 "airline general",
                 "flights",
-                "great"
+                "bad"
             ]
         ],
         [
@@ -6888,36 +6723,31 @@
                 "bad"
             ],
             [
-                "airline service",
-                "sick bags",
+                "onboard food",
+                "kids",
                 "bad"
             ]
         ],
         [
-            [
-                "onboard seat legroom",
-                "front seats",
-                "bad"
-            ],
             [
                 "onboard seat legroom",
                 "leg room",
                 "bad"
             ],
             [
-                "onboard seat legroom",
+                "onboard seat comfort",
                 "front seats",
                 "bad"
             ],
             [
-                "onboard seat legroom",
+                "onboard seat comfort",
                 "front seats",
                 "bad"
             ]
         ],
         [
             [
-                "airline general",
+                "airport operation baggage",
                 "baggage handling",
                 "bad"
             ]
@@ -6925,38 +6755,23 @@
         [
             [
                 "airline general",
+                "NULL",
+                "bad"
+            ],
+            [
+                "punctuality general",
                 "flight",
                 "bad"
             ],
             [
-                "punctuality general",
+                "airline general",
                 "NULL",
                 "bad"
             ],
             [
-                "punctuality general",
+                "airline general",
                 "NULL",
                 "bad"
-            ],
-            [
-                "punctuality general",
-                "NULL",
-                "bad"
-            ],
-            [
-                "punctuality general",
-                "NULL",
-                "bad"
-            ],
-            [
-                "punctuality general",
-                "NULL",
-                "bad"
-            ],
-            [
-                "",
-                "",
-                ""
             ]
         ],
         [
@@ -6988,8 +6803,8 @@
             ]
         ]
     ],
-    "total_time_eval": 209.83575773239136,
-    "total_time_train": 260.22188782691956,
-    "avg_gpu_vram_eval_MB": 15215.279124315872,
-    "avg_gpu_power_eval_W": 124.4829945269742
+    "total_time_eval": 192.10062837600708,
+    "total_time_train": 208.13550090789795,
+    "avg_gpu_vram_eval_MB": null,
+    "avg_gpu_power_eval_W": null
 }
