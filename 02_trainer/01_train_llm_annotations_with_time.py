@@ -13,10 +13,10 @@ model_name_or_path = "Meta-Llama-3.1-8B-Instruct-bnb-4bit"
 
 for seed in range(5):
    for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
-     for fs_num in [50, 10, 0]:
+     for fs_num in [50, 10, 0]:      
        for task in ["tasd", "asqp"]:
          for n_llm_examples in ["full"]:  
-          for ml_method in ["dlo", "paraphrase"]:
+          for ml_method in [f"llm_{model_name_or_path}"]:
             train_ds = dataloader.load_data(ds_name, "train", cv=False, target=task, fs_num=fs_num, fs_ann_mode=True, n_ann_examples=n_llm_examples)
             test_ds = dataloader.load_data(ds_name, "test", cv=False, target=task)
       
