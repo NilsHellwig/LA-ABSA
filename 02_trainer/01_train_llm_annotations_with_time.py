@@ -16,7 +16,7 @@ for seed in range(5):
      for fs_num in [50, 10, 0]:      
        for task in ["tasd", "asqp"]:
          for n_llm_examples in ["full"]:  
-          for ml_method in [f"llm_{model_name_or_path}"]:
+          for ml_method in [f"llm_{model_name_or_path}", "dlo"]:
             train_ds = dataloader.load_data(ds_name, "train", cv=False, target=task, fs_num=fs_num, fs_ann_mode=True, n_ann_examples=n_llm_examples)
             test_ds = dataloader.load_data(ds_name, "test", cv=False, target=task)
       
