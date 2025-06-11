@@ -2,7 +2,7 @@ import sys, os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../zero-shot-absa-quad/')))
 from dataloader import DataLoader
-from trainer import train_paraphrase, train_mvp, train_dlo
+from trainer import train_paraphrase, train_mvp, train_dlo, train_llm
 import json
 import time
 
@@ -10,12 +10,13 @@ from helper import clean_up, create_output_directory
 
 dataloader = DataLoader("../zero-shot-absa-quad/datasets", "../zero-shot-absa-quad/fs_examples")
 
+model_name_or_path = "Meta-Llama-3.1-8B-Instruct-bnb-4bit"
 
 for seed in range(5):
     for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
         for fs_num in [50, 10]:
             for task in ["tasd", "asqp"]:
-                for n_llm_examples in [2, 10, 5]:
+                for n_llm_examples in [2, 5, 10]:
                     for aug_method in ["eda"]:
                         train_ds = dataloader.load_data(
                             ds_name,
@@ -33,7 +34,7 @@ for seed in range(5):
                             ds_name, "test", cv=False, target=task
                         )
 
-                        for ml_method in ["paraphrase"]:
+                        for ml_method in ["dlo", f"llm_{model_name_or_path}"]:
                             print(
                                 f"Task:",
                                 task,
@@ -54,7 +55,8 @@ for seed in range(5):
                                 "aug_method",
                                 aug_method,
                             )
-                            filename = f"./_out_fine_tunings/03_traditional_augmentation/{ml_method}_{aug_method}_{n_llm_examples}_{task}_{fs_num}_{ds_name}_{seed}.json"
+                            cond_name = f"{ml_method}_{aug_method}_{n_llm_examples}_{task}_{fs_num}_{ds_name}_{seed}"
+                            filename = f"./_out_fine_tunings/03_traditional_augmentation/{cond_name}.json"
 
                             if os.path.exists(filename):
                                 print(f"File {filename} already exists. Skipping.")
@@ -88,6 +90,24 @@ for seed in range(5):
                                         dataset=ds_name,
                                         task=task,
                                     )
+ 
+                                if ml_method == f"llm_{model_name_or_path}":
+                                  unique_aspect_categories = sorted(
+                                   {
+                                      aspect["aspect_category"]
+                                      for entry in dataloader.load_data(
+                                          name=ds_name, data_type="all", target=task
+                                      )
+                                      for aspect in entry["aspects"]
+                                   }
+                                  )
+                                  scores = train_llm(train_ds=train_ds, test_ds=test_ds, seed=seed, dataset=ds_name, task=task, model_name_or_path=model_name_or_path, cond_name=cond_name, unique_aspect_categories=unique_aspect_categories)
+                                  clean_up(output_directory=f'./{cond_name}')
+               
+                                  # remove cache_res.json
+                                  if os.path.exists(f"{cond_name}_res.json"):
+                                      os.remove(f"{cond_name}_res.json")                               
+                                
 
                                 with open(filename, "w", encoding="utf-8") as json_file:
                                     json.dump(
