@@ -1,0 +1,53 @@
+\begin{tabular}{@{}llccccccccccc@{}}
+\toprule
+\multirow{2}{*}{\textbf{Approach}} & \multicolumn{2}{c}{\textbf{\# Train}} & \multicolumn{2}{c}{\textbf{Rest15}} & \multicolumn{2}{c}{\textbf{Rest16}} & \multicolumn{2}{c}{\textbf{FlightABSA}} & \multicolumn{2}{c}{\textbf{Coursera}} & \multicolumn{2}{c}{\textbf{Hotels}} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9} \cmidrule(lr){10-11} \cmidrule(l){12-13}
+& TASD & ASQP & TASD & ASQP & TASD & ASQP & TASD & ASQP & TASD & ASQP & TASD & ASQP \\
+\midrule
+\multicolumn{13}{@{}l}{\textbf{0 annotated example given: Gemma-3-27B (ICL) / LLM-as-annotator (LLMA)}} \\
+\midrule
+LLMA w/ Llama-3-8B FT & full & full & 26.11 & 19.11 & 47.18 & 28.03 & \underline{52.36} & \underline{43.34} & 29.46 & 13.16 & 40.29 & 24.61 \\
+LLMA w/ DLO & full & full & 25.82 & 18.88 & \underline{47.41} & 26.97 & 51.75 & 42.82 & \underline{30.60} & \underline{13.38} & \underline{40.70} & \underline{24.97} \\
+\midrule
+\multicolumn{13}{@{}l}{\textbf{10 annotated example given: Gemma-3-27B (ICL) / SLM trained on 10 examples / LLM-as-annotator (LAA-ABSA)}} \\
+\midrule
+Llama-3-8B FT & 10 & 10 & 31.79 & 15.38 & 36.26 & 15.63 & 36.62 & 18.50 & 21.41 & 8.20 & 31.31 & 16.55 \\
+DLO & 10 & 10 & 15.84 & 4.37 & 13.59 & 5.18 & 16.07 & 4.87 & 22.93 & 4.47 & 18.07 & 3.53 \\
+LAA-ABSA w/ Llama-3-8B FT & full & full & 53.22 & 37.47 & 63.02 & 43.84 & \underline{61.73} & 46.01 & 38.46 & \underline{23.41} & 55.07 & \underline{32.42} \\
+LAA-ABSA w/ DLO & full & full & 49.23 & 37.19 & 62.37 & 46.20 & 61.40 & \underline{46.47} & 39.22 & 23.37 & 55.27 & 31.44 \\
+\midrule
+\multicolumn{13}{@{}l}{\textit{SLM trained on 10 annotated examples + EDA- or QAIE-augmented examples}} \\
+\midrule
+EDA w/ Llama-3-8B FT & 30 & 30 & 35.96 & 16.24 & 47.23 & 19.62 & 35.36 & 19.21 & 22.76 & 8.90 & 28.15 & 17.32 \\
+EDA w/ Llama-3-8B FT & 60 & 60 & 39.59 & 16.85 & 41.92 & 21.59 & 32.69 & 22.23 & 30.03 & 14.18 & 33.52 & 19.29 \\
+EDA w/ DLO & 30 & 30 & 24.58 & 6.74 & 16.97 & 9.27 & 21.18 & 12.13 & 28.14 & 9.75 & 22.73 & 5.98 \\
+EDA w/ DLO & 60 & 60 & 26.65 & 8.68 & 18.06 & 10.70 & 21.66 & 12.40 & 28.25 & 11.73 & 23.95 & 7.51 \\
+QAIE & 26.4 & 45.2 & 20.11 & 9.96 & 12.37 & 14.78 & 17.76 & 15.38 & 25.18 & 17.54 & 21.69 & 9.86 \\
+\midrule
+\multicolumn{13}{@{}l}{\textbf{50 annotated example given: Gemma-3-27B (ICL) / SLM trained on 50 examples / LLM-as-annotator (LAA-ABSA)}} \\
+\midrule
+Llama-3-8B FT & 50 & 50 & 49.16 & 32.00 & 50.72 & 35.66 & 49.10 & 32.71 & 34.31 & 20.60 & 42.48 & 27.76 \\
+DLO & 50 & 50 & 39.54 & 26.63 & 43.95 & 29.57 & 42.92 & 28.74 & 36.04 & 19.08 & 44.72 & 27.20 \\
+LAA-ABSA w/ Llama-3-8B FT & full & full & 61.45 & 39.01 & 64.72 & 50.02 & 62.79 & 47.25 & 44.43 & 24.40 & 61.15 & 43.07 \\
+LAA-ABSA w/ DLO & full & full & 58.40 & 40.38 & 62.03 & 49.85 & 62.57 & \underline{48.98} & 44.39 & 25.69 & 61.43 & \underline{44.24} \\
+\midrule
+\multicolumn{13}{@{}l}{\textit{SLM trained on 50 annotated examples + EDA- or QAIE-augmented examples}} \\
+\midrule
+EDA w/ Llama-3-8B FT & 150 & 150 & 49.59 & 31.90 & 52.36 & 37.89 & 50.82 & 35.38 & 37.07 & 20.30 & 50.81 & 32.03 \\
+EDA w/ Llama-3-8B FT & 300 & 300 & 50.30 & 31.54 & 52.87 & 39.22 & 49.59 & 39.27 & 38.99 & 21.85 & 51.76 & 33.38 \\
+EDA w/ DLO & 150 & 150 & 43.86 & 30.41 & 46.79 & 33.52 & 45.60 & 34.84 & 37.81 & 23.53 & 45.89 & 31.39 \\
+EDA w/ DLO & 300 & 300 & 44.76 & 30.90 & 46.99 & 34.42 & 46.48 & 36.37 & 38.32 & 23.53 & 45.20 & 32.55 \\
+QAIE & 141.8 & 248.8 & 45.01 & 33.87 & 45.09 & 35.21 & 48.44 & 33.98 & 36.23 & 22.45 & 50.51 & 35.95 \\
+\midrule
+\multicolumn{13}{@{}l}{\textbf{Full set of human-annotated examples: SOTA approaches}} \\
+\midrule
+Llama-3-8B FT & full & full & \textbf{68.07} & \textbf{49.50} & \textbf{72.07} & 58.19 & \textbf{69.19} & 56.35 & 49.93 & 30.96 & 66.64 & 53.92 \\
+DLO & full & full & 62.95 & 48.18 & 71.79 & \textbf{59.79} & 68.95 & \textbf{58.33} & \textbf{52.58} & \textbf{32.54} & \textbf{68.56} & \textbf{55.45} \\
+\midrule
+\multicolumn{13}{@{}l}{\textit{Zero- and few-shot prompting using Gemma-3-27B}} \\
+\midrule
+Gemma-3-27B (ICL) & 0 & 0 & \underline{30.36} & \underline{24.73} & 45.51 & \underline{28.96} & 51.81 & 42.37 & 29.50 & 13.36 & 38.97 & 23.02 \\
+Gemma-3-27B (ICL) & 10 & 10 & \underline{54.47} & \underline{39.95} & \underline{66.75} & \underline{46.23} & 60.36 & 45.24 & \underline{41.69} & 22.31 & \underline{56.51} & 31.41 \\
+Gemma-3-27B (ICL) & 50 & 50 & \underline{62.12} & \underline{41.74} & \underline{68.53} & \underline{51.10} & \underline{64.60} & 48.37 & \underline{44.80} & \underline{25.86} & \underline{62.97} & 43.83 \\
+\bottomrule
+\end{tabular}
