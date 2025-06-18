@@ -1,0 +1,2148 @@
+[
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "805_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text:\n\n[('everything', 'food general', 'positive', 'good')]",
+        "pred_label": [
+            [
+                "everything",
+                "food general",
+                "positive",
+                "good"
+            ]
+        ],
+        "duration_label": 1.364262580871582,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 212.98916666666665,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.4737637042999268,
+        "text": "Try everything for that matter , it is all good .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "food quality",
+                "polarity": "positive",
+                "opinion_term": "all good"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "food quality",
+                "positive",
+                "all good"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "616_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions:\n\n[('NULL', 'restaurant general', 'positive', 'Amazing!')]",
+                "pred_label": false,
+                "duration_label": 1.2991173267364502,
+                "seed": 2,
+                "regeneration_reason": "opinion term not in text"
+            }
+        ],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the text \"Amazing!\":\n\n[('NULL', 'restaurant general', 'positive', 'Amazing')]",
+        "pred_label": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive",
+                "Amazing"
+            ]
+        ],
+        "duration_label": 1.0985841751098633,
+        "seed": 7,
+        "avg_gpu_power_eval_W": 215.44476190476192,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 2.497434616088867,
+        "text": "Amazing !",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "food quality",
+                "polarity": "positive",
+                "opinion_term": "Amazing"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "food quality",
+                "positive",
+                "Amazing"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "151_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('food', 'food general', 'positive', 'wonderful'), ('food', 'food general', 'positive', 'tasty'), ('food', 'food general', 'positive', 'filling'), ('service', 'service general', 'positive', 'professional'), ('service', 'service general', 'positive', 'friendly')]",
+        "pred_label": [
+            [
+                "food",
+                "food general",
+                "positive",
+                "wonderful"
+            ],
+            [
+                "food",
+                "food general",
+                "positive",
+                "tasty"
+            ],
+            [
+                "food",
+                "food general",
+                "positive",
+                "filling"
+            ],
+            [
+                "service",
+                "service general",
+                "positive",
+                "professional"
+            ],
+            [
+                "service",
+                "service general",
+                "positive",
+                "friendly"
+            ]
+        ],
+        "duration_label": 3.112645149230957,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 220.7538461538461,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 3.1834867000579834,
+        "text": "The food is wonderful , tasty and filling , and the service is professional and friendly .",
+        "aspects": [
+            {
+                "aspect_term": "food",
+                "aspect_category": "food quality",
+                "polarity": "positive",
+                "opinion_term": "wonderful"
+            },
+            {
+                "aspect_term": "food",
+                "aspect_category": "food quality",
+                "polarity": "positive",
+                "opinion_term": "tasty"
+            },
+            {
+                "aspect_term": "food",
+                "aspect_category": "food style_options",
+                "polarity": "positive",
+                "opinion_term": "filling"
+            },
+            {
+                "aspect_term": "service",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "professional"
+            },
+            {
+                "aspect_term": "service",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "friendly"
+            }
+        ],
+        "tuple_list": [
+            [
+                "food",
+                "food quality",
+                "positive",
+                "wonderful"
+            ],
+            [
+                "food",
+                "food quality",
+                "positive",
+                "tasty"
+            ],
+            [
+                "food",
+                "food style_options",
+                "positive",
+                "filling"
+            ],
+            [
+                "service",
+                "service general",
+                "positive",
+                "professional"
+            ],
+            [
+                "service",
+                "service general",
+                "positive",
+                "friendly"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "487_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text:\n\n[('NULL', 'service general', 'negative', 'shooed')]",
+        "pred_label": [
+            [
+                "NULL",
+                "service general",
+                "negative",
+                "shooed"
+            ]
+        ],
+        "duration_label": 1.1485443115234375,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 213.50100000000003,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.2248127460479736,
+        "text": "We were then shooed inside .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "service general",
+                "polarity": "negative",
+                "opinion_term": "shooed"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "service general",
+                "negative",
+                "shooed"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "612_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('service', 'service general', 'negative', 'slow'), ('they', 'restaurant miscellaneous', 'negative', 'do n\\'t toast')]",
+        "pred_label": [
+            [
+                "service",
+                "service general",
+                "negative",
+                "slow"
+            ],
+            [
+                "they",
+                "restaurant miscellaneous",
+                "negative",
+                "do n't toast"
+            ]
+        ],
+        "duration_label": 1.8801603317260742,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 216.23624999999996,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.9493036270141602,
+        "text": "Drawbacks : service is slow and they do n't toast !",
+        "aspects": [
+            {
+                "aspect_term": "service",
+                "aspect_category": "service general",
+                "polarity": "negative",
+                "opinion_term": "slow"
+            }
+        ],
+        "tuple_list": [
+            [
+                "service",
+                "service general",
+                "negative",
+                "slow"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "431_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the defined format:\n\n[('Beef noodle soup', 'food general', 'positive', 'good')]",
+        "pred_label": [
+            [
+                "Beef noodle soup",
+                "food general",
+                "positive",
+                "good"
+            ]
+        ],
+        "duration_label": 1.3263282775878906,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 214.9881818181818,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3305084705352783,
+        "text": "Beef noodle soup is good as well .",
+        "aspects": [
+            {
+                "aspect_term": "Beef noodle soup",
+                "aspect_category": "food quality",
+                "polarity": "positive",
+                "opinion_term": "good"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Beef noodle soup",
+                "food quality",
+                "positive",
+                "good"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "340_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions and format:\n\n[('Chennai Garden', 'restaurant general', 'positive', 'favorite')]",
+        "pred_label": [
+            [
+                "Chennai Garden",
+                "restaurant general",
+                "positive",
+                "favorite"
+            ]
+        ],
+        "duration_label": 1.3354849815368652,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 222.10999999999999,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.4460508823394775,
+        "text": "Chennai Garden is my favorite Indian restaurant in the city .",
+        "aspects": [
+            {
+                "aspect_term": "Chennai Garden",
+                "aspect_category": "restaurant general",
+                "polarity": "positive",
+                "opinion_term": "favorite"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Chennai Garden",
+                "restaurant general",
+                "positive",
+                "favorite"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "724_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('atmosphere', 'ambience general', 'negative', 'nothing special'), ('establishment', 'restaurant general', 'positive', 'feels like')]",
+        "pred_label": [
+            [
+                "atmosphere",
+                "ambience general",
+                "negative",
+                "nothing special"
+            ],
+            [
+                "establishment",
+                "restaurant general",
+                "positive",
+                "feels like"
+            ]
+        ],
+        "duration_label": 1.799121379852295,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 216.0546666666666,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8122153282165527,
+        "text": "The atmosphere is nothing special , but it feels like a Sushi establishment in Tokyo .",
+        "aspects": [
+            {
+                "aspect_term": "atmosphere",
+                "aspect_category": "ambience general",
+                "polarity": "positive",
+                "opinion_term": "nothing special"
+            }
+        ],
+        "tuple_list": [
+            [
+                "atmosphere",
+                "ambience general",
+                "positive",
+                "nothing special"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "473_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('food', 'food quality', 'positive', 'delicious'), ('service', 'service general', 'positive', 'delicious')]",
+        "pred_label": [
+            [
+                "food",
+                "food quality",
+                "positive",
+                "delicious"
+            ],
+            [
+                "service",
+                "service general",
+                "positive",
+                "delicious"
+            ]
+        ],
+        "duration_label": 1.7292301654815674,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 220.5653333333333,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.823603630065918,
+        "text": "This was my frist time at Cafe St. Bart 's and I must say how delicious the food and the service was .",
+        "aspects": [
+            {
+                "aspect_term": "food",
+                "aspect_category": "food quality",
+                "polarity": "positive",
+                "opinion_term": "delicious"
+            }
+        ],
+        "tuple_list": [
+            [
+                "food",
+                "food quality",
+                "positive",
+                "delicious"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "551_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text:\n\n[('place', 'restaurant general', 'positive', 'kicks ass')]",
+        "pred_label": [
+            [
+                "place",
+                "restaurant general",
+                "positive",
+                "kicks ass"
+            ]
+        ],
+        "duration_label": 1.1480443477630615,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 211.58399999999997,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.2107925415039062,
+        "text": "Seriously , this place kicks ass .",
+        "aspects": [
+            {
+                "aspect_term": "place",
+                "aspect_category": "restaurant general",
+                "polarity": "positive",
+                "opinion_term": "kicks ass"
+            }
+        ],
+        "tuple_list": [
+            [
+                "place",
+                "restaurant general",
+                "positive",
+                "kicks ass"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "175_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('fish', 'food quality', 'negative', 'not fresh'), ('rice', 'food quality', 'negative', 'tasted old and stale')]",
+        "pred_label": [
+            [
+                "fish",
+                "food quality",
+                "negative",
+                "not fresh"
+            ],
+            [
+                "rice",
+                "food quality",
+                "negative",
+                "tasted old and stale"
+            ]
+        ],
+        "duration_label": 1.8399639129638672,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 217.62500000000003,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.9467155933380127,
+        "text": "The fish was not fresh and the rice tasted old and stale .",
+        "aspects": [
+            {
+                "aspect_term": "fish",
+                "aspect_category": "food quality",
+                "polarity": "negative",
+                "opinion_term": "not fresh"
+            },
+            {
+                "aspect_term": "rice",
+                "aspect_category": "food quality",
+                "polarity": "negative",
+                "opinion_term": "old"
+            },
+            {
+                "aspect_term": "rice",
+                "aspect_category": "food quality",
+                "polarity": "negative",
+                "opinion_term": "stale"
+            }
+        ],
+        "tuple_list": [
+            [
+                "fish",
+                "food quality",
+                "negative",
+                "not fresh"
+            ],
+            [
+                "rice",
+                "food quality",
+                "negative",
+                "old"
+            ],
+            [
+                "rice",
+                "food quality",
+                "negative",
+                "stale"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "484_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the text \"Probably would not go again ...\":\n\n[('NULL', 'restaurant general', 'negative', 'not go')]",
+        "pred_label": [
+            [
+                "NULL",
+                "restaurant general",
+                "negative",
+                "not go"
+            ]
+        ],
+        "duration_label": 1.339714527130127,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 210.98833333333332,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.4562737941741943,
+        "text": "Probably would not go again ...",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "negative",
+                "opinion_term": "not go again"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant general",
+                "negative",
+                "not go again"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "303_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('hours', 'restaurant general', 'positive', 'enjoyable')]",
+        "pred_label": [
+            [
+                "hours",
+                "restaurant general",
+                "positive",
+                "enjoyable"
+            ]
+        ],
+        "duration_label": 1.2851026058197021,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 211.49636363636367,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3505651950836182,
+        "text": "I went to Areo on a Sunday afternoon with four of my girlfriends , and spent three enjoyable hours there .",
+        "aspects": [
+            {
+                "aspect_term": "Areo",
+                "aspect_category": "restaurant general",
+                "polarity": "positive",
+                "opinion_term": "enjoyable"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Areo",
+                "restaurant general",
+                "positive",
+                "enjoyable"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "478_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions and format:\n\n[('manager', 'service general', 'negative', 'incompetent')]",
+        "pred_label": [
+            [
+                "manager",
+                "service general",
+                "negative",
+                "incompetent"
+            ]
+        ],
+        "duration_label": 1.4214661121368408,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 214.3991666666667,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.4612560272216797,
+        "text": "The only problem is that the manager is a complete incompetent .",
+        "aspects": [
+            {
+                "aspect_term": "manager",
+                "aspect_category": "service general",
+                "polarity": "negative",
+                "opinion_term": "incompetent"
+            }
+        ],
+        "tuple_list": [
+            [
+                "manager",
+                "service general",
+                "negative",
+                "incompetent"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "526_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('beers', 'drinks quality', 'positive', 'interesting'), ('wines', 'drinks prices', 'positive', 'well priced')]",
+        "pred_label": [
+            [
+                "beers",
+                "drinks quality",
+                "positive",
+                "interesting"
+            ],
+            [
+                "wines",
+                "drinks prices",
+                "positive",
+                "well priced"
+            ]
+        ],
+        "duration_label": 1.7952063083648682,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 219.20600000000005,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8142821788787842,
+        "text": "The bar is very well stocked with interesting beers and well priced wines .",
+        "aspects": [
+            {
+                "aspect_term": "bar",
+                "aspect_category": "drinks style_options",
+                "polarity": "positive",
+                "opinion_term": "well stocked"
+            },
+            {
+                "aspect_term": "beers",
+                "aspect_category": "drinks style_options",
+                "polarity": "positive",
+                "opinion_term": "interesting"
+            },
+            {
+                "aspect_term": "wines",
+                "aspect_category": "drinks prices",
+                "polarity": "positive",
+                "opinion_term": "well priced"
+            }
+        ],
+        "tuple_list": [
+            [
+                "bar",
+                "drinks style_options",
+                "positive",
+                "well stocked"
+            ],
+            [
+                "beers",
+                "drinks style_options",
+                "positive",
+                "interesting"
+            ],
+            [
+                "wines",
+                "drinks prices",
+                "positive",
+                "well priced"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "537_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('Service', 'service general', 'positive', 'friendly', 'attentive')]",
+                "pred_label": false,
+                "duration_label": 1.349785327911377,
+                "seed": 2,
+                "regeneration_reason": "tuple has not exactly 4 elements"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('Service', 'service general', 'positive', 'friendly', 'attentive')]",
+                "pred_label": false,
+                "duration_label": 1.308804988861084,
+                "seed": 7,
+                "regeneration_reason": "tuple has not exactly 4 elements"
+            }
+        ],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions and format:\n\n[('Service', 'service general', 'positive', 'friendly'), ('Service', 'service general', 'positive', 'attentive')]",
+        "pred_label": [
+            [
+                "Service",
+                "service general",
+                "positive",
+                "friendly"
+            ],
+            [
+                "Service",
+                "service general",
+                "positive",
+                "attentive"
+            ]
+        ],
+        "duration_label": 1.809896469116211,
+        "seed": 12,
+        "avg_gpu_power_eval_W": 220.33540540540542,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 4.504840612411499,
+        "text": "Service friendly and attentive .",
+        "aspects": [
+            {
+                "aspect_term": "Service",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "friendly"
+            },
+            {
+                "aspect_term": "Service",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "attentive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Service",
+                "service general",
+                "positive",
+                "friendly"
+            ],
+            [
+                "Service",
+                "service general",
+                "positive",
+                "attentive"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "179_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('wine list', 'drinks style_options', 'positive', 'interesting'), ('values', 'drinks prices', 'positive', 'good')]",
+        "pred_label": [
+            [
+                "wine list",
+                "drinks style_options",
+                "positive",
+                "interesting"
+            ],
+            [
+                "values",
+                "drinks prices",
+                "positive",
+                "good"
+            ]
+        ],
+        "duration_label": 1.8050878047943115,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 218.66133333333335,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8239545822143555,
+        "text": "The wine list is interesting and has many good values .",
+        "aspects": [
+            {
+                "aspect_term": "wine list",
+                "aspect_category": "drinks style_options",
+                "polarity": "positive",
+                "opinion_term": "interesting"
+            },
+            {
+                "aspect_term": "wine list",
+                "aspect_category": "drinks prices",
+                "polarity": "positive",
+                "opinion_term": "good values"
+            }
+        ],
+        "tuple_list": [
+            [
+                "wine list",
+                "drinks style_options",
+                "positive",
+                "interesting"
+            ],
+            [
+                "wine list",
+                "drinks prices",
+                "positive",
+                "good values"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "169_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('prices', 'restaurant prices', 'positive', 'CHEAP'), ('service', 'service general', 'positive', 'quality'), ('food', 'food general', 'positive', 'quality')]",
+        "pred_label": [
+            [
+                "prices",
+                "restaurant prices",
+                "positive",
+                "CHEAP"
+            ],
+            [
+                "service",
+                "service general",
+                "positive",
+                "quality"
+            ],
+            [
+                "food",
+                "food general",
+                "positive",
+                "quality"
+            ]
+        ],
+        "duration_label": 2.1855661869049072,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 222.3161111111111,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 2.196287155151367,
+        "text": "The prices were CHEAP compared to the quality of service and food .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant prices",
+                "polarity": "positive",
+                "opinion_term": "CHEAP"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant prices",
+                "positive",
+                "CHEAP"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "510_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('pizza', 'food general', 'positive', 'good'), ('pizza', 'food general', 'positive', 'huge')]",
+        "pred_label": [
+            [
+                "pizza",
+                "food general",
+                "positive",
+                "good"
+            ],
+            [
+                "pizza",
+                "food general",
+                "positive",
+                "huge"
+            ]
+        ],
+        "duration_label": 1.6998555660247803,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 221.6086666666667,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8230199813842773,
+        "text": "The pizza was pretty good and huge .",
+        "aspects": [
+            {
+                "aspect_term": "pizza",
+                "aspect_category": "food quality",
+                "polarity": "positive",
+                "opinion_term": "good"
+            },
+            {
+                "aspect_term": "pizza",
+                "aspect_category": "food style_options",
+                "polarity": "positive",
+                "opinion_term": "huge"
+            }
+        ],
+        "tuple_list": [
+            [
+                "pizza",
+                "food quality",
+                "positive",
+                "good"
+            ],
+            [
+                "pizza",
+                "food style_options",
+                "positive",
+                "huge"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "329_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('servings', 'food general', 'negative', 'Small'), ('salmon', 'food quality', 'negative', 'wasnt impressed'), ('chicken', 'food quality', 'positive', 'good')]",
+        "pred_label": [
+            [
+                "servings",
+                "food general",
+                "negative",
+                "Small"
+            ],
+            [
+                "salmon",
+                "food quality",
+                "negative",
+                "wasnt impressed"
+            ],
+            [
+                "chicken",
+                "food quality",
+                "positive",
+                "good"
+            ]
+        ],
+        "duration_label": 2.2593302726745605,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 217.4978947368421,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 2.301161766052246,
+        "text": "Small servings for main entree , i had salmon ( wasnt impressed ) girlfriend had chicken , it was good .",
+        "aspects": [
+            {
+                "aspect_term": "salmon",
+                "aspect_category": "food quality",
+                "polarity": "negative",
+                "opinion_term": "wasnt impressed"
+            },
+            {
+                "aspect_term": "chicken",
+                "aspect_category": "food quality",
+                "polarity": "positive",
+                "opinion_term": "good"
+            },
+            {
+                "aspect_term": "servings for main entree",
+                "aspect_category": "food general",
+                "polarity": "negative",
+                "opinion_term": "Small"
+            }
+        ],
+        "tuple_list": [
+            [
+                "salmon",
+                "food quality",
+                "negative",
+                "wasnt impressed"
+            ],
+            [
+                "chicken",
+                "food quality",
+                "positive",
+                "good"
+            ],
+            [
+                "servings for main entree",
+                "food general",
+                "negative",
+                "Small"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "379_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('places', 'restaurant general', 'positive', 'favorite')]",
+        "pred_label": [
+            [
+                "places",
+                "restaurant general",
+                "positive",
+                "favorite"
+            ]
+        ],
+        "duration_label": 1.2277793884277344,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 215.9790909090909,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.337822675704956,
+        "text": "It 's one of our favorite places to eat in NY .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "positive",
+                "opinion_term": "favorite"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive",
+                "favorite"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "75_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('cream cheeses', 'food quality', 'positive', 'out of this world'), ('coffee', 'drinks quality', 'positive', 'love')]",
+        "pred_label": [
+            [
+                "cream cheeses",
+                "food quality",
+                "positive",
+                "out of this world"
+            ],
+            [
+                "coffee",
+                "drinks quality",
+                "positive",
+                "love"
+            ]
+        ],
+        "duration_label": 1.8237388134002686,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 217.08800000000002,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8350870609283447,
+        "text": "The cream cheeses are out of this world and I love that coffee ! !",
+        "aspects": [
+            {
+                "aspect_term": "cream cheeses",
+                "aspect_category": "food quality",
+                "polarity": "positive",
+                "opinion_term": "out of this world"
+            },
+            {
+                "aspect_term": "coffee",
+                "aspect_category": "drinks quality",
+                "polarity": "positive",
+                "opinion_term": "love"
+            }
+        ],
+        "tuple_list": [
+            [
+                "cream cheeses",
+                "food quality",
+                "positive",
+                "out of this world"
+            ],
+            [
+                "coffee",
+                "drinks quality",
+                "positive",
+                "love"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "607_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('tiramisu chocolate cake', 'food general', 'positive', 'delicious')]",
+        "pred_label": [
+            [
+                "tiramisu chocolate cake",
+                "food general",
+                "positive",
+                "delicious"
+            ]
+        ],
+        "duration_label": 1.3740060329437256,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 220.27166666666668,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.459327220916748,
+        "text": "We concluded with tiramisu chocolate cake , both were delicious .",
+        "aspects": [
+            {
+                "aspect_term": "tiramisu chocolate cake",
+                "aspect_category": "food quality",
+                "polarity": "positive",
+                "opinion_term": "delicious"
+            }
+        ],
+        "tuple_list": [
+            [
+                "tiramisu chocolate cake",
+                "food quality",
+                "positive",
+                "delicious"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "155_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text:\n\n[('NULL', 'restaurant general', 'neutral', 'plan')]",
+        "pred_label": [
+            [
+                "NULL",
+                "restaurant general",
+                "neutral",
+                "plan"
+            ]
+        ],
+        "duration_label": 1.1102268695831299,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 207.664,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.2179665565490723,
+        "text": "I plan on stopping by next week as well .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "positive",
+                "opinion_term": "stopping by next week"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive",
+                "stopping by next week"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "381_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('menu', 'food general', 'negative', 'limited')]",
+        "pred_label": [
+            [
+                "menu",
+                "food general",
+                "negative",
+                "limited"
+            ]
+        ],
+        "duration_label": 1.2382197380065918,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 212.8418181818182,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3416974544525146,
+        "text": "The menu is very limited - i think we counted 4 or 5 entrees .",
+        "aspects": [
+            {
+                "aspect_term": "menu",
+                "aspect_category": "food style_options",
+                "polarity": "negative",
+                "opinion_term": "limited"
+            }
+        ],
+        "tuple_list": [
+            [
+                "menu",
+                "food style_options",
+                "negative",
+                "limited"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "220_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text \"A must try !\":\n\n[('NULL', 'restaurant general', 'positive', 'must try')]",
+        "pred_label": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive",
+                "must try"
+            ]
+        ],
+        "duration_label": 1.2952802181243896,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 209.78909090909093,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3415052890777588,
+        "text": "A must try !",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "positive",
+                "opinion_term": "A must try"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive",
+                "A must try"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "396_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('family size penne a la vodka', 'food general', 'positive', 'tremendously gigantic'), ('portion', 'food general', 'positive', 'gigantic'), ('bucket of food', 'food general', 'positive', 'literally')]",
+        "pred_label": [
+            [
+                "family size penne a la vodka",
+                "food general",
+                "positive",
+                "tremendously gigantic"
+            ],
+            [
+                "portion",
+                "food general",
+                "positive",
+                "gigantic"
+            ],
+            [
+                "bucket of food",
+                "food general",
+                "positive",
+                "literally"
+            ]
+        ],
+        "duration_label": 2.567654848098755,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 222.99136363636364,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 2.6518428325653076,
+        "text": "We were 4 and got the family size penne a la vodka which was tremendously gigantic portion ... a bucket of food literally .",
+        "aspects": [
+            {
+                "aspect_term": "penne a la vodka",
+                "aspect_category": "food style_options",
+                "polarity": "positive",
+                "opinion_term": "gigantic"
+            }
+        ],
+        "tuple_list": [
+            [
+                "penne a la vodka",
+                "food style_options",
+                "positive",
+                "gigantic"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "28_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text:\n\n[('NULL', 'food general', 'positive', 'delicious')]",
+        "pred_label": [
+            [
+                "NULL",
+                "food general",
+                "positive",
+                "delicious"
+            ]
+        ],
+        "duration_label": 1.0873041152954102,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 211.77555555555557,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.096177101135254,
+        "text": "MMmmm ... it was delicious .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "food quality",
+                "polarity": "positive",
+                "opinion_term": "delicious"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "food quality",
+                "positive",
+                "delicious"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "295_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('food general', 'food quality', 'negative', 'greasy'), ('food general', 'food quality', 'negative', 'dry'), ('food general', 'food quality', 'negative', 'tasteless')]",
+                "pred_label": false,
+                "duration_label": 2.3424806594848633,
+                "seed": 2,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('food general', 'food quality', 'negative', 'greasy'), ('food general', 'food quality', 'negative', 'dry'), ('food general', 'food quality', 'negative', 'tasteless')]",
+                "pred_label": false,
+                "duration_label": 2.343130350112915,
+                "seed": 7,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions and format:\n\n[('food general', 'food quality', 'negative', 'greasy'), ('food general', 'food quality', 'negative', 'dry'), ('food general', 'food quality', 'negative', 'tasteless')]",
+                "pred_label": false,
+                "duration_label": 2.415351629257202,
+                "seed": 12,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('food general', 'food quality', 'negative', 'greasy'), ('food general', 'food quality', 'negative', 'dry'), ('food general', 'food quality', 'negative', 'tasteless')]",
+                "pred_label": false,
+                "duration_label": 2.302466869354248,
+                "seed": 17,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the defined format:\n\n[('food general', 'food quality', 'negative', 'greasy'), ('food general', 'food quality', 'negative', 'dry'), ('food general', 'food quality', 'negative', 'tasteless')]",
+                "pred_label": false,
+                "duration_label": 2.337277412414551,
+                "seed": 22,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions and format:\n\n[('food general', 'food quality', 'negative', 'greasy'), ('food general', 'food quality', 'negative', 'dry'), ('food general', 'food quality', 'negative', 'tasteless')]",
+                "pred_label": false,
+                "duration_label": 2.4147403240203857,
+                "seed": 27,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the defined format:\n\n[('food general', 'food quality', 'negative', 'greasy'), ('food general', 'food quality', 'negative', 'dry'), ('food general', 'food quality', 'negative', 'tasteless')]",
+                "pred_label": false,
+                "duration_label": 2.34883975982666,
+                "seed": 32,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('food general', 'food quality', 'negative', 'greasy'), ('food general', 'food quality', 'negative', 'dry'), ('food general', 'food quality', 'negative', 'tasteless')]",
+                "pred_label": false,
+                "duration_label": 2.339715003967285,
+                "seed": 37,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('food general', 'food quality', 'negative', 'greasy'), ('food general', 'food quality', 'negative', 'dry'), ('food general', 'food quality', 'negative', 'tasteless')]",
+                "pred_label": false,
+                "duration_label": 2.2991740703582764,
+                "seed": 42,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('food general', 'food quality', 'negative', 'greasy'), ('food general', 'food quality', 'negative', 'dry'), ('food general', 'food quality', 'negative', 'tasteless')]",
+                "pred_label": false,
+                "duration_label": 2.3804714679718018,
+                "seed": 47,
+                "regeneration_reason": "aspect term not in text"
+            }
+        ],
+        "init_seed": 2,
+        "pred_label": [],
+        "duration_label": 2.3804714679718018,
+        "seed": 52,
+        "avg_gpu_power_eval_W": 223.17554404145068,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 23.613756895065308,
+        "text": "Anybody who likes this place must be from a different planet , where greasy , dry and tasteless are complimentary .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "food quality",
+                "polarity": "negative",
+                "opinion_term": "greasy"
+            },
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "food quality",
+                "polarity": "negative",
+                "opinion_term": "dry"
+            },
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "food quality",
+                "polarity": "negative",
+                "opinion_term": "tasteless"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "food quality",
+                "negative",
+                "greasy"
+            ],
+            [
+                "NULL",
+                "food quality",
+                "negative",
+                "dry"
+            ],
+            [
+                "NULL",
+                "food quality",
+                "negative",
+                "tasteless"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "528_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the defined format:\n\n[('affordable', 'restaurant prices', 'positive', 'affordable'), ('ambient', 'ambience general', 'positive', 'excellent')]",
+        "pred_label": [
+            [
+                "affordable",
+                "restaurant prices",
+                "positive",
+                "affordable"
+            ],
+            [
+                "ambient",
+                "ambience general",
+                "positive",
+                "excellent"
+            ]
+        ],
+        "duration_label": 1.7710394859313965,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 217.20933333333332,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8410427570343018,
+        "text": "Very affordable and excellent ambient !",
+        "aspects": [
+            {
+                "aspect_term": "ambient",
+                "aspect_category": "ambience general",
+                "polarity": "positive",
+                "opinion_term": "excellent"
+            },
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant prices",
+                "polarity": "positive",
+                "opinion_term": "affordable"
+            }
+        ],
+        "tuple_list": [
+            [
+                "ambient",
+                "ambience general",
+                "positive",
+                "excellent"
+            ],
+            [
+                "NULL",
+                "restaurant prices",
+                "positive",
+                "affordable"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "337_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('food', 'food general', 'positive', 'Great'), ('decor', 'ambience general', 'positive', 'great'), ('service', 'service general', 'positive', 'great')]",
+        "pred_label": [
+            [
+                "food",
+                "food general",
+                "positive",
+                "Great"
+            ],
+            [
+                "decor",
+                "ambience general",
+                "positive",
+                "Great"
+            ],
+            [
+                "service",
+                "service general",
+                "positive",
+                "Great"
+            ]
+        ],
+        "duration_label": 2.1736979484558105,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 219.42611111111106,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 2.21675705909729,
+        "text": "Great food , great decor , great service .",
+        "aspects": [
+            {
+                "aspect_term": "food",
+                "aspect_category": "food quality",
+                "polarity": "positive",
+                "opinion_term": "Great"
+            },
+            {
+                "aspect_term": "decor",
+                "aspect_category": "ambience general",
+                "polarity": "positive",
+                "opinion_term": "great"
+            },
+            {
+                "aspect_term": "service",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "great"
+            }
+        ],
+        "tuple_list": [
+            [
+                "food",
+                "food quality",
+                "positive",
+                "Great"
+            ],
+            [
+                "decor",
+                "ambience general",
+                "positive",
+                "great"
+            ],
+            [
+                "service",
+                "service general",
+                "positive",
+                "great"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "659_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('sushi', 'food general', 'positive', 'best'), ('sushi', 'food quality', 'positive', 'best')]",
+        "pred_label": [
+            [
+                "sushi",
+                "food general",
+                "positive",
+                "best"
+            ],
+            [
+                "sushi",
+                "food quality",
+                "positive",
+                "best"
+            ]
+        ],
+        "duration_label": 1.738290786743164,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 219.24266666666665,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.837660551071167,
+        "text": "This is the best sushi in new york city - hands down .",
+        "aspects": [
+            {
+                "aspect_term": "sushi",
+                "aspect_category": "food quality",
+                "polarity": "positive",
+                "opinion_term": "best"
+            }
+        ],
+        "tuple_list": [
+            [
+                "sushi",
+                "food quality",
+                "positive",
+                "best"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "524_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('dosas', 'food quality', 'negative', 'skimpy'), ('dosas', 'food quality', 'negative', 'unattractive'), ('dosas', 'food quality', 'negative', 'drip with grease'), ('dosas', 'food general', 'negative', 'eat another one')]",
+        "pred_label": [
+            [
+                "dosas",
+                "food quality",
+                "negative",
+                "skimpy"
+            ],
+            [
+                "dosas",
+                "food quality",
+                "negative",
+                "unattractive"
+            ],
+            [
+                "dosas",
+                "food quality",
+                "negative",
+                "drip with grease"
+            ],
+            [
+                "dosas",
+                "food general",
+                "negative",
+                "eat another one"
+            ]
+        ],
+        "duration_label": 3.009232759475708,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 221.76520000000005,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 3.0745322704315186,
+        "text": "The dosas are skimpy , unattractive and drip with grease , and personally I 'd drink popcorn topping before I 'd eat another one of these .",
+        "aspects": [
+            {
+                "aspect_term": "dosas",
+                "aspect_category": "food style_options",
+                "polarity": "negative",
+                "opinion_term": "skimpy"
+            },
+            {
+                "aspect_term": "dosas",
+                "aspect_category": "food quality",
+                "polarity": "negative",
+                "opinion_term": "unattractive"
+            }
+        ],
+        "tuple_list": [
+            [
+                "dosas",
+                "food style_options",
+                "negative",
+                "skimpy"
+            ],
+            [
+                "dosas",
+                "food quality",
+                "negative",
+                "unattractive"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "649_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text:\n\n[('NULL', 'restaurant general', 'positive', 'going back again and again')]",
+        "pred_label": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive",
+                "going back again and again"
+            ]
+        ],
+        "duration_label": 1.2216830253601074,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 213.69399999999996,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.2332839965820312,
+        "text": "I have been going back again and again .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "positive",
+                "opinion_term": "going back again and again"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive",
+                "going back again and again"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "814_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the defined format:\n\n[('food', 'food general', 'positive', 'Best')]",
+        "pred_label": [
+            [
+                "food",
+                "food general",
+                "positive",
+                "Best"
+            ]
+        ],
+        "duration_label": 1.243713140487671,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 221.58272727272725,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.353276252746582,
+        "text": "Best Taiwanese food in NY !",
+        "aspects": [
+            {
+                "aspect_term": "Taiwanese food",
+                "aspect_category": "food quality",
+                "polarity": "positive",
+                "opinion_term": "Best"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Taiwanese food",
+                "food quality",
+                "positive",
+                "Best"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "48_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text:\n\n[('NULL', 'restaurant general', 'positive', 'pleasantly surprised')]",
+        "pred_label": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive",
+                "pleasantly surprised"
+            ]
+        ],
+        "duration_label": 1.164844274520874,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 210.74,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.2295408248901367,
+        "text": "We were very pleasantly surprised .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "positive",
+                "opinion_term": "pleasantly surprised"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive",
+                "pleasantly surprised"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "560_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('delivery guys', 'service general', 'negative', 'MAJOR attitude')]",
+        "pred_label": [
+            [
+                "delivery guys",
+                "service general",
+                "negative",
+                "MAJOR attitude"
+            ]
+        ],
+        "duration_label": 1.3323032855987549,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 215.85363636363635,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3506593704223633,
+        "text": "There is a downside if you 're ordering in -- the delivery guys have MAJOR attitude .",
+        "aspects": [
+            {
+                "aspect_term": "delivery guys",
+                "aspect_category": "service general",
+                "polarity": "negative",
+                "opinion_term": "downside"
+            }
+        ],
+        "tuple_list": [
+            [
+                "delivery guys",
+                "service general",
+                "negative",
+                "downside"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "792_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('service', 'service general', 'neutral', 'ok'), ('people', 'service general', 'negative', 'did n\\'t get what they asked for')]",
+        "pred_label": [
+            [
+                "service",
+                "service general",
+                "neutral",
+                "ok"
+            ],
+            [
+                "people",
+                "service general",
+                "negative",
+                "did n't get what they asked for"
+            ]
+        ],
+        "duration_label": 1.9833970069885254,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 222.6529411764706,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 2.087768316268921,
+        "text": "The service is ok , some of the people did n't get what they asked for .",
+        "aspects": [
+            {
+                "aspect_term": "service",
+                "aspect_category": "service general",
+                "polarity": "neutral",
+                "opinion_term": "ok"
+            }
+        ],
+        "tuple_list": [
+            [
+                "service",
+                "service general",
+                "neutral",
+                "ok"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "18_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions and format:\n\n[('eat', 'food general', 'positive', 'happy')]",
+        "pred_label": [
+            [
+                "eat",
+                "food general",
+                "positive",
+                "happy"
+            ]
+        ],
+        "duration_label": 1.317185878753662,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 211.9172727272727,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3459866046905518,
+        "text": "It 's somewhere you can eat and be happy .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "positive",
+                "opinion_term": "happy"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive",
+                "happy"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "282_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions and format:\n\n[('choice', 'restaurant general', 'positive', 'great'), ('deal', 'restaurant prices', 'positive', 'great')]",
+        "pred_label": [
+            [
+                "choice",
+                "restaurant general",
+                "positive",
+                "great"
+            ],
+            [
+                "deal",
+                "restaurant prices",
+                "positive",
+                "great"
+            ]
+        ],
+        "duration_label": 1.7739615440368652,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 220.77066666666664,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8496718406677246,
+        "text": "A great choice at any cost and a great deal .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant general",
+                "polarity": "positive",
+                "opinion_term": "A great choice"
+            },
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "restaurant prices",
+                "polarity": "positive",
+                "opinion_term": "a great deal"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "restaurant general",
+                "positive",
+                "A great choice"
+            ],
+            [
+                "NULL",
+                "restaurant prices",
+                "positive",
+                "a great deal"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "rest15",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "119_rest15_../zero-shot-absa-quad/datasets/asqp/rest15/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 2,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('expresso', 'drinks quality', 'positive', 'liked')]",
+        "pred_label": [
+            [
+                "expresso",
+                "drinks quality",
+                "positive",
+                "liked"
+            ]
+        ],
+        "duration_label": 1.2614245414733887,
+        "seed": 2,
+        "avg_gpu_power_eval_W": 212.79818181818175,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3531816005706787,
+        "text": "One of us actually liked the expresso - that 's it .",
+        "aspects": [
+            {
+                "aspect_term": "expresso",
+                "aspect_category": "drinks quality",
+                "polarity": "positive",
+                "opinion_term": "liked"
+            }
+        ],
+        "tuple_list": [
+            [
+                "expresso",
+                "drinks quality",
+                "positive",
+                "liked"
+            ]
+        ]
+    }
+]

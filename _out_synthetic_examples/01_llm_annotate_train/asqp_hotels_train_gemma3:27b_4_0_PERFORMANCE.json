@@ -1,0 +1,4313 @@
+[
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "953_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('staff', 'service general', 'positive', 'friendly'), ('staff', 'service general', 'positive', 'helpful'), ('lift', 'facilities general', 'positive', 'super quick')]",
+        "pred_label": [
+            [
+                "staff",
+                "service general",
+                "positive",
+                "friendly"
+            ],
+            [
+                "staff",
+                "service general",
+                "positive",
+                "helpful"
+            ],
+            [
+                "lift",
+                "facilities general",
+                "positive",
+                "super quick"
+            ]
+        ],
+        "duration_label": 2.540300130844116,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 208.5666666666667,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 2.563904047012329,
+        "text": "The hotel staff were friendly and helpful and the lift was super quick !",
+        "aspects": [
+            {
+                "aspect_term": "staff",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "friendly"
+            },
+            {
+                "aspect_term": "staff",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "helpful"
+            },
+            {
+                "aspect_term": "lift",
+                "aspect_category": "facilities general",
+                "polarity": "positive",
+                "opinion_term": "super quick"
+            }
+        ],
+        "tuple_list": [
+            [
+                "staff",
+                "service general",
+                "positive",
+                "friendly"
+            ],
+            [
+                "staff",
+                "service general",
+                "positive",
+                "helpful"
+            ],
+            [
+                "lift",
+                "facilities general",
+                "positive",
+                "super quick"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1140_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the text \"Good hotel\" based on your definitions:\n\n[('hotel', 'hotel general', 'positive', 'Good')]",
+        "pred_label": [
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "Good"
+            ]
+        ],
+        "duration_label": 1.3520007133483887,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 218.54083333333332,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.466048240661621,
+        "text": "Good hotel",
+        "aspects": [
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "Good"
+            }
+        ],
+        "tuple_list": [
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "Good"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "271_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('bathroom', 'rooms general', 'positive', 'large'), ('bathroom', 'rooms cleanliness', 'positive', 'clean'), ('toiletries', 'room_amenities general', 'positive', 'good')]",
+        "pred_label": [
+            [
+                "bathroom",
+                "rooms general",
+                "positive",
+                "large"
+            ],
+            [
+                "bathroom",
+                "rooms cleanliness",
+                "positive",
+                "clean"
+            ],
+            [
+                "toiletries",
+                "room_amenities general",
+                "positive",
+                "good"
+            ]
+        ],
+        "duration_label": 2.352463483810425,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 217.419,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 2.450503349304199,
+        "text": "The bathroom was large and clean , with good toiletries .",
+        "aspects": [
+            {
+                "aspect_term": "bathroom",
+                "aspect_category": "rooms design_features",
+                "polarity": "positive",
+                "opinion_term": "large"
+            },
+            {
+                "aspect_term": "bathroom",
+                "aspect_category": "rooms cleanliness",
+                "polarity": "positive",
+                "opinion_term": "clean"
+            },
+            {
+                "aspect_term": "toiletries",
+                "aspect_category": "room_amenities general",
+                "polarity": "positive",
+                "opinion_term": "good"
+            }
+        ],
+        "tuple_list": [
+            [
+                "bathroom",
+                "rooms design_features",
+                "positive",
+                "large"
+            ],
+            [
+                "bathroom",
+                "rooms cleanliness",
+                "positive",
+                "clean"
+            ],
+            [
+                "toiletries",
+                "room_amenities general",
+                "positive",
+                "good"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "95_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('motel', 'hotel general', 'positive', 'Good'), ('standard', 'hotel quality', 'positive', 'standard')]",
+        "pred_label": [
+            [
+                "motel",
+                "hotel general",
+                "positive",
+                "Good"
+            ],
+            [
+                "standard",
+                "hotel quality",
+                "positive",
+                "standard"
+            ]
+        ],
+        "duration_label": 1.7595024108886719,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 216.57333333333332,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8491251468658447,
+        "text": "Good standard motel Stayed here at the start end end of our Northwest States tour .",
+        "aspects": [
+            {
+                "aspect_term": "motel",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "Good standard"
+            }
+        ],
+        "tuple_list": [
+            [
+                "motel",
+                "hotel general",
+                "positive",
+                "Good standard"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1154_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions and format:\n\n[('Nine Zero', 'hotel general', 'positive', 'wonderful')]",
+        "pred_label": [
+            [
+                "Nine Zero",
+                "hotel general",
+                "positive",
+                "wonderful"
+            ]
+        ],
+        "duration_label": 1.4069552421569824,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 212.78666666666666,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.4728789329528809,
+        "text": "I had such a wonderful time in Boston , thanks to Nine Zero .  .",
+        "aspects": [
+            {
+                "aspect_term": "Nine Zero",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "wonderful"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Nine Zero",
+                "hotel general",
+                "positive",
+                "wonderful"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "915_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions and format:\n\n[('accomodations', 'rooms general', 'positive', 'nice'), ('cuisine', 'food_drinks miscellaneous', 'positive', 'nice'), ('morning buffet', 'food_drinks miscellaneous', 'negative', 'pricey')]",
+        "pred_label": [
+            [
+                "accomodations",
+                "rooms general",
+                "positive",
+                "nice"
+            ],
+            [
+                "cuisine",
+                "food_drinks miscellaneous",
+                "positive",
+                "nice"
+            ],
+            [
+                "morning buffet",
+                "food_drinks miscellaneous",
+                "negative",
+                "pricey"
+            ]
+        ],
+        "duration_label": 2.533461093902588,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 220.87857142857143,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 2.5836620330810547,
+        "text": "accomodations , nice cuisine , morning buffet a little pricey",
+        "aspects": [
+            {
+                "aspect_term": "cuisine",
+                "aspect_category": "food_drinks quality",
+                "polarity": "positive",
+                "opinion_term": "nice"
+            },
+            {
+                "aspect_term": "morning buffet",
+                "aspect_category": "food_drinks prices",
+                "polarity": "negative",
+                "opinion_term": "little pricey"
+            }
+        ],
+        "tuple_list": [
+            [
+                "cuisine",
+                "food_drinks quality",
+                "positive",
+                "nice"
+            ],
+            [
+                "morning buffet",
+                "food_drinks prices",
+                "negative",
+                "little pricey"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "21_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('Concierge', 'service general', 'positive', 'helpful'), ('staff', 'service general', 'positive', 'helpful'), ('cost of drinks', 'food_drinks prices', 'negative', 'steep side'), ('breakfast', 'food_drinks miscellaneous', 'negative', 'steep side')]",
+        "pred_label": [
+            [
+                "Concierge",
+                "service general",
+                "positive",
+                "helpful"
+            ],
+            [
+                "staff",
+                "service general",
+                "positive",
+                "helpful"
+            ],
+            [
+                "cost of drinks",
+                "food_drinks prices",
+                "negative",
+                "steep side"
+            ],
+            [
+                "breakfast",
+                "food_drinks miscellaneous",
+                "negative",
+                "steep side"
+            ]
+        ],
+        "duration_label": 3.0607850551605225,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 220.76769230769227,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 3.1759438514709473,
+        "text": "Concierge and all the staff very helpful , however I did find the cost of drinks a little on the steep side , as was breakfast .",
+        "aspects": [
+            {
+                "aspect_term": "Concierge",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "very helpful"
+            },
+            {
+                "aspect_term": "staff",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "very helpful"
+            },
+            {
+                "aspect_term": "drinks",
+                "aspect_category": "food_drinks prices",
+                "polarity": "negative",
+                "opinion_term": "little on the steep side"
+            },
+            {
+                "aspect_term": "breakfast",
+                "aspect_category": "food_drinks prices",
+                "polarity": "negative",
+                "opinion_term": "little on the steep side"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Concierge",
+                "service general",
+                "positive",
+                "very helpful"
+            ],
+            [
+                "staff",
+                "service general",
+                "positive",
+                "very helpful"
+            ],
+            [
+                "drinks",
+                "food_drinks prices",
+                "negative",
+                "little on the steep side"
+            ],
+            [
+                "breakfast",
+                "food_drinks prices",
+                "negative",
+                "little on the steep side"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1029_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('location', 'location general', 'neutral', 'is a bit of a walk'), ('location', 'location general', 'positive', 'enjoyed'), ('community', 'location general', 'positive', 'enjoyed'), ('historic sites', 'location general', 'positive', 'enjoyed')]",
+        "pred_label": [
+            [
+                "location",
+                "location general",
+                "neutral",
+                "is a bit of a walk"
+            ],
+            [
+                "location",
+                "location general",
+                "positive",
+                "enjoyed"
+            ],
+            [
+                "community",
+                "location general",
+                "positive",
+                "enjoyed"
+            ],
+            [
+                "historic sites",
+                "location general",
+                "positive",
+                "enjoyed"
+            ]
+        ],
+        "duration_label": 2.9552319049835205,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 219.4364,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 3.034672737121582,
+        "text": "While the location is a bit of a walk from the center of town , we enjoyed walking and seeing the community every bit as much as we enjoyed all of the historic sites .",
+        "aspects": [
+            {
+                "aspect_term": "location",
+                "aspect_category": "location general",
+                "polarity": "neutral",
+                "opinion_term": "bit of a walk from the center of town"
+            }
+        ],
+        "tuple_list": [
+            [
+                "location",
+                "location general",
+                "neutral",
+                "bit of a walk from the center of town"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1320_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions and format:\n\n[('NULL', 'service general', 'positive', 'nice'), ('NULL', 'service general', 'positive', 'welcome')]",
+        "pred_label": [
+            [
+                "NULL",
+                "service general",
+                "positive",
+                "nice"
+            ],
+            [
+                "NULL",
+                "service general",
+                "positive",
+                "welcome"
+            ]
+        ],
+        "duration_label": 1.7836647033691406,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 217.40666666666672,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.830796718597412,
+        "text": "really nice making us feel really welcome .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "feel really welcome"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "service general",
+                "positive",
+                "feel really welcome"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1344_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('service', 'service general', 'positive', 'Great'), ('clean', 'hotel cleanliness', 'positive', 'super clean')]",
+        "pred_label": [
+            [
+                "service",
+                "service general",
+                "positive",
+                "Great"
+            ],
+            [
+                "clean",
+                "hotel cleanliness",
+                "positive",
+                "super clean"
+            ]
+        ],
+        "duration_label": 1.7204687595367432,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 219.94133333333335,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8229427337646484,
+        "text": "Great service , super clean and well",
+        "aspects": [
+            {
+                "aspect_term": "service",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "Great"
+            },
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "rooms cleanliness",
+                "polarity": "positive",
+                "opinion_term": "super clean"
+            }
+        ],
+        "tuple_list": [
+            [
+                "service",
+                "service general",
+                "positive",
+                "Great"
+            ],
+            [
+                "NULL",
+                "rooms cleanliness",
+                "positive",
+                "super clean"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "888_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('location', 'location general', 'positive', 'great'), ('price', 'hotel prices', 'positive', 'great')]",
+        "pred_label": [
+            [
+                "location",
+                "location general",
+                "positive",
+                "great"
+            ],
+            [
+                "price",
+                "hotel prices",
+                "positive",
+                "great"
+            ]
+        ],
+        "duration_label": 1.7113714218139648,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 214.4633333333334,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8243966102600098,
+        "text": "I would recommend this hotel , great location and a great price .",
+        "aspects": [
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "would recommend"
+            },
+            {
+                "aspect_term": "location",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "great"
+            },
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel prices",
+                "polarity": "positive",
+                "opinion_term": "great price"
+            }
+        ],
+        "tuple_list": [
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "would recommend"
+            ],
+            [
+                "location",
+                "location general",
+                "positive",
+                "great"
+            ],
+            [
+                "hotel",
+                "hotel prices",
+                "positive",
+                "great price"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "440_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions:\n\n[('NULL', 'service general', 'positive', 'sure')]",
+        "pred_label": [
+            [
+                "NULL",
+                "service general",
+                "positive",
+                "sure"
+            ]
+        ],
+        "duration_label": 1.2625207901000977,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 211.95000000000002,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3303396701812744,
+        "text": "We will go back for sure !",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "will go back for sure"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "hotel general",
+                "positive",
+                "will go back for sure"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "67_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('Breakfast', 'food_drinks miscellaneous', 'negative', 'not included'), ('it', 'food_drinks miscellaneous', 'negative', 'a shame')]",
+        "pred_label": [
+            [
+                "Breakfast",
+                "food_drinks miscellaneous",
+                "negative",
+                "not included"
+            ],
+            [
+                "It",
+                "food_drinks miscellaneous",
+                "negative",
+                "a shame"
+            ]
+        ],
+        "duration_label": 1.9339208602905273,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 219.11187499999997,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.9538750648498535,
+        "text": "Breakfast is not included , which is a shame as many hotels in Italy offer it .",
+        "aspects": [
+            {
+                "aspect_term": "Breakfast",
+                "aspect_category": "food_drinks prices",
+                "polarity": "negative",
+                "opinion_term": "not included"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Breakfast",
+                "food_drinks prices",
+                "negative",
+                "not included"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "337_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the text \"Nice Hotel\" based on the provided definitions:\n\n[('Hotel', 'hotel general', 'positive', 'Nice')]",
+        "pred_label": [
+            [
+                "Hotel",
+                "hotel general",
+                "positive",
+                "Nice"
+            ]
+        ],
+        "duration_label": 1.3551409244537354,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 220.98749999999998,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.4623751640319824,
+        "text": "Nice Hotel",
+        "aspects": [
+            {
+                "aspect_term": "Hotel",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "Nice"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Hotel",
+                "hotel general",
+                "positive",
+                "Nice"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "314_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text:\n\n[('there', 'hotel general', 'positive', 'go back')]",
+        "pred_label": [
+            [
+                "there",
+                "hotel general",
+                "positive",
+                "go back"
+            ]
+        ],
+        "duration_label": 1.1093864440917969,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 209.40899999999996,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.2088446617126465,
+        "text": "I would go back there ! Marcel - Swiss",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "would go back"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "hotel general",
+                "positive",
+                "would go back"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "942_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions and format:\n\n[('food', 'food_drinks quality', 'positive', 'excellent'), ('excursions', 'facilities miscellaneous', 'positive', 'good')]",
+        "pred_label": [
+            [
+                "food",
+                "food_drinks quality",
+                "positive",
+                "excellent"
+            ],
+            [
+                "excursions",
+                "facilities miscellaneous",
+                "positive",
+                "good"
+            ]
+        ],
+        "duration_label": 1.948728322982788,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 216.17249999999999,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.9521002769470215,
+        "text": "The food was excellent , the excursions was good .",
+        "aspects": [
+            {
+                "aspect_term": "food",
+                "aspect_category": "food_drinks quality",
+                "polarity": "positive",
+                "opinion_term": "excellent"
+            },
+            {
+                "aspect_term": "excursions",
+                "aspect_category": "facilities general",
+                "polarity": "positive",
+                "opinion_term": "good"
+            }
+        ],
+        "tuple_list": [
+            [
+                "food",
+                "food_drinks quality",
+                "positive",
+                "excellent"
+            ],
+            [
+                "excursions",
+                "facilities general",
+                "positive",
+                "good"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "868_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('place', 'hotel general', 'positive', 'Great'), ('pleased', 'hotel general', 'positive', 'pleased')]",
+        "pred_label": [
+            [
+                "Place",
+                "hotel general",
+                "positive",
+                "Great"
+            ],
+            [
+                "pleased",
+                "hotel general",
+                "positive",
+                "pleased"
+            ]
+        ],
+        "duration_label": 1.7553908824920654,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 222.45133333333334,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8218071460723877,
+        "text": "Great Place I stayed there recently and was very pleased .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "Great"
+            },
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "very pleased"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "hotel general",
+                "positive",
+                "Great"
+            ],
+            [
+                "NULL",
+                "hotel general",
+                "positive",
+                "very pleased"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1038_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('rooms', 'rooms general', 'negative', 'not refurbished'), ('surroundings', 'rooms general', 'negative', 'noisy')]",
+        "pred_label": [
+            [
+                "rooms",
+                "rooms general",
+                "negative",
+                "not refurbished"
+            ],
+            [
+                "surroundings",
+                "rooms general",
+                "negative",
+                "noisy"
+            ]
+        ],
+        "duration_label": 1.8292737007141113,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 218.46200000000002,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8372392654418945,
+        "text": "These rooms are not refurbished , noisy surroundings ( generartors etc )  .",
+        "aspects": [
+            {
+                "aspect_term": "rooms",
+                "aspect_category": "rooms design_features",
+                "polarity": "negative",
+                "opinion_term": "not refurbished"
+            },
+            {
+                "aspect_term": "rooms",
+                "aspect_category": "rooms comfort",
+                "polarity": "negative",
+                "opinion_term": "noisy surroundings"
+            }
+        ],
+        "tuple_list": [
+            [
+                "rooms",
+                "rooms design_features",
+                "negative",
+                "not refurbished"
+            ],
+            [
+                "rooms",
+                "rooms comfort",
+                "negative",
+                "noisy surroundings"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "909_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('Rooms', 'rooms general', 'positive', 'excellent'), ('size', 'rooms general', 'positive', 'descent'), ('luxury', 'rooms general', 'positive', 'luxury')]",
+        "pred_label": [
+            [
+                "Rooms",
+                "rooms general",
+                "positive",
+                "excellent"
+            ],
+            [
+                "size",
+                "rooms general",
+                "positive",
+                "descent"
+            ],
+            [
+                "luxury",
+                "rooms general",
+                "positive",
+                "luxury"
+            ]
+        ],
+        "duration_label": 2.221230983734131,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 222.76105263157896,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 2.3185184001922607,
+        "text": "Rooms are excellent , well appointed and a descent size , pure luxury .",
+        "aspects": [
+            {
+                "aspect_term": "Rooms",
+                "aspect_category": "rooms general",
+                "polarity": "positive",
+                "opinion_term": "excellent"
+            },
+            {
+                "aspect_term": "Rooms",
+                "aspect_category": "rooms general",
+                "polarity": "positive",
+                "opinion_term": "well appointed"
+            },
+            {
+                "aspect_term": "Rooms",
+                "aspect_category": "rooms design_features",
+                "polarity": "positive",
+                "opinion_term": "descent size"
+            },
+            {
+                "aspect_term": "Rooms",
+                "aspect_category": "rooms general",
+                "polarity": "positive",
+                "opinion_term": "pure luxury"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Rooms",
+                "rooms general",
+                "positive",
+                "excellent"
+            ],
+            [
+                "Rooms",
+                "rooms general",
+                "positive",
+                "well appointed"
+            ],
+            [
+                "Rooms",
+                "rooms design_features",
+                "positive",
+                "descent size"
+            ],
+            [
+                "Rooms",
+                "rooms general",
+                "positive",
+                "pure luxury"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "546_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('location', 'location general', 'positive', 'great'), ('CN Tower', 'location general', 'positive', 'great')]",
+        "pred_label": [
+            [
+                "location",
+                "location general",
+                "positive",
+                "great"
+            ],
+            [
+                "CN Tower",
+                "location general",
+                "positive",
+                "great"
+            ]
+        ],
+        "duration_label": 1.7480576038360596,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 217.28799999999998,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.834606409072876,
+        "text": "The location was great as it was only a 10 - 15 min walk to the CN Tower which was great .",
+        "aspects": [
+            {
+                "aspect_term": "location",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "great"
+            },
+            {
+                "aspect_term": "location",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "10 - 15 min walk to the CN Tower"
+            },
+            {
+                "aspect_term": "location",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "great"
+            }
+        ],
+        "tuple_list": [
+            [
+                "location",
+                "location general",
+                "positive",
+                "great"
+            ],
+            [
+                "location",
+                "location general",
+                "positive",
+                "10 - 15 min walk to the CN Tower"
+            ],
+            [
+                "location",
+                "location general",
+                "positive",
+                "great"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "280_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('service', 'service general', 'positive', 'outstanding')]",
+        "pred_label": [
+            [
+                "service",
+                "service general",
+                "positive",
+                "outstanding"
+            ]
+        ],
+        "duration_label": 1.2996010780334473,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 209.83636363636361,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3395483493804932,
+        "text": "The service was outstanding - both toward us and our 2 year old .",
+        "aspects": [
+            {
+                "aspect_term": "service",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "outstanding"
+            }
+        ],
+        "tuple_list": [
+            [
+                "service",
+                "service general",
+                "positive",
+                "outstanding"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "113_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('efficiency', 'service general', 'positive', 'superlatives'), ('friendliness', 'service general', 'positive', 'superlatives')]",
+        "pred_label": [
+            [
+                "efficiency",
+                "service general",
+                "positive",
+                "superlatives"
+            ],
+            [
+                "friendliness",
+                "service general",
+                "positive",
+                "superlatives"
+            ]
+        ],
+        "duration_label": 1.9459123611450195,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 218.96687500000002,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.9551303386688232,
+        "text": "Not enough superlatives to describe the efficiency and friendliness , even down to the maids .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "Not enough superlatives to describe the efficiency"
+            },
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "friendliness"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "service general",
+                "positive",
+                "Not enough superlatives to describe the efficiency"
+            ],
+            [
+                "NULL",
+                "service general",
+                "positive",
+                "friendliness"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "689_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions and format:\n\n[('hospitality', 'service general', 'positive', 'Excellent')]",
+        "pred_label": [
+            [
+                "hospitality",
+                "service general",
+                "positive",
+                "Excellent"
+            ]
+        ],
+        "duration_label": 1.3759398460388184,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 219.20833333333334,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.466792345046997,
+        "text": "Excellent hospitality",
+        "aspects": [
+            {
+                "aspect_term": "hospitality",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "Excellent"
+            }
+        ],
+        "tuple_list": [
+            [
+                "hospitality",
+                "service general",
+                "positive",
+                "Excellent"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1065_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions:\n\n[('NULL', 'service general', 'positive', 'better')]",
+        "pred_label": [
+            [
+                "NULL",
+                "service general",
+                "positive",
+                "better"
+            ]
+        ],
+        "duration_label": 1.2667291164398193,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 212.6090909090909,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3433277606964111,
+        "text": "Couldn ' t have asked for better .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "Couldn't have asked for better"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "hotel general",
+                "positive",
+                "Couldn't have asked for better"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "46_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('hotel building', 'facilities general', 'positive', 'beautiful'), ('one bedroom suite', 'rooms general', 'positive', 'wonderful'), ('views', 'rooms general', 'positive', 'stunning'), ('room', 'rooms general', 'positive', 'stunning'), ('VIP lounge', 'facilities general', 'positive', 'stunning'), ('service', 'service general', 'positive', 'excellent')]",
+        "pred_label": [
+            [
+                "hotel building",
+                "facilities general",
+                "positive",
+                "beautiful"
+            ],
+            [
+                "one bedroom suite",
+                "rooms general",
+                "positive",
+                "wonderful"
+            ],
+            [
+                "views",
+                "rooms general",
+                "positive",
+                "stunning"
+            ],
+            [
+                "room",
+                "rooms general",
+                "positive",
+                "stunning"
+            ],
+            [
+                "VIP lounge",
+                "facilities general",
+                "positive",
+                "stunning"
+            ],
+            [
+                "service",
+                "service general",
+                "positive",
+                "excellent"
+            ]
+        ],
+        "duration_label": 3.778062105178833,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 222.74258064516124,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 3.7904715538024902,
+        "text": "A beautiful new hotel building , wonderful one bedroom suite , stunning views from our room and the VIP lounge , and excellent service .",
+        "aspects": [
+            {
+                "aspect_term": "hotel building",
+                "aspect_category": "hotel design_features",
+                "polarity": "positive",
+                "opinion_term": "beautiful"
+            },
+            {
+                "aspect_term": "bedroom suite",
+                "aspect_category": "rooms general",
+                "polarity": "positive",
+                "opinion_term": "wonderful"
+            },
+            {
+                "aspect_term": "room",
+                "aspect_category": "rooms general",
+                "polarity": "positive",
+                "opinion_term": "stunning views"
+            },
+            {
+                "aspect_term": "VIP lounge",
+                "aspect_category": "rooms general",
+                "polarity": "positive",
+                "opinion_term": "stunning views"
+            },
+            {
+                "aspect_term": "service",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "excellent"
+            }
+        ],
+        "tuple_list": [
+            [
+                "hotel building",
+                "hotel design_features",
+                "positive",
+                "beautiful"
+            ],
+            [
+                "bedroom suite",
+                "rooms general",
+                "positive",
+                "wonderful"
+            ],
+            [
+                "room",
+                "rooms general",
+                "positive",
+                "stunning views"
+            ],
+            [
+                "VIP lounge",
+                "rooms general",
+                "positive",
+                "stunning views"
+            ],
+            [
+                "service",
+                "service general",
+                "positive",
+                "excellent"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "883_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the text \"Nice food .\", following your definitions:\n\n[('food', 'food_drinks miscellaneous', 'positive', 'Nice')]",
+        "pred_label": [
+            [
+                "food",
+                "food_drinks miscellaneous",
+                "positive",
+                "Nice"
+            ]
+        ],
+        "duration_label": 1.429396390914917,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 217.0391666666667,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.4690096378326416,
+        "text": "Nice food .",
+        "aspects": [
+            {
+                "aspect_term": "food",
+                "aspect_category": "food_drinks quality",
+                "polarity": "positive",
+                "opinion_term": "Nice"
+            }
+        ],
+        "tuple_list": [
+            [
+                "food",
+                "food_drinks quality",
+                "positive",
+                "Nice"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "290_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('restaurant and bar', 'facilities general', 'positive', 'improved'), ('makeover', 'facilities general', 'positive', 'improved')]",
+        "pred_label": [
+            [
+                "restaurant and bar",
+                "facilities general",
+                "positive",
+                "improved"
+            ],
+            [
+                "makeover",
+                "facilities general",
+                "positive",
+                "improved"
+            ]
+        ],
+        "duration_label": 1.7894048690795898,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 219.688,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.832406997680664,
+        "text": "Just had a restaurant and bar makeover - much improved .",
+        "aspects": [
+            {
+                "aspect_term": "restaurant",
+                "aspect_category": "food_drinks quality",
+                "polarity": "positive",
+                "opinion_term": "NULL"
+            },
+            {
+                "aspect_term": "bar",
+                "aspect_category": "food_drinks quality",
+                "polarity": "positive",
+                "opinion_term": "NULL"
+            }
+        ],
+        "tuple_list": [
+            [
+                "restaurant",
+                "food_drinks quality",
+                "positive",
+                "NULL"
+            ],
+            [
+                "bar",
+                "food_drinks quality",
+                "positive",
+                "NULL"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "412_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions and format:\n\n[('stay', 'hotel general', 'positive', 'enjoyed')]",
+        "pred_label": [
+            [
+                "stay",
+                "hotel general",
+                "positive",
+                "enjoyed"
+            ]
+        ],
+        "duration_label": 1.3750755786895752,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 218.80583333333334,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.4627387523651123,
+        "text": "We really enjoyed our stay in the Belvedere .",
+        "aspects": [
+            {
+                "aspect_term": "Belvedere",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "really enjoyed our stay"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Belvedere",
+                "hotel general",
+                "positive",
+                "really enjoyed our stay"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "116_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('hotel', 'hotel general', 'positive', 'could not find fault'), ('tea-making facilities', 'room_amenities general', 'negative', 'no')]",
+                "pred_label": false,
+                "duration_label": 2.0503814220428467,
+                "seed": 4,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('hotel', 'hotel general', 'positive', 'could not find fault'), ('tea-making facilities', 'room_amenities general', 'negative', 'no')]",
+                "pred_label": false,
+                "duration_label": 1.9944159984588623,
+                "seed": 9,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('hotel', 'hotel general', 'positive', 'could not find fault'), ('tea-making facilities', 'room_amenities general', 'negative', 'no')]",
+                "pred_label": false,
+                "duration_label": 2.0040223598480225,
+                "seed": 14,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('hotel', 'hotel general', 'positive', 'could not find fault'), ('tea-making facilities', 'room_amenities general', 'negative', 'no')]",
+                "pred_label": false,
+                "duration_label": 2.005617618560791,
+                "seed": 19,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the defined format:\n\n[('hotel', 'hotel general', 'positive', 'could not find fault'), ('tea-making facilities', 'room_amenities general', 'negative', 'no')]",
+                "pred_label": false,
+                "duration_label": 2.0267579555511475,
+                "seed": 24,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('hotel', 'hotel general', 'positive', 'could not find fault'), ('tea-making facilities', 'room_amenities general', 'negative', 'no')]",
+                "pred_label": false,
+                "duration_label": 2.007739305496216,
+                "seed": 29,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the defined format:\n\n[('hotel', 'hotel general', 'positive', 'could not find fault'), ('tea-making facilities', 'room_amenities general', 'negative', 'no')]",
+                "pred_label": false,
+                "duration_label": 2.0116536617279053,
+                "seed": 34,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions and format:\n\n[('hotel', 'hotel general', 'positive', 'could not find fault'), ('tea-making facilities', 'room_amenities general', 'negative', 'no')]",
+                "pred_label": false,
+                "duration_label": 2.0823185443878174,
+                "seed": 39,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('hotel', 'hotel general', 'positive', 'could not find fault'), ('tea-making facilities', 'room_amenities general', 'negative', 'no')]",
+                "pred_label": false,
+                "duration_label": 2.01253342628479,
+                "seed": 44,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('hotel', 'hotel general', 'positive', 'could not find fault'), ('tea-making facilities', 'room_amenities general', 'negative', 'no')]",
+                "pred_label": false,
+                "duration_label": 1.9867334365844727,
+                "seed": 49,
+                "regeneration_reason": "aspect term not in text"
+            }
+        ],
+        "init_seed": 4,
+        "pred_label": [],
+        "duration_label": 1.9867334365844727,
+        "seed": 54,
+        "avg_gpu_power_eval_W": 221.55927710843395,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 20.302652597427368,
+        "text": "I ' m a fussy devil , and where possible do like to stay in 4 * hotels , but I could not find fault with this hotel other than there was no tea - making facilities in the room .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "facilities general",
+                "polarity": "negative",
+                "opinion_term": "no tea-making facilities in the room"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "facilities general",
+                "negative",
+                "no tea-making facilities in the room"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "77_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('food', 'food_drinks quality', 'negative', 'cold'), ('food', 'food_drinks quality', 'negative', 'not replenished'), ('breakfast', 'food_drinks miscellaneous', 'negative', 'disappointing')]",
+        "pred_label": [
+            [
+                "food",
+                "food_drinks quality",
+                "negative",
+                "cold"
+            ],
+            [
+                "food",
+                "food_drinks quality",
+                "negative",
+                "not replenished"
+            ],
+            [
+                "breakfast",
+                "food_drinks miscellaneous",
+                "negative",
+                "disappointing"
+            ]
+        ],
+        "duration_label": 2.5174577236175537,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 218.80904761904762,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 2.564779043197632,
+        "text": "We had breakfast there in the morning , the food was cold and not replenished , very disappointing .",
+        "aspects": [
+            {
+                "aspect_term": "food",
+                "aspect_category": "food_drinks quality",
+                "polarity": "negative",
+                "opinion_term": "cold"
+            },
+            {
+                "aspect_term": "food",
+                "aspect_category": "food_drinks quality",
+                "polarity": "negative",
+                "opinion_term": "not replenished"
+            },
+            {
+                "aspect_term": "food",
+                "aspect_category": "food_drinks quality",
+                "polarity": "negative",
+                "opinion_term": "very disappointing"
+            }
+        ],
+        "tuple_list": [
+            [
+                "food",
+                "food_drinks quality",
+                "negative",
+                "cold"
+            ],
+            [
+                "food",
+                "food_drinks quality",
+                "negative",
+                "not replenished"
+            ],
+            [
+                "food",
+                "food_drinks quality",
+                "negative",
+                "very disappointing"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "281_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('charges', 'facilities prices', 'negative', 'exorbitant'), ('internet access', 'facilities general', 'negative', 'exorbitant')]",
+        "pred_label": [
+            [
+                "charges",
+                "facilities prices",
+                "negative",
+                "exorbitant"
+            ],
+            [
+                "internet access",
+                "facilities general",
+                "negative",
+                "exorbitant"
+            ]
+        ],
+        "duration_label": 1.9322118759155273,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 218.00624999999997,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.9622972011566162,
+        "text": "Only downside were the exorbitant charges for even short local phone calls and internet access .",
+        "aspects": [
+            {
+                "aspect_term": "phone calls and internet access",
+                "aspect_category": "facilities prices",
+                "polarity": "negative",
+                "opinion_term": "exorbitant charges"
+            }
+        ],
+        "tuple_list": [
+            [
+                "phone calls and internet access",
+                "facilities prices",
+                "negative",
+                "exorbitant charges"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "70_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the text \"Superb breakfast view\", following the provided definitions:\n\n[('breakfast view', 'food_drinks miscellaneous', 'positive', 'Superb')]",
+        "pred_label": [
+            [
+                "breakfast view",
+                "food_drinks miscellaneous",
+                "positive",
+                "Superb"
+            ]
+        ],
+        "duration_label": 1.5634064674377441,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 217.56692307692308,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.5958948135375977,
+        "text": "Superb breakfast view",
+        "aspects": [
+            {
+                "aspect_term": "breakfast",
+                "aspect_category": "food_drinks quality",
+                "polarity": "positive",
+                "opinion_term": "Superb"
+            }
+        ],
+        "tuple_list": [
+            [
+                "breakfast",
+                "food_drinks quality",
+                "positive",
+                "Superb"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "717_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the given definitions:\n\n[('somewhere', 'location general', 'positive', 'close')]",
+        "pred_label": [
+            [
+                "somewhere",
+                "location general",
+                "positive",
+                "close"
+            ]
+        ],
+        "duration_label": 1.299391746520996,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 218.11636363636362,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3442747592926025,
+        "text": "It ' s very close to the action , but next time I will spend a couple extra bucks to stay somewhere",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "very close to the action"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "location general",
+                "positive",
+                "very close to the action"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "213_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('hotel', 'hotel general', 'positive', 'Excellent')]",
+        "pred_label": [
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "Excellent"
+            ]
+        ],
+        "duration_label": 1.2211263179779053,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 216.78400000000002,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.2300896644592285,
+        "text": "Excellent hotel , we ' ll stay there again .",
+        "aspects": [
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "Excellent"
+            },
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "ll stay there again"
+            }
+        ],
+        "tuple_list": [
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "Excellent"
+            ],
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "ll stay there again"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "836_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('staff', 'service general', 'positive', 'nice'), ('water', 'room_amenities general', 'positive', 'free'), ('bonus', 'room_amenities general', 'positive', 'bonus'), ('wellcome', 'room_amenities general', 'positive', 'wellcome')]",
+        "pred_label": [
+            [
+                "staff",
+                "service general",
+                "positive",
+                "nice"
+            ],
+            [
+                "water",
+                "room_amenities general",
+                "positive",
+                "free"
+            ],
+            [
+                "bonus",
+                "room_amenities general",
+                "positive",
+                "bonus"
+            ],
+            [
+                "wellcome",
+                "room_amenities general",
+                "positive",
+                "wellcome"
+            ]
+        ],
+        "duration_label": 3.032552719116211,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 223.55440000000002,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 3.0648653507232666,
+        "text": "The staff is very nice and the free 4 bottles of water per day are a bonus very wellcome - barcelona is hot .",
+        "aspects": [
+            {
+                "aspect_term": "staff",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "very nice"
+            },
+            {
+                "aspect_term": "bottles of water",
+                "aspect_category": "food_drinks prices",
+                "polarity": "positive",
+                "opinion_term": "free"
+            }
+        ],
+        "tuple_list": [
+            [
+                "staff",
+                "service general",
+                "positive",
+                "very nice"
+            ],
+            [
+                "bottles of water",
+                "food_drinks prices",
+                "positive",
+                "free"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "678_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the text \"Would definitely recommend .\", following the provided definitions:\n\n[('NULL', 'service general', 'positive', 'definitely recommend')]",
+        "pred_label": [
+            [
+                "NULL",
+                "service general",
+                "positive",
+                "definitely recommend"
+            ]
+        ],
+        "duration_label": 1.4699559211730957,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 219.28499999999997,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.4752099514007568,
+        "text": "Would definitely recommend .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "definitely recommend"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "hotel general",
+                "positive",
+                "definitely recommend"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "936_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the defined format:\n\n[('restaurant', 'food_drinks miscellaneous', 'positive', 'excellent')]",
+        "pred_label": [
+            [
+                "restaurant",
+                "food_drinks miscellaneous",
+                "positive",
+                "excellent"
+            ]
+        ],
+        "duration_label": 1.3527767658233643,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 220.6725,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.4758851528167725,
+        "text": "There is an excellent restaurant right around trhe corner ( the Golden View ) that sits out over the Arno river .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "excellent restaurant right around trhe corner"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "location general",
+                "positive",
+                "excellent restaurant right around trhe corner"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1091_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('hotel', 'hotel general', 'positive', 'cool'), ('hotel', 'hotel general', 'positive', 'funky'), ('hotel', 'hotel general', 'positive', 'artsy')]",
+        "pred_label": [
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "cool"
+            ],
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "funky"
+            ],
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "artsy"
+            ]
+        ],
+        "duration_label": 2.3125782012939453,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 216.01368421052632,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 2.32863712310791,
+        "text": "This is such a cool hotel , very noirish , rat pack , 50 ' s , space - age swingin ' batchelor pad kind of vibe , with funky and artsy overtones .",
+        "aspects": [
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "cool"
+            },
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel design_features",
+                "polarity": "positive",
+                "opinion_term": "very noirish"
+            },
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel design_features",
+                "polarity": "positive",
+                "opinion_term": "rat pack"
+            },
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel design_features",
+                "polarity": "positive",
+                "opinion_term": "50's"
+            },
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel design_features",
+                "polarity": "positive",
+                "opinion_term": "space-age swingin' batchelor pad kind of vibe"
+            },
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "funky"
+            }
+        ],
+        "tuple_list": [
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "cool"
+            ],
+            [
+                "hotel",
+                "hotel design_features",
+                "positive",
+                "very noirish"
+            ],
+            [
+                "hotel",
+                "hotel design_features",
+                "positive",
+                "rat pack"
+            ],
+            [
+                "hotel",
+                "hotel design_features",
+                "positive",
+                "50's"
+            ],
+            [
+                "hotel",
+                "hotel design_features",
+                "positive",
+                "space-age swingin' batchelor pad kind of vibe"
+            ],
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "funky"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "972_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('hotel', 'hotel general', 'positive', 'excellent'), ('location', 'location general', 'positive', 'good'), ('rooms', 'rooms cleanliness', 'positive', 'spotless'), ('service', 'service general', 'positive', 'great')]",
+        "pred_label": [
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "excellent"
+            ],
+            [
+                "location",
+                "location general",
+                "positive",
+                "good"
+            ],
+            [
+                "rooms",
+                "rooms cleanliness",
+                "positive",
+                "spotless"
+            ],
+            [
+                "service",
+                "service general",
+                "positive",
+                "great"
+            ]
+        ],
+        "duration_label": 2.680730104446411,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 223.10818181818178,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 2.7082107067108154,
+        "text": "xcellent hotel and city Just come back from Beijing , stayed 7 nights at the Crown Plaza , this is an excellent hotel , good location , spotless rooms , great service especially in the champagne bar !",
+        "aspects": [
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "xcellent"
+            },
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "excellent"
+            },
+            {
+                "aspect_term": "location",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "good"
+            },
+            {
+                "aspect_term": "rooms",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "spotless"
+            },
+            {
+                "aspect_term": "service",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "great"
+            }
+        ],
+        "tuple_list": [
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "xcellent"
+            ],
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "excellent"
+            ],
+            [
+                "location",
+                "location general",
+                "positive",
+                "good"
+            ],
+            [
+                "rooms",
+                "service general",
+                "positive",
+                "spotless"
+            ],
+            [
+                "service",
+                "service general",
+                "positive",
+                "great"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "907_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('Hotel Allessandra', 'hotel general', 'positive', 'great'), ('evenings', 'hotel general', 'positive', 'wonderful')]",
+        "pred_label": [
+            [
+                "Hotel Allessandra",
+                "hotel general",
+                "positive",
+                "great"
+            ],
+            [
+                "evenings",
+                "hotel general",
+                "positive",
+                "wonderful"
+            ]
+        ],
+        "duration_label": 1.8882288932800293,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 220.751875,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.964968204498291,
+        "text": "Hotel Allessandra was great We just returned from a 10 day stay in Italy with 3 wonderful evenings spend at the Hotel Alessandra .",
+        "aspects": [
+            {
+                "aspect_term": "Hotel Allessandra",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "great"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Hotel Allessandra",
+                "hotel general",
+                "positive",
+                "great"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "759_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('room', 'rooms general', 'positive', 'nice'), ('room', 'rooms general', 'positive', 'quiet')]",
+        "pred_label": [
+            [
+                "room",
+                "rooms general",
+                "positive",
+                "nice"
+            ],
+            [
+                "room",
+                "rooms general",
+                "positive",
+                "quiet"
+            ]
+        ],
+        "duration_label": 1.738781452178955,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 217.53733333333332,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.846590518951416,
+        "text": "We were given a nice quiet room on the 6th floor overllooking the pool of the adjacent hotel property .",
+        "aspects": [
+            {
+                "aspect_term": "room",
+                "aspect_category": "rooms general",
+                "polarity": "positive",
+                "opinion_term": "nice"
+            },
+            {
+                "aspect_term": "room",
+                "aspect_category": "rooms comfort",
+                "polarity": "positive",
+                "opinion_term": "quiet"
+            },
+            {
+                "aspect_term": "room",
+                "aspect_category": "rooms general",
+                "polarity": "positive",
+                "opinion_term": "overllooking the pool of the adjacent hotel"
+            }
+        ],
+        "tuple_list": [
+            [
+                "room",
+                "rooms general",
+                "positive",
+                "nice"
+            ],
+            [
+                "room",
+                "rooms comfort",
+                "positive",
+                "quiet"
+            ],
+            [
+                "room",
+                "rooms general",
+                "positive",
+                "overllooking the pool of the adjacent hotel"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "569_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('room', 'rooms general', 'positive', 'allowed to stay longer'), ('extra charge', 'rooms prices', 'negative', 'no extra charge')]",
+        "pred_label": [
+            [
+                "room",
+                "rooms general",
+                "positive",
+                "allowed to stay longer"
+            ],
+            [
+                "extra charge",
+                "rooms prices",
+                "negative",
+                "no extra charge"
+            ]
+        ],
+        "duration_label": 1.9828681945800781,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 215.61176470588234,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 2.088092565536499,
+        "text": "I had a very late flight out of Seattle the day I left , and I was allowed to stay longer in my room with no extra charge .",
+        "aspects": [
+            {
+                "aspect_term": "room",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "allowed to stay longer"
+            }
+        ],
+        "tuple_list": [
+            [
+                "room",
+                "service general",
+                "positive",
+                "allowed to stay longer"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1362_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('Room', 'rooms general', 'positive', 'lovely'), ('clean', 'rooms cleanliness', 'positive', 'clean'), ('fresh', 'rooms general', 'positive', 'fresh'), ('well presented', 'rooms general', 'positive', 'well presented')]",
+        "pred_label": [
+            [
+                "Room",
+                "rooms general",
+                "positive",
+                "lovely"
+            ],
+            [
+                "clean",
+                "rooms cleanliness",
+                "positive",
+                "clean"
+            ],
+            [
+                "fresh",
+                "rooms general",
+                "positive",
+                "fresh"
+            ],
+            [
+                "well presented",
+                "rooms general",
+                "positive",
+                "well presented"
+            ]
+        ],
+        "duration_label": 2.7470149993896484,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 218.75130434782616,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 2.8166191577911377,
+        "text": "Room was lovely , clean , fresh and well presented .",
+        "aspects": [
+            {
+                "aspect_term": "Room",
+                "aspect_category": "rooms general",
+                "polarity": "positive",
+                "opinion_term": "lovely"
+            },
+            {
+                "aspect_term": "Room",
+                "aspect_category": "rooms cleanliness",
+                "polarity": "positive",
+                "opinion_term": "clean"
+            },
+            {
+                "aspect_term": "Room",
+                "aspect_category": "rooms design_features",
+                "polarity": "positive",
+                "opinion_term": "fresh"
+            },
+            {
+                "aspect_term": "Room",
+                "aspect_category": "rooms design_features",
+                "polarity": "positive",
+                "opinion_term": "well presented"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Room",
+                "rooms general",
+                "positive",
+                "lovely"
+            ],
+            [
+                "Room",
+                "rooms cleanliness",
+                "positive",
+                "clean"
+            ],
+            [
+                "Room",
+                "rooms design_features",
+                "positive",
+                "fresh"
+            ],
+            [
+                "Room",
+                "rooms design_features",
+                "positive",
+                "well presented"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "429_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('Walking distance', 'location general', 'positive', 'Walking distance')]",
+        "pred_label": [
+            [
+                "Walking distance",
+                "location general",
+                "positive",
+                "Walking distance"
+            ]
+        ],
+        "duration_label": 1.2774474620819092,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 215.77,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3412022590637207,
+        "text": "Walking distance to NY Natural History Museum .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "Walking distance to NY Natural History Museum"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "location general",
+                "positive",
+                "Walking distance to NY Natural History Museum"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "402_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('stay', 'hotel general', 'positive', 'Great')]",
+        "pred_label": [
+            [
+                "stay",
+                "hotel general",
+                "positive",
+                "Great"
+            ]
+        ],
+        "duration_label": 1.2722275257110596,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 215.19636363636366,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3434326648712158,
+        "text": "Great find I stayed here on my final day in Sydney prior to a long haul flight back home .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "Great find"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "hotel general",
+                "positive",
+                "Great find"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1233_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('staff', 'service general', 'positive', 'attentive'), ('staff', 'service general', 'positive', 'professional')]",
+        "pred_label": [
+            [
+                "staff",
+                "service general",
+                "positive",
+                "attentive"
+            ],
+            [
+                "staff",
+                "service general",
+                "positive",
+                "professional"
+            ]
+        ],
+        "duration_label": 1.7620182037353516,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 218.38066666666666,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8417139053344727,
+        "text": "The staff are very attentive and professional .",
+        "aspects": [
+            {
+                "aspect_term": "staff",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "very attentive"
+            },
+            {
+                "aspect_term": "staff",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "professional"
+            }
+        ],
+        "tuple_list": [
+            [
+                "staff",
+                "service general",
+                "positive",
+                "very attentive"
+            ],
+            [
+                "staff",
+                "service general",
+                "positive",
+                "professional"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1268_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the text \"Nice hotel\" based on your definitions:\n\n[('hotel', 'hotel general', 'positive', 'Nice')]",
+        "pred_label": [
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "Nice"
+            ]
+        ],
+        "duration_label": 1.321044683456421,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 215.6009090909091,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3530786037445068,
+        "text": "Nice hotel",
+        "aspects": [
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "Nice"
+            }
+        ],
+        "tuple_list": [
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "Nice"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1085_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('Crown Plaza', 'hotel general', 'positive', 'nice')]",
+        "pred_label": [
+            [
+                "Crown Plaza",
+                "hotel general",
+                "positive",
+                "nice"
+            ]
+        ],
+        "duration_label": 1.3072423934936523,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 218.16818181818178,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3557415008544922,
+        "text": "The Crown Plaza was very nice !",
+        "aspects": [
+            {
+                "aspect_term": "Crown Plaza",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "very nice"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Crown Plaza",
+                "hotel general",
+                "positive",
+                "very nice"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "791_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('hotel', 'hotel general', 'positive', 'clean'), ('staff', 'service general', 'positive', 'helpful')]",
+        "pred_label": [
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "clean"
+            ],
+            [
+                "staff",
+                "service general",
+                "positive",
+                "helpful"
+            ]
+        ],
+        "duration_label": 1.7467451095581055,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 219.5286666666667,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8396942615509033,
+        "text": "We visited Berlin in June 2004 and found the hotel very clean and the staff were very helpful .",
+        "aspects": [
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel cleanliness",
+                "polarity": "positive",
+                "opinion_term": "very clean"
+            },
+            {
+                "aspect_term": "staff",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "very helpful"
+            }
+        ],
+        "tuple_list": [
+            [
+                "hotel",
+                "hotel cleanliness",
+                "positive",
+                "very clean"
+            ],
+            [
+                "staff",
+                "service general",
+                "positive",
+                "very helpful"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "9_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('hotel', 'hotel general', 'positive', 'loved'), ('lobby area', 'facilities design_features', 'positive', 'elegant'), ('guest rooms', 'rooms general', 'positive', 'comfortable'), ('guest rooms', 'rooms general', 'positive', 'spacious'), ('dining room', 'food_drinks miscellaneous', 'positive', 'incredible')]",
+        "pred_label": [
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "loved"
+            ],
+            [
+                "lobby area",
+                "facilities design_features",
+                "positive",
+                "elegant"
+            ],
+            [
+                "guest rooms",
+                "rooms general",
+                "positive",
+                "comfortable"
+            ],
+            [
+                "guest rooms",
+                "rooms general",
+                "positive",
+                "spacious"
+            ],
+            [
+                "dining room",
+                "food_drinks miscellaneous",
+                "positive",
+                "incredible"
+            ]
+        ],
+        "duration_label": 3.4140636920928955,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 221.48241379310343,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 3.5321943759918213,
+        "text": "I absolutely loved everything about the hotel , from the elegant lobby area , to the comfortable and spacious guest rooms to the incredible dining room .",
+        "aspects": [
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "absolutely loved"
+            },
+            {
+                "aspect_term": "lobby area",
+                "aspect_category": "hotel design_features",
+                "polarity": "positive",
+                "opinion_term": "elegant"
+            },
+            {
+                "aspect_term": "guest rooms",
+                "aspect_category": "rooms comfort",
+                "polarity": "positive",
+                "opinion_term": "comfortable"
+            },
+            {
+                "aspect_term": "guest rooms",
+                "aspect_category": "rooms design_features",
+                "polarity": "positive",
+                "opinion_term": "spacious"
+            },
+            {
+                "aspect_term": "dining room",
+                "aspect_category": "rooms general",
+                "polarity": "positive",
+                "opinion_term": "incredible"
+            }
+        ],
+        "tuple_list": [
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "absolutely loved"
+            ],
+            [
+                "lobby area",
+                "hotel design_features",
+                "positive",
+                "elegant"
+            ],
+            [
+                "guest rooms",
+                "rooms comfort",
+                "positive",
+                "comfortable"
+            ],
+            [
+                "guest rooms",
+                "rooms design_features",
+                "positive",
+                "spacious"
+            ],
+            [
+                "dining room",
+                "rooms general",
+                "positive",
+                "incredible"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "278_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the text \"Affordably Elegant\" following your definitions:\n\n[('prices', 'facilities prices', 'positive', 'Affordably'), ('design_features', 'facilities design_features', 'positive', 'Elegant')]",
+                "pred_label": false,
+                "duration_label": 2.043226718902588,
+                "seed": 4,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the text \"Affordably Elegant\" based on your definitions:\n\n[('prices', 'facilities prices', 'positive', 'Affordably'), ('design_features', 'facilities design_features', 'positive', 'Elegant')]",
+                "pred_label": false,
+                "duration_label": 2.026639938354492,
+                "seed": 9,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the text \"Affordably Elegant\" based on your definitions:\n\n[('prices', 'facilities prices', 'positive', 'Affordably'), ('general', 'hotel general', 'positive', 'Elegant')]",
+                "pred_label": false,
+                "duration_label": 1.8970341682434082,
+                "seed": 14,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the text \"Affordably Elegant\" based on your definitions:\n\n[('prices', 'facilities prices', 'positive', 'Affordably'), ('general', 'hotel general', 'positive', 'Elegant')]",
+                "pred_label": false,
+                "duration_label": 1.908188819885254,
+                "seed": 19,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the text \"Affordably Elegant\" based on your definitions:\n\n[('prices', 'facilities prices', 'positive', 'Affordably'), ('general', 'hotel general', 'positive', 'Elegant')]",
+                "pred_label": false,
+                "duration_label": 1.9331262111663818,
+                "seed": 24,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the text \"Affordably Elegant\" based on your definitions:\n\n[('prices', 'facilities prices', 'positive', 'Affordably'), ('general', 'hotel general', 'positive', 'Elegant')]",
+                "pred_label": false,
+                "duration_label": 1.905296802520752,
+                "seed": 29,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the text \"Affordably Elegant\" based on your definitions:\n\n[('prices', 'facilities prices', 'positive', 'Affordably'), ('design_features', 'facilities design_features', 'positive', 'Elegant')]",
+                "pred_label": false,
+                "duration_label": 2.052809000015259,
+                "seed": 34,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the text \"Affordably Elegant\" following your definitions:\n\n[('prices', 'facilities prices', 'positive', 'Affordably'), ('design_features', 'facilities design_features', 'positive', 'Elegant')]",
+                "pred_label": false,
+                "duration_label": 2.023738384246826,
+                "seed": 39,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the text \"Affordably Elegant\" based on the provided definitions:\n\n[('prices', 'facilities prices', 'positive', 'Affordably'), ('general', 'hotel general', 'positive', 'Elegant')]",
+                "pred_label": false,
+                "duration_label": 1.9280555248260498,
+                "seed": 44,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the text \"Affordably Elegant\" based on your definitions:\n\n[('prices', 'facilities prices', 'positive', 'Affordably'), ('general', 'hotel general', 'positive', 'Elegant')]",
+                "pred_label": false,
+                "duration_label": 1.9194104671478271,
+                "seed": 49,
+                "regeneration_reason": "aspect term not in text"
+            }
+        ],
+        "init_seed": 4,
+        "pred_label": [],
+        "duration_label": 1.9194104671478271,
+        "seed": 54,
+        "avg_gpu_power_eval_W": 222.06530864197532,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 19.721281051635742,
+        "text": "Affordably Elegant",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "hotel prices",
+                "polarity": "positive",
+                "opinion_term": "Affordably Elegant"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "hotel prices",
+                "positive",
+                "Affordably Elegant"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "845_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('Kapok', 'hotel general', 'positive', 'loved'), ('Kapok', 'hotel general', 'positive', 'so much')]",
+        "pred_label": [
+            [
+                "Kapok",
+                "hotel general",
+                "positive",
+                "loved"
+            ],
+            [
+                "Kapok",
+                "hotel general",
+                "positive",
+                "so much"
+            ]
+        ],
+        "duration_label": 1.8469161987304688,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 218.135625,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.9449405670166016,
+        "text": "We loved the Kapok so much we stayed there 3 times over a 3 week period while coming and going from Beijing !",
+        "aspects": [
+            {
+                "aspect_term": "Kapok",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "loved"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Kapok",
+                "hotel general",
+                "positive",
+                "loved"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "750_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('rate', 'facilities prices', 'positive', 'good'), ('room', 'rooms general', 'neutral', 'sells')]",
+        "pred_label": [
+            [
+                "rate",
+                "facilities prices",
+                "positive",
+                "good"
+            ],
+            [
+                "room",
+                "rooms general",
+                "neutral",
+                "sells"
+            ]
+        ],
+        "duration_label": 1.8236212730407715,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 214.34466666666668,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8268349170684814,
+        "text": "They had a good rate of $ 395 a night for a room which normally sells for $ 610 a night .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "hotel prices",
+                "polarity": "positive",
+                "opinion_term": "good rate"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "hotel prices",
+                "positive",
+                "good rate"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "933_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[\n('location', 'location general', 'positive', 'perfect'),\n('staff', 'service general', 'positive', 'friendly', 'attentive'),\n('rooms', 'rooms cleanliness', 'positive', 'spotless', 'attractive'),\n('breakfast', 'food_drinks quality', 'positive', 'excellent')\n]",
+                "pred_label": false,
+                "duration_label": 3.1737403869628906,
+                "seed": 4,
+                "regeneration_reason": "tuple has not exactly 4 elements"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('location', 'location general', 'positive', 'perfect'), ('staff', 'service general', 'positive', 'friendly', 'attentive'), ('rooms', 'rooms cleanliness', 'positive', 'spotless', 'attractive'), ('breakfast', 'food_drinks quality', 'positive', 'excellent')]",
+                "pred_label": false,
+                "duration_label": 2.9817357063293457,
+                "seed": 9,
+                "regeneration_reason": "tuple has not exactly 4 elements"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[\n('location', 'location general', 'positive', 'perfect'),\n('staff', 'service general', 'positive', 'friendly', 'attentive'),\n('rooms', 'rooms cleanliness', 'positive', 'spotless', 'attractive'),\n('breakfast', 'food_drinks quality', 'positive', 'excellent')\n]",
+                "pred_label": false,
+                "duration_label": 3.1807172298431396,
+                "seed": 14,
+                "regeneration_reason": "tuple has not exactly 4 elements"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('location', 'location general', 'positive', 'perfect'), ('staff', 'service general', 'positive', 'friendly', 'attentive'), ('rooms', 'rooms cleanliness', 'positive', 'spotless', 'attractive'), ('breakfast', 'food_drinks quality', 'positive', 'excellent')]",
+                "pred_label": false,
+                "duration_label": 2.9600350856781006,
+                "seed": 19,
+                "regeneration_reason": "tuple has not exactly 4 elements"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the defined format:\n\n[\n('location', 'location general', 'positive', 'perfect'),\n('staff', 'service general', 'positive', 'friendly', 'attentive'),\n('rooms', 'rooms cleanliness', 'positive', 'spotless', 'attractive'),\n('breakfast', 'food_drinks quality', 'positive', 'excellent')\n]",
+                "pred_label": false,
+                "duration_label": 3.204341173171997,
+                "seed": 24,
+                "regeneration_reason": "tuple has not exactly 4 elements"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[\n('location', 'location general', 'positive', 'perfect'),\n('staff', 'service general', 'positive', 'friendly', 'attentive'),\n('rooms', 'rooms cleanliness', 'positive', 'spotless', 'attractive'),\n('breakfast', 'food_drinks quality', 'positive', 'excellent')\n]",
+                "pred_label": false,
+                "duration_label": 3.1221206188201904,
+                "seed": 29,
+                "regeneration_reason": "tuple has not exactly 4 elements"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[\n('location', 'location general', 'positive', 'perfect'),\n('staff', 'service general', 'positive', 'friendly', 'attentive'),\n('rooms', 'rooms cleanliness', 'positive', 'spotless', 'attractive'),\n('breakfast', 'food_drinks quality', 'positive', 'excellent')\n]",
+                "pred_label": false,
+                "duration_label": 3.1393425464630127,
+                "seed": 34,
+                "regeneration_reason": "tuple has not exactly 4 elements"
+            }
+        ],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the defined format:\n\n[('location', 'location general', 'positive', 'perfect'), ('staff', 'service general', 'positive', 'friendly'), ('staff', 'service general', 'positive', 'attentive'), ('rooms', 'rooms cleanliness', 'positive', 'spotless'), ('rooms', 'rooms design_features', 'positive', 'attractive'), ('breakfast', 'food_drinks quality', 'positive', 'excellent')]",
+        "pred_label": [
+            [
+                "location",
+                "location general",
+                "positive",
+                "perfect"
+            ],
+            [
+                "staff",
+                "service general",
+                "positive",
+                "friendly"
+            ],
+            [
+                "staff",
+                "service general",
+                "positive",
+                "attentive"
+            ],
+            [
+                "rooms",
+                "rooms cleanliness",
+                "positive",
+                "spotless"
+            ],
+            [
+                "rooms",
+                "rooms design_features",
+                "positive",
+                "attractive"
+            ],
+            [
+                "breakfast",
+                "food_drinks quality",
+                "positive",
+                "excellent"
+            ]
+        ],
+        "duration_label": 3.6997759342193604,
+        "seed": 39,
+        "avg_gpu_power_eval_W": 223.36200956937802,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 25.52872109413147,
+        "text": "perfect location ( on the river , an easy walk to the Ponte Vecchio )  ; friendly , attentive staff ; spotless , attractive rooms ; and an excellent ( hot ) American breakfast .",
+        "aspects": [
+            {
+                "aspect_term": "location",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "perfect"
+            },
+            {
+                "aspect_term": "staff",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "friendly"
+            },
+            {
+                "aspect_term": "staff",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "attentive"
+            },
+            {
+                "aspect_term": "rooms",
+                "aspect_category": "rooms cleanliness",
+                "polarity": "positive",
+                "opinion_term": "spotless"
+            },
+            {
+                "aspect_term": "rooms",
+                "aspect_category": "rooms quality",
+                "polarity": "positive",
+                "opinion_term": "attractive"
+            },
+            {
+                "aspect_term": "American breakfast",
+                "aspect_category": "food_drinks quality",
+                "polarity": "positive",
+                "opinion_term": "excellent"
+            }
+        ],
+        "tuple_list": [
+            [
+                "location",
+                "location general",
+                "positive",
+                "perfect"
+            ],
+            [
+                "staff",
+                "service general",
+                "positive",
+                "friendly"
+            ],
+            [
+                "staff",
+                "service general",
+                "positive",
+                "attentive"
+            ],
+            [
+                "rooms",
+                "rooms cleanliness",
+                "positive",
+                "spotless"
+            ],
+            [
+                "rooms",
+                "rooms quality",
+                "positive",
+                "attractive"
+            ],
+            [
+                "American breakfast",
+                "food_drinks quality",
+                "positive",
+                "excellent"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "266_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('food', 'food_drinks quality', 'positive', 'high standard'), ('service', 'service general', 'positive', 'high standard')]",
+        "pred_label": [
+            [
+                "food",
+                "food_drinks quality",
+                "positive",
+                "high standard"
+            ],
+            [
+                "service",
+                "service general",
+                "positive",
+                "high standard"
+            ]
+        ],
+        "duration_label": 1.899247169494629,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 218.92999999999998,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.9607834815979004,
+        "text": "I am a qualifed Chef and my wife and I have eaten in some of the best restaurants in the world including what is listed as THE best restaurant in the world at the moment by renowned Chefs , The Fat Duck in Bray , UK and found the food and service in The Torres to be of an extremely high standard .",
+        "aspects": [
+            {
+                "aspect_term": "food",
+                "aspect_category": "food_drinks quality",
+                "polarity": "positive",
+                "opinion_term": "extremely high standard"
+            },
+            {
+                "aspect_term": "service",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "extremely high standard"
+            }
+        ],
+        "tuple_list": [
+            [
+                "food",
+                "food_drinks quality",
+                "positive",
+                "extremely high standard"
+            ],
+            [
+                "service",
+                "service general",
+                "positive",
+                "extremely high standard"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "629_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('value', 'facilities prices', 'positive', 'Good'), ('rooms', 'rooms quality', 'positive', 'nicely finished'), ('public areas', 'facilities general', 'positive', 'good')]",
+        "pred_label": [
+            [
+                "value",
+                "facilities prices",
+                "positive",
+                "Good"
+            ],
+            [
+                "rooms",
+                "rooms quality",
+                "positive",
+                "nicely finished"
+            ],
+            [
+                "public areas",
+                "facilities general",
+                "positive",
+                "Good"
+            ]
+        ],
+        "duration_label": 2.280169725418091,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 219.0368421052632,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 2.3306949138641357,
+        "text": "Good value , nicely finished rooms and good quality public areas .",
+        "aspects": [
+            {
+                "aspect_term": "rooms",
+                "aspect_category": "rooms prices",
+                "polarity": "positive",
+                "opinion_term": "Good value"
+            },
+            {
+                "aspect_term": "rooms",
+                "aspect_category": "rooms general",
+                "polarity": "positive",
+                "opinion_term": "nicely finished"
+            },
+            {
+                "aspect_term": "public areas",
+                "aspect_category": "facilities quality",
+                "polarity": "positive",
+                "opinion_term": "good quality"
+            }
+        ],
+        "tuple_list": [
+            [
+                "rooms",
+                "rooms prices",
+                "positive",
+                "Good value"
+            ],
+            [
+                "rooms",
+                "rooms general",
+                "positive",
+                "nicely finished"
+            ],
+            [
+                "public areas",
+                "facilities quality",
+                "positive",
+                "good quality"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "696_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('location', 'location general', 'positive', 'Great'), ('location', 'location general', 'positive', 'Great')]",
+        "pred_label": [
+            [
+                "Location",
+                "location general",
+                "positive",
+                "Great"
+            ],
+            [
+                "Location",
+                "location general",
+                "positive",
+                "Great"
+            ]
+        ],
+        "duration_label": 1.699683427810669,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 218.91357142857137,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.707693338394165,
+        "text": "Great Location Great location just outside the Red Light District .",
+        "aspects": [
+            {
+                "aspect_term": "Location",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "Great"
+            },
+            {
+                "aspect_term": "Location",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "just outside the Red Light District"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Location",
+                "location general",
+                "positive",
+                "Great"
+            ],
+            [
+                "Location",
+                "location general",
+                "positive",
+                "just outside the Red Light District"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "459_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('taxi service', 'service general', 'positive', 'friendly'), ('taxi service', 'service general', 'positive', 'helpful')]",
+        "pred_label": [
+            [
+                "taxi service",
+                "service general",
+                "positive",
+                "friendly"
+            ],
+            [
+                "taxi service",
+                "service general",
+                "positive",
+                "helpful"
+            ]
+        ],
+        "duration_label": 1.7630763053894043,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 221.02066666666667,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.841160774230957,
+        "text": "The taxi service available through the hotel was very friendly and helpful .",
+        "aspects": [
+            {
+                "aspect_term": "taxi service",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "very friendly"
+            },
+            {
+                "aspect_term": "taxi service",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "helpful"
+            }
+        ],
+        "tuple_list": [
+            [
+                "taxi service",
+                "service general",
+                "positive",
+                "very friendly"
+            ],
+            [
+                "taxi service",
+                "service general",
+                "positive",
+                "helpful"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1199_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the text \"Great Resort\" based on the provided definitions:\n\n[('Resort', 'hotel general', 'positive', 'Great')]",
+        "pred_label": [
+            [
+                "Resort",
+                "hotel general",
+                "positive",
+                "Great"
+            ]
+        ],
+        "duration_label": 1.4059593677520752,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 214.88166666666666,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.4729294776916504,
+        "text": "Great Resort",
+        "aspects": [
+            {
+                "aspect_term": "Resort",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "Great"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Resort",
+                "hotel general",
+                "positive",
+                "Great"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "960_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('Embassy Suites', 'hotel general', 'positive', 'nice'), ('location', 'location general', 'positive', 'close')]",
+                "pred_label": false,
+                "duration_label": 1.798297643661499,
+                "seed": 4,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('Embassy Suites', 'hotel general', 'positive', 'nice'), ('location', 'location general', 'positive', 'close')]",
+                "pred_label": false,
+                "duration_label": 1.829742193222046,
+                "seed": 9,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('Embassy Suites', 'hotel general', 'positive', 'nice'), ('location', 'location general', 'positive', 'close')]",
+                "pred_label": false,
+                "duration_label": 1.7835180759429932,
+                "seed": 14,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('Embassy Suites', 'hotel general', 'positive', 'nice'), ('location', 'location general', 'positive', 'close')]",
+                "pred_label": false,
+                "duration_label": 1.8336784839630127,
+                "seed": 19,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the defined format:\n\n[('Embassy Suites', 'hotel general', 'positive', 'nice'), ('location', 'location general', 'positive', 'close')]",
+                "pred_label": false,
+                "duration_label": 1.7786109447479248,
+                "seed": 24,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, formatted as requested:\n\n[('Embassy Suites', 'hotel general', 'positive', 'nice'), ('location', 'location general', 'positive', 'close')]",
+                "pred_label": false,
+                "duration_label": 1.7673420906066895,
+                "seed": 29,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following your defined format:\n\n[('Embassy Suites', 'hotel general', 'positive', 'nice'), ('location', 'location general', 'positive', 'close')]",
+                "pred_label": false,
+                "duration_label": 1.810770034790039,
+                "seed": 34,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the defined format:\n\n[('Embassy Suites', 'hotel general', 'positive', 'nice'), ('location', 'location general', 'positive', 'close')]",
+                "pred_label": false,
+                "duration_label": 1.8033041954040527,
+                "seed": 39,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('Embassy Suites', 'hotel general', 'positive', 'nice'), ('location', 'location general', 'positive', 'close')]",
+                "pred_label": false,
+                "duration_label": 1.7751731872558594,
+                "seed": 44,
+                "regeneration_reason": "aspect term not in text"
+            },
+            {
+                "pred_label_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('Embassy Suites', 'hotel general', 'positive', 'nice'), ('location', 'location general', 'positive', 'close')]",
+                "pred_label": false,
+                "duration_label": 1.7737445831298828,
+                "seed": 49,
+                "regeneration_reason": "aspect term not in text"
+            }
+        ],
+        "init_seed": 4,
+        "pred_label": [],
+        "duration_label": 1.7737445831298828,
+        "seed": 54,
+        "avg_gpu_power_eval_W": 220.32530612244898,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 18.05382466316223,
+        "text": "very nice we chose to stay at embassy suites for our first night after flying to los angeles as it was very close to the hertz rental site .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "very nice"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "hotel general",
+                "positive",
+                "very nice"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "245_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[\n('bugs', 'rooms cleanliness', 'negative', 'no'),\n('staff', 'service general', 'positive', 'courteous'),\n('odors', 'rooms cleanliness', 'negative', 'foul'),\n('rooms', 'rooms general', 'positive', 'nice clean'),\n('air conditioning', 'room_amenities general', 'positive', 'excellent')\n]",
+        "pred_label": [
+            [
+                "bugs",
+                "rooms cleanliness",
+                "negative",
+                "no"
+            ],
+            [
+                "staff",
+                "service general",
+                "positive",
+                "courteous"
+            ],
+            [
+                "odors",
+                "rooms cleanliness",
+                "negative",
+                "foul"
+            ],
+            [
+                "rooms",
+                "rooms general",
+                "positive",
+                "nice clean"
+            ],
+            [
+                "air conditioning",
+                "room_amenities general",
+                "positive",
+                "excellent"
+            ]
+        ],
+        "duration_label": 3.650808572769165,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 221.4406666666667,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 3.6925299167633057,
+        "text": "We did not have any of the problems listed here in other reviews - no bugs , extremely courteous staff , no foul odors , nice clean rooms with excellent air conditioning .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "hotel cleanliness",
+                "polarity": "positive",
+                "opinion_term": "no bugs"
+            },
+            {
+                "aspect_term": "staff",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "extremely courteous"
+            },
+            {
+                "aspect_term": "rooms",
+                "aspect_category": "rooms cleanliness",
+                "polarity": "positive",
+                "opinion_term": "no foul odors,"
+            },
+            {
+                "aspect_term": "rooms",
+                "aspect_category": "rooms cleanliness",
+                "polarity": "positive",
+                "opinion_term": "nice clean"
+            },
+            {
+                "aspect_term": "air conditioning",
+                "aspect_category": "room_amenities quality",
+                "polarity": "positive",
+                "opinion_term": "excellent"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "hotel cleanliness",
+                "positive",
+                "no bugs"
+            ],
+            [
+                "staff",
+                "service general",
+                "positive",
+                "extremely courteous"
+            ],
+            [
+                "rooms",
+                "rooms cleanliness",
+                "positive",
+                "no foul odors,"
+            ],
+            [
+                "rooms",
+                "rooms cleanliness",
+                "positive",
+                "nice clean"
+            ],
+            [
+                "air conditioning",
+                "room_amenities quality",
+                "positive",
+                "excellent"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "794_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('beds', 'rooms general', 'negative', 'small')]",
+        "pred_label": [
+            [
+                "beds",
+                "rooms general",
+                "negative",
+                "small"
+            ]
+        ],
+        "duration_label": 1.287337303161621,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 216.66181818181815,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3466269969940186,
+        "text": "We had a room with two double beds , but the beds were very small for double beds .",
+        "aspects": [
+            {
+                "aspect_term": "beds",
+                "aspect_category": "rooms design_features",
+                "polarity": "negative",
+                "opinion_term": "very small"
+            }
+        ],
+        "tuple_list": [
+            [
+                "beds",
+                "rooms design_features",
+                "negative",
+                "very small"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1011_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('service', 'service general', 'positive', 'excellent'), ('location', 'location general', 'positive', 'excellent')]",
+        "pred_label": [
+            [
+                "service",
+                "service general",
+                "positive",
+                "excellent"
+            ],
+            [
+                "location",
+                "location general",
+                "positive",
+                "excellent"
+            ]
+        ],
+        "duration_label": 1.7260594367980957,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 218.32266666666666,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8398165702819824,
+        "text": "Don ' t expect any frills but the service and location are excellent .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "hotel miscellaneous",
+                "polarity": "negative",
+                "opinion_term": "Don't expect any frills"
+            },
+            {
+                "aspect_term": "service",
+                "aspect_category": "service general",
+                "polarity": "positive",
+                "opinion_term": "excellent"
+            },
+            {
+                "aspect_term": "location",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "excellent"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "hotel miscellaneous",
+                "negative",
+                "Don't expect any frills"
+            ],
+            [
+                "service",
+                "service general",
+                "positive",
+                "excellent"
+            ],
+            [
+                "location",
+                "location general",
+                "positive",
+                "excellent"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "334_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('location', 'location general', 'positive', 'Convenient')]",
+        "pred_label": [
+            [
+                "location",
+                "location general",
+                "positive",
+                "Convenient"
+            ]
+        ],
+        "duration_label": 1.3035695552825928,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 212.1472727272727,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3554012775421143,
+        "text": "Convenient location for getting around Barcelona on foot .",
+        "aspects": [
+            {
+                "aspect_term": "location",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "Convenient"
+            }
+        ],
+        "tuple_list": [
+            [
+                "location",
+                "location general",
+                "positive",
+                "Convenient"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "916_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('hotel', 'hotel general', 'neutral', 'typical')]",
+        "pred_label": [
+            [
+                "hotel",
+                "hotel general",
+                "neutral",
+                "typical"
+            ]
+        ],
+        "duration_label": 1.2434685230255127,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 217.95545454545456,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3570308685302734,
+        "text": "This hotel is a typical budget down town Amsterdam hotel .",
+        "aspects": [
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel general",
+                "polarity": "neutral",
+                "opinion_term": "typical budget down town Amsterdam hotel"
+            }
+        ],
+        "tuple_list": [
+            [
+                "hotel",
+                "hotel general",
+                "neutral",
+                "typical budget down town Amsterdam hotel"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "965_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('tub', 'rooms cleanliness', 'negative', 'dead bug')]",
+        "pred_label": [
+            [
+                "tub",
+                "rooms cleanliness",
+                "negative",
+                "dead bug"
+            ]
+        ],
+        "duration_label": 1.2965521812438965,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 212.12363636363634,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.3440032005310059,
+        "text": "Found a dead bug in the tub .",
+        "aspects": [
+            {
+                "aspect_term": "tub",
+                "aspect_category": "rooms cleanliness",
+                "polarity": "negative",
+                "opinion_term": "Found a dead bug"
+            }
+        ],
+        "tuple_list": [
+            [
+                "tub",
+                "rooms cleanliness",
+                "negative",
+                "Found a dead bug"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "342_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the text \"Best Location in Barceloma\", following your definitions:\n\n[('Location', 'location general', 'positive', 'Best')]",
+        "pred_label": [
+            [
+                "Location",
+                "location general",
+                "positive",
+                "Best"
+            ]
+        ],
+        "duration_label": 1.3981189727783203,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 218.4525,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.479679822921753,
+        "text": "Best Location in Barceloma",
+        "aspects": [
+            {
+                "aspect_term": "Location",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "Best"
+            }
+        ],
+        "tuple_list": [
+            [
+                "Location",
+                "location general",
+                "positive",
+                "Best"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "1009_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('hotel', 'hotel general', 'positive', 'nicer'), ('hotel', 'hotel prices', 'positive', 'more')]",
+        "pred_label": [
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "nicer"
+            ],
+            [
+                "hotel",
+                "hotel prices",
+                "positive",
+                "more"
+            ]
+        ],
+        "duration_label": 1.7964363098144531,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 215.662,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8450181484222412,
+        "text": "I would prefer spending more for a nicer hotel , such as the Century Southern Tower in the same area or the Mercure Ginza .",
+        "aspects": [
+            {
+                "aspect_term": "NULL",
+                "aspect_category": "hotel miscellaneous",
+                "polarity": "negative",
+                "opinion_term": "prefer spending more for a nicer hotel"
+            }
+        ],
+        "tuple_list": [
+            [
+                "NULL",
+                "hotel miscellaneous",
+                "negative",
+                "prefer spending more for a nicer hotel"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "863_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('location', 'location general', 'positive', 'good'), ('restaurants', 'food_drinks miscellaneous', 'positive', 'good')]",
+        "pred_label": [
+            [
+                "location",
+                "location general",
+                "positive",
+                "good"
+            ],
+            [
+                "restaurants",
+                "food_drinks miscellaneous",
+                "positive",
+                "good"
+            ]
+        ],
+        "duration_label": 1.807748794555664,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 218.50866666666667,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 1.8459486961364746,
+        "text": "The location is very good , plenty of good restaurants , tram stop and canal cruise close by .",
+        "aspects": [
+            {
+                "aspect_term": "location",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "very good"
+            },
+            {
+                "aspect_term": "location",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "plenty of good restaurants,"
+            },
+            {
+                "aspect_term": "location",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "tram stop and canal cruise close by"
+            }
+        ],
+        "tuple_list": [
+            [
+                "location",
+                "location general",
+                "positive",
+                "very good"
+            ],
+            [
+                "location",
+                "location general",
+                "positive",
+                "plenty of good restaurants,"
+            ],
+            [
+                "location",
+                "location general",
+                "positive",
+                "tram stop and canal cruise close by"
+            ]
+        ]
+    },
+    {
+        "task": "asqp",
+        "dataset_name": "hotels",
+        "dataset_type": "train",
+        "llm_base_model": "gemma3:27b",
+        "id": "800_hotels_../zero-shot-absa-quad/datasets/asqp/hotels/train.txt",
+        "invalid_precitions_label": [],
+        "init_seed": 4,
+        "pred_raw": "Here's the breakdown of sentiment elements in the provided text, following the specified format:\n\n[('hotel', 'hotel general', 'positive', 'nice'), ('located', 'location general', 'positive', 'well located'), ('close', 'location general', 'positive', 'close')]",
+        "pred_label": [
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "nice"
+            ],
+            [
+                "located",
+                "location general",
+                "positive",
+                "well located"
+            ],
+            [
+                "close",
+                "location general",
+                "positive",
+                "close"
+            ]
+        ],
+        "duration_label": 2.229191780090332,
+        "seed": 4,
+        "avg_gpu_power_eval_W": 221.7984210526316,
+        "avg_gpu_vram_eval_MB": 19325.0,
+        "total_time_eval": 2.339118719100952,
+        "text": "This hotel is just nice and is very well located and very close to everything .",
+        "aspects": [
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "hotel general",
+                "polarity": "positive",
+                "opinion_term": "just nice"
+            },
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "very well located"
+            },
+            {
+                "aspect_term": "hotel",
+                "aspect_category": "location general",
+                "polarity": "positive",
+                "opinion_term": "very close to everything"
+            }
+        ],
+        "tuple_list": [
+            [
+                "hotel",
+                "hotel general",
+                "positive",
+                "just nice"
+            ],
+            [
+                "hotel",
+                "location general",
+                "positive",
+                "very well located"
+            ],
+            [
+                "hotel",
+                "location general",
+                "positive",
+                "very close to everything"
+            ]
+        ]
+    }
+]
