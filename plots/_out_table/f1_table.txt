@@ -4,19 +4,19 @@
 \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9} \cmidrule(lr){10-11} \cmidrule(l){12-13}
 & TASD & ASQP & TASD & ASQP & TASD & ASQP & TASD & ASQP & TASD & ASQP & TASD & ASQP \\
 \midrule
-\multicolumn{13}{@{}l}{\textbf{0 annotated example given: Gemma-3-27B (0-shot) / LLM-as-annotator (LLMA)}} \\
+\multicolumn{13}{@{}l}{\textbf{0 annotated example given: Gemma-3-27B (0-shot) / LLM-as-a-annotator (LA-ABSA)}} \\
 \midrule
 Gemma-3-27B (0-shot) & 0 & 0 & \textbf{30.36} & \textbf{24.73} & 45.51 & \textbf{28.96} & 51.81 & 42.37 & 29.50 & 13.36 & 38.97 & 23.02 \\
-LLMA w/ LLaMA-3-8B FT & full & full & 26.11 & 19.11 & 47.18 & 28.03 & \textbf{52.36} & \textbf{43.34} & 29.46 & 13.16 & 40.29 & 24.61 \\
-LLMA w/ DLO & full & full & 25.82 & 18.88 & \textbf{47.41} & 26.97 & 51.75 & 42.82 & \textbf{30.60} & \textbf{13.38} & \textbf{40.70} & \textbf{24.97} \\
+LA-ABSA w/ LLaMA-3-8B FT & full & full & 26.11 & 19.11 & 47.18 & 28.03 & \textbf{52.36} & \textbf{43.34} & 29.46 & 13.16 & 40.29 & 24.61 \\
+LA-ABSA w/ DLO & full & full & 25.82 & 18.88 & \textbf{47.41} & 26.97 & 51.75 & 42.82 & \textbf{30.60} & \textbf{13.38} & \textbf{40.70} & \textbf{24.97} \\
 \midrule
-\multicolumn{13}{@{}l}{\textbf{10 annotated examples given: Gemma-3-27B (ICL) / SLM trained on 10 examples / LLM-as-annotator (LAA-ABSA)}} \\
+\multicolumn{13}{@{}l}{\textbf{10 annotated example given: Gemma-3-27B (ICL) / SLM trained on 10 examples / LLM-as-a-annotator (LA-ABSA)}} \\
 \midrule
 Gemma-3-27B ICL & 10 & 10 & \textbf{54.47} & \textbf{39.95} & \textbf{66.75} & \textbf{46.23} & 60.36 & 45.24 & \textbf{41.69} & 22.31 & \textbf{56.51} & 31.41 \\
 LLaMA-3-8B FT & 10 & 10 & 31.79 & 15.38 & 36.26 & 15.63 & 36.62 & 18.50 & 21.41 & 8.20 & 31.31 & 16.55 \\
 DLO & 10 & 10 & 15.84 & 4.37 & 13.59 & 5.18 & 16.07 & 4.87 & 22.93 & 4.47 & 18.07 & 3.53 \\
-LAA-ABSA w/ LLaMA-3-8B FT & full & full & 53.22 & 37.47 & 63.02 & 43.84 & \textbf{61.73} & 46.01 & 38.46 & \textbf{23.41} & 55.07 & \textbf{32.42} \\
-LAA-ABSA w/ DLO & full & full & 49.23 & 37.19 & 62.37 & 46.20 & 61.40 & \textbf{46.47} & 39.22 & 23.37 & 55.27 & 31.44 \\
+LA-ABSA w/ LLaMA-3-8B FT & full & full & 53.22 & 37.47 & 63.02 & 43.84 & \textbf{61.73} & 46.01 & 38.46 & \textbf{23.41} & 55.07 & \textbf{32.42} \\
+LA-ABSA w/ DLO & full & full & 49.23 & 37.19 & 62.37 & 46.20 & 61.40 & \textbf{46.47} & 39.22 & 23.37 & 55.27 & 31.44 \\
 \midrule
 \multicolumn{13}{@{}l}{\textit{SLM trained on 10 annotated examples + EDA- or QAIE-augmented examples}} \\
 \midrule
@@ -26,13 +26,13 @@ EDA w/ DLO & 60 & 60 & 26.65 & 8.68 & 18.06 & 10.70 & 21.66 & 12.40 & 28.25 & 11
 EDA w/ DLO & 110 & 110 & 29.31 & 9.22 & 19.16 & 11.24 & 22.66 & 11.77 & 28.48 & 13.00 & 24.57 & 7.44 \\
 QAIE & 26.4 & 45.2 & 20.11 & 9.96 & 12.37 & 14.78 & 17.76 & 15.38 & 25.18 & 17.54 & 21.69 & 9.86 \\
 \midrule
-\multicolumn{13}{@{}l}{\textbf{50 annotated examples given: Gemma-3-27B (ICL) / SLM trained on 50 examples / LLM-as-annotator (LAA-ABSA)}} \\
+\multicolumn{13}{@{}l}{\textbf{50 annotated example given: Gemma-3-27B (ICL) / SLM trained on 50 examples / LLM-as-a-annotator (LA-ABSA)}} \\
 \midrule
 Gemma-3-27B ICL & 50 & 50 & \textbf{62.12} & \textbf{41.74} & \textbf{68.53} & \textbf{51.10} & \textbf{64.60} & 48.37 & \textbf{44.80} & \textbf{25.86} & \textbf{62.97} & 43.83 \\
 LLaMA-3-8B FT & 50 & 50 & 49.16 & 32.00 & 50.72 & 35.66 & 49.10 & 32.71 & 34.31 & 20.60 & 42.48 & 27.76 \\
 DLO & 50 & 50 & 39.54 & 26.63 & 43.95 & 29.57 & 42.92 & 28.74 & 36.04 & 19.08 & 44.72 & 27.20 \\
-LAA-ABSA w/ LLaMA-3-8B FT & full & full & 61.45 & 39.01 & 64.72 & 50.02 & 62.79 & 47.25 & 44.43 & 24.40 & 61.15 & 43.07 \\
-LAA-ABSA w/ DLO & full & full & 58.40 & 40.38 & 62.03 & 49.85 & 62.57 & \textbf{48.98} & 44.39 & 25.69 & 61.43 & \textbf{44.24} \\
+LA-ABSA w/ LLaMA-3-8B FT & full & full & 61.45 & 39.01 & 64.72 & 50.02 & 62.79 & 47.25 & 44.43 & 24.40 & 61.15 & 43.07 \\
+LA-ABSA w/ DLO & full & full & 58.40 & 40.38 & 62.03 & 49.85 & 62.57 & \textbf{48.98} & 44.39 & 25.69 & 61.43 & \textbf{44.24} \\
 \midrule
 \multicolumn{13}{@{}l}{\textit{SLM trained on 50 annotated examples + EDA- or QAIE-augmented examples}} \\
 \midrule
