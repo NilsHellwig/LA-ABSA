@@ -6,12 +6,12 @@
 \arrayrulecolor{black}\midrule
 \multicolumn{15}{@{}l}{\textbf{Scenario: 0 annotated examples given}} \\
 \arrayrulecolor{black}\midrule
-Gemma-3-27B (0-shot) & 0 & 0 & \textbf{31.36} & \textbf{26.29} & 46.57 & 30.29 & 56.90 & 45.42 & 32.58 & 15.14 & 41.02 & 23.16 & 41.69 & 28.06 \\
+Gemma-3-27B (0-shot) & 0 & 0 & \textbf{31.36} & \textbf{26.29} & 46.57 & \textbf{30.29} & 56.90 & 45.42 & 32.58 & 15.14 & 41.02 & 23.16 & 41.69 & 28.06 \\
 \noalign{\vskip 0.1cm}              
 \arrayrulecolor{lightgray}\hline  
 \noalign{\vskip 0.1cm}
-LA-ABSA w/ LLaMA-3.1-8B FT & full & full & 27.72 & 21.46 & 48.61 & \textbf{30.86} & \textbf{57.96} & \textbf{48.54} & 33.20 & 15.50 & 42.89 & 25.60 & 42.08 & \textbf{28.39} \\
-LA-ABSA w/ DLO & full & full & 27.36 & 20.91 & \textbf{49.27} & 29.81 & 56.98 & 47.39 & \textbf{34.47} & \textbf{16.02} & \textbf{43.85} & \textbf{26.21} & \textbf{42.38} & 28.07 \\
+LA-ABSA w/ Paraphrase & full & full & 28.54 & 20.25 & \textbf{49.68} & 28.54 & 55.69 & 46.31 & 34.06 & 15.74 & 43.22 & \textbf{27.18} & 42.24 & 27.60 \\
+LA-ABSA w/ DLO & full & full & 27.36 & 20.91 & 49.27 & 29.81 & \textbf{56.98} & \textbf{47.39} & \textbf{34.47} & \textbf{16.02} & \textbf{43.85} & 26.21 & \textbf{42.38} & \textbf{28.07} \\
 \arrayrulecolor{black}\midrule
 \multicolumn{15}{@{}l}{\textbf{Scenario: 10 annotated examples given}} \\
 \arrayrulecolor{black}\midrule
@@ -19,47 +19,47 @@ Gemma-3-27B ICL & 10 & 10 & \textbf{52.66} & \textbf{40.50} & \textbf{65.19} & 4
 \noalign{\vskip 0.1cm}              
 \arrayrulecolor{lightgray}\hline  
 \noalign{\vskip 0.1cm}
-LLaMA-3.1-8B FT & 10 & 10 & 30.56 & 15.72 & 38.74 & 18.90 & 34.71 & 20.10 & 21.15 & 8.76 & 32.46 & 16.06 & 31.52 & 15.91 \\
+Paraphrase & 10 & 10 & 7.38 & 1.11 & 5.93 & 3.23 & 7.64 & 2.85 & 14.51 & 4.26 & 12.39 & 2.06 & 9.57 & 2.70 \\
 DLO & 10 & 10 & 13.47 & 4.13 & 13.95 & 4.91 & 13.91 & 4.03 & 20.86 & 4.02 & 17.39 & 3.41 & 15.92 & 4.10 \\
 \noalign{\vskip 0.1cm}              
 \arrayrulecolor{lightgray}\hline  
 \noalign{\vskip 0.1cm}
-LA-ABSA w/ LLaMA-3.1-8B FT & full & full & 52.12 & 39.42 & 61.70 & 45.78 & 61.32 & 46.51 & 38.52 & 23.94 & 53.16 & \textbf{30.04} & 53.37 & 37.14 \\
+LA-ABSA w/ Paraphrase & full & full & 46.98 & 36.43 & 61.76 & 45.91 & 58.68 & 45.93 & 38.65 & 22.99 & 53.82 & \textbf{31.07} & 51.98 & 36.47 \\
 LA-ABSA w/ DLO & full & full & 48.19 & 38.99 & 61.28 & \textbf{48.81} & \textbf{61.51} & \textbf{47.36} & 39.63 & \textbf{23.98} & 54.50 & 29.93 & 53.02 & \textbf{37.82} \\
 \noalign{\vskip 0.1cm}              
 \arrayrulecolor{lightgray}\hline  
 \noalign{\vskip 0.1cm}
-EDA w/ LLaMA-3.1-8B FT (5) & 60 & 60 & 38.49 & 16.83 & 41.26 & 22.38 & 28.88 & 21.97 & 28.03 & 13.82 & 35.64 & 18.95 & 34.46 & 18.79 \\
-EDA w/ LLaMA-3.1-8B FT (10) & 110 & 110 & 37.04 & 13.48 & 38.84 & 20.83 & 27.26 & 20.17 & 29.59 & 12.51 & 32.88 & 17.89 & 33.12 & 16.98 \\
+EDA w/ Paraphrase (5) & 60 & 60 & 20.17 & 11.35 & 15.07 & 12.54 & 16.67 & 9.66 & 21.89 & 8.61 & 24.39 & 6.04 & 19.64 & 9.64 \\
+EDA w/ Paraphrase (10) & 110 & 110 & 22.89 & 11.27 & 15.28 & 12.74 & 18.90 & 11.56 & 23.81 & 9.52 & 23.98 & 5.65 & 20.97 & 10.15 \\
 EDA w/ DLO (5) & 60 & 60 & 24.36 & 8.96 & 18.09 & 10.76 & 18.75 & 10.61 & 26.11 & 10.76 & 23.31 & 7.10 & 22.12 & 9.64 \\
 EDA w/ DLO (10) & 110 & 110 & 27.31 & 9.36 & 19.02 & 11.19 & 19.62 & 10.17 & 26.60 & 11.99 & 23.94 & 6.99 & 23.30 & 9.94 \\
 QAIE & 26.4 & 45.2 & 16.24 & 8.19 & 10.24 & 12.84 & 14.73 & 12.42 & 22.56 & 15.81 & 17.19 & 8.19 & 16.19 & 11.49 \\
 \arrayrulecolor{black}\midrule
 \multicolumn{15}{@{}l}{\textbf{Scenario: 50 annotated examples given}} \\
 \arrayrulecolor{black}\midrule
-Gemma-3-27B ICL & 50 & 50 & 57.16 & 39.25 & \textbf{65.77} & 48.06 & \textbf{62.95} & 45.25 & 39.75 & 21.71 & 56.92 & 37.17 & \textbf{56.51} & 38.29 \\
+Gemma-3-27B ICL & 50 & 50 & \textbf{\underline{57.16}} & 39.25 & \textbf{\underline{65.77}} & 48.06 & \textbf{62.95} & 45.25 & 39.75 & 21.71 & 56.92 & 37.17 & \textbf{56.51} & 38.29 \\
 \noalign{\vskip 0.1cm}              
 \arrayrulecolor{lightgray}\hline  
 \noalign{\vskip 0.1cm}
-LLaMA-3.1-8B FT & 50 & 50 & 47.79 & 33.11 & 50.80 & 34.79 & 51.12 & 34.07 & 34.47 & 20.48 & 43.15 & 28.88 & 45.46 & 30.26 \\
+Paraphrase & 50 & 50 & 34.60 & 26.62 & 34.66 & 23.25 & 31.38 & 17.42 & 31.43 & 18.21 & 36.05 & 22.59 & 33.63 & 21.62 \\
 DLO & 50 & 50 & 38.65 & 28.60 & 43.33 & 30.06 & 43.89 & 29.22 & 33.32 & 17.89 & 41.02 & 25.99 & 40.04 & 26.35 \\
 \noalign{\vskip 0.1cm}              
 \arrayrulecolor{lightgray}\hline  
 \noalign{\vskip 0.1cm}
-LA-ABSA w/ LLaMA-3.1-8B FT & full & full & \textbf{57.70} & 38.92 & 62.54 & 49.74 & 62.04 & 46.54 & \textbf{42.46} & 23.23 & 56.50 & 39.45 & 56.25 & 39.57 \\
-LA-ABSA w/ DLO & full & full & 55.15 & \textbf{40.53} & 60.65 & \textbf{50.06} & 62.27 & \textbf{48.95} & \textbf{42.46} & \textbf{24.50} & \textbf{57.77} & \textbf{42.11} & 55.66 & \textbf{41.23} \\
+LA-ABSA w/ Paraphrase & full & full & 52.50 & 37.01 & 61.12 & 46.16 & 60.76 & 46.31 & \textbf{42.50} & 24.42 & 56.40 & 40.75 & 54.65 & 38.93 \\
+LA-ABSA w/ DLO & full & full & 55.15 & \textbf{40.53} & 60.65 & \textbf{50.06} & 62.27 & \textbf{48.95} & 42.46 & \textbf{24.50} & \textbf{57.77} & \textbf{42.11} & 55.66 & \textbf{41.23} \\
 \noalign{\vskip 0.1cm}              
 \arrayrulecolor{lightgray}\hline  
 \noalign{\vskip 0.1cm}
-EDA w/ LLaMA-3.1-8B FT (5) & 300 & 300 & 47.67 & 32.20 & 52.22 & 39.22 & 50.81 & 40.92 & 38.20 & 20.96 & 51.29 & 33.68 & 48.04 & 33.39 \\
-EDA w/ LLaMA-3.1-8B FT (10) & 550 & 550 & 47.79 & 31.40 & 53.02 & 38.82 & 51.64 & 41.05 & 39.30 & 20.92 & 50.56 & 33.43 & 48.46 & 33.12 \\
+EDA w/ Paraphrase (5) & 300 & 300 & 40.69 & 29.36 & 41.21 & 29.24 & 40.91 & 29.69 & 34.88 & 19.84 & 41.85 & 27.09 & 39.91 & 27.04 \\
+EDA w/ Paraphrase (10) & 550 & 550 & 40.24 & 29.26 & 41.57 & 29.81 & 39.92 & 30.47 & 33.98 & 20.20 & 40.00 & 27.29 & 39.14 & 27.41 \\
 EDA w/ DLO (5) & 300 & 300 & 43.38 & 30.64 & 46.05 & 34.19 & 45.97 & 35.42 & 36.48 & 22.15 & 42.19 & 31.32 & 42.82 & 30.75 \\
 EDA w/ DLO (10) & 550 & 550 & 42.49 & 30.74 & 44.40 & 34.32 & 44.54 & 35.39 & 36.02 & 23.07 & 41.84 & 31.60 & 41.86 & 31.02 \\
 QAIE & 141.8 & 248.8 & 41.70 & 32.78 & 42.30 & 33.46 & 45.57 & 31.33 & 34.87 & 21.44 & 44.60 & 33.52 & 41.81 & 30.51 \\
 \arrayrulecolor{black}\midrule
 \multicolumn{15}{@{}l}{\textbf{Full set of human-annotated examples: SOTA approaches}} \\
 \arrayrulecolor{black}\midrule
-LLaMA-3.1-8B FT & full & full & \textbf{\underline{66.65}} & \textbf{\underline{49.61}} & \textbf{\underline{70.45}} & 58.70 & 68.73 & 56.85 & 49.59 & 30.96 & 65.76 & 53.56 & \textbf{\underline{64.24}} & 49.94 \\
-DLO & full & full & - & 49.33 & - & \textbf{\underline{61.80}} & \textbf{\underline{69.30}} & \textbf{\underline{60.10}} & \textbf{\underline{52.38}} & \textbf{\underline{33.07}} & \textbf{\underline{68.71}} & \textbf{\underline{56.56}} & 63.46 & \textbf{\underline{52.17}} \\
+Paraphrase & full & full & - & 47.72 & - & 59.30 & 69.26 & 58.17 & 51.02 & 32.63 & 67.01 & 55.19 & 62.43 & 50.60 \\
+DLO & full & full & - & \textbf{\underline{49.33}} & - & \textbf{\underline{61.80}} & \textbf{\underline{69.30}} & \textbf{\underline{60.10}} & \textbf{\underline{52.38}} & \textbf{\underline{33.07}} & \textbf{\underline{68.71}} & \textbf{\underline{56.56}} & \textbf{\underline{63.46}} & \textbf{\underline{52.17}} \\
 \bottomrule
 \end{tabular}
