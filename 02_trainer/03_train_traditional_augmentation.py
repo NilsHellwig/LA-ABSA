@@ -13,10 +13,10 @@ dataloader = DataLoader("../zero-shot-absa-quad/datasets", "../zero-shot-absa-qu
 model_name_or_path = "Meta-Llama-3.1-8B-Instruct-bnb-4bit"
 
 for seed in range(5):
-    for ds_name in ["rest16", "hotels", "rest15", "flightabsa", "coursera"]:
-        for fs_num in [50, 10]:
+    for ds_name in ["rest15", "rest16", "flightabsa", "coursera", "hotels"]:
+        for fs_num in [10, 50]:
             for task in ["tasd", "asqp"]:
-                for n_llm_examples in [2, 5, 10]:
+                for n_llm_examples in [15]:
                     for aug_method in ["eda"]:
                         train_ds = dataloader.load_data(
                             ds_name,
@@ -34,7 +34,7 @@ for seed in range(5):
                             ds_name, "test", cv=False, target=task
                         )
 
-                        for ml_method in ["dlo", f"llm_{model_name_or_path}"]:
+                        for ml_method in ["dlo", "paraphrase"]:#, f"llm_{model_name_or_path}"]:
                             print(
                                 f"Task:",
                                 task,
@@ -58,10 +58,7 @@ for seed in range(5):
                             cond_name = f"{ml_method}_{aug_method}_{n_llm_examples}_{task}_{fs_num}_{ds_name}_{seed}"
                             filename = f"./_out_fine_tunings/03_traditional_augmentation/{cond_name}.json"
 
-                            if os.path.exists(filename):
-                                print(f"File {filename} already exists. Skipping.")
-                                continue
-                            else:
+                            if True:
 
                                 clean_up()
                                 create_output_directory()
