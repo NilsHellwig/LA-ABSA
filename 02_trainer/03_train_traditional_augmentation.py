@@ -58,7 +58,7 @@ for seed in range(5):
                             cond_name = f"{ml_method}_{aug_method}_{n_llm_examples}_{task}_{fs_num}_{ds_name}_{seed}"
                             filename = f"./_out_fine_tunings/03_traditional_augmentation/{cond_name}.json"
 
-                            if True:
+                            if not os.path.exists(filename):
 
                                 clean_up()
                                 create_output_directory()
