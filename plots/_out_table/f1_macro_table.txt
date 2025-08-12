@@ -1,0 +1,61 @@
+\begin{tabular}{@{}llccccccccccc|cc@{}}
+\toprule
+\multirow{2}{*}{\textbf{Approach}} & \multicolumn{2}{c}{\textbf{\# Train}} & \multicolumn{2}{c}{\textbf{Rest15}} & \multicolumn{2}{c}{\textbf{Rest16}} & \multicolumn{2}{c}{\textbf{FlightABSA}} & \multicolumn{2}{c}{\textbf{Coursera}} & \multicolumn{2}{c}{\textbf{Hotels}} & \multicolumn{2}{c}{\textbf{AVG}} \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9} \cmidrule(lr){10-11} \cmidrule(l){12-13} \cmidrule(l){14-15}
+& TASD & ASQP & TASD & ASQP & TASD & ASQP & TASD & ASQP & TASD & ASQP & TASD & ASQP & TASD & ASQP \\
+\arrayrulecolor{black}\midrule
+\multicolumn{15}{@{}l}{\textbf{Scenario: 0 annotated examples given}} \\
+\arrayrulecolor{black}\midrule
+Gemma-3-27B (0-shot) & 0 & 0 & \textbf{33.68} & \textbf{23.64} & \textbf{45.94} & 23.64 & \textbf{55.24} & \textbf{39.50} & \textbf{33.78} & \textbf{13.23} & \textbf{29.70} & \textbf{18.49} & \textbf{39.67} & \textbf{23.70} \\
+\noalign{\vskip 0.1cm}              
+\arrayrulecolor{lightgray}\hline  
+\noalign{\vskip 0.1cm}
+LA-ABSA w/ Paraphrase & full & full & 22.88 & 19.93 & 35.84 & 26.20 & 45.95 & 33.61 & 11.85 & 4.09 & 16.20 & 12.44 & 26.54 & 19.25 \\
+LA-ABSA w/ DLO & full & full & 24.12 & 21.02 & 36.12 & \textbf{29.16} & 45.37 & 36.32 & 12.10 & 3.70 & 17.18 & 13.10 & 26.98 & 20.66 \\
+\arrayrulecolor{black}\midrule
+\multicolumn{15}{@{}l}{\textbf{Scenario: 10 annotated examples given}} \\
+\arrayrulecolor{black}\midrule
+Gemma-3-27B ICL & 10 & 10 & \textbf{54.53} & \textbf{\underline{38.67}} & \textbf{64.33} & \textbf{43.21} & \textbf{56.32} & 36.58 & \textbf{\underline{41.75}} & \textbf{\underline{20.44}} & \textbf{31.15} & 18.05 & \textbf{49.62} & \textbf{31.39} \\
+\noalign{\vskip 0.1cm}              
+\arrayrulecolor{lightgray}\hline  
+\noalign{\vskip 0.1cm}
+Paraphrase & 10 & 10 & 3.47 & 0.46 & 2.59 & 0.87 & 2.38 & 1.03 & 2.17 & 0.66 & 2.65 & 0.47 & 2.65 & 0.70 \\
+DLO & 10 & 10 & 6.10 & 1.42 & 6.01 & 1.25 & 4.74 & 1.35 & 3.33 & 0.60 & 4.10 & 0.83 & 4.86 & 1.09 \\
+\noalign{\vskip 0.1cm}              
+\arrayrulecolor{lightgray}\hline  
+\noalign{\vskip 0.1cm}
+LA-ABSA w/ Paraphrase & full & full & 34.17 & 23.98 & 48.59 & 34.59 & 51.20 & 36.29 & 17.01 & 8.54 & 26.90 & \textbf{19.19} & 35.57 & 24.52 \\
+LA-ABSA w/ DLO & full & full & 35.03 & 26.77 & 50.39 & 36.25 & 53.19 & \textbf{39.01} & 17.14 & 9.38 & 29.02 & 18.18 & 36.95 & 25.92 \\
+\noalign{\vskip 0.1cm}              
+\arrayrulecolor{lightgray}\hline  
+\noalign{\vskip 0.1cm}
+EDA w/ DLO (\#aug=10) & 110 & 110 & 11.33 & 5.57 & 7.94 & 2.22 & 8.05 & 3.64 & 4.22 & 2.02 & 5.49 & 2.27 & 7.40 & 3.15 \\
+QAIE & 26.4 & 45.2 & 14.86 & 5.37 & 7.84 & 14.29 & 12.02 & 7.00 & 4.30 & 1.90 & 3.52 & 2.86 & 8.51 & 6.28 \\
+DS\textsuperscript{2}-ABSA & 21,1k & 21,1k & 18.83 & 12.17 & 26.68 & 15.60 & 22.66 & 13.04 & 9.65 & 3.17 & 16.97 & 7.89 & 18.96 & 10.37 \\
+\arrayrulecolor{black}\midrule
+\multicolumn{15}{@{}l}{\textbf{Scenario: 50 annotated examples given}} \\
+\arrayrulecolor{black}\midrule
+Gemma-3-27B ICL & 50 & 50 & \textbf{\underline{56.01}} & \textbf{36.01} & \textbf{\underline{64.81}} & \textbf{\underline{44.56}} & \textbf{54.06} & 36.67 & \textbf{38.24} & \textbf{17.80} & \textbf{35.47} & \textbf{25.24} & \textbf{\underline{49.72}} & \textbf{32.06} \\
+\noalign{\vskip 0.1cm}              
+\arrayrulecolor{lightgray}\hline  
+\noalign{\vskip 0.1cm}
+Paraphrase & 50 & 50 & 19.75 & 14.05 & 16.35 & 8.35 & 12.43 & 7.23 & 9.59 & 2.99 & 13.87 & 7.54 & 14.40 & 8.03 \\
+DLO & 50 & 50 & 27.78 & 18.10 & 22.46 & 13.05 & 28.90 & 19.71 & 8.68 & 3.11 & 16.50 & 9.74 & 20.86 & 12.74 \\
+\noalign{\vskip 0.1cm}              
+\arrayrulecolor{lightgray}\hline  
+\noalign{\vskip 0.1cm}
+LA-ABSA w/ Paraphrase & full & full & 35.74 & 26.57 & 48.34 & 31.01 & 52.88 & 36.65 & 17.96 & 7.37 & 28.20 & 19.79 & 36.62 & 24.28 \\
+LA-ABSA w/ DLO & full & full & 41.64 & 28.42 & 49.37 & 37.37 & 52.17 & \textbf{40.88} & 18.07 & 8.10 & 30.19 & 22.59 & 38.29 & 27.47 \\
+\noalign{\vskip 0.1cm}              
+\arrayrulecolor{lightgray}\hline  
+\noalign{\vskip 0.1cm}
+EDA w/ DLO (\#aug=10) & 550 & 550 & 27.35 & 17.61 & 22.38 & 16.12 & 33.71 & 24.74 & 12.22 & 5.72 & 15.85 & 13.07 & 22.30 & 15.45 \\
+QAIE & 141.8 & 248.8 & 44.81 & 30.84 & 45.50 & 32.23 & 37.41 & 22.29 & 20.79 & 10.20 & 24.19 & 18.51 & 34.54 & 22.82 \\
+DS\textsuperscript{2}-ABSA & 21,7k & 21,6k & 24.95 & 18.14 & 31.43 & 21.81 & 28.52 & 17.92 & 11.86 & 4.69 & 18.35 & 13.06 & 23.02 & 15.12 \\
+\arrayrulecolor{black}\midrule
+\multicolumn{15}{@{}l}{\textbf{Full set of human-annotated examples: SOTA approaches}} \\
+\arrayrulecolor{black}\midrule
+Paraphrase & full & full & - & - & - & - & \textbf{\underline{58.48}} & 48.47 & 30.67 & \textbf{15.66} & 37.49 & 30.31 & 42.21 & 31.48 \\
+DLO & full & full & - & - & - & - & 57.24 & \textbf{\underline{49.41}} & \textbf{32.25} & 14.91 & \textbf{\underline{38.14}} & \textbf{\underline{33.04}} & \textbf{42.54} & \textbf{\underline{32.45}} \\
+\bottomrule
+\end{tabular}
