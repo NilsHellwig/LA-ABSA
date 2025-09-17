@@ -1,61 +1,76 @@
 \begin{tabular}{@{}llccccccccccc|cc@{}}
 \toprule
-\multirow{2}{*}{\textbf{Approach}} & \multicolumn{2}{c}{\textbf{\# Train}} & \multicolumn{2}{c}{\textbf{Rest15}} & \multicolumn{2}{c}{\textbf{Rest16}} & \multicolumn{2}{c}{\textbf{FlightABSA}} & \multicolumn{2}{c}{\textbf{Coursera}} & \multicolumn{2}{c}{\textbf{Hotels}} & \multicolumn{2}{c}{\textbf{AVG}} \\
+\multirow{2}{*}{\textbf{Approach}} & \multicolumn{2}{c}{\cellcolor{gray!10}\textbf{\# Train}} & \multicolumn{2}{c}{\cellcolor{gray!10}\textbf{Rest15}} & \multicolumn{2}{c}{\cellcolor{gray!10}\textbf{Rest16}} & \multicolumn{2}{c}{\cellcolor{gray!10}\textbf{FlightABSA}} & \multicolumn{2}{c}{\cellcolor{gray!10}\textbf{Coursera}} & \multicolumn{2}{c}{\cellcolor{gray!10}\textbf{Hotels}} & \multicolumn{2}{c}{\cellcolor{gray!20}\textbf{AVG}} \\
 \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9} \cmidrule(lr){10-11} \cmidrule(l){12-13} \cmidrule(l){14-15}
-& TASD & ASQP & TASD & ASQP & TASD & ASQP & TASD & ASQP & TASD & ASQP & TASD & ASQP & TASD & ASQP \\
+& \textbf{TASD} & \textbf{ASQP} & \textbf{TASD} & \textbf{ASQP} & \textbf{TASD} & \textbf{ASQP} & \textbf{TASD} & \textbf{ASQP} & \textbf{TASD} & \textbf{ASQP} & \textbf{TASD} & \textbf{ASQP} & \textbf{TASD} & \textbf{ASQP} \\
 \arrayrulecolor{black}\midrule
-\multicolumn{15}{@{}l}{\textbf{Scenario: 0 annotated examples given}} \\
+\multicolumn{15}{@{}l}{\cellcolor{gray!15}\textbf{Scenario: 0 annotated examples given}} \\
 \arrayrulecolor{black}\midrule
 Gemma-3-27B (0-shot) & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
 \noalign{\vskip 0.1cm}              
 \arrayrulecolor{lightgray}\hline  
 \noalign{\vskip 0.1cm}
-LA-ABSA w/ Paraphrase & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
-LA-ABSA w/ DLO & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
+\rowcolor{gray!5}
+LA-ABSA &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+\textit{w/ Paraphrase} & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
+\rowcolor{gray!5}
+\textit{w/ DLO }& xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
 \arrayrulecolor{black}\midrule
-\multicolumn{15}{@{}l}{\textbf{Scenario: 10 annotated examples given}} \\
-\arrayrulecolor{black}\midrule
-Gemma-3-27B ICL & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
-\noalign{\vskip 0.1cm}              
-\arrayrulecolor{lightgray}\hline  
-\noalign{\vskip 0.1cm}
-Paraphrase & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
-DLO & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
-\noalign{\vskip 0.1cm}              
-\arrayrulecolor{lightgray}\hline  
-\noalign{\vskip 0.1cm}
-LA-ABSA w/ Paraphrase & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
-LA-ABSA w/ DLO & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
-\noalign{\vskip 0.1cm}              
-\arrayrulecolor{lightgray}\hline  
-\noalign{\vskip 0.1cm}
-EDA w/ DLO (\#aug=10) & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
-QAIE & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
-DS\textsuperscript{2}-ABSA & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
-\arrayrulecolor{black}\midrule
-\multicolumn{15}{@{}l}{\textbf{Scenario: 50 annotated examples given}} \\
+\multicolumn{15}{@{}l}{\cellcolor{gray!15}\textbf{Scenario: 10 annotated examples given}} \\
 \arrayrulecolor{black}\midrule
 Gemma-3-27B ICL & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
 \noalign{\vskip 0.1cm}              
 \arrayrulecolor{lightgray}\hline  
 \noalign{\vskip 0.1cm}
+\rowcolor{gray!5}
 Paraphrase & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
 DLO & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
 \noalign{\vskip 0.1cm}              
 \arrayrulecolor{lightgray}\hline  
 \noalign{\vskip 0.1cm}
-LA-ABSA w/ Paraphrase & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
-LA-ABSA w/ DLO & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
+\rowcolor{gray!5}
+LA-ABSA &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+\textit{w/ Paraphrase} & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
+\rowcolor{gray!5}
+\textit{w/ DLO }& xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
 \noalign{\vskip 0.1cm}              
 \arrayrulecolor{lightgray}\hline  
 \noalign{\vskip 0.1cm}
-EDA w/ DLO (\#aug=10) & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
+EDA & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
+\rowcolor{gray!5}
 QAIE & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
 DS\textsuperscript{2}-ABSA & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
 \arrayrulecolor{black}\midrule
-\multicolumn{15}{@{}l}{\textbf{Full set of human-annotated examples: SOTA approaches}} \\
+\multicolumn{15}{@{}l}{\cellcolor{gray!15}\textbf{Scenario: 50 annotated examples given}} \\
+\arrayrulecolor{black}\midrule
+\rowcolor{gray!5}
+Gemma-3-27B ICL & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
+\noalign{\vskip 0.1cm}              
+\arrayrulecolor{lightgray}\hline  
+\noalign{\vskip 0.1cm}
+Paraphrase & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
+\rowcolor{gray!5}
+DLO & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
+\noalign{\vskip 0.1cm}              
+\arrayrulecolor{lightgray}\hline  
+\noalign{\vskip 0.1cm}
+LA-ABSA &  &  &  &  &  &  &  &  &  &  &  &  &  &  \\
+\rowcolor{gray!5}
+\textit{w/ Paraphrase} & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
+\textit{w/ DLO }& xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
+\noalign{\vskip 0.1cm}              
+\arrayrulecolor{lightgray}\hline  
+\noalign{\vskip 0.1cm}
+\rowcolor{gray!5}
+EDA & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
+QAIE & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
+\rowcolor{gray!5}
+DS\textsuperscript{2}-ABSA & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
+\arrayrulecolor{black}\midrule
+\multicolumn{15}{@{}l}{\cellcolor{gray!15}\textbf{Full set of human-annotated examples: SOTA approaches}} \\
 \arrayrulecolor{black}\midrule
 Paraphrase & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
+\rowcolor{gray!5}
 DLO & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx & xxxx \\
 \bottomrule
 \end{tabular}
