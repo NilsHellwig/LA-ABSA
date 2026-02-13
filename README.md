@@ -11,9 +11,14 @@ Accepted at **LREC 2026** (15th edition) · Palma, Mallorca (Spain)
 
 ---
 
-**Nils Constantin Hellwig · Jakob Fehle · Udo Kruschwitz · Christian Wolff**
+**Nils Constantin Hellwig¹* · Jakob Fehle¹ · Udo Kruschwitz² · Christian Wolff¹**
 
-University of Regensburg, Germany
+¹Media Informatics Group, University of Regensburg, Germany  
+²Information Science Group, University of Regensburg, Germany
+
+`{nils-constantin.hellwig, jakob.fehle, udo.kruschwitz, christian.wolff}@ur.de`
+
+*\*Contact: Nils Constantin Hellwig ([nils-constantin.hellwig@ur.de](mailto:nils-constantin.hellwig@ur.de))*
 
 ---
 
@@ -47,5 +52,11 @@ This repository contains the official implementation of **LA-ABSA**, an approach
 ## 📜 Citation (TBA)
 
 ```bibtex
-tba
+@inproceedings{hellwig2026laabsa,
+  title={LLM-as-an-Annotator: Training Lightweight Models with LLM-Annotated Examples for Aspect Sentiment Tuple Prediction},
+  author={Hellwig, Nils Constantin and Fehle, Jakob and Kruschwitz, Udo and Wolff, Christian},
+  booktitle={Proceedings of the 15th Language Resources and Evaluation Conference (LREC 2026)},
+  year={2026},
+  address={Palma, Mallorca, Spain}
+}
 ```
