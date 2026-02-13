@@ -7,7 +7,7 @@
 Accepted at **LREC 2026** (15th edition) · Palma, Mallorca (Spain)
 
 [![Paper](https://img.shields.io/badge/Paper-LREC%202026-blue?style=for-the-badge&logo=googlescholar)](TBA)
-[![Model](https://img.shields.io/badge/Gemma--3--27B-FFAB00?style=for-the-badge&logo=googlegemini)](https://huggingface.co/google/gemma-3-27b-it)
+[![Correspondence](https://img.shields.io/badge/Contact-Nils%20Hellwig-darkred?style=for-the-badge&logo=minutemailer)](mailto:nils-constantin.hellwig@ur.de)
 
 ---
 
@@ -16,9 +16,8 @@ Accepted at **LREC 2026** (15th edition) · Palma, Mallorca (Spain)
 ¹Media Informatics Group, University of Regensburg, Germany  
 ²Information Science Group, University of Regensburg, Germany
 
+*✉ Correspondence to: [nils-constantin.hellwig@ur.de](mailto:nils-constantin.hellwig@ur.de)*  
 `{nils-constantin.hellwig, jakob.fehle, udo.kruschwitz, christian.wolff}@ur.de`
-
-*\*Contact: Nils Constantin Hellwig ([nils-constantin.hellwig@ur.de](mailto:nils-constantin.hellwig@ur.de))*
 
 ---
 
