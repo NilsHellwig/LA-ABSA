@@ -51,11 +51,5 @@ This repository contains the official implementation of **LA-ABSA**, an approach
 ## 📜 Citation (TBA)
 
 ```bibtex
-@inproceedings{hellwig2026laabsa,
-  title={LLM-as-an-Annotator: Training Lightweight Models with LLM-Annotated Examples for Aspect Sentiment Tuple Prediction},
-  author={Hellwig, Nils Constantin and Fehle, Jakob and Kruschwitz, Udo and Wolff, Christian},
-  booktitle={Proceedings of the 15th Language Resources and Evaluation Conference (LREC 2026)},
-  year={2026},
-  address={Palma, Mallorca, Spain}
-}
+tba
 ```
